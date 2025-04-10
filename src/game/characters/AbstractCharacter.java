@@ -23,7 +23,7 @@ public abstract class  AbstractCharacter implements Combatant, GameEntity{
         if (tryEvade()) return;
         //TODO
     }
-
+//ku,o
     @Override
     public void heal(int amount) {
         this.health += amount;

@@ -8,7 +8,7 @@ public class GameMap {
     private int size;
 
     public GameMap(int size){
-
+        this.size = size;
     }
     public int getSize(){
         return size;

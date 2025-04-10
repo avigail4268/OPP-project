@@ -81,22 +81,27 @@ public class GameWorld {
             for (int j = 0; j < map.getSize(); j++) {
                 Position pos = new Position(i,j);
                 //check if player in position
-                if (!map.isEmpty(pos)) continue;
-
+                if (!map.isEmpty(pos))
+                    continue;
+                else break;
                 double random = Math.random();
 
-                if (random < 0.4) {
+                if (random <= 0.4) {
                     continue;
-                } else if (random < 0.7) {
+                } else if (  0.4 < random && random <= 0.7) {
                      createEnemy(pos);
-                } else if (random < 0.8) {
-                    creatWall();
+                } else if (0.7 < random && random < 0.8) {
+                    creatWall(pos);
                 } else {
-                    creatItem();
+                    creatItem(pos);
                 }
 
             }
         }
+    }
+
+    private void creatItem(Position pos) {
+
     }
 
     private void creatWall() {
@@ -106,9 +111,9 @@ public class GameWorld {
     public void createEnemy(Position pos){
         double random = Math.random();
         Enemy enemy;
-        if (random < 1.0/3.0){
+        if (random <= 1.0/3.0){
             enemy= new Dragon(pos);
-        } else if (random < 2.0/3.0) {
+        } else if (random <= 2.0/3.0) {
             enemy = new Orc(pos);
         }else {
             enemy =new Goblin(pos);
