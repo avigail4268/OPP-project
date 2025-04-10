@@ -1,4 +1,4 @@
 package game.characters;
 
-public class Goblin {
+public class Goblin extends Enemy{
 }

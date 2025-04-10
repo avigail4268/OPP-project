@@ -1,4 +1,5 @@
 package game.characters;
 
-public class Dragon {
+public class Dragon extends Enemy{
+
 }

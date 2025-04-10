@@ -1,4 +1,4 @@
 package game.characters;
 
-public class Orc {
+public class Orc extends Enemy{
 }
