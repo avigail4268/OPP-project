@@ -1,7 +1,6 @@
 package game.core;
 import game.items.GameItem;
 import game.items.Potion;
-import game.items.PotionType;
 import game.items.PowerPotion;
 
 import java.util.ArrayList;
@@ -52,7 +51,7 @@ public class Inventory {
     }
 
     public boolean useItem(int index) {
-
+    return false;
     }
 
 }

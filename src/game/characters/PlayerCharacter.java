@@ -8,12 +8,14 @@ import game.map.Position;
 public abstract class PlayerCharacter extends AbstractCharacter {
 
     private String name;
-    private Inventory inventory = new Inventory();
+    private Inventory inventory;
     private int treasurePoints = 0;
 
     public PlayerCharacter(String playerName, Position position) {
         super(position);
         this.name = playerName;
+        this.inventory = new Inventory();
+        this.treasurePoints = 0;
     }
 
      public String getName() {
@@ -58,12 +60,8 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     }
 
     @Override
-    public int getHealth() {
-        return 0;
-    }
-
-    @Override
     public boolean setHealth(int health) {
+        //todo
         return false;
     }
 }
