@@ -1,5 +1,7 @@
 package game.combat;
 
+import game.map.Position;
+
 public interface Combatant {
     int getHealth();
     boolean setHealth(int health);
@@ -8,4 +10,5 @@ public interface Combatant {
     boolean isDead();
     int getPower();
     boolean tryEvade();
+    Position getPosition();
 }

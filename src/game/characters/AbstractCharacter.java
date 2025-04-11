@@ -19,9 +19,12 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     }
     @Override
     public void receiveDamage(int amount, Combatant source) {
-        //subtract amount from health
-        if (tryEvade()) return;
-        //TODO
+        //TODO recheck
+        if (tryEvade()) {
+            System.out.println("You have evaded the attack!");
+        }
+        else
+            this.health -= amount;
     }
 
     @Override
@@ -55,11 +58,17 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
 
     @Override
     public boolean setPosition(Position newPos) {
-        // TODD
+        // TODD recheck
         return false;
     }
     @Override
-    public abstract boolean setHealth(int health);
+    public boolean setHealth(int health) {
+        if (health > 0) {
+            this.health = health;
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public abstract String getDisplaySymbol();
@@ -67,7 +76,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     @Override
     public abstract boolean setVisible(boolean visible);
 
-    public  int getHealth(){
+    public int getHealth(){
         return health;
     }
 }

@@ -58,10 +58,4 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getTreasurePoints(){
          return treasurePoints;
     }
-
-    @Override
-    public boolean setHealth(int health) {
-        //todo
-        return false;
-    }
 }
