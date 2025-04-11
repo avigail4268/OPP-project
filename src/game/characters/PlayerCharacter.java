@@ -32,7 +32,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
             if (inventory.isHealthPotion(i)) {
                 // use the potion
                 Interactable potion = (Interactable) inventory.getItems().get(i);
-                potion.interact(this)
+                potion.interact(this);
                 return true;
             }
         }

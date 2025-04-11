@@ -30,4 +30,9 @@ public abstract class GameItem implements GameEntity {
     public boolean setPosition(Position newPos) {
         return false;
     }
+
+    public abstract boolean equals(Object obj);
+    public abstract String toString();
+
+
 }

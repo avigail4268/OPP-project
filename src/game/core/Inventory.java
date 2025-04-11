@@ -14,18 +14,19 @@ public class Inventory {
     }
 
     public boolean addItem(GameItem item) {
-        //add item to inventory
-        items.add(item);
-
-        // TODO check if item was added successfully and return the check result
-        return true;
+        if (item != null){
+            items.add(item);
+            return true;
+        }
+        return false;
     }
 
     public boolean removeItem(GameItem item) {
-        items.remove(item);
-
-        // TODO check if item was removed successfully and return the check result
-        return true;
+        if (items.contains(item)){
+            items.remove(item);
+            return true;
+        }
+        return false;
     }
 
     public List<GameItem> getItems() {
@@ -41,7 +42,6 @@ public class Inventory {
 
         if (!this.isPowerPotion(i) && item instanceof Potion)
             return true;
-
         return false;
     }
 
@@ -51,7 +51,18 @@ public class Inventory {
     }
 
     public boolean useItem(int index) {
+        // TODO check if useItem is needed
     return false;
     }
-
+    public boolean equals (Object obj) {
+        if ( obj instanceof Inventory)
+        {
+            Inventory other = (Inventory) obj;
+            return this.items.equals(other.items);
+        }
+        return false;
+    }
+    public String toString() {
+        return "Inventory";
+    }
 }

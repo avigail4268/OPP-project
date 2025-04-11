@@ -9,10 +9,29 @@ public class Position {
 
     public int distanceTo(Position otherPos){
         // TODO calculate manheten distance to other point
-        return 1;
+        int otherRow = otherPos.getRow();
+        int otherCol = otherPos.getCol();
+        int dis = Math.abs(this.row - otherRow) + Math.abs(this.col - otherCol);
+        return dis;
+    }
+    private int getRow(){
+        return row;
+    }
+    private int getCol(){
+        return col;
     }
 
     public boolean equals(Position otherPos){
         return otherPos.row == row && otherPos.col == col;
+    }
+    public boolean equals(Object obj) {
+        if (obj instanceof Position) {
+            Position position = (Position) obj;
+            return this.row == position.row && this.col == position.col;
+        }
+        return false;
+    }
+    public String toString(){
+        return "("+row+","+col+")";
     }
 }

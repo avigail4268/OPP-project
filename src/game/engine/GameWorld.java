@@ -15,24 +15,23 @@ public class GameWorld {
     private GameMap map;
 
 
-    public GameWorld(){
-        //creat game map
+    public GameWorld() {
+        //create game map
         creatGameMap();
-        //creat player character
+        //create player character
         initPlayers();
-        //creat game content
+        //create game content
         populateGameMap();
     }
 
     private void creatGameMap() {
         // ask for user input and create map
-        System.out.println("Enter map size (minimum size is 10x10) :");
+        System.out.println("Enter map size (minimum size is 10x10):");
         Scanner scanner = new Scanner(System.in);
         int size;
         size = scanner.nextInt();
         //check map size
         this.map = new GameMap(size);
-
     }
 
     private void initPlayers() {
@@ -51,14 +50,12 @@ public class GameWorld {
             System.out.println("Enter player name : ");
             String playerName = scanner.next();
             createPlayer(playerType,playerName);
-
         }
     }
     private void createPlayer(int playerType, String playerName) {
         PlayerCharacter player;
         try {
             Position position = this.map.getRandomEmptyPosition();
-
             if (playerType == 1) {
                 player = new Warrior(playerName,position);
             } else if (playerType == 2) {
@@ -72,7 +69,6 @@ public class GameWorld {
         catch (RuntimeException e) {
             //TODO
         }
-
     }
     private void populateGameMap() {
         // add content to the map - enemies and items.
@@ -95,7 +91,6 @@ public class GameWorld {
                 } else {
                     creatItem(pos);
                 }
-
             }
         }
     }
@@ -103,7 +98,6 @@ public class GameWorld {
     private void creatItem(Position pos) {
 
     }
-
     private void creatWall() {
 
     }

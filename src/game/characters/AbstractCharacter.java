@@ -6,7 +6,7 @@ import game.map.Position;
 
 import java.util.Random;
 
-public abstract class  AbstractCharacter implements Combatant, GameEntity{
+public abstract class AbstractCharacter implements Combatant, GameEntity{
     private Position position;
     private int health;
     private int power;
