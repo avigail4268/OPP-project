@@ -3,19 +3,18 @@ package game.characters;
 import game.combat.Combatant;
 import game.core.GameEntity;
 import game.map.Position;
-
 import java.util.Random;
 
 public abstract class AbstractCharacter implements Combatant, GameEntity{
     private Position position;
     private int health;
     private int power;
-    private final double evasionChance = 0.25;
+    private double evasionChance = 0.25;
 
     public AbstractCharacter(Position position) {
         setPosition(position);
-        health = 100;
-        power = new Random().nextInt(4,14);
+        this.health = 100;
+        this.power = new Random().nextInt(4,14);
     }
     @Override
     public void receiveDamage(int amount, Combatant source) {
@@ -26,7 +25,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         else
             this.health -= amount;
     }
-
     @Override
     public void heal(int amount) {
         this.health += amount;
@@ -58,7 +56,10 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
 
     @Override
     public boolean setPosition(Position newPos) {
-        // TODD recheck
+        if (newPos != null) {
+            this.position = newPos;
+            return true;
+        }
         return false;
     }
     @Override
@@ -74,9 +75,11 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     public abstract String getDisplaySymbol();
 
     @Override
-    public abstract boolean setVisible(boolean visible);
+    //TODO something
+    public abstract void setVisible(boolean visible);
 
     public int getHealth(){
         return health;
     }
+
 }

@@ -1,5 +1,5 @@
 package game.map;
-
+//finished
 public class Position {
     private int row, col;
     public Position(int r,int c){
@@ -8,7 +8,6 @@ public class Position {
     }
 
     public int distanceTo(Position otherPos){
-        // TODO calculate manheten distance to other point
         int otherRow = otherPos.getRow();
         int otherCol = otherPos.getCol();
         int dis = Math.abs(this.row - otherRow) + Math.abs(this.col - otherCol);

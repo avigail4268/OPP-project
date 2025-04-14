@@ -6,11 +6,13 @@ public abstract class GameItem implements GameEntity {
     private Position position;
     private boolean blocksMovement;
     private String description;
+    private boolean visible;
 
     public GameItem(Position position, boolean blocksMovement, String description) {
         this.position = position;
         this.blocksMovement = blocksMovement;
         this.description = description;
+        this.visible = false;
     }
 
     @Override
@@ -19,20 +21,24 @@ public abstract class GameItem implements GameEntity {
     }
 
     @Override
-    public abstract String getDisplaySymbol();
-
-    @Override
-    public boolean setVisible(boolean visible) {
-        return false;
+    public void setVisible(boolean visible) {
+        //todo should be boolean
+        this.visible = visible;
     }
-
     @Override
     public boolean setPosition(Position newPos) {
+        if (newPos != null) {
+            this.position = newPos;
+            return true;
+        }
         return false;
+    }
+    public String toString(){
+        return description;
     }
 
     public abstract boolean equals(Object obj);
-    public abstract String toString();
 
-
+    @Override
+    public abstract String getDisplaySymbol();
 }

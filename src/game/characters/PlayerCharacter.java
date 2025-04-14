@@ -9,7 +9,8 @@ public abstract class PlayerCharacter extends AbstractCharacter {
 
     private String name;
     private Inventory inventory;
-    private int treasurePoints = 0;
+    private int treasurePoints;
+
 
     public PlayerCharacter(String playerName, Position position) {
         super(position);
@@ -58,4 +59,5 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getTreasurePoints(){
          return treasurePoints;
     }
+
 }

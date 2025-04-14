@@ -2,10 +2,9 @@ package game.core;
 import game.items.GameItem;
 import game.items.Potion;
 import game.items.PowerPotion;
-
 import java.util.ArrayList;
 import java.util.List;
-
+//finished
 public class Inventory {
     private List<GameItem> items;
 
@@ -50,10 +49,6 @@ public class Inventory {
         return item instanceof PowerPotion;
     }
 
-    public boolean useItem(int index) {
-        // TODO check if useItem is needed
-    return false;
-    }
     public boolean equals (Object obj) {
         if ( obj instanceof Inventory)
         {
