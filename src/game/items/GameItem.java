@@ -22,7 +22,6 @@ public abstract class GameItem implements GameEntity {
 
     @Override
     public void setVisible(boolean visible) {
-        //todo should be boolean
         this.visible = visible;
     }
     @Override

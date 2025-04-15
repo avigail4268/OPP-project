@@ -45,7 +45,10 @@ public class GameWorld {
             System.out.println("select player character: 1.warrior, 2.mage, 3.archer, 4.no more character ");
             Scanner scanner = new Scanner(System.in);
             int playerType = scanner.nextInt();
-            // TODO add a check that input is valid (continue input until valid)
+            while (1 > playerType || playerType > 4) {
+                System.out.println("Wrong input! please choose one of the following options:  1.warrior, 2.mage, 3.archer, 4.no more character");
+                playerType = scanner.nextInt();
+            }
             if (playerType == 4) {break;}
             System.out.println("Enter player name : ");
             String playerName = scanner.next();

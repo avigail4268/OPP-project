@@ -9,15 +9,20 @@ public class Potion extends GameItem implements Interactable {
     private int increaseAmount;
     private boolean isUsed;
 
-    public Potion(Position position, boolean blocksMovement, String description) {
+    public Potion(Position position, boolean blocksMovement, String description,int max,int min) {
+        //when its health potion max =50 min = 10, when its power potion max = 5 min = 1
         super(position, blocksMovement, description);
-        this.increaseAmount = new Random().nextInt(10, 50);
+        this.increaseAmount = new Random().nextInt(min, max);
         this.isUsed = false;
     }
 
     @Override
     public String getDisplaySymbol() {
         return "P";
+    }
+
+    protected boolean getIsUsed() {
+        return isUsed;
     }
 
     @Override
@@ -28,7 +33,9 @@ public class Potion extends GameItem implements Interactable {
             this.isUsed = true;
         }
     }
-
+    protected int getIncreaseAmount() {
+        return increaseAmount;
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Potion) {
@@ -36,5 +43,13 @@ public class Potion extends GameItem implements Interactable {
             return isUsed == potion.isUsed && getPosition().equals(potion.getPosition());
         }
         return false;
+    }
+    public String toString() {
+        if (isUsed) {
+            return " health potion already used!";
+        }
+        else {
+            return "health potion not yet used!";
+        }
     }
 }

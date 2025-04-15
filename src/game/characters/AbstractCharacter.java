@@ -9,6 +9,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     private Position position;
     private int health;
     private int power;
+    private boolean visible;
     private double evasionChance = 0.25;
 
     public AbstractCharacter(Position position) {
@@ -38,6 +39,14 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     @Override
     public int getPower() {
         return power;
+    }
+
+    public boolean setPower(int amount) {
+        if (amount > 0){
+            this.power += amount;
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -70,16 +79,14 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         }
         return false;
     }
-
+    public void setVisible(boolean visible){
+        this.visible = visible;
+    }
     @Override
-    public abstract String getDisplaySymbol();
-
-    @Override
-    //TODO something
-    public abstract void setVisible(boolean visible);
-
     public int getHealth(){
         return health;
     }
+    @Override
+    public abstract String getDisplaySymbol();
 
 }
