@@ -1,6 +1,7 @@
 package game.characters;
 
 import game.combat.Combatant;
+import game.combat.MagicElement;
 import game.core.GameEntity;
 import game.map.Position;
 import java.util.Random;
@@ -88,5 +89,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     }
     @Override
     public abstract String getDisplaySymbol();
+
+    public abstract MagicElement getMagicElement();
 
 }

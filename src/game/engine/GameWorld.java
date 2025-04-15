@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import game.characters.*;
+import game.core.GameEntity;
 import game.items.GameItem;
 import game.items.Potion;
 import game.items.PowerPotion;
@@ -19,12 +20,104 @@ public class GameWorld {
 
 
     public GameWorld(List<GameItem> items) {
+        gameInitialization();
+
+        startGame();
+    }
+
+    private void gameInitialization() {
         //create game map
         creatGameMap();
         //create player character
         initPlayers();
         //create game content
         populateGameMap();
+    }
+
+    private void startGame() {
+        while (true){
+            for (int i =0; i<players.size(); i++){
+                PlayerCharacter currentPlayer = players.get(i);
+                Position newPosition = chooseMovement(currentPlayer.getPosition());
+                if (newPosition != null){
+                    currentPlayer.setPosition(newPosition);
+                } else {
+                    // TODO can the player choose not to attack? let him choose a different direction or move to next player?
+                }
+            }
+
+        }
+    }
+
+    private Position chooseMovement(Position lastPosition) {
+        System.out.println("Please choose direction: 1.right 2.left 3.forward 4.backwards");
+        Scanner scanner = new Scanner(System.in);
+        int direction = scanner.nextInt();
+        while (direction < 1 || direction > 4) {
+            System.out.println(" wrong input! Please choose direction: 1.right 2.left 3.forward 4.backwards");
+            direction = scanner.nextInt();
+        }
+        int row = lastPosition.getRow(),col = lastPosition.getCol();
+        if (direction == 1) {
+            Position newPos = new Position(row,col+1);
+            if (map.isEmpty(newPos)) {
+                return newPos;
+            }
+            else {
+                // check who is in the position and let the user choose how to act
+                boolean move = checkPosition(newPos);
+                if (move) {
+                    return newPos;
+                } else {
+                    return null;
+                }
+            }
+        } else if (direction == 2) {
+            Position newPos = new Position(row,col-1);
+            if (map.isEmpty(newPos)) {
+                return newPos;
+            }
+            checkPosition(newPos);
+        } else if (direction == 3) {
+            Position newPos = new Position(row+1,col);
+            if (map.isEmpty(newPos)) {
+                return newPos;
+            }
+            map.checkPosition();
+        }
+        return direction;
+    }
+
+    private boolean checkPosition(Position newPos) {
+        // currently for simplicity pretending there is one entity at each position
+        GameEntity entity = map.getEntityInPosition(newPos).getFirst();
+        if (entity instanceof PlayerCharacter) {
+            // TODO what happens here
+        }
+        else if (entity instanceof Enemy) {
+            // check enemy type
+            Enemy enemy = findEnemy(entity);
+            switch (enemy.getDisplaySymbol()) {
+                case DisplaySymbols.Goblin:
+                    // enemy is of type goblin
+                    // player can attack or run
+                    // if the player choose to attack - he stay in the current position and start combat
+                    // if combat success move the player to the newPos
+//                    return true;
+                    // if he choose to run - let him pick another position
+//                return false;
+            }
+        } else {
+            // TODO check GameItem type
+        }
+    }
+
+
+    private Enemy findEnemy(GameEntity entity) {
+        for (Enemy enemy : enemies) {
+            if (enemy.equals(entity)) return enemy;
+        }
+        return null;
     }
 
     private void creatGameMap() {
@@ -63,11 +156,11 @@ public class GameWorld {
         try {
             Position position = this.map.getRandomEmptyPosition();
             if (playerType == 1) {
-                player = new Warrior(playerName,position);
+                player = new Warrior(playerName,position,100);
             } else if (playerType == 2) {
-                player = new Mage(playerName,position);
+                player = new Mage(playerName,position,100);
             } else {
-                player = new Archer(playerName,position);
+                player = new Archer(playerName,position,100);
             }
             map.addToGrid(position, player);
             players.add(player);
@@ -124,11 +217,11 @@ public class GameWorld {
         double random = Math.random();
         Enemy enemy;
         if (random <= 1.0/3.0){
-            enemy= new Dragon(pos);
+            enemy= new Dragon(pos,50);
         } else if (random <= 2.0/3.0) {
-            enemy = new Orc(pos);
+            enemy = new Orc(pos,50);
         }else {
-            enemy =new Goblin(pos);
+            enemy =new Goblin(pos,50);
         }
         enemies.add(enemy);
         map.addToGrid(pos,enemy);

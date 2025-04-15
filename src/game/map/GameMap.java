@@ -48,4 +48,9 @@ public class GameMap {
         grid.put(pos, entities);
         return true;
     }
+
+    public List<GameEntity> getEntityInPosition(Position pos) {
+        List<GameEntity> entities = grid.get(pos);
+        return entities;
+    }
 }

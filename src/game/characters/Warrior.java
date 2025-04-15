@@ -1,6 +1,7 @@
 package game.characters;
 
 import game.combat.Combatant;
+import game.combat.MagicElement;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
 import game.map.Position;
@@ -8,8 +9,8 @@ import java.util.Random;
 
 public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
     private final int defence;
-    public Warrior(String playerName, Position position) {
-        super(playerName, position);
+    public Warrior(String playerName, Position position,int health) {
+        super(playerName, position, health);
         Random random = new Random();
         this.defence = random.nextInt(120);
     }
@@ -17,6 +18,11 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     @Override
     public String getDisplaySymbol() {
         return "W";
+    }
+
+    @Override
+    public MagicElement getMagicElement() {
+        return null;
     }
 
 

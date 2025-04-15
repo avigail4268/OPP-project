@@ -10,8 +10,8 @@ import game.map.Position;
 public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker {
     private MagicElement element;
 
-    public Mage(String name,Position pos) {
-        super(name,pos);
+    public Mage(String name,Position pos,int health) {
+        super(name,pos,health);
         this.element = this.element.getElement();
     }
 
@@ -21,13 +21,28 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     @Override
+    public MagicElement getMagicElement() {
+        return element;
+    }
+
+    @Override
     public void calculateMagicDamage(Combatant target) {
-    //todo (problem: what if my target is not mage or dragon?)
+        double totalDamage = this.getPower() * 1.5;
+        MagicElement targetElement = target.getMagicElement();
+        if (targetElement != null) {
+            if (this.element.isStrongerThan(targetElement)) {
+                totalDamage *= 1.2;
+            } else if (targetElement.isStrongerThan(this.element)) {
+                totalDamage *= 0.8;
+            }
+        }
+        target.receiveDamage((int) totalDamage, this);
     }
 
     @Override
     public void castSpell(Combatant target) {
         //todo : use calculateMagicDamage?
+        calculateMagicDamage(target);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package game.characters;
 
 import game.combat.Combatant;
+import game.combat.MagicElement;
 import game.combat.PhysicalAttacker;
 import game.combat.RangeFighter;
 import game.map.Position;
@@ -10,8 +11,8 @@ import java.util.Random;
 public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAttacker {
     private double accuracy;
 
-    public Archer(String name, Position pos) {
-        super(name, pos);
+    public Archer(String name, Position pos,int health) {
+        super(name,pos,health);
         Random rand = new Random();
         accuracy = rand.nextDouble(0.8);
     }
@@ -21,6 +22,15 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         return "A";
     }
 
+    @Override
+    public MagicElement getMagicElement() {
+        return null;
+    }
+    public boolean tryEvade(){
+//        double evadeChance = Math.random();
+//        if (evadeChance < this.)
+        return false;
+    }
     @Override
     public void attack(Combatant target) {
         //todo : how to check if manage to evade?

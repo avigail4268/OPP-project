@@ -11,4 +11,5 @@ public interface Combatant {
     int getPower();
     boolean tryEvade();
     Position getPosition();
+    MagicElement getMagicElement();
 }

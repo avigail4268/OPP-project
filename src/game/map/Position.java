@@ -13,10 +13,10 @@ public class Position {
         int dis = Math.abs(this.row - otherRow) + Math.abs(this.col - otherCol);
         return dis;
     }
-    private int getRow(){
+    public int getRow(){
         return row;
     }
-    private int getCol(){
+    public int getCol(){
         return col;
     }
 
