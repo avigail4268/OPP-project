@@ -14,11 +14,11 @@ import game.map.Position;
 public class GameWorld {
     private List <PlayerCharacter> players;
     private List <Enemy> enemies;
-    private List<GameItem> items;
+    private List <GameItem> items;
     private GameMap map;
 
 
-    public GameWorld() {
+    public GameWorld(List<GameItem> items) {
         //create game map
         creatGameMap();
         //create player character
@@ -79,6 +79,8 @@ public class GameWorld {
     private void populateGameMap() {
         // add content to the map - enemies and items.
         // each one will be generated on a random location in the map
+        this.items = new ArrayList<GameItem>();
+        this.enemies = new ArrayList<Enemy>();
         for (int i = 0; i < map.getSize(); i++) {
             for (int j = 0; j < map.getSize(); j++) {
                 Position pos = new Position(i,j);

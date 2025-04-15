@@ -12,9 +12,9 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     private boolean visible;
     private double evasionChance = 0.25;
 
-    public AbstractCharacter(Position position) {
+    public AbstractCharacter(Position position,int health) {
         setPosition(position);
-        this.health = 100;
+        this.health = health;
         this.power = new Random().nextInt(4,14);
     }
     @Override

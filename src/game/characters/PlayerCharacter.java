@@ -12,8 +12,8 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     private int treasurePoints;
 
 
-    public PlayerCharacter(String playerName, Position position) {
-        super(position);
+    public PlayerCharacter(String playerName, Position position,int health) {
+        super(position, health);
         this.name = playerName;
         this.inventory = new Inventory();
         this.treasurePoints = 0;
@@ -59,5 +59,4 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getTreasurePoints(){
          return treasurePoints;
     }
-
 }
