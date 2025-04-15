@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 import game.characters.*;
 import game.items.GameItem;
+import game.items.Potion;
+import game.items.PowerPotion;
+import game.items.Wall;
 import game.map.GameMap;
 import game.map.Position;
 
@@ -82,27 +85,37 @@ public class GameWorld {
                 //check if player in position
                 if (!map.isEmpty(pos))
                     continue;
-                else break;
                 double random = Math.random();
-
                 if (random <= 0.4) {
                     continue;
-                } else if (  0.4 < random && random <= 0.7) {
+                } else if (random <= 0.7) {
                      createEnemy(pos);
-                } else if (0.7 < random && random < 0.8) {
+                } else if (random < 0.8) {
                     creatWall(pos);
-                } else {
-                    creatItem(pos);
+                } else if(random < 0.95) {
+                    creatPotion(pos);
+                }else {
+                    createPowerPotion(pos);
                 }
             }
         }
     }
 
-    private void creatItem(Position pos) {
-
+    private void createPowerPotion(Position pos) {
+        PowerPotion powerPotion = new PowerPotion(pos,false,"Power potion",5,1);
+        items.add(powerPotion);
+        map.addToGrid(pos, powerPotion);
     }
-    private void creatWall() {
 
+    private void creatPotion(Position pos) {
+        Potion potion = new Potion(pos,false,"Potion",50,10);
+        items.add(potion);
+        map.addToGrid(pos, potion);
+    }
+    private void creatWall(Position pos) {
+        Wall wall = new Wall(pos,true,"Wall");
+        items.add(wall);
+        map.addToGrid(pos, wall);
     }
 
     public void createEnemy(Position pos){

@@ -32,9 +32,12 @@ public abstract class GameItem implements GameEntity {
         }
         return false;
     }
-    public String toString(){
-        return description;
-    }
+
+//    public String getDescription() {
+//        return description;
+//    }
+    @Override
+    public abstract String toString();
 
     public abstract boolean equals(Object obj);
 

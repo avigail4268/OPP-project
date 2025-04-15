@@ -10,8 +10,24 @@ public class PowerPotion extends Potion {
     public void interact(PlayerCharacter c) {
         if(!getIsUsed()){
             c.setPower(this.getIncreaseAmount());
-            this.
+            this.setIsUsed();
         }
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PowerPotion) {
+            PowerPotion p = (PowerPotion) obj;
+            return this.getPosition().equals(p.getPosition()) && this.getIsUsed() == p.getIsUsed();
+        }
+        return false;
+    }
+    public String toString() {
+        if (getIsUsed()) {
+            return "power potion already used!";
+        }
+        else {
+            return "power potion yet used!";
+        }
+    }
 }

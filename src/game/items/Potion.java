@@ -24,13 +24,19 @@ public class Potion extends GameItem implements Interactable {
     protected boolean getIsUsed() {
         return isUsed;
     }
-
+    protected boolean setIsUsed() {
+        if(!isUsed){
+            this.isUsed = true;
+            return true;
+        }
+        return false;
+    }
     @Override
     public void interact(PlayerCharacter c) {
         if (!isUsed) {
             int amount = Math.min(this.increaseAmount, 100 - c.getHealth());
             c.heal(amount);
-            this.isUsed = true;
+            setIsUsed();
         }
     }
     protected int getIncreaseAmount() {
@@ -46,7 +52,7 @@ public class Potion extends GameItem implements Interactable {
     }
     public String toString() {
         if (isUsed) {
-            return " health potion already used!";
+            return "health potion already used!";
         }
         else {
             return "health potion not yet used!";
