@@ -12,7 +12,9 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     public Mage(String name,Position pos,int health) {
         super(name,pos,health);
-        this.element = this.element.getElement();
+        this.element = getMagicElement();
+        //TODO: check if this is correct, i think the element should be set in the constructor
+        // cause its not innitialized
     }
 
     @Override
@@ -27,12 +29,13 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     @Override
     public void calculateMagicDamage(Combatant target) {
+        //TODO: check if this is correct
         double totalDamage = this.getPower() * 1.5;
         MagicElement targetElement = target.getMagicElement();
         if (targetElement != null) {
-            if (this.element.isStrongerThan(targetElement)) {
+            if (this.element.isElementStrongerThan(targetElement)) {
                 totalDamage *= 1.2;
-            } else if (targetElement.isStrongerThan(this.element)) {
+            } else if (targetElement.isElementStrongerThan(this.element)) {
                 totalDamage *= 0.8;
             }
         }
@@ -47,15 +50,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     @Override
     public boolean isElementStrongerThan(MagicAttacker other) {
-        if (element.isStrongerThan(other.getElement())){
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public MagicElement getElement() {
-        return element;
+        return element.isElementStrongerThan(other.getMagicElement());
     }
 
     @Override
@@ -67,15 +62,13 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     @Override
+    //TODO: how??????
     public int getRange() {
         return 2;
     }
 
     @Override
     public boolean isInRange(Position self, Position target) {
-        if(self.distanceTo(target) <= getRange()){
-            return true;
-        }
-        return false;
+        return self.distanceTo(target) <= getRange();
     }
 }

@@ -17,6 +17,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         setPosition(position);
         this.health = health;
         this.power = new Random().nextInt(4,14);
+        this.visible = true;
     }
     @Override
     public void receiveDamage(int amount, Combatant source) {
@@ -27,6 +28,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         else
             this.health -= amount;
     }
+
     @Override
     public void heal(int amount) {
         this.health += amount;
@@ -34,7 +36,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
 
     @Override
     public boolean isDead() {
-        return health <= 0;
+        return health == 0;
     }
 
     @Override
@@ -53,10 +55,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     @Override
     public boolean tryEvade() {
         double evadeChance = Math.random();
-        if (evadeChance < this.evasionChance) {
-            return true;
-        }
-        return false;
+        return evadeChance < this.evasionChance;
     }
 
     @Override
@@ -80,6 +79,9 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         }
         return false;
     }
+    public double getEvasionChance () {
+        return evasionChance;
+    }
     public void setVisible(boolean visible){
         this.visible = visible;
     }
@@ -91,5 +93,8 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     public abstract String getDisplaySymbol();
 
     public abstract MagicElement getMagicElement();
+
+    //i dont think its sopposed to be absract cause only mage has magic element and we cant
+    //use it in other classes like warrior or archer
 
 }

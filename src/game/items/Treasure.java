@@ -18,25 +18,6 @@ public class Treasure extends GameItem implements Interactable {
     }
 
     @Override
-    public String toString() {
-        if (collected) {
-            return "treasure collected!";
-        }
-        else {
-            return "treasure not collected yet!";
-        }
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Treasure) {
-            Treasure other = (Treasure) obj;
-            return other.value == this.value && this.getPosition().equals(other.getPosition());
-        }
-        return false;
-    }
-
-    @Override
     public String getDisplaySymbol() {
         return "T";
     }
@@ -60,5 +41,24 @@ public class Treasure extends GameItem implements Interactable {
             c.addToInventory(powerPotion);
             this.collected = true;
         }
+    }
+
+    @Override
+    public String toString() {
+        if (collected) {
+            return "treasure collected!";
+        }
+        else {
+            return "treasure not collected yet!";
+        }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Treasure) {
+            Treasure other = (Treasure) obj;
+            return other.value == this.value && this.getPosition().equals(other.getPosition());
+        }
+        return false;
     }
 }

@@ -36,6 +36,7 @@ public abstract class GameItem implements GameEntity {
 //    public String getDescription() {
 //        return description;
 //    }
+
     @Override
     public abstract String toString();
 

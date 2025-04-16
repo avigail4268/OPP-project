@@ -24,6 +24,9 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     }
 
     public boolean addToInventory(GameItem item) {
+        if (item == null) {
+            return false;
+        }
         return inventory.addItem(item);
     }
 
@@ -50,10 +53,8 @@ public abstract class PlayerCharacter extends AbstractCharacter {
          return false;
     }
 
-    public boolean updateTreasurePoint(int amount){
-         this.treasurePoints = treasurePoints + amount;
-         //check if updated successfully
-        return true;
+    public void updateTreasurePoint(int amount){
+        this.treasurePoints += amount;
     }
 
     public int getTreasurePoints(){

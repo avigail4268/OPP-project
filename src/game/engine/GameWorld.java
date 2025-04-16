@@ -54,7 +54,7 @@ public class GameWorld {
         Scanner scanner = new Scanner(System.in);
         int direction = scanner.nextInt();
         while (direction < 1 || direction > 4) {
-            System.out.println(" wrong input! Please choose direction: 1.right 2.left 3.forward 4.backwards");
+            System.out.println("Wrong input! Please choose direction: 1.right 2.left 3.forward 4.backwards");
             direction = scanner.nextInt();
         }
         int row = lastPosition.getRow(),col = lastPosition.getCol();
@@ -138,15 +138,15 @@ public class GameWorld {
     }
     private void playersTypes() {
         for (int i = 0; i < 3; i++) { // can be for/while depends on your choice of player number
-            System.out.println("select player character: 1.warrior, 2.mage, 3.archer, 4.no more character ");
+            System.out.println("Select player character: 1.Warrior, 2.Mage, 3.Archer, 4.No more character ");
             Scanner scanner = new Scanner(System.in);
             int playerType = scanner.nextInt();
             while (1 > playerType || playerType > 4) {
-                System.out.println("Wrong input! please choose one of the following options:  1.warrior, 2.mage, 3.archer, 4.no more character");
+                System.out.println("Wrong input! please choose one of the following options:  1.Warrior, 2.Mage, 3.Archer, 4.No more character");
                 playerType = scanner.nextInt();
             }
             if (playerType == 4) {break;}
-            System.out.println("Enter player name : ");
+            System.out.println("Enter player name:");
             String playerName = scanner.next();
             createPlayer(playerType,playerName);
         }

@@ -8,7 +8,7 @@ public enum MagicElement {
         LIGHTNING,
         ACID;
 
-    public boolean isStrongerThan(MagicElement other) {
+    public boolean isElementStrongerThan(MagicElement other) {
         switch (this) {
             case FIRE:
                 return other == ICE;

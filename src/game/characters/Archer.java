@@ -11,7 +11,7 @@ import java.util.Random;
 public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAttacker {
     private double accuracy;
 
-    public Archer(String name, Position pos,int health) {
+    public Archer(String name, Position pos, int health) {
         super(name,pos,health);
         Random rand = new Random();
         accuracy = rand.nextDouble(0.8);
@@ -23,23 +23,29 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
 
     @Override
-    public MagicElement getMagicElement() {
+    public MagicElement getMagicElement() { //non magic element
         return null;
     }
+
     public boolean tryEvade(){
+        //TODO : check if this is correct
+        double enemyEvasion = getEvasionChance();
+        double evadeChance = enemyEvasion * (1 - accuracy);
+        return evadeChance <= 0.25;
 //        double evadeChance = Math.random();
 //        if (evadeChance < this.)
-        return false;
+//        return false;
     }
     @Override
     public void attack(Combatant target) {
         //todo : how to check if manage to evade?
-        if (target.tryEvade()){
-            System.out.println("You are evading.");
+        if (target.isDead())
+        {
+            System.out.println("Target is already dead.");
         }
-        else {
-            target.receiveDamage(getPower(),this);
-        }
+        int damage = this.getPower();
+        target.receiveDamage(damage, this);
+        System.out.println("You attacked the target for " + damage + " damage.");
     }
 
     @Override
@@ -54,17 +60,33 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     @Override
     public void fightRanged(Combatant target) {
-
-    }
-
-    @Override
-    public int getRange() {
-        return 2;
+        //TODO : check if this is correct
+        if (isInRange(this.getPosition(), target.getPosition())){
+            attack(target);
+        }
     }
 
     @Override
     public boolean isInRange(Position self, Position target) {
         //TODO the same code as Mage???!!!!
+        //TODO : check if this is correct
+        return self.distanceTo(target) <= getRange();
+    }
+
+    @Override
+    public int getRange() {
+        //TODO : this method!!!
+        return 2;
+    }
+
+    public boolean equals (Object obj) {
+        if (obj instanceof Archer) {
+            Archer archer = (Archer) obj;
+            return this.getName().equals(archer.getName()) && this.getPosition().equals(archer.getPosition());
+        }
         return false;
+    }
+    public String toString () {
+        return "Archer: " + this.getName() + " at " + this.getPosition();
     }
 }
