@@ -91,10 +91,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     }
     @Override
     public abstract String getDisplaySymbol();
-
     public abstract MagicElement getMagicElement();
-
-    //i dont think its sopposed to be absract cause only mage has magic element and we cant
-    //use it in other classes like warrior or archer
-
+    public abstract void attack(Combatant target);
 }

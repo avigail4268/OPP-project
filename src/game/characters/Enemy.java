@@ -15,11 +15,12 @@ public abstract class Enemy extends AbstractCharacter {
         Random r = new Random();
         this.loot = r.nextInt(100,300);
     }
-    public void defeat () {
-        //TODO: how to add treasure to the map
+    public Treasure defeat () {
         if (this.getHealth() == 0) {
             Treasure treasure = new Treasure(this.getPosition(), false, "Treasure");
+            return treasure;
         }
+        return null;
     }
     public int getLoot() {
         return loot;

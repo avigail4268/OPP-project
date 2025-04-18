@@ -12,4 +12,5 @@ public interface Combatant {
     boolean tryEvade();
     Position getPosition();
     MagicElement getMagicElement();
+    void attack(Combatant target);
 }

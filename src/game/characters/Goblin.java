@@ -5,8 +5,6 @@ import game.combat.MagicElement;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
 import game.map.Position;
-
-import java.util.Map;
 import java.util.Random;
 
 public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {

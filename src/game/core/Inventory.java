@@ -31,7 +31,7 @@ public class Inventory {
     public List<GameItem> getItems() {
         return items;
     }
-
+//todo check if necessary
     public int getItemCount() {
         return items.size();
     }

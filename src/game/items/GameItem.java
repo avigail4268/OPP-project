@@ -32,6 +32,9 @@ public abstract class GameItem implements GameEntity {
         }
         return false;
     }
+    public boolean isBlocksMovement() {
+        return blocksMovement;
+    }
 
 //    public String getDescription() {
 //        return description;

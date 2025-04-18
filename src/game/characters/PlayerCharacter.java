@@ -3,7 +3,10 @@ import game.core.Inventory;
 import game.items.GameItem;
 import game.items.Interactable;
 import game.items.Potion;
+import game.items.PowerPotion;
 import game.map.Position;
+
+import java.util.List;
 
 public abstract class PlayerCharacter extends AbstractCharacter {
 
@@ -31,11 +34,10 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     }
 
     public boolean usePotion() {
-         // if has health potion in inventory use it
-        for (int i = 0; i < inventory.getItemCount(); i++) {
-            if (inventory.isHealthPotion(i)) {
-                // use the potion
-                Interactable potion = (Interactable) inventory.getItems().get(i);
+        // if has health potion in inventory use it
+        List<GameItem> item = inventory.getItems();
+        for (int i = 0; i < item.size(); i++) {
+            if (item.get(i) instanceof Potion potion) {
                 potion.interact(this);
                 return true;
             }
@@ -45,11 +47,13 @@ public abstract class PlayerCharacter extends AbstractCharacter {
 
     public boolean usePowerPotion() {
         // if has power potion in inventory use it
-         for (int i = 0; i < inventory.getItemCount(); i++) {
-             if (inventory.isPowerPotion(i)) {
-                 return true;
-             }
-         }
+        List<GameItem> item = inventory.getItems();
+        for (int i = 0; i < item.size(); i++) {
+            if (item.get(i) instanceof PowerPotion powerPotion) {
+                powerPotion.interact(this);
+                return true;
+            }
+        }
          return false;
     }
 
