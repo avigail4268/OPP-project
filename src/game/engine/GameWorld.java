@@ -40,11 +40,13 @@ public class GameWorld {
             for (int i =0; i<players.size(); i++){
                 //currentPlayer is the player how's need to play now.
                 PlayerCharacter currentPlayer = players.get(i);
+                isVisible(currentPlayer.getPosition());
                 //chooseMovement return the position than the player choose, if available, if not return null.
                 Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
                 if (newPosition != null) {
                     currentPlayer.setPosition(newPosition);
                 }
+
             }
         }
     }
@@ -58,7 +60,6 @@ public class GameWorld {
         System.out.println("6. Use Power Potion");
         Scanner scanner = new Scanner(System.in);
         int action = scanner.nextInt();
-        //check the input is valid.
         while (action < 1 || action > 6) {
             System.out.println("Choose an action:");
             System.out.println("1. Move Up");
@@ -155,7 +156,11 @@ public class GameWorld {
             }
         } else {
             if (isBlocked(entity.getPosition())){
-                System.out.println("There is a Wall! you need to pass it!");
+                System.out.println("There is a Wall! you need to choose another spot!");
+                newPos = chooseMovement(currentPlayer.getPosition(),currentPlayer);
+                if (newPos != null) {
+                    currentPlayer.setPosition(newPos);
+                }
                 return false;
             }
             else if (entity instanceof Interactable item){
@@ -242,6 +247,22 @@ public class GameWorld {
                 }else {
                     createPowerPotion(pos);
                 }
+            }
+        }
+    }
+    private void isVisible (Position otherPos) {
+       checkArrayList(players,otherPos);
+       checkArrayList(enemies,otherPos);
+       checkArrayList(items,otherPos);
+    }
+    private void checkArrayList(List<? extends GameEntity> entities, Position position) {
+        for (int i = 0; i < entities.size(); i++) {
+            GameEntity entity = entities.get(i);
+            if (entity.getPosition().distanceTo(position) <= 2) {
+                entity.setVisible(true);
+            }
+            else {
+                entity.setVisible(false);
             }
         }
     }
