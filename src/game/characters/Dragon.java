@@ -1,5 +1,6 @@
 package game.characters;
 
+import game.combat.MagicElement;
 import game.combat.*;
 import game.map.Position;
 
@@ -9,7 +10,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     public Dragon(Position pos, int health) {
         super(pos,health);
-        element = getMagicElement();
+         this.element = MagicElement.getElement();
         //TODO: check if this is correct, i think the element should be set in the constructor
         // cause its not innitialized
 
@@ -116,6 +117,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     }
     @Override
     public String toString () {
-        return "Dragon at position " + getPosition() + " and magic element " + getMagicElement();
+        return "Dragon at position " + getPosition();
     }
 }

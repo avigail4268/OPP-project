@@ -12,7 +12,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     public Mage(String name,Position pos,int health) {
         super(name,pos,health);
-        this.element = getMagicElement();
+        this.element = MagicElement.getElement();
         //TODO: check if this is correct, i think the element should be set in the constructor
         // cause its not innitialized
     }
@@ -74,5 +74,8 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     @Override
     public boolean isInRange(Position self, Position target) {
         return self.distanceTo(target) <= getRange();
+    }
+    public String toString() {
+        return "Mage at " + getPosition();
     }
 }

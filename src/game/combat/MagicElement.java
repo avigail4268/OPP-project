@@ -22,7 +22,7 @@ public enum MagicElement {
                 return false;
         }
     }
-    public MagicElement getElement() {
+    public static MagicElement getElement() {
         Random r = new Random();
         int type = r.nextInt(3);
         if (type == 0) {

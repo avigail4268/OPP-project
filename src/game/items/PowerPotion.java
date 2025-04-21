@@ -23,11 +23,7 @@ public class PowerPotion extends Potion {
         return false;
     }
     public String toString() {
-        if (getIsUsed()) {
-            return "power potion already used!";
-        }
-        else {
-            return "power potion yet used!";
-        }
+        return "Power potion " + getPosition();
+
     }
 }

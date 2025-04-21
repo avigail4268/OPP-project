@@ -41,6 +41,9 @@ public class GameMap {
         List<GameEntity> entities = grid.get(pos);
         if (entities == null) {
             entities = new ArrayList<>();
+            entities.add(gameEntity);
+            grid.put(pos, entities);
+            return true;
         }
         if (!entities.contains(gameEntity)) {
             entities.add(gameEntity);

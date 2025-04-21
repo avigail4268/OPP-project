@@ -109,7 +109,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     }
     @Override
     public String toString () {
-        return "Orc at position " + getPosition() + "and resistance " + getResistance();
+        return "Orc at position " + getPosition();
     }
 
 

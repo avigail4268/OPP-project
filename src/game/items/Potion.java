@@ -51,11 +51,7 @@ public class Potion extends GameItem implements Interactable {
         return false;
     }
     public String toString() {
-        if (isUsed) {
-            return "health potion already used!";
-        }
-        else {
-            return "health potion not yet used!";
-        }
+        return "Health potion " + getPosition();
+
     }
 }

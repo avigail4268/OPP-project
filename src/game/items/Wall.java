@@ -10,7 +10,7 @@ public class Wall extends GameItem {
 
     @Override
     public String toString() {
-        return "Wall";
+        return "Wall at position " + getPosition();
     }
 
     @Override

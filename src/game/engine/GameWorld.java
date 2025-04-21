@@ -25,8 +25,6 @@ public class GameWorld {
         //if its enemy: attack or not
     }
     private void gameInitialization() {
-        //TODO DELETE PRINT
-        System.out.println("GAME1");
         //create game map
         createGameMap();
         //create player character
@@ -46,8 +44,6 @@ public class GameWorld {
                 currentPlayer.setPosition(newPosition);
             }
             if (currentPlayer.isDead()) {
-                //TODO DELETE PRINT
-                System.out.println("GAME22");
                 players.remove(currentPlayer);
                 System.out.println("Player " + currentPlayer.getName() + " is dead, GAME OVER!");
                 break;
@@ -80,14 +76,14 @@ public class GameWorld {
         }
         Position newPos = lastPosition;
         int row = lastPosition.getRow(),col = lastPosition.getCol();
-        if (action == 1) {
-            newPos = new Position(row,col+1);
-        } else if (action == 2) {
-            newPos = new Position(row,col-1);
-        } else if (action == 3) {
-            newPos = new Position(row+1,col);
-        }else if (action == 4) {
-            newPos = new Position(row-1,col);
+        if (action == 1) { // Move Up
+            newPos = new Position(row - 1, col);
+        } else if (action == 2) { // Move Down
+            newPos = new Position(row + 1, col);
+        } else if (action == 3) { // Move Left
+            newPos = new Position(row, col - 1);
+        } else if (action == 4) { // Move Right
+            newPos = new Position(row, col + 1);
         }
         else if (action == 5) {
            if (currentPlayer.usePotion()){
@@ -112,6 +108,7 @@ public class GameWorld {
         return isAvailable(newPos,currentPlayer);
     }
     private Position isAvailable(Position newPos, PlayerCharacter currentPlayer) {
+        //TODO problematic function!!!!!!
         if (!isInMapBounds(newPos)) {
             System.out.println("Out of game bounds! - Invalid move");
             return null;
@@ -186,8 +183,6 @@ public class GameWorld {
         return false;
     }
     private Enemy findEnemy(GameEntity entity) {
-        //TODO DELETE PRINT
-        System.out.println("GAME33");
         for (Enemy enemy : enemies) {
             if (enemy.equals(entity)) return enemy;
         }
@@ -206,8 +201,6 @@ public class GameWorld {
         this.map = new GameMap(size);
     }
     private void initPlayers() {
-        //TODO DELETE PRINT
-        System.out.println("GAME4");
         // user selects the player type from the available types (archer / warrior / magic)
         // after user select character ask for name and give a random position in GameMap
         this.players = new ArrayList<PlayerCharacter>();
@@ -248,8 +241,6 @@ public class GameWorld {
     private void populateGameMap() {
         // add content to the map - enemies and items.
         // each one will be generated on a random location in the map
-        //TODO DELETE PRINT
-        System.out.println("GAME8");
         this.items = new ArrayList<GameItem>();
         this.enemies = new ArrayList<Enemy>();
         for (int i = 0; i < map.getSize(); i++) {
@@ -272,12 +263,10 @@ public class GameWorld {
                 }
             }
         }
-        //TODO DELETE PRINT
-        System.out.println("Total Enemies: " + enemies.size());
-        System.out.println("Total Items: " + items.size());
-
     }
     private void isVisible (Position otherPos) {
+        System.out.println("You are in position " + otherPos + "!");
+        System.out.println("Look around you: ");
        checkArrayList(players,otherPos);
        checkArrayList(enemies,otherPos);
        checkArrayList(items,otherPos);
@@ -285,8 +274,9 @@ public class GameWorld {
     private void checkArrayList(List<? extends GameEntity> entities, Position position) {
         for (int i = 0; i < entities.size(); i++) {
             GameEntity entity = entities.get(i);
-            if (entity.getPosition().distanceTo(position) <= 2) {
+            if (entity.getPosition().distanceTo(position) <= 2 && !entity.getPosition().equals(position)) {
                 entity.setVisible(true);
+                System.out.println("there is " + entity.toString() + " !");
             }
             else {
                 entity.setVisible(false);
@@ -294,22 +284,16 @@ public class GameWorld {
         }
     }
     private void createPowerPotion(Position pos) {
-        //TODO DELETE PRINT
-        System.out.println("GAMEpOWERpotion");
         PowerPotion powerPotion = new PowerPotion(pos,false,"Power potion",5,1);
         items.add(powerPotion);
         map.addToGrid(pos, powerPotion);
     }
     private void createPotion(Position pos) {
-        //TODO DELETE PRINT
-        System.out.println("GAMEpotion");
         Potion potion = new Potion(pos,false,"Potion",50,10);
         items.add(potion);
         map.addToGrid(pos, potion);
     }
     private void createWall(Position pos) {
-        //TODO DELETE PRINT
-        System.out.println("CREATE WALL");
         Wall wall = new Wall(pos,true,"Wall");
         items.add(wall);
         map.addToGrid(pos, wall);
@@ -324,8 +308,6 @@ public class GameWorld {
         return false;
     }
     public void createEnemy(Position pos){
-        //TODO DELETE PRINT
-        System.out.println("CREATE ENEMY");
         double random = Math.random();
         Enemy enemy;
         if (random <= 1.0/3.0){
