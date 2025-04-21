@@ -16,37 +16,45 @@ public class GameWorld {
     private List <GameItem> items;
     private GameMap map;
 
-    public GameWorld(List<GameItem> items) {
+    public GameWorld() {
         //initialize bord: players, enemy's and items.
         gameInitialization();
         //every player in his turn choose the direction, we need to check if this position available
         //if not available the player have 3 choices:
         //if its item: take it, add it to inventory.
         //if its enemy: attack or not
-        //todo  if its another payer i have no idea.
-        startGame();
     }
     private void gameInitialization() {
+        //TODO DELETE PRINT
+        System.out.println("GAME1");
         //create game map
-        creatGameMap();
+        createGameMap();
         //create player character
         initPlayers();
         //create game content
         populateGameMap();
     }
-    private void startGame() {
-        // todo the loop should end when all the players is dead or one win?
+    public void startGame() {
+        //game loop ends when the player is dead or achieve 500 points
         while (true){
-            for (int i =0; i<players.size(); i++){
-                //currentPlayer is the player how's need to play now.
-                PlayerCharacter currentPlayer = players.get(i);
-                isVisible(currentPlayer.getPosition());
-                //chooseMovement return the position than the player choose, if available, if not return null.
-                Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
-                if (newPosition != null) {
-                    currentPlayer.setPosition(newPosition);
-                }
-
+            //currentPlayer is the player how's need to play now.
+            PlayerCharacter currentPlayer = players.getFirst();
+            isVisible(currentPlayer.getPosition());
+            //chooseMovement return the position than the player choose, if available, if not return null.
+            Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
+            if (newPosition != null) {
+                currentPlayer.setPosition(newPosition);
+            }
+            if (currentPlayer.isDead()) {
+                //TODO DELETE PRINT
+                System.out.println("GAME22");
+                players.remove(currentPlayer);
+                System.out.println("Player " + currentPlayer.getName() + " is dead, GAME OVER!");
+                break;
+            }
+            if (currentPlayer.getTreasurePoints() >= 500) {
+                System.out.println("Player " + currentPlayer.getName() + " achieve 500 points and WON THE GAME!");
+                break;
             }
         }
     }
@@ -61,7 +69,7 @@ public class GameWorld {
         Scanner scanner = new Scanner(System.in);
         int action = scanner.nextInt();
         while (action < 1 || action > 6) {
-            System.out.println("Choose an action:");
+            System.out.println("Invalid input, Choose an action:");
             System.out.println("1. Move Up");
             System.out.println("2. Move Down");
             System.out.println("3. Move Left");
@@ -109,11 +117,17 @@ public class GameWorld {
             return null;
         }
         else if (map.isEmpty(newPos)) {
+            //TODO DELETE PRINT
+            System.out.println("ALWAYS");
             return newPos;
         }
         else {
+            //TODO DELETE PRINT
+            System.out.println("ARRIVE HERE");
             boolean move = checkPosition(newPos,currentPlayer);
             if (move) {
+                //TODO DELETE PRINT
+                System.out.println("OR MAYBE HERE");
                 return newPos;
             } else {
                 return null;
@@ -129,7 +143,6 @@ public class GameWorld {
     private boolean checkPosition(Position newPos,PlayerCharacter currentPlayer) {
         // currently for simplicity pretending there is one entity at each position
         GameEntity entity = map.getEntityInPosition(newPos).getFirst();
-        Scanner scanner = new Scanner(System.in);
         if (entity instanceof PlayerCharacter) {
             // TODO what happens here
             return false;
@@ -165,46 +178,52 @@ public class GameWorld {
             }
             else if (entity instanceof Interactable item){
                 item.interact(currentPlayer);
+                //TODO DELETE PRINT
+                System.out.println("DEFENDER");
                 return true;
             }
         }
         return false;
     }
     private Enemy findEnemy(GameEntity entity) {
+        //TODO DELETE PRINT
+        System.out.println("GAME33");
         for (Enemy enemy : enemies) {
             if (enemy.equals(entity)) return enemy;
         }
         return null;
     }
-    private void creatGameMap() {
+    private void createGameMap() {
         // ask for user input and create map
         System.out.println("Enter map size (minimum size is 10x10):");
         Scanner scanner = new Scanner(System.in);
         int size;
         size = scanner.nextInt();
-        //check map size
+        while (size < 10) {
+            System.out.println("Invalid input! please enter a number greater than 10");
+            size = scanner.nextInt();
+        }
         this.map = new GameMap(size);
     }
     private void initPlayers() {
+        //TODO DELETE PRINT
+        System.out.println("GAME4");
         // user selects the player type from the available types (archer / warrior / magic)
         // after user select character ask for name and give a random position in GameMap
         this.players = new ArrayList<PlayerCharacter>();
         playersTypes();// init players
     }
     private void playersTypes() {
-        for (int i = 0; i < 3; i++) { // can be for/while depends on your choice of player number
-            System.out.println("Select player character: 1.Warrior, 2.Mage, 3.Archer, 4.No more character ");
-            Scanner scanner = new Scanner(System.in);
-            int playerType = scanner.nextInt();
-            while (1 > playerType || playerType > 4) {
-                System.out.println("Wrong input! please choose one of the following options:  1.Warrior, 2.Mage, 3.Archer, 4.No more character");
-                playerType = scanner.nextInt();
-            }
-            if (playerType == 4) {break;}
-            System.out.println("Enter player name:");
-            String playerName = scanner.next();
-            createPlayer(playerType,playerName);
+        System.out.println("Select player character: 1.Warrior, 2.Mage, 3.Archer");
+        Scanner scanner = new Scanner(System.in);
+        int playerType = scanner.nextInt();
+        while (1 > playerType || playerType > 3) {
+            System.out.println("Wrong input! please choose one of the following options:  1.Warrior, 2.Mage, 3.Archer");
+            playerType = scanner.nextInt();
         }
+        System.out.println("Enter player name:");
+        String playerName = scanner.next();
+        createPlayer(playerType,playerName);
     }
     private void createPlayer(int playerType, String playerName) {
         PlayerCharacter player;
@@ -221,12 +240,16 @@ public class GameWorld {
             players.add(player);
         }
         catch (RuntimeException e) {
-            //TODO
+            System.out.println("No empty position found on the board");
+            System.out.println("Please try again");
+            playersTypes();
         }
     }
     private void populateGameMap() {
         // add content to the map - enemies and items.
         // each one will be generated on a random location in the map
+        //TODO DELETE PRINT
+        System.out.println("GAME8");
         this.items = new ArrayList<GameItem>();
         this.enemies = new ArrayList<Enemy>();
         for (int i = 0; i < map.getSize(); i++) {
@@ -241,14 +264,18 @@ public class GameWorld {
                 } else if (random <= 0.7) {
                      createEnemy(pos);
                 } else if (random < 0.8) {
-                    creatWall(pos);
+                    createWall(pos);
                 } else if(random < 0.95) {
-                    creatPotion(pos);
+                    createPotion(pos);
                 }else {
                     createPowerPotion(pos);
                 }
             }
         }
+        //TODO DELETE PRINT
+        System.out.println("Total Enemies: " + enemies.size());
+        System.out.println("Total Items: " + items.size());
+
     }
     private void isVisible (Position otherPos) {
        checkArrayList(players,otherPos);
@@ -267,16 +294,22 @@ public class GameWorld {
         }
     }
     private void createPowerPotion(Position pos) {
+        //TODO DELETE PRINT
+        System.out.println("GAMEpOWERpotion");
         PowerPotion powerPotion = new PowerPotion(pos,false,"Power potion",5,1);
         items.add(powerPotion);
         map.addToGrid(pos, powerPotion);
     }
-    private void creatPotion(Position pos) {
+    private void createPotion(Position pos) {
+        //TODO DELETE PRINT
+        System.out.println("GAMEpotion");
         Potion potion = new Potion(pos,false,"Potion",50,10);
         items.add(potion);
         map.addToGrid(pos, potion);
     }
-    private void creatWall(Position pos) {
+    private void createWall(Position pos) {
+        //TODO DELETE PRINT
+        System.out.println("CREATE WALL");
         Wall wall = new Wall(pos,true,"Wall");
         items.add(wall);
         map.addToGrid(pos, wall);
@@ -291,14 +324,16 @@ public class GameWorld {
         return false;
     }
     public void createEnemy(Position pos){
+        //TODO DELETE PRINT
+        System.out.println("CREATE ENEMY");
         double random = Math.random();
         Enemy enemy;
         if (random <= 1.0/3.0){
-            enemy= new Dragon(pos,50);
+            enemy = new Dragon(pos,50);
         } else if (random <= 2.0/3.0) {
             enemy = new Orc(pos,50);
         }else {
-            enemy =new Goblin(pos,50);
+            enemy = new Goblin(pos,50);
         }
         enemies.add(enemy);
         map.addToGrid(pos,enemy);

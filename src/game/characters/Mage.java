@@ -28,6 +28,11 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     @Override
+    public void attack(Combatant target) {
+        castSpell(target);
+    }
+
+    @Override
     public void calculateMagicDamage(Combatant target) {
         //TODO: check if this is correct
         double totalDamage = this.getPower() * 1.5;
@@ -62,7 +67,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     @Override
-    //TODO: how??????
     public int getRange() {
         return 2;
     }

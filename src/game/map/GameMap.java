@@ -33,7 +33,7 @@ public class GameMap {
                     return pos;
                 }
             }
-            throw new RuntimeException("No empty position found on the board");
+            throw new RuntimeException ("No empty position found on the board");
     }
 
     public boolean addToGrid(Position pos, GameEntity gameEntity){
@@ -44,13 +44,17 @@ public class GameMap {
         }
         if (!entities.contains(gameEntity)) {
             entities.add(gameEntity);
+            grid.put(pos, entities);
+            return true;
         }
-        grid.put(pos, entities);
-        return true;
+        return false;
     }
 
     public List<GameEntity> getEntityInPosition(Position pos) {
-        List<GameEntity> entities = grid.get(pos);
-        return entities;
+        // TODO CHECK THE RESULT
+//        List<GameEntity> entities = grid.get(pos);
+//        return entities;
+        return grid.getOrDefault(pos, new ArrayList<>());
+
     }
 }
