@@ -76,6 +76,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         return self.distanceTo(target) <= getRange();
     }
     public String toString() {
-        return "Mage at " + getPosition();
+        return "Mage: " + this.getName() + " at " + getPosition();
     }
 }
