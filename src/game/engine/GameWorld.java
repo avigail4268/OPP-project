@@ -109,14 +109,17 @@ public class GameWorld {
     }
     private Position isAvailable(Position newPos, PlayerCharacter currentPlayer) {
         if (!isInMapBounds(newPos)) {
+            //TODO delete
             System.out.println("Out of game bounds! - Invalid move");
             return null;
         }
         else if (map.isEmpty(newPos)) {
+            //TODO delete
             System.out.println("empty place");
             return newPos;
         }
         else {
+            //TODO delete
             System.out.println("have something in this position");
             boolean move = checkPosition(newPos,currentPlayer);
             if (move) {
@@ -264,7 +267,7 @@ public class GameWorld {
         }
     }
     private void isVisible (PlayerCharacter currentPlayer) {
-        System.out.println("You are in position " + currentPlayer.getPosition() + " !");
+        System.out.println(currentPlayer + " !");
         System.out.println("Look around you: ");
         checkArrayList(players,currentPlayer);
         checkArrayList(enemies,currentPlayer);
