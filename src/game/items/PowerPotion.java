@@ -9,8 +9,10 @@ public class PowerPotion extends Potion {
     }
     public void interact(PlayerCharacter c) {
         if(!getIsUsed()){
-            c.setPower(this.getIncreaseAmount());
+            int amount = this.getIncreaseAmount();
+            c.setPower(amount);
             this.setIsUsed();
+            System.out.println("You power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
         }
     }
 

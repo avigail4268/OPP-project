@@ -33,4 +33,8 @@ public class Position {
     public String toString(){
         return "("+row+","+col+")";
     }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(row, col);
+    }
 }

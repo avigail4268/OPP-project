@@ -11,9 +11,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     public Dragon(Position pos, int health) {
         super(pos,health);
          this.element = MagicElement.getElement();
-        //TODO: check if this is correct, i think the element should be set in the constructor
-        // cause its not innitialized
-
     }
 
     @Override
@@ -77,7 +74,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             if (isCriticalHit())
             {
                 target.receiveDamage((int) powerAttack * 2, this);
-
+                System.out.println("The dragon attack back with Critical hit!");
             }
             else {
                 target.receiveDamage((int) powerAttack, this);
@@ -92,7 +89,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     @Override
     public void attack(Combatant target) {
-        //TODO: check if this is correct
         if (isInMeleeRange(this.getPosition(), target.getPosition())) {
             castSpell(target);
         }

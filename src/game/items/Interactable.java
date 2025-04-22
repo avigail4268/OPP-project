@@ -4,4 +4,5 @@ import game.characters.PlayerCharacter;
 
 public interface Interactable {
     void interact(PlayerCharacter c);
+    void collect(PlayerCharacter c);
 }

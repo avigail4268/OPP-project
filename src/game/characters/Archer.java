@@ -32,13 +32,9 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         double enemyEvasion = getEvasionChance();
         double evadeChance = enemyEvasion * (1 - accuracy);
         return evadeChance <= 0.25;
-//        double evadeChance = Math.random();
-//        if (evadeChance < this.)
-//        return false;
     }
     @Override
     public void attack(Combatant target) {
-        //todo : how to check if manage to evade?
         if (target.isDead())
         {
             System.out.println("Target is already dead.");

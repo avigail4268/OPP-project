@@ -52,12 +52,21 @@ public class GameMap {
         }
         return false;
     }
+    public boolean removeFromGrid(Position pos, GameEntity gameEntity){
+        List<GameEntity> entities = grid.get(pos);
+        if (entities == null) {
+            return false;
+        }
+        if (!entities.contains(gameEntity)) {
+            return false;
+        }
+        grid.remove(pos);
+        return true;
+    }
 
     public List<GameEntity> getEntityInPosition(Position pos) {
         // TODO CHECK THE RESULT
-//        List<GameEntity> entities = grid.get(pos);
-//        return entities;
-        return grid.getOrDefault(pos, new ArrayList<>());
-
+        List<GameEntity> entities = grid.get(pos);
+        return entities;
     }
 }

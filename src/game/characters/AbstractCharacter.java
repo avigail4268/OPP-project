@@ -36,7 +36,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
 
     @Override
     public boolean isDead() {
-        return health == 0;
+        return health <= 0;
     }
 
     @Override

@@ -16,7 +16,7 @@ public abstract class Enemy extends AbstractCharacter {
         this.loot = r.nextInt(100,300);
     }
     public Treasure defeat () {
-        if (this.getHealth() == 0) {
+        if (this.isDead()) {
             Treasure treasure = new Treasure(this.getPosition(), false, "Treasure");
             return treasure;
         }

@@ -37,7 +37,7 @@ public class GameWorld {
         while (true){
             //currentPlayer is the player how's need to play now.
             PlayerCharacter currentPlayer = players.getFirst();
-            isVisible(currentPlayer.getPosition());
+            isVisible(currentPlayer);
             //chooseMovement return the position than the player choose, if available, if not return null.
             Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
             if (newPosition != null) {
@@ -108,23 +108,18 @@ public class GameWorld {
         return isAvailable(newPos,currentPlayer);
     }
     private Position isAvailable(Position newPos, PlayerCharacter currentPlayer) {
-        //TODO problematic function!!!!!!
         if (!isInMapBounds(newPos)) {
             System.out.println("Out of game bounds! - Invalid move");
             return null;
         }
         else if (map.isEmpty(newPos)) {
-            //TODO DELETE PRINT
-            System.out.println("ALWAYS");
+            System.out.println("empty place");
             return newPos;
         }
         else {
-            //TODO DELETE PRINT
-            System.out.println("ARRIVE HERE");
+            System.out.println("have something in this position");
             boolean move = checkPosition(newPos,currentPlayer);
             if (move) {
-                //TODO DELETE PRINT
-                System.out.println("OR MAYBE HERE");
                 return newPos;
             } else {
                 return null;
@@ -149,8 +144,9 @@ public class GameWorld {
             Enemy enemy = findEnemy(entity);
             CombatSystem combatSystem = new CombatSystem();
             combatSystem.resolveCombat(currentPlayer,enemy);
-            if (currentPlayer.isDead()){
+            if (currentPlayer.isDead()) {
                 players.remove(currentPlayer);
+                map.removeFromGrid(newPos,currentPlayer);
                 return false;
             }
             else if (enemy.isDead()){
@@ -159,6 +155,7 @@ public class GameWorld {
                 items.add(replacement);
                 map.addToGrid(replacement.getPosition(),replacement);
                 enemies.remove(enemy);
+                map.removeFromGrid(newPos,enemy);
                 return true;
             }
             else {
@@ -174,9 +171,11 @@ public class GameWorld {
                 return false;
             }
             else if (entity instanceof Interactable item){
-                item.interact(currentPlayer);
-                //TODO DELETE PRINT
-                System.out.println("DEFENDER");
+                item.collect(currentPlayer);
+                if (item instanceof Potion){
+                    items.remove(item);
+                }
+                map.removeFromGrid(newPos,entity);
                 return true;
             }
         }
@@ -264,19 +263,19 @@ public class GameWorld {
             }
         }
     }
-    private void isVisible (Position otherPos) {
-        System.out.println("You are in position " + otherPos + "!");
+    private void isVisible (PlayerCharacter currentPlayer) {
+        System.out.println("You are in position " + currentPlayer.getPosition() + " !");
         System.out.println("Look around you: ");
-       checkArrayList(players,otherPos);
-       checkArrayList(enemies,otherPos);
-       checkArrayList(items,otherPos);
+        checkArrayList(players,currentPlayer);
+        checkArrayList(enemies,currentPlayer);
+        checkArrayList(items,currentPlayer);
     }
-    private void checkArrayList(List<? extends GameEntity> entities, Position position) {
+    private void checkArrayList(List<? extends GameEntity> entities, PlayerCharacter currentPlayer) {
         for (int i = 0; i < entities.size(); i++) {
             GameEntity entity = entities.get(i);
-            if (entity.getPosition().distanceTo(position) <= 2 && !entity.getPosition().equals(position)) {
+            if (entity.getPosition().distanceTo(currentPlayer.getPosition()) <= 2 && !entity.equals(currentPlayer)) {
                 entity.setVisible(true);
-                System.out.println("there is " + entity.toString() + " !");
+                System.out.println("there is " + entity + " !");
             }
             else {
                 entity.setVisible(false);

@@ -51,13 +51,9 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     }
 
     @Override
-    //TODO : check if this is correct and possible todo
     public void attack(Combatant target) {
-        if (target.tryEvade()) {
-            System.out.println("The target evaded the attack!");
-        }
-        else if (isCriticalHit()) {
-            System.out.println("Critical hit!");
+        if (isCriticalHit()) {
+            System.out.println("The goblin attack back with Critical hit!");
             target.receiveDamage(getPower() * 2, this);
         } else {
             target.receiveDamage(getPower(), this);

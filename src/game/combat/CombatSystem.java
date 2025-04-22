@@ -5,18 +5,15 @@ import game.map.Position;
 
 public class CombatSystem {
     public void resolveCombat(Combatant attacker, Combatant defender) {
-        //TODO DELETE PRINT
-        System.out.println("ATTACKING");
         if (isInRange(attacker, defender)) {
-            //TODO DELETE PRINT
-            System.out.println("DEFENDER");
             attacker.attack(defender);
             defender.attack(attacker);
             if (attacker.isDead()) {
                 System.out.println("Game Over! you are dead!");
-            } else {
+            }else if (defender.isDead()) {
                 System.out.println("Enemy is dead! you won the fight!");
-                System.out.println("DEAD?");
+            }else {
+                System.out.println("You hit your enemy but not hard enough,he is still stand in is place.");
             }
         }
         else {

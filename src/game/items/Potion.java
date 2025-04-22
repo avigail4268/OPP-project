@@ -37,7 +37,11 @@ public class Potion extends GameItem implements Interactable {
             int amount = Math.min(this.increaseAmount, 100 - c.getHealth());
             c.heal(amount);
             setIsUsed();
+            System.out.println("You health was " + (c.getHealth()-amount) + " now is " + (c.getHealth()));
         }
+    }
+    public void collect(PlayerCharacter c) {
+        c.addToInventory(this);
     }
     protected int getIncreaseAmount() {
         return increaseAmount;
