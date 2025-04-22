@@ -41,12 +41,11 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         }
         int damage = this.getPower();
         target.receiveDamage(damage, this);
-        System.out.println("You attacked the target for " + damage + " damage.");
+        System.out.println("You attacked your enemy for"  + damage + " damage.");
     }
 
     @Override
     public boolean isCriticalHit() {
-        // todo : double code??????
         double rand = Math.random();
         if (rand <= 0.1){
             return true;
