@@ -53,9 +53,12 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     @Override
     public void attack(Combatant target) {
         if (isCriticalHit()) {
-            System.out.println("The goblin attack back with Critical hit!");
-            target.receiveDamage(getPower() * 2, this);
-        } else {
+            if(target.receiveDamage(getPower() * 2, this))
+            {
+                System.out.println("The goblin attack back with Critical hit!");
+            }
+        }
+        else {
             target.receiveDamage(getPower(), this);
         }
     }
@@ -76,6 +79,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     }
     @Override
     public String toString () {
-        return "Goblin at this position " + this.getPosition();
+        return " Goblin at this position " + this.getPosition();
     }
 }

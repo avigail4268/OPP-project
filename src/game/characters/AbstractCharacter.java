@@ -23,10 +23,12 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     public boolean receiveDamage(int amount, Combatant source) {
         //TODO recheck
         if (tryEvade()) {
-            System.out.println("You have evaded the attack!");
+            System.out.println(this.getDisplaySymbol() + " You have evaded the attack!");
+            return false;
         }
         else
             this.health -= amount;
+        return true;
     }
 
     @Override

@@ -37,11 +37,11 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     public void attack(Combatant target) {
         if (target.isDead())
         {
-            System.out.println("Target is already dead.");
+            System.out.println("Target is dead.");
         }
         int damage = this.getPower();
         target.receiveDamage(damage, this);
-        System.out.println("You attacked your enemy for"  + damage + " damage.");
+        System.out.println(this.getName() + " attacked your enemy for"  + damage + " damage.");
     }
 
     @Override

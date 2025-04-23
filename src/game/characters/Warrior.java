@@ -50,8 +50,11 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
             return;
         }
         int damage = this.getPower();
-        target.receiveDamage(damage, this);
-        System.out.println("You attacked your enemy for " + damage + " damage.");
+        if (target.receiveDamage(damage, this))
+        {
+            System.out.println(this.getName() + " attacked your enemy for " + damage + " damage.");
+
+        }
     }
 
     @Override

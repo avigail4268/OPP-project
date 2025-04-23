@@ -40,8 +40,14 @@ public class GameWorld {
             isVisible(currentPlayer);
             //chooseMovement return the position than the player choose, if available, if not return null.
             Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
+            System.out.println("current health: " + currentPlayer.getHealth());
+            System.out.println("Treasure points: " + currentPlayer.getTreasurePoints());
             if (newPosition != null) {
+                Position lastPosition = currentPlayer.getPosition();
                 currentPlayer.setPosition(newPosition);
+                map.removeFromGrid(lastPosition, currentPlayer);
+                map.addToGrid(newPosition, currentPlayer);
+
             }
             if (currentPlayer.isDead()) {
                 players.remove(currentPlayer);
@@ -136,48 +142,50 @@ public class GameWorld {
     }
     private boolean checkPosition(Position newPos,PlayerCharacter currentPlayer) {
         // currently for simplicity pretending there is one entity at each position
-        GameEntity entity = map.getEntityInPosition(newPos).getFirst();
-        if (entity instanceof PlayerCharacter) {
-            // TODO what happens here
-            return false;
-        }
-        else if (entity instanceof Enemy) {
-            // check enemy type
-            Enemy enemy = findEnemy(entity);
-            CombatSystem combatSystem = new CombatSystem();
-            combatSystem.resolveCombat(currentPlayer,enemy);
-            if (currentPlayer.isDead()) {
-                players.remove(currentPlayer);
-                map.removeFromGrid(newPos,currentPlayer);
+        List <GameEntity> entity = map.getEntityInPosition(newPos);
+        for (int i = 0; i < entity.size(); i++) {
+            if (entity.get(i) instanceof PlayerCharacter) {
+                // TODO what happens here
                 return false;
             }
-            else if (enemy.isDead()){
-                //when enemy is dead we need to add treasure in his position instead
-                Treasure replacement = enemy.defeat();
-                currentPlayer.updateTreasurePoint(enemy.getLoot());
-                items.add(replacement);
-                map.addToGrid(replacement.getPosition(),replacement);
-                enemies.remove(enemy);
-                map.removeFromGrid(newPos,enemy);
-                return true;
-            }
-            else {
-                return false;
-            }
-        } else {
-            if (isBlocked(entity.getPosition())){
-                System.out.println("There is a Wall! you need to choose another spot!");
-                newPos = chooseMovement(currentPlayer.getPosition(),currentPlayer);
-                if (newPos != null) {
-                    currentPlayer.setPosition(newPos);
+            else if (entity.get(i) instanceof Enemy) {
+                // check enemy type
+                Enemy enemy = findEnemy(entity.get(i));
+                CombatSystem combatSystem = new CombatSystem();
+                combatSystem.resolveCombat(currentPlayer,enemy);
+                if (currentPlayer.isDead()) {
+                    players.remove(currentPlayer);
+                    map.removeFromGrid(newPos,currentPlayer);
+                    return false;
                 }
-                return false;
-            }
-            else if (entity instanceof Interactable item){
-                item.collect(currentPlayer);
-                items.remove(item);
-                map.removeFromGrid(newPos,entity);
-                return true;
+                else if (enemy.isDead()){
+                    //when enemy is dead we need to add treasure in his position instead
+                    Treasure replacement = enemy.defeat();
+                    currentPlayer.updateTreasurePoint(enemy.getLoot());
+                    enemies.remove(enemy);
+                    map.removeFromGrid(newPos,enemy);
+                    items.add(replacement);
+                    map.addToGrid(replacement.getPosition(),replacement);
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            } else {
+                if (isBlocked(entity.get(i).getPosition())){
+                    System.out.println("There is a Wall! you need to choose another spot!");
+                    newPos = chooseMovement(currentPlayer.getPosition(),currentPlayer);
+                    if (newPos != null) {
+                        currentPlayer.setPosition(newPos);
+                    }
+                    return false;
+                }
+                else if (entity.get(i) instanceof Interactable item){
+                    item.collect(currentPlayer);
+                    items.remove(item);
+                    map.removeFromGrid(newPos,entity.get(i));
+                    return true;
+                }
             }
         }
         return false;

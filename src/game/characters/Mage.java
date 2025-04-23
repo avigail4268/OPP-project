@@ -38,13 +38,16 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         double totalDamage = this.getPower() * 1.5;
         MagicElement targetElement = target.getMagicElement();
         if (targetElement != null) {
+            System.out.println("mage calcmagic, attack with magic");
             if (this.element.isElementStrongerThan(targetElement)) {
                 totalDamage *= 1.2;
             } else if (targetElement.isElementStrongerThan(this.element)) {
                 totalDamage *= 0.8;
             }
         }
-        target.receiveDamage((int) totalDamage, this);
+        if (target.receiveDamage((int) totalDamage, this)) {
+            System.out.println(this.getName() + " attacked the enemy for " + (int) totalDamage + " damage.");
+        }
     }
 
     @Override

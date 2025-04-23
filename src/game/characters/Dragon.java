@@ -27,17 +27,30 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     //TODO: check if this is correct
     public void calculateMagicDamage(Combatant target) {
         if (target.getMagicElement() == null) {
-            return;
+            if(target.receiveDamage(this.getPower(), this)) {
+                System.out.println("dragon calcmagic, attack physical ");
+            }
         }
-        if (this.element.isElementStrongerThan(target.getMagicElement())) {
-            double totalDamage = this.getPower() * 1.5;
-            target.receiveDamage((int) totalDamage, this);
-        } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
-            double totalDamage = this.getPower() * 0.8;
-            target.receiveDamage((int) totalDamage, this);
-        } else {
-            double totalDamage = this.getPower();
-            target.receiveDamage((int) totalDamage, this);
+        else {
+            if (this.element.isElementStrongerThan(target.getMagicElement())) {
+                double totalDamage = this.getPower() * 1.5;
+                if (target.receiveDamage((int) totalDamage, this))
+                {
+                    System.out.println("dragon calcmagic, attack magic");
+
+                }
+            } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
+                double totalDamage = this.getPower() * 0.8;
+                if (target.receiveDamage((int) totalDamage, this))
+                {
+                    System.out.println("dragon calcmagic, attack magic");
+
+                }
+            } else {
+                System.out.println("dragon calcmagic, attack magic");
+                double totalDamage = this.getPower();
+                target.receiveDamage((int) totalDamage, this);
+            }
         }
     }
 

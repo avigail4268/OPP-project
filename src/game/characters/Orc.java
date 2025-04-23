@@ -22,27 +22,31 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         if (!this.isDead()) {
             if (source.getMagicElement() != null) {
                 double magicDamage = amount * (1 - resistance);
-                super.receiveDamage((int) magicDamage, source);
+                if (!super.receiveDamage((int) magicDamage, source))
+                {
+                    System.out.println("Orc evaded the attack!");
+                    return false;
+                }
+                else {
+                    return true;
+                }
             } else {
-                super.receiveDamage(amount, source);
+                if (!super.receiveDamage(amount, source)) {
+                    System.out.println("Orc evaded the attack!");
+                    return false;
+                }
+                else {
+                    return true;
+                }
             }
         }
         else {
             System.out.println("Orc is dead.");
             this.defeat();
-            //todo
-            if(source instanceof Mage mage)
-            {
-                mage.updateTreasurePoint(this.getLoot());
+            if (source instanceof PlayerCharacter player) {
+                player.updateTreasurePoint(this.getLoot());
             }
-            else if (source instanceof Archer archer)
-            {
-                archer.updateTreasurePoint(this.getLoot());
-            }
-            else if (source instanceof Warrior warrior)
-            {
-                warrior.updateTreasurePoint(this.getLoot());
-            }
+            return false;
         }
     }
     public double getResistance() {
@@ -77,11 +81,15 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     @Override
     public void attack(Combatant target) {
         if (isCriticalHit()) {
-            target.receiveDamage(getPower() * 2, this);
-            System.out.println("The orc attack back with Critical hit!");
+            if(target.receiveDamage(getPower() * 2, this))
+            {
+                System.out.println("The orc attack back with Critical hit!");
+            }
         }
         else {
-            target.receiveDamage(getPower(), this);
+            if (target.receiveDamage(getPower(), this)) {
+                System.out.println("You attacked your enemy for " + getPower() + " damage.");
+            }
         }
     }
     @Override
