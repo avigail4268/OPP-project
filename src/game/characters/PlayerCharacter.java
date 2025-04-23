@@ -39,9 +39,11 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         for (int i = 0; i < item.size(); i++) {
             if (item.get(i) instanceof Potion potion) {
                 potion.interact(this);
+                inventory.removeItem(item.get(i));
                 return true;
             }
         }
+
         return false;
     }
 

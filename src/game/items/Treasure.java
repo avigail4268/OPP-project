@@ -28,8 +28,7 @@ public class Treasure extends GameItem implements Interactable {
         if (random <= 1.0/3.0) {
             description = "Health potion";
             Potion potion = new Potion(this.getPosition(),false,description,50,10);
-            c.addToInventory(potion);
-            System.out.println("Health potion added to your inventory!");
+            potion.collect(c);
             this.collected = true;
         }
         else if (random <= 1.0/2.0 + 1.0/3.0) {
@@ -40,14 +39,14 @@ public class Treasure extends GameItem implements Interactable {
         else {
             description = "Power potion";
             PowerPotion powerPotion = new PowerPotion(this.getPosition(),false,description,5,1);
-            c.addToInventory(powerPotion);
-            System.out.println("Power potion added to your inventory!");
+            powerPotion.collect(c);
             this.collected = true;
         }
     }
     public void collect(PlayerCharacter c) {
         this.interact(c);
     }
+
     @Override
     public String toString() {
         return "treasure in position " + getPosition();

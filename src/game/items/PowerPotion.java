@@ -15,6 +15,10 @@ public class PowerPotion extends Potion {
             System.out.println("You power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
         }
     }
+    public void collect(PlayerCharacter c) {
+        c.addToInventory(this);
+        System.out.println("Added power potion to your inventory! ");
+    }
 
     @Override
     public boolean equals(Object obj) {

@@ -16,7 +16,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         super(pos,health);
         resistance = new Random().nextDouble(0.5);
     }
-    public void receiveDamage(int amount, Combatant source) {
+    public boolean receiveDamage(int amount, Combatant source) {
         //TODO: check if this is correct
         //if orc is not dead calc the damage if he is dead then give loot
         if (!this.isDead()) {
@@ -30,6 +30,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         else {
             System.out.println("Orc is dead.");
             this.defeat();
+            //todo
             if(source instanceof Mage mage)
             {
                 mage.updateTreasurePoint(this.getLoot());

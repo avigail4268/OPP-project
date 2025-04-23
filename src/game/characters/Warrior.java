@@ -63,9 +63,10 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         return false;
     }
 
-    public void receiveDamage (int amount, Combatant source) {
+    public boolean receiveDamage (int amount, Combatant source) {
         if (tryEvade()) {
             System.out.println("You have evaded the attack!");
+            return false;
         }
         else {
             if (isCriticalHit()) {
@@ -73,6 +74,7 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
             }
             int damage =(int)(amount* (1 - Math.min(0.6, defence/200.0)));
             this.setHealth(this.getHealth() - damage);
+            return true;
         }
     }
 

@@ -20,7 +20,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         this.visible = true;
     }
     @Override
-    public void receiveDamage(int amount, Combatant source) {
+    public boolean receiveDamage(int amount, Combatant source) {
         //TODO recheck
         if (tryEvade()) {
             System.out.println("You have evaded the attack!");

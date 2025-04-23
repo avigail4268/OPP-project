@@ -42,6 +42,7 @@ public class Potion extends GameItem implements Interactable {
     }
     public void collect(PlayerCharacter c) {
         c.addToInventory(this);
+        System.out.println("Added potion to your inventory! ");
     }
     protected int getIncreaseAmount() {
         return increaseAmount;

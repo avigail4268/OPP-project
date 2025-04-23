@@ -109,7 +109,6 @@ public class GameWorld {
     }
     private Position isAvailable(Position newPos, PlayerCharacter currentPlayer) {
         if (!isInMapBounds(newPos)) {
-            //TODO delete
             System.out.println("Out of game bounds! - Invalid move");
             return null;
         }
@@ -155,6 +154,7 @@ public class GameWorld {
             else if (enemy.isDead()){
                 //when enemy is dead we need to add treasure in his position instead
                 Treasure replacement = enemy.defeat();
+                currentPlayer.updateTreasurePoint(enemy.getLoot());
                 items.add(replacement);
                 map.addToGrid(replacement.getPosition(),replacement);
                 enemies.remove(enemy);
@@ -175,9 +175,7 @@ public class GameWorld {
             }
             else if (entity instanceof Interactable item){
                 item.collect(currentPlayer);
-                if (item instanceof Potion){
-                    items.remove(item);
-                }
+                items.remove(item);
                 map.removeFromGrid(newPos,entity);
                 return true;
             }
