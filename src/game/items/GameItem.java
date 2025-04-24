@@ -25,6 +25,10 @@ public abstract class GameItem implements GameEntity {
         this.visible = visible;
     }
     @Override
+    public boolean getVisible() {
+        return visible;
+    }
+    @Override
     public boolean setPosition(Position newPos) {
         if (newPos != null) {
             this.position = newPos;

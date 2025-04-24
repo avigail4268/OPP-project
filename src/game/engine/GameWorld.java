@@ -11,6 +11,7 @@ import game.map.Position;
 
 
 public class GameWorld {
+
     public GameWorld() {
         //initialize bord: players, enemy's and items.
         gameInitialization();
@@ -31,8 +32,9 @@ public class GameWorld {
         //game loop ends when the player is dead or achieve 500 points
         while (true){
             //currentPlayer is the player how's need to play now.
-            PlayerCharacter currentPlayer = players.getFirst();
+            PlayerCharacter currentPlayer = players.get(0); //to get the current player
             isVisible(currentPlayer);
+            printBoard();
             //chooseMovement return the position than the player choose, if available, if not return null.
             Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
             System.out.println("current health: " + currentPlayer.getHealth());
@@ -42,7 +44,7 @@ public class GameWorld {
                 currentPlayer.setPosition(newPosition);
                 map.removeFromGrid(lastPosition, currentPlayer);
                 map.addToGrid(newPosition, currentPlayer);
-
+                board[lastPosition.getRow()][lastPosition.getCol()] = "_ "; // clear the last position
             }
             if (currentPlayer.isDead()) {
                 players.remove(currentPlayer);
@@ -55,6 +57,33 @@ public class GameWorld {
             }
         }
     }
+    private void printBoard () {
+        System.out.println("=== Game Board ===");
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+               System.out.print(board[i][j] + " "); // print the value at the current position
+            }
+            System.out.println(); // new line after each row
+        }
+    }
+    private void createGameMap() {
+        // ask for user input and create map
+        System.out.println("Enter map size (minimum size is 10x10):");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        while (size < 10) {
+            System.out.println("Invalid input! please enter a number greater than 10");
+            size = scanner.nextInt();
+        }
+        board = new String[size][size];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board [i][j] = "_ "; // initialize the board with empty spaces
+            }
+        }
+        this.map = new GameMap(size);
+    }
+
     private Position chooseMovement(Position lastPosition,PlayerCharacter currentPlayer) {
         System.out.println("Choose an action:");
         System.out.println("1. Move Up");
@@ -191,18 +220,6 @@ public class GameWorld {
         }
         return null;
     }
-    private void createGameMap() {
-        // ask for user input and create map
-        System.out.println("Enter map size (minimum size is 10x10):");
-        Scanner scanner = new Scanner(System.in);
-        int size;
-        size = scanner.nextInt();
-        while (size < 10) {
-            System.out.println("Invalid input! please enter a number greater than 10");
-            size = scanner.nextInt();
-        }
-        this.map = new GameMap(size);
-    }
     private void initPlayers() {
         // user selects the player type from the available types (archer / warrior / magic)
         // after user select character ask for name and give a random position in GameMap
@@ -277,12 +294,27 @@ public class GameWorld {
     private void checkArrayList(List<? extends GameEntity> entities, PlayerCharacter currentPlayer) {
         for (int i = 0; i < entities.size(); i++) {
             GameEntity entity = entities.get(i);
-            if (entity.getPosition().distanceTo(currentPlayer.getPosition()) <= 2 && !entity.equals(currentPlayer)) {
+            Position entityPosition = entity.getPosition();
+            if (entityPosition.distanceTo(currentPlayer.getPosition()) <= 2 && !entity.equals(currentPlayer)) {
                 entity.setVisible(true);
+                int row = entity.getPosition().getRow();
+                int col = entity.getPosition().getCol();
+                board[row][col] = entity.getDisplaySymbol().substring(0, 2);
                 System.out.println("there is " + entity + " !");
             }
-            else {
-                entity.setVisible(false);
+            if (entityPosition.distanceTo(currentPlayer.getPosition()) > 2) {
+                if (entity.getVisible()) {
+                    entity.setVisible(false);
+                    int row = entity.getPosition().getRow();
+                    int col = entity.getPosition().getCol();
+                    board[row][col] = "_ ";
+                }
+            }
+            if (entity.equals(currentPlayer)){
+                entity.setVisible(true);
+                int row = entity.getPosition().getRow();
+                int col = entity.getPosition().getCol();
+                board[row][col] = entity.getDisplaySymbol().substring(0, 2);
             }
         }
     }
@@ -323,9 +355,9 @@ public class GameWorld {
         enemies.add(enemy);
         map.addToGrid(pos,enemy);
     }
-
     private List <PlayerCharacter> players;
     private List <Enemy> enemies;
     private List <GameItem> items;
     private GameMap map;
+    private String[][] board;
 }

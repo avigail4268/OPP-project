@@ -24,6 +24,6 @@ public class Wall extends GameItem {
 
     @Override
     public String getDisplaySymbol() {
-        return "W";
+        return "WALL";
     }
 }

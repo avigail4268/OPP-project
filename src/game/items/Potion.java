@@ -18,7 +18,7 @@ public class Potion extends GameItem implements Interactable {
 
     @Override
     public String getDisplaySymbol() {
-        return "P";
+        return "HP";
     }
 
     protected boolean getIsUsed() {
@@ -37,6 +37,7 @@ public class Potion extends GameItem implements Interactable {
             int amount = Math.min(this.increaseAmount, 100 - c.getHealth());
             c.heal(amount);
             setIsUsed();
+            c.getInventory().removeItem(this);
             System.out.println("You health was " + (c.getHealth()-amount) + " now is " + (c.getHealth()));
         }
     }

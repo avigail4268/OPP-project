@@ -1,6 +1,5 @@
 package game.combat;
 
-import game.characters.Warrior;
 import game.map.Position;
 
 public class CombatSystem {
@@ -15,13 +14,15 @@ public class CombatSystem {
                 System.out.println("You have been evaded from enemy attack!");
             }else {
                 defender.attack(attacker);
+                if (!defender.isDead())
+                {
+                    System.out.println("You hit your enemy but not hard enough,he is still stand in is place.");
+                }
             }
             if (attacker.isDead()) {
                 System.out.println("Game Over! you are dead!");
             }else if (defender.isDead()) {
                 System.out.println("Enemy is dead! you won the fight!");
-            }else {
-                System.out.println("You hit your enemy but not hard enough,he is still stand in is place.");
             }
         }
         else {

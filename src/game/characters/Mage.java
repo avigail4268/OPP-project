@@ -15,7 +15,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
     @Override
     public String getDisplaySymbol() {
-        return "Mage";
+        return "MAGE";
     }
     @Override
     public MagicElement getMagicElement() {
@@ -41,24 +41,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         target.receiveDamage((int) totalDamage, this);
         System.out.println(this.getName() + " attacked the enemy for " + (int) totalDamage + " damage.");
     }
-//original function
-//    @Override
-//    public void calculateMagicDamage(Combatant target) {
-//        //TODO: check if this is correct
-//        double totalDamage = this.getPower() * 1.5;
-//        MagicElement targetElement = target.getMagicElement();
-//        if (targetElement != null) {
-//            System.out.println("mage calcmagic, attack with magic");
-//            if (this.element.isElementStrongerThan(targetElement)) {
-//                totalDamage *= 1.2;
-//            } else if (targetElement.isElementStrongerThan(this.element)) {
-//                totalDamage *= 0.8;
-//            }
-//        }
-//        if (target.receiveDamage((int) totalDamage, this)) {
-//            System.out.println(this.getName() + " attacked the enemy for " + (int) totalDamage + " damage.");
-//        }
-//    }
     @Override
     public void castSpell(Combatant target) {
         //todo : use calculateMagicDamage?
@@ -83,6 +65,14 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     public boolean isInRange(Position self, Position target) {
         return self.distanceTo(target) <= getRange();
     }
+    public boolean equals (Object obj) {
+        if (obj instanceof Mage) {
+            Mage other = (Mage) obj;
+            return this.getName().equals(other.getName()) && this.getPosition().equals(other.getPosition());
+        }
+        return false;
+    }
+
     public String toString() {
         return "Mage: " + this.getName() + " at " + getPosition();
     }

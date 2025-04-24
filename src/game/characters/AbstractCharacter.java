@@ -61,6 +61,10 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         }
         return false;
     }
+    @Override
+    public boolean getVisible() {
+        return visible;
+    }
     public double getEvasionChance () {
         return evasionChance;
     }
@@ -75,7 +79,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     public abstract String getDisplaySymbol();
     public abstract MagicElement getMagicElement();
     public abstract void attack(Combatant target);
-
     private Position position;
     private int health;
     private int power;

@@ -12,6 +12,7 @@ public class PowerPotion extends Potion {
             int amount = this.getIncreaseAmount();
             c.setPower(amount);
             this.setIsUsed();
+            c.getInventory().removeItem(this);
             System.out.println("You power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
         }
     }
@@ -19,7 +20,10 @@ public class PowerPotion extends Potion {
         c.addToInventory(this);
         System.out.println("Added power potion to your inventory! ");
     }
-
+    @Override
+    public String getDisplaySymbol() {
+        return "PP";
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof PowerPotion) {

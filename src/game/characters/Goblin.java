@@ -17,7 +17,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     }
     @Override
     public String getDisplaySymbol() {
-        return "Goblin";
+        return "GOBLIN";
     }
     @Override
     public MagicElement getMagicElement() {
@@ -50,19 +50,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
             target.receiveDamage(getPower(), this);
         }
     }
-//original function
-//    @Override
-//    public void attack(Combatant target) {
-//        if (isCriticalHit()) {
-//            if(target.receiveDamage(getPower() * 2, this))
-//            {
-//                System.out.println("The goblin attack back with Critical hit!");
-//            }
-//        }
-//        else {
-//            target.receiveDamage(getPower(), this);
-//        }
-//    }
+
     @Override
     public boolean isCriticalHit() {
         //TODO: check if this is correct

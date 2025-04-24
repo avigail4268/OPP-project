@@ -37,7 +37,7 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         }
         int damage = this.getPower();
         target.receiveDamage(damage, this);
-        System.out.println(this.getName() + " attacked your enemy for"  + damage + " damage.");
+        System.out.println(this.getName() + " attacked your enemy for "  + damage + " damage.");
     }
     @Override
     public boolean isCriticalHit() {
@@ -67,11 +67,13 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
     public boolean equals (Object obj) {
         if (obj instanceof Archer) {
-            Archer archer = (Archer) obj;
-            return this.getName().equals(archer.getName()) && this.getPosition().equals(archer.getPosition());
+            Archer other = (Archer) obj;
+            return this.getName().equals(other.getName()) && this.getPosition().equals(other.getPosition());
         }
         return false;
     }
+
+
     public String toString () {
         return "Archer: " + this.getName() + " at " + this.getPosition();
     }

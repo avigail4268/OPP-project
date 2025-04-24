@@ -18,52 +18,20 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         if (source.getMagicElement() != null) {
             double magicDamage = amount * (1 - resistance);
             super.receiveDamage((int) magicDamage, source);
+            System.out.println("Orc received " + magicDamage + " damage from magic attack.");
 
         } else {
             super.receiveDamage(amount, source);
+            System.out.println("Orc received " + amount + " damage from physical attack.");
         }
 
     }
-    //original function
-//    public void receiveDamage(int amount, Combatant source) {
-//        //TODO: check if this is correct
-//        //if orc is not dead calc the damage if he is dead then give loot
-//        if (!this.isDead()) {
-//            if (source.getMagicElement() != null) {
-//                double magicDamage = amount * (1 - resistance);
-//                if (!super.receiveDamage((int) magicDamage, source))
-//                {
-//                    System.out.println("Orc evaded the attack!");
-//                    return false;
-//                }
-//                else {
-//                    return true;
-//                }
-//            } else {
-//                if (!super.receiveDamage(amount, source)) {
-//                    System.out.println("Orc evaded the attack!");
-//                    return false;
-//                }
-//                else {
-//                    return true;
-//                }
-//            }
-//        }
-//        else {
-//            System.out.println("Orc is dead.");
-//            this.defeat();
-//            if (source instanceof PlayerCharacter player) {
-//                player.updateTreasurePoint(this.getLoot());
-//            }
-//            return false;
-//        }
-//    }
     public double getResistance() {
         return resistance;
     }
     @Override
     public String getDisplaySymbol() {
-        return "Orc";
+        return "ORC";
     }
     @Override
     public MagicElement getMagicElement() { //non magic element
@@ -94,21 +62,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
 
         }
     }
-//original function
-//    @Override
-//    public void attack(Combatant target) {
-//        if (isCriticalHit()) {
-//            if(target.receiveDamage(getPower() * 2, this))
-//            {
-//                System.out.println("The orc attacked back with Critical hit!");
-//            }
-//        }
-//        else {
-//            if (target.receiveDamage(getPower(), this)) {
-//                System.out.println("The orc attacked back for " + getPower() + " damage.");
-//            }
-//        }
-//    }
     @Override
     public boolean isCriticalHit() {
         //TODO: check if this is correct

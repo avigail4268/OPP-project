@@ -33,7 +33,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
                 }
                 else {
                     potion.interact(this);
-                    inventory.removeItem(item.get(i));
                     return true;
                 }
             }
@@ -50,6 +49,9 @@ public abstract class PlayerCharacter extends AbstractCharacter {
             }
         }
          return false;
+    }
+    public Inventory getInventory () {
+        return inventory;
     }
     public void updateTreasurePoint(int amount){
         this.treasurePoints += amount;

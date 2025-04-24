@@ -39,8 +39,14 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     @Override
     public void attack(Combatant target) {
         int damage = this.getPower();
-        target.receiveDamage(damage, this);
-        System.out.println(this.getName() + " attacked your enemy for " + damage + " damage.");
+        if (isCriticalHit()) {
+            target.receiveDamage(getPower() * 2, this);
+            System.out.println("The warrior attacked back with Critical hit! for " + getPower() * 2);
+        }
+        else {
+            target.receiveDamage(getPower(), this);
+            System.out.println(this.getName() + " attacked your enemy for " + damage + " damage.");
+        }
     }
     @Override
     public boolean isCriticalHit() {
@@ -51,11 +57,10 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         return false;
     }
     public void receiveDamage (int amount, Combatant source) {
-        if (isCriticalHit()) {
-            amount = amount*2;
-        }
         int damage =(int)(amount* (1 - Math.min(0.6, defence/200.0)));
         this.setHealth(this.getHealth() - damage);
+        System.out.println("Enemy attacked " + this.getName() + " for " + amount + " damage, you received only " + damage);
+
     }
     public boolean equals (Object obj) {
         if (obj instanceof Warrior){
