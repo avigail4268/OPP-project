@@ -8,24 +8,19 @@ import game.map.Position;
 import java.util.Random;
 
 public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
-    private final int defence;
     public Warrior(String playerName, Position position,int health) {
         super(playerName, position, health);
         Random random = new Random();
         this.defence = random.nextInt(120);
     }
-
     @Override
     public String getDisplaySymbol() {
-        return "W";
+        return "Warrior";
     }
-
     @Override
     public MagicElement getMagicElement() {
         return null;
     }
-
-
     @Override
     public void fightClose (Combatant target) {
         if (isInMeleeRange(this.getPosition(), target.getPosition())) {
@@ -34,7 +29,6 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
             System.out.println("Target is out of melee range.");
         }
     }
-
     @Override
     public boolean isInMeleeRange(Position self, Position target) {
         if (self.distanceTo(target) == 1) {
@@ -42,21 +36,12 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         }
         return false;
     }
-
     @Override
     public void attack(Combatant target) {
-        if (target.isDead()) {
-            System.out.println("Target is already dead.");
-            return;
-        }
         int damage = this.getPower();
-        if (target.receiveDamage(damage, this))
-        {
-            System.out.println(this.getName() + " attacked your enemy for " + damage + " damage.");
-
-        }
+        target.receiveDamage(damage, this);
+        System.out.println(this.getName() + " attacked your enemy for " + damage + " damage.");
     }
-
     @Override
     public boolean isCriticalHit() {
         double rand = Math.random();
@@ -65,22 +50,13 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         }
         return false;
     }
-
-    public boolean receiveDamage (int amount, Combatant source) {
-        if (tryEvade()) {
-            System.out.println("You have evaded the attack!");
-            return false;
+    public void receiveDamage (int amount, Combatant source) {
+        if (isCriticalHit()) {
+            amount = amount*2;
         }
-        else {
-            if (isCriticalHit()) {
-                amount = amount*2;
-            }
-            int damage =(int)(amount* (1 - Math.min(0.6, defence/200.0)));
-            this.setHealth(this.getHealth() - damage);
-            return true;
-        }
+        int damage =(int)(amount* (1 - Math.min(0.6, defence/200.0)));
+        this.setHealth(this.getHealth() - damage);
     }
-
     public boolean equals (Object obj) {
         if (obj instanceof Warrior){
             Warrior other = (Warrior) obj;
@@ -91,4 +67,6 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     public String toString () {
         return "Warrior: " + this.getName() + " at " + this.getPosition();
     }
+
+    private final int defence;
 }

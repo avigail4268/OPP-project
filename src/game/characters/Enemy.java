@@ -8,8 +8,6 @@ import game.map.Position;
 import java.util.Random;
 
 public abstract class Enemy extends AbstractCharacter {
-    private int loot;
-
     public Enemy(Position position,int health) {
         super(position,health);
         Random r = new Random();
@@ -26,4 +24,5 @@ public abstract class Enemy extends AbstractCharacter {
         return loot;
     }
 
+    private int loot;
 }

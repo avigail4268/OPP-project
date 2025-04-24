@@ -11,11 +11,6 @@ import game.map.Position;
 
 
 public class GameWorld {
-    private List <PlayerCharacter> players;
-    private List <Enemy> enemies;
-    private List <GameItem> items;
-    private GameMap map;
-
     public GameWorld() {
         //initialize bord: players, enemy's and items.
         gameInitialization();
@@ -55,7 +50,7 @@ public class GameWorld {
                 break;
             }
             if (currentPlayer.getTreasurePoints() >= 500) {
-                System.out.println("Player " + currentPlayer.getName() + " achieve 500 points and WON THE GAME!");
+                System.out.println("Player " + currentPlayer.getName() + " achieve more than 500 points and WON THE GAME!");
                 break;
             }
         }
@@ -328,4 +323,9 @@ public class GameWorld {
         enemies.add(enemy);
         map.addToGrid(pos,enemy);
     }
+
+    private List <PlayerCharacter> players;
+    private List <Enemy> enemies;
+    private List <GameItem> items;
+    private GameMap map;
 }

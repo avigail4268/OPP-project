@@ -7,12 +7,6 @@ import game.map.Position;
 import java.util.Random;
 
 public abstract class AbstractCharacter implements Combatant, GameEntity{
-    private Position position;
-    private int health;
-    private int power;
-    private boolean visible;
-    private double evasionChance = 0.25;
-
     public AbstractCharacter(Position position,int health) {
         setPosition(position);
         this.health = health;
@@ -20,32 +14,21 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         this.visible = true;
     }
     @Override
-    public boolean receiveDamage(int amount, Combatant source) {
-        //TODO recheck
-        if (tryEvade()) {
-            System.out.println(this.getDisplaySymbol() + " You have evaded the attack!");
-            return false;
-        }
-        else
-            this.health -= amount;
-        return true;
+    public void receiveDamage(int amount, Combatant source) {
+        this.health -= amount;
     }
-
     @Override
     public void heal(int amount) {
         this.health += amount;
     }
-
     @Override
     public boolean isDead() {
         return health <= 0;
     }
-
     @Override
     public int getPower() {
         return power;
     }
-
     public boolean setPower(int amount) {
         if (amount > 0){
             this.power += amount;
@@ -53,18 +36,15 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
         }
         return false;
     }
-
     @Override
     public boolean tryEvade() {
         double evadeChance = Math.random();
         return evadeChance < this.evasionChance;
     }
-
     @Override
     public Position getPosition() {
         return position;
     }
-
     @Override
     public boolean setPosition(Position newPos) {
         if (newPos != null) {
@@ -95,4 +75,10 @@ public abstract class AbstractCharacter implements Combatant, GameEntity{
     public abstract String getDisplaySymbol();
     public abstract MagicElement getMagicElement();
     public abstract void attack(Combatant target);
+
+    private Position position;
+    private int health;
+    private int power;
+    private boolean visible;
+    private double evasionChance = 0.25;
 }

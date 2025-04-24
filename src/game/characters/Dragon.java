@@ -5,58 +5,75 @@ import game.combat.*;
 import game.map.Position;
 
 public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, MagicAttacker {
-
-    private MagicElement element;
-
     public Dragon(Position pos, int health) {
         super(pos,health);
          this.element = MagicElement.getElement();
     }
-
     @Override
     public String getDisplaySymbol() {
-        return "D";
+        return "Dragon";
     }
-
     @Override
     public MagicElement getMagicElement() {
         return element;
     }
-
     @Override
-    //TODO: check if this is correct
     public void calculateMagicDamage(Combatant target) {
         if (target.getMagicElement() == null) {
-            if(target.receiveDamage(this.getPower(), this)) {
-                System.out.println("dragon calcmagic, attack physical ");
-            }
+            target.receiveDamage(this.getPower(), this);
+            System.out.println("dragon calcmagic, attack physical ");
+
         }
         else {
             if (this.element.isElementStrongerThan(target.getMagicElement())) {
                 double totalDamage = this.getPower() * 1.5;
-                if (target.receiveDamage((int) totalDamage, this))
-                {
-                    System.out.println("dragon calcmagic, attack magic");
+                target.receiveDamage((int) totalDamage, this);
+                System.out.println("dragon calcmagic,his element stronger than you, attack magic");
 
-                }
             } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
                 double totalDamage = this.getPower() * 0.8;
-                if (target.receiveDamage((int) totalDamage, this))
-                {
-                    System.out.println("dragon calcmagic, attack magic");
+                target.receiveDamage((int) totalDamage, this);
+                System.out.println("dragon calcmagic,his element not stronger than you attack magic");
 
-                }
             } else {
-                System.out.println("dragon calcmagic, attack magic");
+                System.out.println("dragon calcmagic,attack magic");
                 double totalDamage = this.getPower();
                 target.receiveDamage((int) totalDamage, this);
             }
         }
     }
-
+    //original function bellow
+//    @Override
+//    public void calculateMagicDamage(Combatant target) {
+//        if (target.getMagicElement() == null) {
+//            if(target.receiveDamage(this.getPower(), this)) {
+//                System.out.println("dragon calcmagic, attack physical ");
+//            }
+//        }
+//        else {
+//            if (this.element.isElementStrongerThan(target.getMagicElement())) {
+//                double totalDamage = this.getPower() * 1.5;
+//                if (target.receiveDamage((int) totalDamage, this))
+//                {
+//                    System.out.println("dragon calcmagic, attack magic");
+//
+//                }
+//            } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
+//                double totalDamage = this.getPower() * 0.8;
+//                if (target.receiveDamage((int) totalDamage, this))
+//                {
+//                    System.out.println("dragon calcmagic, attack magic");
+//
+//                }
+//            } else {
+//                System.out.println("dragon calcmagic, attack magic");
+//                double totalDamage = this.getPower();
+//                target.receiveDamage((int) totalDamage, this);
+//            }
+//        }
+//    }
     @Override
     public void castSpell (Combatant target) {
-        //TODO: check if this is correct
         double powerAttack = this.getPower() * 1.5;
         if (target.getMagicElement() == null) {
             target.receiveDamage((int) powerAttack, this);
@@ -69,7 +86,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             target.receiveDamage((int) powerAttack, this);
         }
     }
-
     @Override
     public boolean isElementStrongerThan(MagicAttacker other) {
         //TODO: check if this is correct
@@ -78,7 +94,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         }
         return false;
     }
-
     @Override
     public void fightClose(Combatant target) {
         //TODO: check if this is correct
@@ -94,12 +109,10 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             }
         }
     }
-
     @Override
     public boolean isInMeleeRange(Position self, Position target) {
         return self.distanceTo(target) <= 1;
     }
-
     @Override
     public void attack(Combatant target) {
         if (isInMeleeRange(this.getPosition(), target.getPosition())) {
@@ -109,13 +122,11 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             fightClose(target);
         }
     }
-
     @Override
     public boolean isCriticalHit() {
         double rand = Math.random();
         return rand <= 0.1;
     }
-
     @Override
     public boolean equals (Object obj) {
         if (obj instanceof Dragon) {
@@ -128,4 +139,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     public String toString () {
         return "Dragon at position " + getPosition();
     }
+
+    private MagicElement element;
+
 }

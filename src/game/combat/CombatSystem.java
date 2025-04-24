@@ -6,8 +6,16 @@ import game.map.Position;
 public class CombatSystem {
     public void resolveCombat(Combatant attacker, Combatant defender) {
         if (isInRange(attacker, defender)) {
-            attacker.attack(defender);
-            defender.attack(attacker);
+            if (defender.tryEvade()) {
+                System.out.println("The enemy evaded the attack!");
+            }else {
+                attacker.attack(defender);
+            }
+            if (defender.tryEvade()) {
+                System.out.println("You have been evaded from enemy attack!");
+            }else {
+                defender.attack(attacker);
+            }
             if (attacker.isDead()) {
                 System.out.println("Game Over! you are dead!");
             }else if (defender.isDead()) {

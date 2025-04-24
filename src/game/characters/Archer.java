@@ -9,24 +9,20 @@ import game.map.Position;
 import java.util.Random;
 
 public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAttacker {
-    private double accuracy;
 
     public Archer(String name, Position pos, int health) {
         super(name,pos,health);
         Random rand = new Random();
         accuracy = rand.nextDouble(0.8);
     }
-
     @Override
     public String getDisplaySymbol() {
-        return "A";
+        return "Archer";
     }
-
     @Override
     public MagicElement getMagicElement() { //non magic element
         return null;
     }
-
     public boolean tryEvade(){
         //TODO : check if this is correct
         double enemyEvasion = getEvasionChance();
@@ -43,7 +39,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         target.receiveDamage(damage, this);
         System.out.println(this.getName() + " attacked your enemy for"  + damage + " damage.");
     }
-
     @Override
     public boolean isCriticalHit() {
         double rand = Math.random();
@@ -52,7 +47,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         }
         return false;
     }
-
     @Override
     public void fightRanged(Combatant target) {
         //TODO : check if this is correct
@@ -60,20 +54,17 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
             attack(target);
         }
     }
-
     @Override
     public boolean isInRange(Position self, Position target) {
         //TODO the same code as Mage???!!!!
         //TODO : check if this is correct
         return self.distanceTo(target) <= getRange();
     }
-
     @Override
     public int getRange() {
         //TODO : this method!!!
         return 2;
     }
-
     public boolean equals (Object obj) {
         if (obj instanceof Archer) {
             Archer archer = (Archer) obj;
@@ -84,4 +75,7 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     public String toString () {
         return "Archer: " + this.getName() + " at " + this.getPosition();
     }
+
+    private double accuracy;
+
 }
