@@ -31,19 +31,19 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         double totalDamage = this.getPower() * 1.5;
         MagicElement targetElement = target.getMagicElement();
         if (targetElement != null) {
-            System.out.println("mage calcmagic, attack with magic");
             if (this.element.isElementStrongerThan(targetElement)) {
                 totalDamage *= 1.2;
+                System.out.println("Mage attack by magic, his element is stronger than the enemy's");
             } else if (targetElement.isElementStrongerThan(this.element)) {
                 totalDamage *= 0.8;
+                System.out.println("Mage attack by magic, his element is weaker than the enemy's");
             }
         }
         target.receiveDamage((int) totalDamage, this);
-        System.out.println(this.getName() + " attacked the enemy for " + (int) totalDamage + " damage.");
+        System.out.println(this.getName() + " attacked the enemy for: " + (int) totalDamage + " damage.");
     }
     @Override
     public void castSpell(Combatant target) {
-        //todo : use calculateMagicDamage?
         calculateMagicDamage(target);
     }
     @Override
@@ -52,7 +52,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
     @Override
     public void fightRanged(Combatant target) {
-        // todo recheck
         if (isInRange(this.getPosition(), target.getPosition())){
             castSpell(target);
         }

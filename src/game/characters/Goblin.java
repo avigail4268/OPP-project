@@ -44,10 +44,11 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     public void attack(Combatant target) {
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            System.out.println("The goblin attack back with Critical hit!");
+            System.out.println("Goblin attack back with Critical hit! for: " + getPower() * 2 + " damage.");
         }
         else {
             target.receiveDamage(getPower(), this);
+            System.out.println("Goblin attacked for: " + getPower() + " damage.");
         }
     }
 
@@ -60,8 +61,8 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     @Override
     public boolean equals (Object obj) {
        if (obj instanceof Goblin) {
-            Goblin goblin = (Goblin) obj;
-            return this.getPosition() == goblin.getPosition() && this.getAgility() == goblin.getAgility();
+            Goblin other = (Goblin) obj;
+            return this.getPosition() == other.getPosition() && this.getAgility() == other.getAgility();
        }
         return false;
     }

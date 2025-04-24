@@ -31,14 +31,18 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
     @Override
     public void attack(Combatant target) {
-        if (target.isDead())
-        {
-            System.out.println("Target is dead.");
-        }
         int damage = this.getPower();
-        target.receiveDamage(damage, this);
-        System.out.println(this.getName() + " attacked your enemy for "  + damage + " damage.");
+        if (isCriticalHit()) {
+            target.receiveDamage(getPower() * 2, this);
+            System.out.println("Archer attacked with Critical hit! for " + getPower() * 2 + " damage.");
+        }
+        else
+        {
+            target.receiveDamage(getPower(), this);
+            System.out.println(this.getName() + " attacked the enemy for " + damage + " damage.");
+        }
     }
+
     @Override
     public boolean isCriticalHit() {
         double rand = Math.random();
@@ -49,15 +53,12 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
     @Override
     public void fightRanged(Combatant target) {
-        //TODO : check if this is correct
         if (isInRange(this.getPosition(), target.getPosition())){
             attack(target);
         }
     }
     @Override
     public boolean isInRange(Position self, Position target) {
-        //TODO the same code as Mage???!!!!
-        //TODO : check if this is correct
         return self.distanceTo(target) <= getRange();
     }
     @Override

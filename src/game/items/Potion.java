@@ -38,12 +38,12 @@ public class Potion extends GameItem implements Interactable {
             c.heal(amount);
             setIsUsed();
             c.getInventory().removeItem(this);
-            System.out.println("You health was " + (c.getHealth()-amount) + " now is " + (c.getHealth()));
+            System.out.println("Your health was " + (c.getHealth()-amount) + " now is " + (c.getHealth()));
         }
     }
     public void collect(PlayerCharacter c) {
         c.addToInventory(this);
-        System.out.println("Added potion to your inventory! ");
+        System.out.println("Potion added to the inventory! ");
     }
     protected int getIncreaseAmount() {
         return increaseAmount;
@@ -57,7 +57,7 @@ public class Potion extends GameItem implements Interactable {
         return false;
     }
     public String toString() {
-        return "Health potion " + getPosition();
+        return "Health Potion " + getPosition();
 
     }
 }

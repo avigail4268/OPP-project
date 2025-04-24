@@ -11,12 +11,12 @@ public class CombatSystem {
                 attacker.attack(defender);
             }
             if (defender.tryEvade()) {
-                System.out.println("You have been evaded from enemy attack!");
+                System.out.println("You have been evaded from the enemy attack!");
             }else {
                 defender.attack(attacker);
                 if (!defender.isDead())
                 {
-                    System.out.println("You hit your enemy but not hard enough,he is still stand in is place.");
+                    System.out.println("You hit the enemy but not hard enough, he is still stand in is place.");
                 }
             }
             if (attacker.isDead()) {

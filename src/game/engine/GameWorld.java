@@ -37,7 +37,7 @@ public class GameWorld {
             printBoard();
             //chooseMovement return the position than the player choose, if available, if not return null.
             Position newPosition = chooseMovement(currentPlayer.getPosition(),currentPlayer);
-            System.out.println("current health: " + currentPlayer.getHealth());
+            System.out.println("Current health: " + currentPlayer.getHealth());
             System.out.println("Treasure points: " + currentPlayer.getTreasurePoints());
             if (newPosition != null) {
                 Position lastPosition = currentPlayer.getPosition();
@@ -48,17 +48,17 @@ public class GameWorld {
             }
             if (currentPlayer.isDead()) {
                 players.remove(currentPlayer);
-                System.out.println("Player " + currentPlayer.getName() + " is dead, GAME OVER!");
+                System.out.println("Player: " + currentPlayer.getName() + " is dead, GAME OVER!");
                 break;
             }
             if (currentPlayer.getTreasurePoints() >= 500) {
-                System.out.println("Player " + currentPlayer.getName() + " achieve more than 500 points and WON THE GAME!");
+                System.out.println("Player: " + currentPlayer.getName() + " achieve more than 500 points and WON THE GAME!");
                 break;
             }
         }
     }
     private void printBoard () {
-        System.out.println("=== Game Board ===");
+        System.out.println("===== Game Board =====");
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
                System.out.print(board[i][j] + " "); // print the value at the current position
@@ -117,11 +117,11 @@ public class GameWorld {
         }
         else if (action == 5) {
            if (currentPlayer.usePotion()){
-               System.out.println("Use Potion");
+               System.out.println("Use Health Potion");
                return newPos;
            }
            else {
-               System.out.println("non potion found in the inventory");
+               System.out.println("Non potion found in the inventory");
                return newPos;
            }
         }
@@ -131,7 +131,7 @@ public class GameWorld {
                 return newPos;
             }
             else {
-                System.out.println("non power potion found in the inventory");
+                System.out.println("Non power potion found in the inventory");
                 return newPos;
             }
         }
@@ -144,12 +144,12 @@ public class GameWorld {
         }
         else if (map.isEmpty(newPos)) {
             //TODO delete
-            System.out.println("empty place");
+            System.out.println("Empty place");
             return newPos;
         }
         else {
             //TODO delete
-            System.out.println("have something in this position");
+            System.out.println("There is something in this position");
             boolean move = checkPosition(newPos,currentPlayer);
             if (move) {
                 return newPos;
@@ -231,7 +231,7 @@ public class GameWorld {
         Scanner scanner = new Scanner(System.in);
         int playerType = scanner.nextInt();
         while (1 > playerType || playerType > 3) {
-            System.out.println("Wrong input! please choose one of the following options:  1.Warrior, 2.Mage, 3.Archer");
+            System.out.println("Wrong input! please choose one of the following options: 1.Warrior, 2.Mage, 3.Archer");
             playerType = scanner.nextInt();
         }
         System.out.println("Enter player name:");

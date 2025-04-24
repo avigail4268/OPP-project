@@ -13,7 +13,7 @@ public class PowerPotion extends Potion {
             c.setPower(amount);
             this.setIsUsed();
             c.getInventory().removeItem(this);
-            System.out.println("You power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
+            System.out.println("Your power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
         }
     }
     public void collect(PlayerCharacter c) {
@@ -33,7 +33,7 @@ public class PowerPotion extends Potion {
         return false;
     }
     public String toString() {
-        return "Power potion " + getPosition();
+        return "Power Potion " + getPosition();
 
     }
 }

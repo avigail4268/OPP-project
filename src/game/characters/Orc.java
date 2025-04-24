@@ -14,7 +14,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         resistance = new Random().nextDouble(0.5);
     }
     public void receiveDamage(int amount, Combatant source) {
-        //TODO: check if this is correct
         if (source.getMagicElement() != null) {
             double magicDamage = amount * (1 - resistance);
             super.receiveDamage((int) magicDamage, source);
@@ -54,11 +53,11 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     public void attack(Combatant target) {
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            System.out.println("The orc attacked back with Critical hit! for " + getPower() * 2);
+            System.out.println("The orc attacked back with Critical hit! for: " + getPower() * 2 + " damage.");
         }
         else {
             target.receiveDamage(getPower(), this);
-            System.out.println("The orc attacked back for " + getPower() + " damage.");
+            System.out.println("The orc attacked back for: " + getPower() + " damage.");
 
         }
     }
@@ -71,8 +70,8 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     @Override
     public boolean equals (Object obj) {
         if (obj instanceof Orc) {
-            Orc orc = (Orc) obj;
-            return this.getPosition() == orc.getPosition() && this.getResistance() == orc.getResistance();
+            Orc other = (Orc) obj;
+            return this.getPosition() == other.getPosition() && this.getResistance() == other.getResistance();
         }
         return false;
     }
