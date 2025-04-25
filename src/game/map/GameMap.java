@@ -1,11 +1,8 @@
 package game.map;
 import game.core.GameEntity;
-
 import java.util.*;
 
 public class GameMap {
-    private Map < Position, List<GameEntity> > grid = new HashMap<>();
-    private int size;
 
     public GameMap(int size){
         this.size = size;
@@ -13,15 +10,10 @@ public class GameMap {
     public int getSize(){
         return size;
     }
-
     public boolean isEmpty(Position pos){
         List<GameEntity> entities = grid.get(pos);
-        if (entities == null || entities.isEmpty()) {
-            return true;
-        }
-        return false;
+        return entities == null || entities.isEmpty();
     }
-
     public Position getRandomEmptyPosition(){
         Random random = new Random();
         int maxTries = size * size;
@@ -35,9 +27,7 @@ public class GameMap {
             }
             throw new RuntimeException ("No empty position found on the board");
     }
-
     public boolean addToGrid(Position pos, GameEntity gameEntity){
-        // TODO check when returns false
         List<GameEntity> entities = grid.get(pos);
         if (entities == null) {
             entities = new ArrayList<>();
@@ -52,19 +42,6 @@ public class GameMap {
         }
         return false;
     }
-//    public boolean removeFromGrid(Position pos, GameEntity gameEntity){
-//        List<GameEntity> entities = grid.get(pos);
-//        if (entities == null) {
-//            return false;
-//        }
-//        if (!entities.contains(gameEntity)) {
-//            return false;
-//        }
-//        grid.remove(pos);
-//        return true;
-//    }
-
-
     public boolean removeFromGrid(Position pos, GameEntity gameEntity){
         List<GameEntity> entities = grid.get(pos);
         if (entities == null) {
@@ -79,11 +56,10 @@ public class GameMap {
         }
         return true;
     }
-
-
     public List<GameEntity> getEntityInPosition(Position pos) {
-        // TODO CHECK THE RESULT
-        List<GameEntity> entities = grid.get(pos);
-        return entities;
+        return grid.get(pos);
     }
+
+    private Map < Position, List<GameEntity> > grid = new HashMap<>();
+    private final int size;
 }

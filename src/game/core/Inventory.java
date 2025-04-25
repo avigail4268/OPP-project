@@ -1,16 +1,12 @@
 package game.core;
 import game.items.GameItem;
-import game.items.Potion;
-import game.items.PowerPotion;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Inventory {
-
     public Inventory() {
         items = new ArrayList<>();
     }
-
     public boolean addItem(GameItem item) {
         if (item != null){
             items.add(item);
@@ -18,7 +14,6 @@ public class Inventory {
         }
         return false;
     }
-
     public boolean removeItem(GameItem item) {
         if (items.contains(item)){
             items.remove(item);
@@ -26,7 +21,6 @@ public class Inventory {
         }
         return false;
     }
-
     public List<GameItem> getItems() {
         return items;
     }

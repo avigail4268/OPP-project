@@ -77,9 +77,8 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
                 System.out.println("Mage attack by magic, his element is weaker than the enemy's");
             }
         }
-
-        target.receiveDamage((int) totalDamage, this);
         System.out.println(this.getName() + " attacked the enemy for: " + (int) totalDamage + " damage.");
+        target.receiveDamage((int) totalDamage, this);
     }
 
     /**

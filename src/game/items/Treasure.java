@@ -1,31 +1,24 @@
 package game.items;
-
-
 import game.characters.PlayerCharacter;
 import game.map.Position;
 
-import java.util.Random;
-
 public class Treasure extends GameItem implements Interactable {
-
-
-    public Treasure(Position position, boolean blocksMovement, String description, int value) {
-        super(position,blocksMovement,description);
+    public Treasure(Position position, boolean blocksMovement, int value) {
+        super(position,blocksMovement);
         this.value = value;
         collected = false;
+        this.setDescription("This is a Treasure! it might be a health potion/power potion/treasure points");
     }
 
     @Override
     public String getDisplaySymbol() {
         return "TREASURE";
     }
-
+    @Override
     public void interact(PlayerCharacter c) {
         double random = Math.random();
-        String description;
         if (random <= 1.0/3.0) {
-            description = "Health potion";
-            Potion potion = new Potion(this.getPosition(),false,description,50,10);
+            Potion potion = new Potion(this.getPosition(),false,50,10);
             potion.collect(c);
             this.collected = true;
         }
@@ -35,21 +28,21 @@ public class Treasure extends GameItem implements Interactable {
             this.collected = true;
         }
         else {
-            description = "Power potion";
-            PowerPotion powerPotion = new PowerPotion(this.getPosition(),false,description,5,1);
+            PowerPotion powerPotion = new PowerPotion(this.getPosition(),false,5,1);
             powerPotion.collect(c);
             this.collected = true;
         }
     }
+    @Override
     public void collect(PlayerCharacter c) {
-        this.interact(c);
+        if (!collected) {
+            this.interact(c);
+        }
     }
-
     @Override
     public String toString() {
         return "treasure in position " + getPosition();
     }
-
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Treasure other) {
@@ -57,7 +50,6 @@ public class Treasure extends GameItem implements Interactable {
         }
         return false;
     }
-
-    private int value;
+    private final int value;
     private boolean collected;
 }

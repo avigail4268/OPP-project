@@ -33,8 +33,6 @@ public class CombatSystem {
             System.out.println("Game Over! You are dead!");
         } else if (defender.isDead()) {
             System.out.println("Enemy is dead! You won the fight!");
-        } else {
-            System.out.println("You hit the enemy, but not enough to kill him!");
         }
     }
 

@@ -149,7 +149,10 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public int getHealth(){
-        return health;
+        if (health >= 0) {
+            return health;
+        }
+        return 0;
     }
 
     /**

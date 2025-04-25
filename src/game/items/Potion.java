@@ -7,19 +7,16 @@ import java.util.Random;
 public class Potion extends GameItem implements Interactable {
 
     public Potion(Position position, boolean blocksMovement,int max,int min) {
-        //when its health potion max =50 min = 10, when its power potion max = 5 min = 1
         super(position, blocksMovement);
         this.increaseAmount = new Random().nextInt(min, max);
         this.isUsed = false;
-        this.setDescription("Health potion") ;
-
+        this.setDescription("This is a health potion, increased by " + increaseAmount);
     }
 
     @Override
     public String getDisplaySymbol() {
         return "HP";
     }
-
     @Override
     public void interact(PlayerCharacter c) {
         if (!isUsed) {
@@ -59,7 +56,6 @@ public class Potion extends GameItem implements Interactable {
     public boolean isUsableInUsePotion() {
         return true;
     }
-
     protected boolean getIsUsed() {
         return isUsed;
     }

@@ -4,8 +4,9 @@ import game.characters.PlayerCharacter;
 import game.map.Position;
 
 public class PowerPotion extends Potion {
-    public PowerPotion(Position position, boolean blocksMovement, String description,int max,int min) {
-        super(position, blocksMovement, description,max,min);
+    public PowerPotion(Position position, boolean blocksMovement, int max,int min) {
+        super(position, blocksMovement,max,min);
+        this.setDescription("This is power potion, increase power by " + this.getIncreaseAmount());
     }
     @Override
     public void interact(PlayerCharacter c) {

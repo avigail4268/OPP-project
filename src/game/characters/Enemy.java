@@ -31,7 +31,7 @@ public abstract class Enemy extends AbstractCharacter {
      */
     public Treasure defeat() {
         if (this.isDead()) {
-            return new Treasure(this.getPosition(), false, "Treasure", loot);
+            return new Treasure(this.getPosition(), false, loot);
         }
         return null;
     }
