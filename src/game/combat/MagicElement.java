@@ -9,18 +9,13 @@ public enum MagicElement {
         ACID;
 
     public boolean isElementStrongerThan(MagicElement other) {
-        switch (this) {
-            case FIRE:
-                return other == ICE;
-            case ICE:
-                return other == LIGHTNING;
-            case LIGHTNING:
-                return other == ACID;
-            case ACID:
-                return other == FIRE;
-            default:
-                return false;
-        }
+        // Check if the current element is stronger than the other element
+        return switch (this) {
+            case FIRE -> other == ICE;
+            case ICE -> other == LIGHTNING;
+            case LIGHTNING -> other == ACID;
+            case ACID -> other == FIRE;
+        };
     }
     public static MagicElement getElement() {
         Random r = new Random();

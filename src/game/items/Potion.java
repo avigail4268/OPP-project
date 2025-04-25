@@ -6,9 +6,6 @@ import java.util.Random;
 
 public class Potion extends GameItem implements Interactable {
 
-    private int increaseAmount;
-    private boolean isUsed;
-
     public Potion(Position position, boolean blocksMovement, String description,int max,int min) {
         //when its health potion max =50 min = 10, when its power potion max = 5 min = 1
         super(position, blocksMovement, description);
@@ -42,8 +39,15 @@ public class Potion extends GameItem implements Interactable {
         }
     }
     public void collect(PlayerCharacter c) {
-        c.addToInventory(this);
-        System.out.println("Potion added to the inventory! ");
+        if (c.addToInventory(this))
+        {
+            System.out.println("Potion added to the inventory! ");
+        }
+        else
+        {
+            System.out.println("Potion not added to the inventory! ");
+        }
+
     }
     protected int getIncreaseAmount() {
         return increaseAmount;
@@ -56,8 +60,16 @@ public class Potion extends GameItem implements Interactable {
         }
         return false;
     }
+    @Override
     public String toString() {
         return "Health Potion " + getPosition();
 
     }
+
+    public boolean isUsableInUsePotion() {
+        return true;
+    }
+
+    private int increaseAmount;
+    private boolean isUsed;
 }

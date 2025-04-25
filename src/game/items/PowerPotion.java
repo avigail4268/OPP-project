@@ -17,8 +17,12 @@ public class PowerPotion extends Potion {
         }
     }
     public void collect(PlayerCharacter c) {
-        c.addToInventory(this);
-        System.out.println("Added power potion to your inventory! ");
+        if (c.addToInventory(this)) {
+            System.out.println("Power Potion added to the inventory! ");
+        }
+        else {
+            System.out.println("Power Potion not added to the inventory! ");
+        }
     }
     @Override
     public String getDisplaySymbol() {
@@ -35,5 +39,9 @@ public class PowerPotion extends Potion {
     public String toString() {
         return "Power Potion " + getPosition();
 
+    }
+    @Override
+    public boolean isUsableInUsePotion() {
+        return false;
     }
 }

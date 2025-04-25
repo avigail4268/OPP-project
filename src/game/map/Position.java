@@ -25,8 +25,8 @@ public class Position {
     }
     public boolean equals(Object obj) {
         if (obj instanceof Position) {
-            Position position = (Position) obj;
-            return this.row == position.row && this.col == position.col;
+            Position other = (Position) obj;
+            return this.row == other.row && this.col == other.col;
         }
         return false;
     }

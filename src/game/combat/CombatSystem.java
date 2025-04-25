@@ -3,40 +3,52 @@ package game.combat;
 import game.map.Position;
 
 public class CombatSystem {
+
+    /**
+     * Resolves a turn of combat between an attacker and a defender.
+     * If in range, attacker attacks first, then defender counter-attacks if still alive.
+     */
     public void resolveCombat(Combatant attacker, Combatant defender) {
-        if (isInRange(attacker, defender)) {
-            if (defender.tryEvade()) {
-                System.out.println("The enemy evaded the attack!");
-            }else {
-                attacker.attack(defender);
-            }
-            if (defender.tryEvade()) {
-                System.out.println("You have been evaded from the enemy attack!");
-            }else {
+        if (!isInRange(attacker, defender)) {
+            System.out.println("You are not in range!");
+            return;
+        }
+        // ATTACKER'S TURN
+        if (defender.tryEvade()) {
+            System.out.println("The enemy evaded the attack!");
+        } else {
+            attacker.attack(defender);
+        }
+
+        // DEFENDER'S TURN (only if still alive)
+        if (!defender.isDead()) {
+            if (attacker.tryEvade()) {
+                System.out.println("You evaded the enemy's attack!");
+            } else {
                 defender.attack(attacker);
-                if (!defender.isDead())
-                {
-                    System.out.println("You hit the enemy but not hard enough, he is still stand in is place.");
-                }
-            }
-            if (attacker.isDead()) {
-                System.out.println("Game Over! you are dead!");
-            }else if (defender.isDead()) {
-                System.out.println("Enemy is dead! you won the fight!");
             }
         }
-        else {
-            System.out.println("You are not in range!");
+
+        // OUTCOME
+        if (attacker.isDead()) {
+            System.out.println("Game Over! You are dead!");
+        } else if (defender.isDead()) {
+            System.out.println("Enemy is dead! You won the fight!");
+        } else {
+            System.out.println("You hit the enemy, but not enough to kill him!");
         }
     }
-    private boolean isInRange(Combatant source, Combatant target){
-        Position sourceCurrentPos=source.getPosition();
-        Position targetCurrentPOs=target.getPosition();
-        if (source instanceof MeleeFighter mf){
-            return mf.isInMeleeRange(sourceCurrentPos,targetCurrentPOs);
-        }
-        else if (source instanceof RangeFighter rf){
-            return rf.isInRange(sourceCurrentPos,targetCurrentPOs);
+
+    /**
+     * Checks if the attacker can reach the defender based on their combat type.
+     */
+    private boolean isInRange(Combatant source, Combatant target) {
+        Position sourcePos = source.getPosition();
+        Position targetPos = target.getPosition();
+        if (source.isInRange(sourcePos, targetPos)) {
+            return true;
+        } else {
+            System.out.println("Target is out of range.");
         }
         return false;
     }

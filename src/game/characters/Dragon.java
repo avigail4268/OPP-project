@@ -4,116 +4,189 @@ import game.combat.MagicElement;
 import game.combat.*;
 import game.map.Position;
 
+/**
+ * Dragon represents an enemy character that can attack both physically and magically.
+ * It implements PhysicalAttacker, MeleeFighter, and MagicAttacker interfaces, allowing it
+ * to engage in both melee and magical combat with a special emphasis on its elemental power.
+ */
 public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, MagicAttacker {
+
+    /**
+     * Constructs a new Dragon with a given position and health.
+     * The Dragon's magic element is set to a default MagicElement.
+     *
+     * @param pos the position of the Dragon
+     * @param health the health of the Dragon
+     */
     public Dragon(Position pos, int health) {
-        super(pos,health);
-         this.element = MagicElement.getElement();
+        super(pos, health);
+        this.element = MagicElement.getElement();
     }
+
+    /**
+     * Gets the display symbol representing the Dragon.
+     *
+     * @return the string "DRAGON"
+     */
     @Override
     public String getDisplaySymbol() {
         return "DRAGON";
     }
+
+    /**
+     * Gets the magic element associated with the Dragon.
+     *
+     * @return the Dragon's MagicElement
+     */
     @Override
     public MagicElement getMagicElement() {
         return element;
     }
+
+    /**
+     * Calculates the magical damage dealt by the Dragon to the target.
+     * The damage depends on whether the Dragon's element is stronger or weaker than the target's element.
+     *
+     * @param target the target Combatant to calculate damage for
+     */
     @Override
     public void calculateMagicDamage(Combatant target) {
-        //TODO: calculate magic damage function should be called here? like in mage??????////
-        //TODO: FIX THIS //
-        if (target.getMagicElement() == null) {
-            target.receiveDamage(this.getPower(), this);
-            System.out.println("Dragon attack physically for: " + this.getPower() + " damage.");
-        }
-        else {
-            if (this.element.isElementStrongerThan(target.getMagicElement())) {
-                double totalDamage = this.getPower() * 1.5;
-                target.receiveDamage((int) totalDamage, this);
-                System.out.println("Dragon attack by magic ,his element is stronger than yours ");
-
-            } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
-                double totalDamage = this.getPower() * 0.8;
-                target.receiveDamage((int) totalDamage, this);
-                System.out.println("Dragon attack by magic ,his element is weaker than yours ");
-
-            } else {
-                System.out.println("dragon calcmagic,attack magic");
-                double totalDamage = this.getPower();
-                target.receiveDamage((int) totalDamage, this);
-            }
+        double magicPower = this.getPower() * 1.5;
+        if (this.element.isElementStrongerThan(target.getMagicElement())) {
+            target.receiveDamage((int)(magicPower * 1.2), this);
+            System.out.println("Dragon's element is stronger than yours");
+            System.out.println("Dragon attacked by magic for: " + (int)(magicPower * 1.2) + " damage.");
+        } else {
+            target.receiveDamage((int)(magicPower * 0.8), this);
+            System.out.println("Dragon's element is weaker than yours");
+            System.out.println("Dragon attacked by magic for: " + (int)(magicPower * 0.8) + " damage.");
         }
     }
+
+    /**
+     * Casts a spell or attacks physically, depending on the target's magic element.
+     * If the target has no magic element, the Dragon will attack physically; otherwise, it will use magic.
+     *
+     * @param target the target Combatant to attack
+     */
     @Override
-    public void castSpell (Combatant target) {
-        //TODO: calculate magic damage function should be called here? like in mage??????////
-        //TODO: FIX THIS //
-        double powerAttack = this.getPower() * 1.5;
+    public void castSpell(Combatant target) {
         if (target.getMagicElement() == null) {
+            double powerAttack = this.getPower() * 1.5;
             target.receiveDamage((int) powerAttack, this);
-            System.out.println("dragon attacked physically for: " + (int) powerAttack + " damage.");
-        }
-        else {
-            if (this.element.isElementStrongerThan(target.getMagicElement())) {
-                powerAttack *= 1.2;
-            } else if (target.getMagicElement().isElementStrongerThan(this.element)) {
-                powerAttack *= 0.8;
-            }
-            target.receiveDamage((int) powerAttack, this);
-            System.out.println("dragon attacked by magic for: " + (int) powerAttack + " damage.");
+            System.out.println("Dragon attacked physically for: " + (int) powerAttack + " damage.");
+        } else {
+            calculateMagicDamage(target);
         }
     }
+
+    /**
+     * Determines if the Dragon's element is stronger than another MagicAttacker's element.
+     *
+     * @param other the other MagicAttacker to compare
+     * @return true if the Dragon's element is stronger, false otherwise
+     */
     @Override
     public boolean isElementStrongerThan(MagicAttacker other) {
-        if (element.isElementStrongerThan(other.getMagicElement())){
-            return true;
-        }
-        return false;
+        return element.isElementStrongerThan(other.getMagicElement());
     }
+
+    /**
+     * Executes a close-range attack on a target Combatant.
+     * This is a physical attack, which may be a critical hit.
+     *
+     * @param target the target Combatant to attack
+     */
     @Override
     public void fightClose(Combatant target) {
-        if (isInMeleeRange(this.getPosition(), target.getPosition())) {
-            double powerAttack = this.getPower();
-            if (isCriticalHit())
-            {
-                target.receiveDamage((int) powerAttack * 2, this);
-                System.out.println("The dragon attack back with Critical hit! for " + (int) powerAttack * 2 + " damage.");
-            }
-            else {
-                target.receiveDamage((int) powerAttack, this);
-            }
+        double powerAttack = this.getPower();
+        if (isCriticalHit()) {
+            target.receiveDamage((int) powerAttack * 2, this);
+            System.out.println("Dragon attacked back with a Critical hit! for " + (int) powerAttack * 2 + " damage.");
+        } else {
+            target.receiveDamage((int) powerAttack, this);
+            System.out.println("Dragon attacked back for " + (int) powerAttack + " damage.");
         }
     }
+
+    /**
+     * Checks if the target is within melee range of the Dragon.
+     *
+     * @param self the Dragon's position
+     * @param target the target's position
+     * @return true if the target is within melee range, false otherwise
+     */
     @Override
     public boolean isInMeleeRange(Position self, Position target) {
         return self.distanceTo(target) <= 1;
     }
+
+    /**
+     * Attacks a target, either physically (if in melee range) or using magic (if out of melee range).
+     *
+     * @param target the target Combatant to attack
+     */
     @Override
     public void attack(Combatant target) {
-        if (isInMeleeRange(this.getPosition(), target.getPosition())) {
+        if (isInRange(this.getPosition(), target.getPosition())) {
+            fightClose(target);
+        } else {
             castSpell(target);
         }
-        else {
-            fightClose(target);
-        }
     }
+
+    /**
+     * Determines if the Dragon's attack is a critical hit.
+     * The chance of a critical hit is 10%.
+     *
+     * @return true if it's a critical hit, false otherwise
+     */
     @Override
     public boolean isCriticalHit() {
         double rand = Math.random();
         return rand <= 0.1;
     }
+    /**
+     * Checks if the target is within range for a melee attack.
+     * This method is used to determine if the Dragon can attack the target.
+     *
+     * @param self the Dragon's position
+     * @param target the target's position
+     * @return true if the target is within melee range, false otherwise
+     */
     @Override
-    public boolean equals (Object obj) {
-        if (obj instanceof Dragon) {
-            Dragon dragon = (Dragon) obj;
-            return this.getPosition() == dragon.getPosition() && this.getMagicElement() == dragon.getMagicElement();
+    public boolean isInRange(Position self, Position target) {
+        return isInMeleeRange(self, target);
+    }
+    /**
+     * Checks if two Dragon objects are equal.
+     * They are considered equal if their position and magic element are the same.
+     *
+     * @param obj the object to compare
+     * @return true if the objects are equal, false otherwise
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Dragon other) {
+            return this.getPosition() == other.getPosition() && this.getMagicElement() == other.getMagicElement();
         }
         return false;
     }
+
+    /**
+     * Gets a string representation of the Dragon.
+     *
+     * @return a string in the format "DRAGON"
+     */
     @Override
-    public String toString () {
-        return "Dragon at position " + getPosition();
+    public String toString() {
+        return this.getDisplaySymbol();
     }
 
-    private MagicElement element;
-
+    // --- Fields ---
+    /**
+     * The magic element of the Dragon.
+     * This element determines the type of magic damage the Dragon can deal.
+     */
+    private final MagicElement element;
 }

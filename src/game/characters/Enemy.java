@@ -1,28 +1,56 @@
 package game.characters;
 
-import game.combat.Combatant;
 import game.items.Treasure;
-import game.map.GameMap;
 import game.map.Position;
-
 import java.util.Random;
 
+/**
+ * Enemy represents a character that can be defeated by a player.
+ * It extends the AbstractCharacter class and adds loot functionality.
+ * When defeated, it may drop a treasure for the player to collect.
+ */
 public abstract class Enemy extends AbstractCharacter {
-    public Enemy(Position position,int health) {
-        super(position,health);
+
+    /**
+     * Constructs a new Enemy with the given position and health.
+     * A random loot value between 100 and 300 is assigned to the enemy.
+     *
+     * @param position the position of the enemy
+     * @param health the health of the enemy
+     */
+    public Enemy(Position position, int health) {
+        super(position, health);
         Random r = new Random();
-        this.loot = r.nextInt(100,300);
+        this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
     }
-    public Treasure defeat () {
+
+    /**
+     * Defeats the enemy and returns a Treasure object if the enemy is dead.
+     * If the enemy is alive, no treasure is dropped.
+     *
+     * @return a Treasure object representing the loot, or null if the enemy is not dead
+     */
+    public Treasure defeat() {
         if (this.isDead()) {
-            Treasure treasure = new Treasure(this.getPosition(), false, "Treasure");
-            return treasure;
+            return new Treasure(this.getPosition(), false, "Treasure");
         }
         return null;
     }
+
+    /**
+     * Gets the amount of loot that the enemy holds.
+     * This is a random value between 100 and 300.
+     *
+     * @return the amount of loot
+     */
     public int getLoot() {
         return loot;
     }
 
-    private int loot;
+    // --- Fields ---
+    /**
+     * The amount of loot that the enemy holds.
+     * This is a random value between 100 and 300.
+     */
+    private final int loot;
 }
