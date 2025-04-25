@@ -7,21 +7,23 @@ public class PowerPotion extends Potion {
     public PowerPotion(Position position, boolean blocksMovement, String description,int max,int min) {
         super(position, blocksMovement, description,max,min);
     }
+    @Override
     public void interact(PlayerCharacter c) {
         if(!getIsUsed()){
             int amount = this.getIncreaseAmount();
             c.setPower(amount);
-            this.setIsUsed();
-            c.getInventory().removeItem(this);
-            System.out.println("Your power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
+            if(this.setIsUsed()) {
+                if (c.getInventory().removeItem(this)) {
+                    System.out.println("Your power was " + (c.getPower()-amount) + " now is " + (c.getPower()));
+
+                }
+            }
         }
     }
+    @Override
     public void collect(PlayerCharacter c) {
         if (c.addToInventory(this)) {
             System.out.println("Power Potion added to the inventory! ");
-        }
-        else {
-            System.out.println("Power Potion not added to the inventory! ");
         }
     }
     @Override
@@ -30,12 +32,12 @@ public class PowerPotion extends Potion {
     }
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof PowerPotion) {
-            PowerPotion p = (PowerPotion) obj;
-            return this.getPosition().equals(p.getPosition()) && this.getIsUsed() == p.getIsUsed();
+        if (obj instanceof PowerPotion other) {
+            return this.getPosition().equals(other.getPosition()) && this.getIsUsed() == other.getIsUsed();
         }
         return false;
     }
+    @Override
     public String toString() {
         return "Power Potion " + getPosition();
 

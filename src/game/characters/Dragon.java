@@ -1,5 +1,4 @@
 package game.characters;
-
 import game.combat.MagicElement;
 import game.combat.*;
 import game.map.Position;

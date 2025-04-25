@@ -1,5 +1,4 @@
 package game.characters;
-
 import game.items.Treasure;
 import game.map.Position;
 import java.util.Random;
@@ -32,7 +31,7 @@ public abstract class Enemy extends AbstractCharacter {
      */
     public Treasure defeat() {
         if (this.isDead()) {
-            return new Treasure(this.getPosition(), false, "Treasure");
+            return new Treasure(this.getPosition(), false, "Treasure", loot);
         }
         return null;
     }

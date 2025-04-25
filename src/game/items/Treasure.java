@@ -7,13 +7,11 @@ import game.map.Position;
 import java.util.Random;
 
 public class Treasure extends GameItem implements Interactable {
-    private int value;
-    private boolean collected;
 
-    public Treasure(Position position, boolean blocksMovement, String description) {
+
+    public Treasure(Position position, boolean blocksMovement, String description, int value) {
         super(position,blocksMovement,description);
-        Random rand = new Random();
-        value = rand.nextInt(100,300);
+        this.value = value;
         collected = false;
     }
 
@@ -54,10 +52,12 @@ public class Treasure extends GameItem implements Interactable {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Treasure) {
-            Treasure other = (Treasure) obj;
+        if (obj instanceof Treasure other) {
             return other.value == this.value && this.getPosition().equals(other.getPosition());
         }
         return false;
     }
+
+    private int value;
+    private boolean collected;
 }

@@ -49,7 +49,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         }
         return inventory.addItem(item);
     }
-
     /**
      * Uses the first available Potion in the inventory that is usable via usePotion().
      *
@@ -58,14 +57,13 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public boolean usePotion() {
         List<GameItem> item = inventory.getItems();
         for (int i = 0; i < item.size(); i++) {
-            if (item.get(i) instanceof Potion potion && !potion.isUsableInUsePotion()) {
+            if (item.get(i) instanceof Potion potion && potion.isUsableInUsePotion()) {
                 potion.interact(this);
                 return true;
             }
         }
         return false;
     }
-
     /**
      * Uses the first available PowerPotion in the inventory.
      *
@@ -81,7 +79,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         }
         return false;
     }
-
     /**
      * Gets the player's inventory.
      *

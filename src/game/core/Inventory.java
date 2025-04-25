@@ -4,9 +4,8 @@ import game.items.Potion;
 import game.items.PowerPotion;
 import java.util.ArrayList;
 import java.util.List;
-//finished
+
 public class Inventory {
-    private List<GameItem> items;
 
     public Inventory() {
         items = new ArrayList<>();
@@ -31,33 +30,18 @@ public class Inventory {
     public List<GameItem> getItems() {
         return items;
     }
-//todo check if necessary
-    public int getItemCount() {
-        return items.size();
-    }
-
-    public boolean isHealthPotion(int i){
-        GameItem item = items.get(i);
-
-        if (!this.isPowerPotion(i) && item instanceof Potion)
-            return true;
-        return false;
-    }
-
-    public boolean isPowerPotion(int index) {
-        GameItem item = items.get(index);
-        return item instanceof PowerPotion;
-    }
-
+    @Override
     public boolean equals (Object obj) {
-        if ( obj instanceof Inventory)
+        if (obj instanceof Inventory other)
         {
-            Inventory other = (Inventory) obj;
             return this.items.equals(other.items);
         }
         return false;
     }
+    @Override
     public String toString() {
         return "Inventory";
     }
+
+    private List<GameItem> items;
 }

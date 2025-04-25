@@ -1,10 +1,8 @@
 package game.characters;
-
 import game.combat.Combatant;
 import game.combat.PhysicalAttacker;
 import game.combat.RangeFighter;
 import game.map.Position;
-
 import java.util.Random;
 
 /**

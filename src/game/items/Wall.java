@@ -15,9 +15,8 @@ public class Wall extends GameItem {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Wall) {
-            Wall w = (Wall) obj;
-            return this.getPosition().equals(w.getPosition());
+        if (obj instanceof Wall other) {
+            return this.getPosition().equals(other.getPosition());
         }
         return false;
     }

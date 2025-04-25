@@ -1,5 +1,4 @@
 package game.combat;
-
 import game.map.Position;
 
 public class CombatSystem {
