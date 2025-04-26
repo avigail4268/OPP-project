@@ -37,6 +37,7 @@ public abstract class GameItem implements GameEntity {
     public abstract boolean equals(Object obj);
     @Override
     public abstract String getDisplaySymbol();
+    public abstract String getColorCode();
     public boolean isBlocksMovement() {
         return blocksMovement;
     }
@@ -47,7 +48,6 @@ public abstract class GameItem implements GameEntity {
     protected void setDescription(String description){
         this.description = description;
     }
-
     private Position position;
     private final boolean blocksMovement;
     private String description;

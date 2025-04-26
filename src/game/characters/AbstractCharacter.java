@@ -191,8 +191,22 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     @Override
     public abstract void attack(Combatant target);
 
+    /**
+     * Checks if the target is within the attack range of the character.
+     *
+     * @param self the character itself
+     * @param target the target position
+     * @return true if in range, false otherwise
+     */
     @Override
     public abstract boolean isInRange (Position self, Position target);
+
+    /**
+     * Gets the color code for displaying the character.
+     *
+     * @return the color code (implemented by subclasses)
+     */
+    public abstract String getColorCode();
 
     /**
      * Gets the chance for the character to evade an attack.
@@ -202,6 +216,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     protected double getEvasionChance () {
         return evasionChance;
     }
+
 
     // --- Fields ---
     /**

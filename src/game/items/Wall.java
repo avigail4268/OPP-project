@@ -22,4 +22,8 @@ public class Wall extends GameItem {
     public String getDisplaySymbol() {
         return "WALL";
     }
+    @Override
+    public String getColorCode() {
+        return "\u001B[37m"; // White for walls
+    }
 }

@@ -50,6 +50,10 @@ public class Treasure extends GameItem implements Interactable {
         }
         return false;
     }
+    @Override
+    public String getColorCode() {
+        return "\u001B[34m"; // Blue for treasure
+    }
     private final int value;
     private boolean collected;
 }

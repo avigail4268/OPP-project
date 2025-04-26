@@ -53,6 +53,10 @@ public class Potion extends GameItem implements Interactable {
         return "Health Potion " + getPosition();
 
     }
+    @Override
+    public String getColorCode() {
+        return "\u001B[34m"; // Blue for items
+    }
     public boolean isUsableInUsePotion() {
         return true;
     }

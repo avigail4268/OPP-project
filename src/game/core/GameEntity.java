@@ -8,4 +8,5 @@ public interface GameEntity {
     String getDisplaySymbol();
     void setVisible(boolean visible);
     boolean getVisible();
+    String getColorCode();
 }

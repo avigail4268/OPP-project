@@ -11,6 +11,7 @@ import game.map.Position;
 
 
 public class GameWorld {
+
     public GameWorld() {
         gameInitialization();
     }
@@ -265,34 +266,33 @@ public class GameWorld {
         }
     }
     private void isVisible (PlayerCharacter currentPlayer) {
-        System.out.println(currentPlayer + " !");
+        System.out.println(currentPlayer + "!");
         System.out.println("Look around you: ");
         checkArrayList(players,currentPlayer);
         checkArrayList(enemies,currentPlayer);
         checkArrayList(items,currentPlayer);
     }
     private void checkArrayList(List<? extends GameEntity> entities, PlayerCharacter currentPlayer) {
+        final String RESET = "\u001B[0m";
+
         for (GameEntity entity : entities) {
             Position entityPosition = entity.getPosition();
+            int row = entity.getPosition().getRow();
+            int col = entity.getPosition().getCol();
+
             if (entityPosition.distanceTo(currentPlayer.getPosition()) <= 2 && !entity.equals(currentPlayer)) {
                 entity.setVisible(true);
-                int row = entity.getPosition().getRow();
-                int col = entity.getPosition().getCol();
-                board[row][col] = entity.getDisplaySymbol().substring(0, 2);
+                board[row][col] = entity.getColorCode() + entity.getDisplaySymbol().substring(0, 2) + RESET;
             }
             if (entityPosition.distanceTo(currentPlayer.getPosition()) > 2) {
                 if (entity.getVisible()) {
                     entity.setVisible(false);
-                    int row = entity.getPosition().getRow();
-                    int col = entity.getPosition().getCol();
                     board[row][col] = "_ ";
                 }
             }
             if (entity.equals(currentPlayer)) {
                 entity.setVisible(true);
-                int row = entity.getPosition().getRow();
-                int col = entity.getPosition().getCol();
-                board[row][col] = entity.getDisplaySymbol().substring(0, 2);
+                board[row][col] = entity.getColorCode() + entity.getDisplaySymbol().substring(0, 2) + RESET;
             }
         }
     }

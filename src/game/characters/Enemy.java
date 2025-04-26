@@ -31,7 +31,7 @@ public abstract class Enemy extends AbstractCharacter {
      */
     public Treasure defeat() {
         if (this.isDead()) {
-            return new Treasure(this.getPosition(), false, loot);
+            return new Treasure(this.getPosition(), false, getLoot());
         }
         return null;
     }
@@ -44,6 +44,27 @@ public abstract class Enemy extends AbstractCharacter {
      */
     public int getLoot() {
         return loot;
+    }
+
+    /**
+     * Gets the red color code for displaying the enemies.
+     *
+     * @return the color code for the player
+     */
+    @Override
+    public String getColorCode() {
+        return "\u001B[31m"; // Red for enemies
+    }
+    @Override
+    public String toString() {
+        return "Enemy in position " + getPosition();
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Enemy other) {
+            return getPosition().equals(other.getPosition());
+        }
+        return false;
     }
 
     // --- Fields ---

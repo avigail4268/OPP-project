@@ -106,6 +106,17 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         return treasurePoints;
     }
 
+    /**
+     * Gets the green color code for displaying the players.
+     *
+     * @return the color code for the player
+     */
+    @Override
+    public String getColorCode() {
+        return "\u001B[32m"; // Green for player
+    }
+
+
     // --- Fields ---
     /**
      * The name of the player character.
