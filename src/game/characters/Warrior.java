@@ -9,7 +9,8 @@ import java.util.Random;
  * The Warrior class represents a player character specialized in melee and physical combat.
  * Warriors have a chance to land critical hits and can reduce incoming damage using their defense stat.
  */
-public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
+public class
+Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
 
     /**
      * Constructs a Warrior with the given name, position, and health.

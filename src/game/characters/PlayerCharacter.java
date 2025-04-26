@@ -95,6 +95,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
      */
     public void updateTreasurePoint(int amount){
         this.treasurePoints += amount;
+
     }
 
     /**

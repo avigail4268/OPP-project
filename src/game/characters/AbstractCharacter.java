@@ -35,6 +35,9 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     @Override
     public void heal(int amount) {
         this.health += amount;
+        if (this.health < 0) {
+            this.health = 0;
+        }
     }
 
     /**
@@ -115,11 +118,8 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public boolean setHealth(int health) {
-        if (health > 0) {
-            this.health = health;
-            return true;
-        }
-        return false;
+        this.health = Math.max(health, 0);
+        return true;
     }
 
     /**
