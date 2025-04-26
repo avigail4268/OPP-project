@@ -24,4 +24,6 @@ public interface PhysicalAttacker {
      * @return true if the attack is a critical hit; false otherwise
      */
     boolean isCriticalHit();
+    /** @return if the hit is critical or not
+     */
 }
