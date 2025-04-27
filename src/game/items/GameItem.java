@@ -128,9 +128,23 @@ public abstract class GameItem implements GameEntity {
         this.description = description;
     }
 
+
+    // --- Fields ---
+    /**
+     * The position of the item in the game world.
+     */
     private Position position;
+    /**
+     * Indicates whether the item blocks movement.
+     */
     private final boolean blocksMovement;
+    /**
+     * The description of the item.
+     */
     private String description;
+    /**
+     * Indicates whether the item is visible.
+     */
     private boolean visible;
 }
 

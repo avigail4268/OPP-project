@@ -5,7 +5,6 @@ import game.map.Position;
 
 /**
  * Represents a power potion that can be collected and used by a player character.
- *
  * When used, the potion increases the player's power by a random amount.
  */
 public class PowerPotion extends Potion {

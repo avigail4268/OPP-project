@@ -78,5 +78,10 @@ public class Inventory {
         return "Inventory";
     }
 
+
+    // --- Fields ---
+    /**
+     * The list of items in the inventory.
+     */
     private List<GameItem> items;
 }

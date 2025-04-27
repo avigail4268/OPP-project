@@ -106,6 +106,14 @@ public class Treasure extends GameItem implements Interactable {
         return "\u001B[34m"; // Blue for treasure
     }
 
+
+    // --- Fields ---
+    /**
+     * The number of treasure points this treasure provides.
+     */
     private final int value;
+    /**
+     * Indicates whether the treasure has been collected.
+     */
     private boolean collected;
 }

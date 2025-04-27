@@ -30,7 +30,7 @@ public class CombatSystem {
 
         // OUTCOME
         if (attacker.isDead()) {
-            System.out.println("Game Over! You are dead!");
+            return;
         } else if (defender.isDead()) {
             System.out.println("Enemy is dead! You won the fight!");
         }
@@ -42,11 +42,6 @@ public class CombatSystem {
     private boolean isInRange(Combatant source, Combatant target) {
         Position sourcePos = source.getPosition();
         Position targetPos = target.getPosition();
-        if (source.isInRange(sourcePos, targetPos)) {
-            return true;
-        } else {
-            System.out.println("Target is out of range.");
-        }
-        return false;
+        return source.isInRange(sourcePos, targetPos);
     }
 }

@@ -142,6 +142,13 @@ public class Potion extends GameItem implements Interactable {
         return increaseAmount;
     }
 
+    // --- Fields ---
+    /**
+     * The amount of health this potion restores.
+     */
     private final int increaseAmount;
+    /**
+     * Indicates whether the potion has been used.
+     */
     private boolean isUsed;
 }
