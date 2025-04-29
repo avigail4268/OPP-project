@@ -13,10 +13,11 @@ public class GameWindow extends JFrame {
         MapPanel mapPanel = new MapPanel(game);
         StatusPanel statusPanel = new StatusPanel(game.getCurrentPlayer());
 
-        add(mapPanel, BorderLayout.CENTER); // פה נמצא ה־GridLayout
+        add(mapPanel, BorderLayout.CENTER);
         add(statusPanel, BorderLayout.SOUTH);
 
         setSize(800, 800);
         setVisible(true);
     }
+
 }
