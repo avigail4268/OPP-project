@@ -457,6 +457,21 @@ public class GameWorld {
         map.addToGrid(pos, enemy);
     }
 
+    public List<PlayerCharacter> getPlayers() {
+        return players;
+    }
+    public PlayerCharacter getCurrentPlayer() {
+        return players.get(0);
+    }
+    public List<GameItem> getItems() {
+        return items;
+    }
+    public List<Enemy> getEnemies() {
+        return enemies;
+    }
+    public GameMap getMap() {
+        return map;
+    }
     // --- Fields ---
 
     /** The list of players in the game. */
