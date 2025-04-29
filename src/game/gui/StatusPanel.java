@@ -51,4 +51,9 @@ public void update(PlayerCharacter player) {
             healthBar.setForeground(Color.RED);
         }
     }
+    public void refresh() {
+        // This method can be used to refresh the status panel if needed
+        // For example, if you want to update the health bar or other components
+        // based on some game events.
+    }
 }

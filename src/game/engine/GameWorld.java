@@ -209,7 +209,8 @@ public class GameWorld {
             if (entity instanceof PlayerCharacter) {
                 //only one player at the moment
                 return false;
-            } else if (entity instanceof Enemy) {
+            }
+            else if (entity instanceof Enemy) {
                 // If the entity is an enemy, initiate combat
                 Enemy enemy = findEnemy(entity);
                 CombatSystem combatSystem = new CombatSystem();
@@ -248,7 +249,6 @@ public class GameWorld {
         }
         return false;
     }
-
     /**
      * Finds an enemy based on a game entity reference.
      *
