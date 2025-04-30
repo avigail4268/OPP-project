@@ -65,11 +65,11 @@ public class GameController {
     }
 
     public int getMapRows() {
-        return game.getMapRows();
+        return game.getMap().getSize();
     }
 
     public int getMapCols() {
-        return game.getMapCols();
+        return game.getMap().getSize();
     }
 
     public int getPlayerHP() {

@@ -67,7 +67,6 @@ public class GameWorld {
             }
         }
     }
-
     /**
      * Initializes the game by creating the map, initializing the player, and populating the game world.
      */
