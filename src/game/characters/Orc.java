@@ -50,7 +50,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
      */
     @Override
     public String getDisplaySymbol() {
-        return "ORC";
+        return "Orc";
     }
     /**
      * Executes a close-range melee attack on the target.

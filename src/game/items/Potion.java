@@ -33,7 +33,7 @@ public class Potion extends GameItem implements Interactable {
      */
     @Override
     public String getDisplaySymbol() {
-        return "HP";
+        return "Health Potion";
     }
 
     /**

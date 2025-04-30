@@ -30,7 +30,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
      */
     @Override
     public String getDisplaySymbol() {
-        return "GOBLIN";
+        return "Goblin";
     }
     /**
      * Performs a melee attack on the target if the target is in range.

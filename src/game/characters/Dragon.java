@@ -29,7 +29,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
      */
     @Override
     public String getDisplaySymbol() {
-        return "DRAGON";
+        return "Dragon";
     }
 
     /**

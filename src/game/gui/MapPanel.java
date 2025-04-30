@@ -1,56 +1,54 @@
 package game.gui;
+
 import game.controller.GameController;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
-
-class MapPanel extends JPanel {
-    private static final int TILE_SIZE = 64;
-    private GameController controller;
-    private JButton[][] grid;
-    private int rows;
-    private int cols;
+public class MapPanel extends JPanel {
+    private final JButton[][] cellButtons;
+    private final GameController controller;
 
     public MapPanel(GameController controller) {
         this.controller = controller;
-        this.rows = controller.getMapRows();
-        this.cols = controller.getMapCols();
+        int rows = controller.getMapRows();
+        int cols = controller.getMapCols();
+
         setLayout(new GridLayout(rows, cols));
-        grid = new JButton[rows][cols];
+        cellButtons = new JButton[rows][cols];
+
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
-                JButton cell = new JButton();
-                cell.setPreferredSize(new Dimension(TILE_SIZE, TILE_SIZE));
-                cell.setFocusPainted(false);
-                final int r = row;
-                final int c = col;
-                cell.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mousePressed(MouseEvent e) {
-                        if (SwingUtilities.isLeftMouseButton(e)) {
-                            controller.handleLeftClick(r, c);
-                        } else if (SwingUtilities.isRightMouseButton(e)) {
-                            controller.handleRightClick(r, c, cell);
+                JButton button = new JButton();
+                button.setIcon(controller.getIconForTile(row, col));
+                int finalRow = row;
+                int finalCol = col;
+                button.addActionListener(e -> controller.handleLeftClick(finalRow, finalCol));
+                button.addMouseListener(new java.awt.event.MouseAdapter() {
+                    public void mousePressed(java.awt.event.MouseEvent e) {
+                        if (SwingUtilities.isRightMouseButton(e)) {
+                            controller.handleRightClick(finalRow, finalCol, button);
                         }
                     }
                 });
-
-                grid[row][col] = cell;
-                add(cell);
+                cellButtons[row][col] = button;
+                add(button);
             }
         }
     }
 
     public void refresh() {
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
-                ImageIcon icon = controller.getIconForTile(row, col);
-                grid[row][col].setIcon(icon);
+        for (int row = 0; row < cellButtons.length; row++) {
+            for (int col = 0; col < cellButtons[0].length; col++) {
+                cellButtons[row][col].setIcon(controller.getIconForTile(row, col));
             }
         }
-        revalidate();
-        repaint();
+    }
+
+    public void highlightCell(int row, int col, Color color) {
+        JButton cell = cellButtons[row][col];
+        Color original = cell.getBackground();
+        cell.setBackground(color);
+        new javax.swing.Timer(300, e -> cell.setBackground(original)).start();
     }
 }

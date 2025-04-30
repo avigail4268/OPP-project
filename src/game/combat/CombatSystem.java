@@ -7,7 +7,7 @@ public class CombatSystem {
      * Resolves a turn of combat between an attacker and a defender.
      * If in range, attacker attacks first, then defender counter-attacks if still alive.
      */
-    public void resolveCombat(Combatant attacker, Combatant defender) {
+    public static void resolveCombat(Combatant attacker, Combatant defender) {
         if (!isInRange(attacker, defender)) {
             System.out.println("You are not in range!");
             return;
@@ -39,7 +39,7 @@ public class CombatSystem {
     /**
      * Checks if the attacker can reach the defender based on their combat type.
      */
-    private boolean isInRange(Combatant source, Combatant target) {
+    private static boolean isInRange(Combatant source, Combatant target) {
         Position sourcePos = source.getPosition();
         Position targetPos = target.getPosition();
         return source.isInRange(sourcePos, targetPos);

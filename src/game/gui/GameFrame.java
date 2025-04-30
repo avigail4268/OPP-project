@@ -29,4 +29,7 @@ public class GameFrame extends JFrame {
         mapPanel.refresh();
         statusPanel.refresh(controller.getPlayer());
     }
+    public MapPanel getMapPanel() {
+        return mapPanel;
+    }
 }

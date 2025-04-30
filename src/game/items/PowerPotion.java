@@ -59,7 +59,7 @@ public class PowerPotion extends Potion {
      */
     @Override
     public String getDisplaySymbol() {
-        return "PP";
+        return "Power Potion";
     }
 
     /**

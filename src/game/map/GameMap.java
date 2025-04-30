@@ -113,7 +113,7 @@ public class GameMap {
      * @param pos the position to retrieve entities from
      * @return a list of entities at the specified position, or null if the position is empty
      */
-    public List<GameEntity> getEntityInPosition(Position pos) {
+    public List<GameEntity> getEntitiesAt(Position pos) {
         return grid.get(pos);
     }
 

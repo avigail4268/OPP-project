@@ -31,7 +31,7 @@ public class Treasure extends GameItem implements Interactable {
      */
     @Override
     public String getDisplaySymbol() {
-        return "TREASURE";
+        return "Treasure";
     }
 
     /**
