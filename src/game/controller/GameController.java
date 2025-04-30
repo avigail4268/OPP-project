@@ -104,6 +104,7 @@ import game.core.GameEntity;
 import game.controller.CellTypeDetector;
 //import game.gui.SoundPlayer;
 import java.awt.*;
+import java.net.URL;
 import java.util.List;
 import java.util.Objects;
 
@@ -165,28 +166,60 @@ public class GameController {
         popup.show(sourceButton, sourceButton.getWidth() / 2, sourceButton.getHeight() / 2);
     }
 
+//    public ImageIcon getIconForTile(int row, int col) {
+//        Position pos = new Position(row, col);
+//        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
+//        String path = "/resources/images/";
+//
+//        if (engine.isVisibleToPlayer(row, col)) {
+//            if (CellTypeDetector.hasPlayer(entities)) {
+//                PlayerCharacter player = CellTypeDetector.getFirstPlayer(entities);
+//                path += player.getDisplaySymbol() + ".png";
+//            } if (CellTypeDetector.hasEnemy(entities)) {
+//                Enemy enemy = CellTypeDetector.getFirstEnemy(entities);
+//                path += enemy.getDisplaySymbol() + ".png";
+//            } if (CellTypeDetector.hasItem(entities)) {
+//                GameItem item = CellTypeDetector.getFirstItem(entities);
+//                path += item.getDescription() + ".png";
+//            } if (CellTypeDetector.hasWall(entities)) {
+//                path += "Wall.png";
+//            }
+//            return new ImageIcon(Objects.requireNonNull(getClass().getResource(path)));
+//        }
+//        return null;
+//    }
+
+
     public ImageIcon getIconForTile(int row, int col) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
+
+        // Si la liste est null, on retourne null directement
+        if (entities == null || !engine.isVisibleToPlayer(row, col)) {
+            return null;
+        }
+
         String path = "/resources/images/";
 
-        if (engine.isVisibleToPlayer(row, col)) {
-            if (CellTypeDetector.hasPlayer(entities)) {
-                PlayerCharacter player = CellTypeDetector.getFirstPlayer(entities);
-                path += player.getDisplaySymbol() + ".png";
-            } if (CellTypeDetector.hasEnemy(entities)) {
-                Enemy enemy = CellTypeDetector.getFirstEnemy(entities);
-                path += enemy.getDisplaySymbol() + ".png";
-            } if (CellTypeDetector.hasItem(entities)) {
-                GameItem item = CellTypeDetector.getFirstItem(entities);
-                path += item.getDescription() + ".png";
-            } if (CellTypeDetector.hasWall(entities)) {
-                path += "Wall.png";
-            }
-            return new ImageIcon(Objects.requireNonNull(getClass().getResource(path)));
+        if (CellTypeDetector.hasPlayer(entities)) {
+            PlayerCharacter player = CellTypeDetector.getFirstPlayer(entities);
+            path += player.getDisplaySymbol() + ".png";
+        } else if (CellTypeDetector.hasEnemy(entities)) {
+            Enemy enemy = CellTypeDetector.getFirstEnemy(entities);
+            path += enemy.getDisplaySymbol() + ".png";
+        } else if (CellTypeDetector.hasItem(entities)) {
+            GameItem item = CellTypeDetector.getFirstItem(entities);
+            path += item.getDescription() + ".png";
+        } else if (CellTypeDetector.hasWall(entities)) {
+            path += "Wall.png";
+        } else {
+            return null;
         }
-        return null;
+
+        URL resource = getClass().getResource(path);
+        return (resource != null) ? new ImageIcon(resource) : null;
     }
+
 
     public int getMapRows() {
         return engine.getMap().getSize();

@@ -114,7 +114,7 @@ public class GameMap {
      * @return a list of entities at the specified position, or null if the position is empty
      */
     public List<GameEntity> getEntitiesAt(Position pos) {
-        return grid.get(pos);
+        return grid.getOrDefault(pos, new ArrayList<>());
     }
 
     // Private field storing the grid of the map
