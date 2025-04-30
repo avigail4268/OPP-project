@@ -15,7 +15,7 @@ public class Main {
             GameWorld world = new GameWorld(size, playerType, name);
             GameController controller = new GameController(world);
             GameFrame frame = new GameFrame(controller);
-            controller.setFrame(frame);  // חיבור בין controller ל־frame
+            controller.setFrame(frame);
             frame.setVisible(true);
         });
     }

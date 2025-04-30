@@ -77,7 +77,7 @@ public class GameController {
             return null;
         }
 
-        String path = "/resources/images/";
+        String path = "/images/";
 
         if (CellTypeDetector.hasPlayer(entities)) {
             PlayerCharacter player = CellTypeDetector.getFirstPlayer(entities);
@@ -87,14 +87,22 @@ public class GameController {
             path += enemy.getDisplaySymbol() + ".png";
         } else if (CellTypeDetector.hasItem(entities)) {
             GameItem item = CellTypeDetector.getFirstItem(entities);
-            path += item.getDescription() + ".png";
+            path += item.getDisplaySymbol() + ".png";
         } else if (CellTypeDetector.hasWall(entities)) {
             path += "Wall.png";
         } else {
             return null;
 
         }
-
+        java.net.URL imgURL = getClass().getResource(path);
+        if (imgURL != null) {
+            ImageIcon originalIcon = new ImageIcon(imgURL);
+            Image scaledImage = originalIcon.getImage().getScaledInstance(64, 64, Image.SCALE_SMOOTH);
+            return new ImageIcon(scaledImage);
+        } else {
+            return null;
+        }
+    }
 
     public int getMapRows() {
         return engine.getMap().getSize();
