@@ -9,16 +9,11 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            // קלט מהמשתמש
             int size = askMapSize();
             int playerType = askPlayerType();
             String name = askPlayerName();
-
-            // יצירת העולם והבקר
             GameWorld world = new GameWorld(size, playerType, name);
             GameController controller = new GameController(world);
-
-            // יצירת ה־GUI
             GameFrame frame = new GameFrame(controller);
             controller.setFrame(frame);  // חיבור בין controller ל־frame
             frame.setVisible(true);
