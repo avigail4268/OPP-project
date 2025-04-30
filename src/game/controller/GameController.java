@@ -1,6 +1,8 @@
 package game.controller;
 
 import javax.swing.*;
+
+import game.characters.PlayerCharacter;
 import game.engine.*;
 import game.gui.CellButton;
 import java.util.Objects;
@@ -25,7 +27,7 @@ public class GameController {
     }
 
     public void handleRightClick(int row, int col, JButton sourceButton) {
-        Tile tile = game.getTile(row, col);
+        CellButton tile = game.getTile(row, col);
         JPopupMenu popup = new JPopupMenu();
 
 
@@ -44,7 +46,7 @@ public class GameController {
     }
 
     public ImageIcon getIconForTile(int row, int col) {
-        Tile tile = game.getTile(row, col);
+        CellButton tile = game.getTile(row, col);
         String path = "/resources/images/";
 
         if (!game.isVisibleToPlayer(row, col)) {
@@ -78,5 +80,8 @@ public class GameController {
 
     public int getPlayerMaxHP() {
         return 100;
+    }
+    public PlayerCharacter getPlayer() {
+        return game.getCurrentPlayer();
     }
 }
