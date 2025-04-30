@@ -138,7 +138,7 @@ public class Potion extends GameItem implements Interactable {
      *
      * @return the health increase amount
      */
-    protected int getIncreaseAmount() {
+    public int getIncreaseAmount() {
         return increaseAmount;
     }
 

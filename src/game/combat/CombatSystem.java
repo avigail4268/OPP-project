@@ -16,6 +16,7 @@ public class CombatSystem {
         if (defender.tryEvade()) {
             System.out.println("The enemy evaded the attack!");
         } else {
+            System.out.println("try attack");
             attacker.attack(defender);
         }
 
@@ -24,6 +25,7 @@ public class CombatSystem {
             if (attacker.tryEvade()) {
                 System.out.println("You evaded the enemy's attack!");
             } else {
+                System.out.println("enemy try attack");
                 defender.attack(attacker);
             }
         }

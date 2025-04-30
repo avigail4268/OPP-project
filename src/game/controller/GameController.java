@@ -3,49 +3,52 @@ import javax.swing.*;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
+import game.gui.GameFrame;
 import game.items.GameItem;
 import game.map.Position;
 import game.core.GameEntity;
 //import game.gui.SoundPlayer;
 import java.awt.*;
-import java.net.URL;
 import java.util.List;
 
 public class GameController {
-    private GameWorld engine;
-    private JFrame frame;
-
     public GameController(GameWorld engine) {
         this.engine = engine;
     }
-
-    public void setFrame(JFrame frame) {
+    public void setFrame(GameFrame frame) {
         this.frame = frame;
     }
-
     public void handleLeftClick(int row, int col) {
         Position clickedPos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
         Position playerPos = engine.getPlayer().getPosition();
-
         if (engine.isValidMove(playerPos, clickedPos, engine.getPlayer())) {
             engine.movePlayerTo(clickedPos);
 //            SoundPlayer.playSound("step.wav");
+            frame.refresh();
         } else if (CellTypeDetector.hasEnemy(entities)) {
             engine.fightEnemyAt(clickedPos);
+            if (engine.getPlayer().isDead()) {
+                JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
+                System.exit(0);
+            }
 //            SoundPlayer.playSound("attack.wav");
             if (frame instanceof game.gui.GameFrame gf) {
                 gf.getMapPanel().highlightCell(row, col, Color.RED);
+                frame.refresh();
             }
+            frame.refresh();
         } else if (CellTypeDetector.hasItem(entities)) {
             engine.pickUpItemAt(clickedPos);
 //            SoundPlayer.playSound("pickup.wav");
+            checkVictory();
+            frame.refresh();
             if (frame instanceof game.gui.GameFrame gf) {
                 gf.getMapPanel().highlightCell(row, col, Color.GREEN);
+                frame.refresh();
             }
         }
     }
-
     public void handleRightClick(int row, int col, JButton sourceButton) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -68,7 +71,6 @@ public class GameController {
 
         popup.show(sourceButton, sourceButton.getWidth() / 2, sourceButton.getHeight() / 2);
     }
-
     public ImageIcon getIconForTile(int row, int col) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -103,28 +105,22 @@ public class GameController {
             return null;
         }
     }
-
+    private void checkVictory() {
+        if (engine.getPlayer().getTreasurePoints() >= 500) {
+            JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
+        }
+    }
     public int getMapRows() {
         return engine.getMap().getSize();
     }
-
     public int getMapCols() {
         return engine.getMap().getSize();
     }
-
-    public int getPlayerHP() {
-        return engine.getPlayer().getHealth();
-    }
-
-    public int getPlayerMaxHP() {
-        return 100;
-    }
-
-//    public int getPlayerPotionCount() {
-//        return engine.getPlayer().getInventory().countPotions();
-//    }
-
     public PlayerCharacter getPlayer() {
         return engine.getPlayer();
     }
+
+    private GameWorld engine;
+    private GameFrame frame;
 }

@@ -1,9 +1,7 @@
 package game;
-
 import game.engine.GameWorld;
 import game.controller.GameController;
 import game.gui.GameFrame;
-
 import javax.swing.*;
 
 public class Main {
@@ -19,7 +17,6 @@ public class Main {
             frame.setVisible(true);
         });
     }
-
     private static int askMapSize() {
         String input = JOptionPane.showInputDialog("Enter map size (min 10):");
         try {
@@ -29,7 +26,6 @@ public class Main {
             return 10;
         }
     }
-
     private static int askPlayerType() {
         Object[] options = {"Warrior", "Mage", "Archer"};
         int choice = JOptionPane.showOptionDialog(null,
@@ -40,7 +36,6 @@ public class Main {
                 null, options, options[0]);
         return choice + 1; // Warrior = 1, Mage = 2, Archer = 3
     }
-
     private static String askPlayerName() {
         return JOptionPane.showInputDialog("Enter your character's name:");
     }

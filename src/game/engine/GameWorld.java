@@ -9,11 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameWorld {
-    private GameMap map;
-    private List<PlayerCharacter> players;
-    private List<Enemy> enemies;
-    private List<GameItem> items;
-
     public GameWorld(int size, int playerType, String playerName) {
         this.map = new GameMap(size);
         this.players = new ArrayList<>();
@@ -22,7 +17,6 @@ public class GameWorld {
         createPlayer(playerType, playerName);
         populateGameMap();
     }
-
     private void createPlayer(int playerType, String playerName) {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
@@ -35,7 +29,6 @@ public class GameWorld {
         map.addToGrid(pos, player);
         players.add(player);
     }
-
     private void populateGameMap() {
         for (int i = 0; i < map.getSize(); i++) {
             for (int j = 0; j < map.getSize(); j++) {
@@ -50,7 +43,6 @@ public class GameWorld {
             }
         }
     }
-
     public void createEnemy(Position pos) {
         double random = Math.random();
         Enemy enemy;
@@ -64,25 +56,21 @@ public class GameWorld {
         enemies.add(enemy);
         map.addToGrid(pos, enemy);
     }
-
     private void createPotion(Position pos) {
         Potion potion = new Potion(pos, false, 50, 10);
         items.add(potion);
         map.addToGrid(pos, potion);
     }
-
     private void createPowerPotion(Position pos) {
         PowerPotion powerPotion = new PowerPotion(pos, false, 5, 1);
         items.add(powerPotion);
         map.addToGrid(pos, powerPotion);
     }
-
     private void createWall(Position pos) {
         Wall wall = new Wall(pos, true);
         items.add(wall);
         map.addToGrid(pos, wall);
     }
-
     public boolean isValidMove(Position from, Position to, PlayerCharacter player) {
         if (to.getRow() < 0 || to.getRow() >= map.getSize() ||
                 to.getCol() < 0 || to.getCol() >= map.getSize()) {
@@ -98,9 +86,8 @@ public class GameWorld {
             if (entity instanceof Wall) return false;
         }
 
-        return true;
+        return map.isEmpty(to);
     }
-
     public void movePlayerTo(Position newPos) {
         PlayerCharacter player = getPlayer();
         Position oldPos = player.getPosition();
@@ -108,8 +95,8 @@ public class GameWorld {
         map.removeFromGrid(oldPos, player);
         map.addToGrid(newPos, player);
     }
-
     public void fightEnemyAt(Position pos) {
+        System.out.println("enter the fight methode");
         List<GameEntity> entities = map.getEntitiesAt(pos);
         for (GameEntity entity : entities) {
             if (entity instanceof Enemy enemy) {
@@ -125,7 +112,6 @@ public class GameWorld {
             }
         }
     }
-
     public void pickUpItemAt(Position pos) {
         List<GameEntity> entities = map.getEntitiesAt(pos);
         for (GameEntity entity : entities) {
@@ -137,31 +123,24 @@ public class GameWorld {
             }
         }
     }
-
     public boolean isVisibleToPlayer(int row, int col) {
         Position playerPos = getPlayer().getPosition();
         Position newPos = new Position(row, col);
         int distance = playerPos.distanceTo(newPos);
         return distance <= 2;
     }
-
     public GameMap getMap() {
         return map;
     }
-
     public PlayerCharacter getPlayer() {
         return players.get(0);
     }
-
-    public List<PlayerCharacter> getPlayers() {
-        return players;
-    }
-
-    public List<Enemy> getEnemies() {
-        return enemies;
-    }
-
     public List<GameItem> getItems() {
         return items;
     }
+
+    private GameMap map;
+    private List<PlayerCharacter> players;
+    private List<Enemy> enemies;
+    private List<GameItem> items;
 }

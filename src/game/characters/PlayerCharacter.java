@@ -54,30 +54,36 @@ public abstract class PlayerCharacter extends AbstractCharacter {
      *
      * @return true if a potion was found and used, false otherwise
      */
-    public boolean usePotion() {
-        List<GameItem> item = inventory.getItems();
-        for (int i = 0; i < item.size(); i++) {
-            if (item.get(i) instanceof Potion potion && potion.isUsableInUsePotion()) {
-                potion.interact(this);
-                return true;
-            }
+    public boolean useItem(GameItem item) {
+        if (item instanceof PowerPotion) {
+            usePowerPotion((PowerPotion) item);
+            inventory.removeItem(item);
+            return true;
+        } else if (item instanceof Potion) {
+            usePotion((Potion) item);
+            inventory.removeItem(item);
+            return true;
         }
         return false;
     }
+
+
+    public void usePotion(Potion potion) {
+        int healingAmount = potion.getIncreaseAmount();
+        int currentHealth = getHealth();
+        potion.interact(this);
+        System.out.println(getName() + " used a potion and healed " + healingAmount + " HP!");
+    }
+
     /**
      * Uses the first available PowerPotion in the inventory.
      *
      * @return true if a power potion was found and used, false otherwise
      */
-    public boolean usePowerPotion() {
-        List<GameItem> item = inventory.getItems();
-        for (int i = 0; i < item.size(); i++) {
-            if (item.get(i) instanceof PowerPotion powerPotion) {
-                powerPotion.interact(this);
-                return true;
-            }
-        }
-        return false;
+    public void usePowerPotion(PowerPotion potion) {
+        int powerBoost = potion.getIncreaseAmount();
+        potion.interact(this);
+        System.out.println(getName() + " used a power potion and gained " + powerBoost + " attack power!");
     }
     /**
      * Gets the player's inventory.
