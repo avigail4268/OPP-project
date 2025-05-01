@@ -96,7 +96,6 @@ public class GameWorld {
         map.addToGrid(newPos, player);
     }
     public void fightEnemyAt(Position pos) {
-        System.out.println("enter the fight methode");
         List<GameEntity> entities = map.getEntitiesAt(pos);
         for (GameEntity entity : entities) {
             if (entity instanceof Enemy enemy) {

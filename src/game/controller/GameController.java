@@ -1,5 +1,7 @@
 package game.controller;
 import javax.swing.*;
+
+import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
@@ -24,7 +26,7 @@ public class GameController {
         Position playerPos = engine.getPlayer().getPosition();
         if (engine.isValidMove(playerPos, clickedPos, engine.getPlayer())) {
             engine.movePlayerTo(clickedPos);
-//            SoundPlayer.playSound("step.wav");
+            SoundPlayer.playSound("footsteps.wav");
             frame.refresh();
         } else if (CellTypeDetector.hasEnemy(entities)) {
             engine.fightEnemyAt(clickedPos);
@@ -32,7 +34,7 @@ public class GameController {
                 JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
                 System.exit(0);
             }
-//            SoundPlayer.playSound("attack.wav");
+            SoundPlayer.playSound("attack.wav");
             if (frame instanceof game.gui.GameFrame gf) {
                 gf.getMapPanel().highlightCell(row, col, Color.RED);
                 frame.refresh();
@@ -40,7 +42,7 @@ public class GameController {
             frame.refresh();
         } else if (CellTypeDetector.hasItem(entities)) {
             engine.pickUpItemAt(clickedPos);
-//            SoundPlayer.playSound("pickup.wav");
+            SoundPlayer.playSound("item_pickup.wav");
             checkVictory();
             frame.refresh();
             if (frame instanceof game.gui.GameFrame gf) {
