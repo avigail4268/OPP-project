@@ -1,6 +1,7 @@
 package game.controller;
 import javax.swing.*;
-
+import java.awt.image.BufferedImage;
+import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
@@ -9,7 +10,6 @@ import game.gui.GameFrame;
 import game.items.GameItem;
 import game.map.Position;
 import game.core.GameEntity;
-//import game.gui.SoundPlayer;
 import java.awt.*;
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class GameController {
                 JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
                 System.exit(0);
             }
-            SoundPlayer.playSound("attack.wav");
+            SoundPlayer.playSound("classic_attack.wav");
             if (frame instanceof game.gui.GameFrame gf) {
                 gf.getMapPanel().highlightCell(row, col, Color.RED);
                 frame.refresh();
@@ -107,6 +107,68 @@ public class GameController {
             return null;
         }
     }
+
+
+    public ImageIcon getIconWithHealthBar(int row, int col) {
+        Position pos = new Position(row, col);
+        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
+
+        if (entities == null || !engine.isVisibleToPlayer(row, col)) {
+            return null;
+        }
+
+        ImageIcon baseIcon = getIconForTile(row, col);
+        if (baseIcon == null) return null;
+
+        Image baseImage = baseIcon.getImage();
+        int width = baseImage.getWidth(null);
+        int height = baseImage.getHeight(null);
+
+        int healthBarHeight = 6;
+        int iconYOffset = 10; // מיקום התמונה מתחת לפס החיים
+
+        // יוצרים תמונה חדשה שכוללת את פס החיים
+        BufferedImage imageWithBar = new BufferedImage(width, height + iconYOffset, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = imageWithBar.createGraphics();
+
+        // מציירים את האייקון למטה מעט כדי שיהיה מקום לפס
+        g.drawImage(baseImage, 0, iconYOffset, null);
+
+        // נזהה האם יש דמות או אויב בתא
+        for (GameEntity entity : entities) {
+            int health = -1;
+
+            if (entity instanceof PlayerCharacter p) {
+                health = p.getHealth();
+            } else if (entity instanceof Enemy e) {
+                health = e.getHealth();
+            }
+
+            if (health >= 0) {
+                double percent = health / 100.0;
+                Color barColor = percent > 0.7 ? Color.GREEN : (percent > 0.3 ? Color.ORANGE : Color.RED);
+
+                // רקע אפור לפס
+                g.setColor(Color.DARK_GRAY);
+                g.fillRect(0, 0, width, healthBarHeight);
+
+                // פס החיים לפי אחוז
+                g.setColor(barColor);
+                g.fillRect(0, 0, (int)(width * percent), healthBarHeight);
+
+                // מסגרת
+                g.setColor(Color.BLACK);
+                g.drawRect(0, 0, width - 1, healthBarHeight - 1);
+
+                break;
+            }
+        }
+
+        g.dispose();
+        return new ImageIcon(imageWithBar);
+    }
+
+
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
@@ -126,3 +188,4 @@ public class GameController {
     private GameWorld engine;
     private GameFrame frame;
 }
+

@@ -17,7 +17,7 @@ public class MapPanel extends JPanel {
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
                 JButton button = new JButton();
-                button.setIcon(controller.getIconForTile(row, col));
+                button.setIcon(controller.getIconWithHealthBar(row, col));
                 int finalRow = row;
                 int finalCol = col;
                 button.addActionListener(e -> controller.handleLeftClick(finalRow, finalCol));
@@ -33,10 +33,12 @@ public class MapPanel extends JPanel {
             }
         }
     }
+
     public void refresh() {
         for (int row = 0; row < cellButtons.length; row++) {
             for (int col = 0; col < cellButtons[0].length; col++) {
-                cellButtons[row][col].setIcon(controller.getIconForTile(row, col));
+                cellButtons[row][col].setIcon(controller.getIconWithHealthBar(row, col));
+
             }
         }
     }

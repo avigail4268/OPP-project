@@ -1,4 +1,5 @@
 package game.gui;
+import game.audio.SoundPlayer;
 import game.characters.PlayerCharacter;
 import game.items.GameItem;
 import javax.swing.*;
@@ -65,6 +66,7 @@ public class StatusPanel extends JPanel {
 
             itemButton.addActionListener(e -> {
                 boolean used = player.useItem(item);
+                SoundPlayer.playSound("use_potion.wav");
                 if (used) {
                     refresh(player);
                 } else {
