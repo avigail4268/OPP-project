@@ -7,6 +7,7 @@ import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
+import game.gui.MapPanel;
 import game.items.GameItem;
 import game.map.Position;
 import game.core.GameEntity;
@@ -25,32 +26,34 @@ public class GameController {
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
         Position playerPos = engine.getPlayer().getPosition();
         if (engine.isValidMove(playerPos, clickedPos, engine.getPlayer())) {
-            engine.movePlayerTo(clickedPos);
-            SoundPlayer.playSound("footsteps.wav");
-            frame.refresh();
-        } else if (CellTypeDetector.hasEnemy(entities)) {
-            engine.fightEnemyAt(clickedPos);
-            if (engine.getPlayer().isDead()) {
-                JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
-                System.exit(0);
-            }
-            SoundPlayer.playSound("classic_attack.wav");
-            if (frame instanceof game.gui.GameFrame gf) {
-                gf.getMapPanel().highlightCell(row, col, Color.RED);
+            if (engine.getMap().isEmpty(clickedPos)) {
+                engine.movePlayerTo(clickedPos);
+                SoundPlayer.playSound("footsteps.wav");
                 frame.refresh();
-            }
-            frame.refresh();
-        } else if (CellTypeDetector.hasItem(entities)) {
-            engine.pickUpItemAt(clickedPos);
-            SoundPlayer.playSound("item_pickup.wav");
-            checkVictory();
-            frame.refresh();
-            if (frame instanceof game.gui.GameFrame gf) {
-                gf.getMapPanel().highlightCell(row, col, Color.GREEN);
+            } else if (CellTypeDetector.hasEnemy(entities)) {
+                engine.fightEnemyAt(clickedPos);
+                if (engine.getPlayer().isDead()) {
+                    JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
+                    System.exit(0);
+                }
+                SoundPlayer.playSound("classic_attack.wav");
+                if (frame instanceof game.gui.GameFrame gf) {
+                    gf.getMapPanel().highlightCell(row, col, Color.RED);
+                }
+                frame.refresh();
+            } else if (CellTypeDetector.hasItem(entities)) {
+                engine.pickUpItemAt(clickedPos);
+                SoundPlayer.playSound("item_pickup.wav");
+                checkVictory();
+                if (frame instanceof game.gui.GameFrame gf) {
+                    gf.getMapPanel().highlightCell(row, col, Color.GREEN);
+                }
+                engine.movePlayerTo(clickedPos);
                 frame.refresh();
             }
         }
     }
+
     public void handleRightClick(int row, int col, JButton sourceButton) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -66,7 +69,7 @@ public class GameController {
             GameItem item = CellTypeDetector.getFirstItem(entities);
             popup.add(new JMenuItem("Item: " + item.getDescription()));
         } else if (CellTypeDetector.hasWall(entities)) {
-            popup.add(new JMenuItem("Wall - impassable"));
+            popup.add(new JMenuItem("Wall - impassable to pass"));
         } else {
             popup.add(new JMenuItem("Empty tile"));
         }
@@ -108,7 +111,6 @@ public class GameController {
         }
     }
 
-
     public ImageIcon getIconWithHealthBar(int row, int col) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -125,38 +127,35 @@ public class GameController {
         int height = baseImage.getHeight(null);
 
         int healthBarHeight = 6;
-        int iconYOffset = 10; // מיקום התמונה מתחת לפס החיים
+        int iconYOffset = 10;
 
-        // יוצרים תמונה חדשה שכוללת את פס החיים
         BufferedImage imageWithBar = new BufferedImage(width, height + iconYOffset, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = imageWithBar.createGraphics();
 
-        // מציירים את האייקון למטה מעט כדי שיהיה מקום לפס
         g.drawImage(baseImage, 0, iconYOffset, null);
 
-        // נזהה האם יש דמות או אויב בתא
         for (GameEntity entity : entities) {
             int health = -1;
+            int maxHealth = -1;
 
             if (entity instanceof PlayerCharacter p) {
                 health = p.getHealth();
+                maxHealth = p.getMaxHealth();
             } else if (entity instanceof Enemy e) {
                 health = e.getHealth();
+                maxHealth = e.getMaxHealth();
             }
 
             if (health >= 0) {
-                double percent = health / 100.0;
+                double percent = (double) health / maxHealth;
                 Color barColor = percent > 0.7 ? Color.GREEN : (percent > 0.3 ? Color.ORANGE : Color.RED);
 
-                // רקע אפור לפס
                 g.setColor(Color.DARK_GRAY);
                 g.fillRect(0, 0, width, healthBarHeight);
 
-                // פס החיים לפי אחוז
                 g.setColor(barColor);
                 g.fillRect(0, 0, (int)(width * percent), healthBarHeight);
 
-                // מסגרת
                 g.setColor(Color.BLACK);
                 g.drawRect(0, 0, width - 1, healthBarHeight - 1);
 
@@ -184,8 +183,17 @@ public class GameController {
     public PlayerCharacter getPlayer() {
         return engine.getPlayer();
     }
+    public GameWorld getEngine() {
+        return engine;
+    }
 
     private GameWorld engine;
     private GameFrame frame;
 }
+
+
+
+
+
+
 

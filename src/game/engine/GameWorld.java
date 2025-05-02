@@ -72,21 +72,19 @@ public class GameWorld {
         map.addToGrid(pos, wall);
     }
     public boolean isValidMove(Position from, Position to, PlayerCharacter player) {
-        if (to.getRow() < 0 || to.getRow() >= map.getSize() ||
-                to.getCol() < 0 || to.getCol() >= map.getSize()) {
+        if (to.getRow() < 0 || to.getRow() >= map.getSize() || to.getCol() < 0 || to.getCol() >= map.getSize()) {
             return false;
         }
-
         int rowDiff = Math.abs(to.getRow() - from.getRow());
         int colDiff = Math.abs(to.getCol() - from.getCol());
         if (rowDiff + colDiff > 1) return false;
-
+        if (from.distanceTo(to) >= 2) return false;
         List<GameEntity> entities = map.getEntitiesAt(to);
         for (GameEntity entity : entities) {
             if (entity instanceof Wall) return false;
         }
 
-        return map.isEmpty(to);
+        return true;
     }
     public void movePlayerTo(Position newPos) {
         PlayerCharacter player = getPlayer();

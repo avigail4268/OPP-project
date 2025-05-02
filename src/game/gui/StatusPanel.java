@@ -15,8 +15,8 @@ public class StatusPanel extends JPanel {
         setBorder(BorderFactory.createTitledBorder("Player Status"));
 
         nameLabel = new JLabel("Name: " + player.getName());
-        classLabel = new JLabel("Class: " + player.getDisplaySymbol());
-        treasureLabel = new JLabel("Treasure: " + player.getTreasurePoints());
+        classLabel = new JLabel("Type: " + player.getDisplaySymbol());
+        treasureLabel = new JLabel("Treasure Points: " + player.getTreasurePoints());
         powerPanel = new JLabel("Power: " + player.getPower());
 
         healthBar = new JProgressBar(0, 100);
@@ -49,12 +49,11 @@ public class StatusPanel extends JPanel {
         this.player = player;
 
         nameLabel.setText("Name: " + player.getName());
-        classLabel.setText("Class: " + player.getDisplaySymbol());
-        treasureLabel.setText("Treasure: " + player.getTreasurePoints());
+        classLabel.setText("Type: " + player.getDisplaySymbol());
+        treasureLabel.setText("Treasure Points: " + player.getTreasurePoints());
         powerPanel.setText("Power: " + player.getPower());
         healthBar.setValue(player.getHealth());
         updateHealthBarColor(player.getHealth());
-
         updateInventory(player.getInventory().getItems());
     }
     private void updateInventory(List<GameItem> items) {
@@ -90,6 +89,7 @@ public class StatusPanel extends JPanel {
             healthBar.setForeground(Color.RED);
         }
     }
+
 
     private JLabel nameLabel;
     private JLabel classLabel;

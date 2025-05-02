@@ -1,9 +1,12 @@
 package game.gui;
 
+
 import game.controller.GameController;
+
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class MapPanel extends JPanel {
     public MapPanel(GameController controller) {
@@ -34,6 +37,8 @@ public class MapPanel extends JPanel {
         }
     }
 
+
+
     public void refresh() {
         for (int row = 0; row < cellButtons.length; row++) {
             for (int col = 0; col < cellButtons[0].length; col++) {
@@ -53,3 +58,7 @@ public class MapPanel extends JPanel {
     private final JButton[][] cellButtons;
     private final GameController controller;
 }
+
+
+
+

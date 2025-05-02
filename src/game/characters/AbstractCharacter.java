@@ -26,6 +26,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
         this.power = new Random().nextInt(4,14);
         this.visible = true;
     }
+    public abstract int getMaxHealth();
 
     /**
      * Heals the character by a specified amount.
@@ -201,12 +202,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     @Override
     public abstract boolean isInRange (Position self, Position target);
 
-    /**
-     * Gets the color code for displaying the character.
-     *
-     * @return the color code (implemented by subclasses)
-     */
-    public abstract String getColorCode();
 
     /**
      * Gets the chance for the character to evade an attack.

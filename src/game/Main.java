@@ -29,11 +29,11 @@ public class Main {
     private static int askPlayerType() {
         Object[] options = {"Warrior", "Mage", "Archer"};
         int choice = JOptionPane.showOptionDialog(null,
-                "Choose your class:",
+                "Choose type:",
                 "Select Player Type",
                 JOptionPane.DEFAULT_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
-                null, options, options[0]);
+                null, options, null);
         return choice + 1; // Warrior = 1, Mage = 2, Archer = 3
     }
     private static String askPlayerName() {

@@ -44,10 +44,4 @@ public interface GameEntity {
      */
     boolean getVisible();
 
-    /**
-     * Gets the color code used to render the entity.
-     *
-     * @return a String representing the color code
-     */
-    String getColorCode();
 }

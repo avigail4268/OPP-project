@@ -46,14 +46,9 @@ public abstract class Enemy extends AbstractCharacter {
         return loot;
     }
 
-    /**
-     * Gets the red color code for displaying the enemies.
-     *
-     * @return the color code for the player
-     */
     @Override
-    public String getColorCode() {
-        return "\u001B[31m"; // Red for enemies
+    public int getMaxHealth() {
+        return 50; // Example max health, can be overridden in subclasses
     }
     @Override
     public String toString() {
