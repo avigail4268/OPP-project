@@ -1,5 +1,6 @@
 package game.controller;
 import javax.swing.*;
+
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
@@ -7,7 +8,7 @@ import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
-import game.gui.MapPanel;
+
 import game.items.GameItem;
 import game.map.Position;
 import game.core.GameEntity;
@@ -21,6 +22,7 @@ public class GameController {
     public void setFrame(GameFrame frame) {
         this.frame = frame;
     }
+
     public void handleLeftClick(int row, int col) {
         Position clickedPos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
