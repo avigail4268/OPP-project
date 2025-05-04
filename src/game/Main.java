@@ -11,7 +11,11 @@ public class Main {
             int playerType = askPlayerType();
             String name = askPlayerName();
             GameWorld world = new GameWorld(size, playerType, name);
+            int panelSize = 640;
+            int tileSize = panelSize / size;
             GameController controller = new GameController(world);
+            controller.setTileSize(tileSize);
+
             GameFrame frame = new GameFrame(controller);
             controller.setFrame(frame);
             frame.setVisible(true);

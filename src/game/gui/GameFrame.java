@@ -1,7 +1,6 @@
 package game.gui;
 import javax.swing.*;
 import java.awt.*;
-
 import game.controller.GameController;
 
 public class GameFrame extends JFrame {
@@ -20,7 +19,6 @@ public class GameFrame extends JFrame {
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
-
     }
     public void refresh() {
         mapPanel.refresh();

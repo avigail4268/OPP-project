@@ -1,6 +1,5 @@
 package game.controller;
 import javax.swing.*;
-
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
@@ -8,7 +7,6 @@ import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
-
 import game.items.GameItem;
 import game.map.Position;
 import game.core.GameEntity;
@@ -106,7 +104,7 @@ public class GameController {
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
             ImageIcon originalIcon = new ImageIcon(imgURL);
-            Image scaledImage = originalIcon.getImage().getScaledInstance(64, 64, Image.SCALE_SMOOTH);
+            Image scaledImage = originalIcon.getImage().getScaledInstance(tileSize, tileSize, Image.SCALE_SMOOTH);
             return new ImageIcon(scaledImage);
         } else {
             return null;
@@ -126,15 +124,14 @@ public class GameController {
 
         Image baseImage = baseIcon.getImage();
         int width = baseImage.getWidth(null);
-        int height = baseImage.getHeight(null);
 
-        int healthBarHeight = 6;
-        int iconYOffset = 10;
+        int healthBarHeight = 4;
+        int iconYOffset = 3;
 
-        BufferedImage imageWithBar = new BufferedImage(width, height + iconYOffset, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage imageWithBar = new BufferedImage(tileSize, tileSize + iconYOffset, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g = imageWithBar.createGraphics();
 
-        g.drawImage(baseImage, 0, iconYOffset, null);
+        g.drawImage(baseImage, 0, iconYOffset, tileSize, tileSize, null);
 
         for (GameEntity entity : entities) {
             int health = -1;
@@ -188,7 +185,39 @@ public class GameController {
     public GameWorld getEngine() {
         return engine;
     }
+    public void setTileSize(int tileSize) {
+        this.tileSize = tileSize;
+    }
+    public void handleArrowKey(String direction) {
+        int currentRow = getPlayer().getPosition().getRow(); // נניח שיש getRow()
+        int currentCol = getPlayer().getPosition().getCol(); // נניח שיש getCol()
 
+        int newRow = currentRow;
+        int newCol = currentCol;
+
+        switch (direction) {
+            case "UP":
+                newRow--;
+                break;
+            case "DOWN":
+                newRow++;
+                break;
+            case "LEFT":
+                newCol--;
+                break;
+            case "RIGHT":
+                newCol++;
+                break;
+        }
+
+        // בדיקה שהמיקום החדש בתוך גבולות המפה
+        if (newRow >= 0 && newRow < getMapRows() && newCol >= 0 && newCol < getMapCols()) {
+            engine.movePlayerTo(new Position(newRow,newCol)); // נניח שיש moveTo(row, col)
+            frame.refresh(); // רענון המסך (או דרך אחרת להציג עדכון)
+        }
+    }
+
+    private int tileSize = 64;
     private GameWorld engine;
     private GameFrame frame;
 }
