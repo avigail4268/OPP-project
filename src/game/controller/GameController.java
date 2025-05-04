@@ -210,10 +210,8 @@ public class GameController {
                 break;
         }
 
-        // בדיקה שהמיקום החדש בתוך גבולות המפה
         if (newRow >= 0 && newRow < getMapRows() && newCol >= 0 && newCol < getMapCols()) {
-            engine.movePlayerTo(new Position(newRow,newCol)); // נניח שיש moveTo(row, col)
-            frame.refresh(); // רענון המסך (או דרך אחרת להציג עדכון)
+            handleLeftClick(newRow, newCol);
         }
     }
 
