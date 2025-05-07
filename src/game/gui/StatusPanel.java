@@ -2,11 +2,13 @@ package game.gui;
 import game.audio.SoundPlayer;
 import game.characters.PlayerCharacter;
 import game.items.GameItem;
+import game.observer.GameObserver;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class StatusPanel extends JPanel {
+public class StatusPanel extends JPanel implements GameObserver {
     public StatusPanel(PlayerCharacter player) {
         this.player = player;
 
@@ -89,8 +91,10 @@ public class StatusPanel extends JPanel {
             healthBar.setForeground(Color.RED);
         }
     }
-
-
+    @Override
+    public void GameUpdated() {
+        refresh(player);
+    }
     private JLabel nameLabel;
     private JLabel classLabel;
     private JLabel treasureLabel;

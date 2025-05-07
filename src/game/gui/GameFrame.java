@@ -12,7 +12,8 @@ public class GameFrame extends JFrame {
 
         mapPanel = new MapPanel(controller);
         statusPanel = new StatusPanel(controller.getPlayer());
-
+        controller.addObserver(mapPanel);
+        controller.addObserver(statusPanel);
         add(mapPanel, BorderLayout.CENTER);
         add(statusPanel, BorderLayout.EAST);
 
