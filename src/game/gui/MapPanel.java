@@ -91,6 +91,7 @@ import game.observer.GameObserver;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class MapPanel extends JPanel implements GameObserver {
     public MapPanel(GameController controller) {
@@ -119,6 +120,37 @@ public class MapPanel extends JPanel implements GameObserver {
                 add(button);
             }
         }
+        setupKeyBindings();
+    }
+
+    private void setupKeyBindings() {
+        InputMap inputMap = getInputMap(WHEN_IN_FOCUSED_WINDOW);
+        ActionMap actionMap = getActionMap();
+        inputMap.put(KeyStroke.getKeyStroke("UP"), "moveUp");
+        inputMap.put(KeyStroke.getKeyStroke("DOWN"), "moveDown");
+        inputMap.put(KeyStroke.getKeyStroke("LEFT"), "moveLeft");
+        inputMap.put(KeyStroke.getKeyStroke("RIGHT"), "moveRight");
+
+        actionMap.put("moveUp", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) {
+                controller.handleArrowKey("UP");
+            }
+        });
+        actionMap.put("moveDown", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) {
+                controller.handleArrowKey("DOWN");
+            }
+        });
+        actionMap.put("moveLeft", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) {
+                controller.handleArrowKey("LEFT");
+            }
+        });
+        actionMap.put("moveRight", new AbstractAction() {
+            public void actionPerformed(ActionEvent e) {
+                controller.handleArrowKey("RIGHT");
+            }
+        });
     }
 
     public void refresh() {
