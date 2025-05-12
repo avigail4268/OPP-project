@@ -5,7 +5,7 @@ import game.map.Position;
 
 /**
  * Represents a treasure that can be collected by a player character.
-
+ * <p>
  * A treasure can either give a health potion, a power potion, or treasure points randomly.
  */
 public class Treasure extends GameItem implements Interactable {
@@ -13,9 +13,9 @@ public class Treasure extends GameItem implements Interactable {
     /**
      * Creates a new treasure at the specified position.
      *
-     * @param position the initial position of the treasure
+     * @param position       the initial position of the treasure
      * @param blocksMovement true if the treasure blocks movement, false otherwise
-     * @param value the number of treasure points this treasure provides if selected
+     * @param value          the number of treasure points this treasure provides if selected
      */
     public Treasure(Position position, boolean blocksMovement, int value) {
         super(position, blocksMovement);
@@ -36,7 +36,7 @@ public class Treasure extends GameItem implements Interactable {
 
     /**
      * Interacts with the treasure, providing the player with a random reward.
-
+     * <p>
      * Rewards can be: a health potion, treasure points, or a power potion.
      *
      * @param c the player character interacting with the treasure
@@ -48,7 +48,7 @@ public class Treasure extends GameItem implements Interactable {
             Potion potion = new Potion(this.getPosition(), false, 50, 10);
             potion.collect(c);
             this.collected = true;
-        } else if (random <= 1.0/2.0 + 1.0/3.0) {
+        } else if (random <= 1.0 / 2.0 + 1.0 / 3.0) {
             c.updateTreasurePoint(value);
             System.out.println("You collected " + value + " treasure points!");
             this.collected = true;
@@ -95,17 +95,6 @@ public class Treasure extends GameItem implements Interactable {
         }
         return false;
     }
-
-    /**
-     * Returns the color code used to render the treasure.
-     *
-     * @return the blue color code
-     */
-    @Override
-    public String getColorCode() {
-        return "\u001B[34m"; // Blue for treasure
-    }
-
 
     // --- Fields ---
     /**

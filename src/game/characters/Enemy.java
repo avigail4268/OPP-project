@@ -39,21 +39,36 @@ public abstract class Enemy extends AbstractCharacter {
     /**
      * Gets the amount of loot that the enemy holds.
      * This is a random value between 100 and 300.
-     *
      * @return the amount of loot
      */
     public int getLoot() {
         return loot;
     }
-
+    /**
+     * Returns the maximum health points of the enemy.
+     * This method can be overridden in subclasses to provide different health values.
+     * @return the maximum health (default is 50)
+     */
     @Override
     public int getMaxHealth() {
         return 50; // Example max health, can be overridden in subclasses
     }
+
+    /**
+     * Returns a string representation of the enemy, including its current position.
+     * @return a string describing the enemy's position
+     */
     @Override
     public String toString() {
         return "Enemy in position " + getPosition();
     }
+
+    /**
+     * Compares this enemy with another object for equality.
+     * Two enemies are considered equal if they occupy the same position on the map.
+     * @param obj the object to compare to
+     * @return true if the other object is an Enemy and has the same position; false otherwise
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Enemy other) {
@@ -61,6 +76,7 @@ public abstract class Enemy extends AbstractCharacter {
         }
         return false;
     }
+
 
     // --- Fields ---
     /**

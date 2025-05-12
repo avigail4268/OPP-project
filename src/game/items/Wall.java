@@ -55,13 +55,4 @@ public class Wall extends GameItem {
         return "Wall";
     }
 
-    /**
-     * Returns the color code used to render the wall.
-     *
-     * @return the white color code
-     */
-    @Override
-    public String getColorCode() {
-        return "\u001B[37m"; // White for walls
-    }
 }

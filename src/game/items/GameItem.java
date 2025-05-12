@@ -93,14 +93,6 @@ public abstract class GameItem implements GameEntity {
      */
     @Override
     public abstract String getDisplaySymbol();
-
-    /**
-     * Returns the color code used to render this item.
-     *
-     * @return a string representing the color code
-     */
-    public abstract String getColorCode();
-
     /**
      * Checks whether the item blocks movement.
      *

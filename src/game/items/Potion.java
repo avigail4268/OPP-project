@@ -91,17 +91,6 @@ public class Potion extends GameItem implements Interactable {
     public String toString() {
         return "Health Potion " + getPosition();
     }
-
-    /**
-     * Returns the color code used to render the potion.
-     *
-     * @return the blue color code
-     */
-    @Override
-    public String getColorCode() {
-        return "\u001B[34m"; // Blue for items
-    }
-
     /**
      * Checks if the potion can be used in a usable-in-use context.
      *

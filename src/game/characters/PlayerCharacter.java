@@ -112,7 +112,11 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getTreasurePoints(){
         return treasurePoints;
     }
-
+    /**
+     * Returns the maximum health points of the enemy.
+     * This method can be overridden in subclasses to provide different health values.
+     * @return the maximum health (default is 100 )
+     */
     @Override
     public int getMaxHealth() {
         return 100;
