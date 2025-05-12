@@ -1,219 +1,3 @@
-//package game.controller;
-//import javax.swing.*;
-//import java.awt.image.BufferedImage;
-//import java.awt.Graphics2D;
-//import game.audio.SoundPlayer;
-//import game.characters.Enemy;
-//import game.characters.PlayerCharacter;
-//import game.engine.GameWorld;
-//import game.gui.GameFrame;
-//import game.items.GameItem;
-//import game.map.Position;
-//import game.core.GameEntity;
-//import java.awt.*;
-//import java.util.List;
-//
-//public class GameController {
-//    public GameController(GameWorld engine) {
-//        this.engine = engine;
-//    }
-//    public void setFrame(GameFrame frame) {
-//        this.frame = frame;
-//    }
-//    public void handleLeftClick(int row, int col) {
-//        Position clickedPos = new Position(row, col);
-//        List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
-//        Position playerPos = engine.getPlayer().getPosition();
-//        if (engine.isValidMove(playerPos, clickedPos, engine.getPlayer())) {
-//            if (engine.getMap().isEmpty(clickedPos)) {
-//                engine.movePlayerTo(clickedPos);
-//                SoundPlayer.playSound("footsteps.wav");
-//                frame.refresh();
-//            } else if (CellTypeDetector.hasEnemy(entities)) {
-//                engine.fightEnemyAt(clickedPos);
-//                if (engine.getPlayer().isDead()) {
-//                    JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
-//                    System.exit(0);
-//                }
-//                SoundPlayer.playSound("classic_attack.wav");
-//                if (frame instanceof game.gui.GameFrame gf) {
-//                    gf.getMapPanel().highlightCell(row, col, Color.RED);
-//                }
-//                frame.refresh();
-//            } else if (CellTypeDetector.hasItem(entities)) {
-//                engine.pickUpItemAt(clickedPos);
-//                SoundPlayer.playSound("item_pickup.wav");
-//                checkVictory();
-//                if (frame instanceof game.gui.GameFrame gf) {
-//                    gf.getMapPanel().highlightCell(row, col, Color.GREEN);
-//                }
-//                engine.movePlayerTo(clickedPos);
-//                frame.refresh();
-//            }
-//        }
-//    }
-//    public void handleRightClick(int row, int col, JButton sourceButton) {
-//        Position pos = new Position(row, col);
-//        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
-//        JPopupMenu popup = new JPopupMenu();
-//
-//        if (CellTypeDetector.hasEnemy(entities)) {
-//            Enemy e = CellTypeDetector.getFirstEnemy(entities);
-//            JPanel infoPanel = new JPanel(new GridLayout(0, 1));
-//            infoPanel.add(new JLabel("Enemy: " + e.getDisplaySymbol()));
-//            infoPanel.add(new JLabel("HP: " + e.getHealth()));
-//            popup.add(infoPanel);
-//        } else if (CellTypeDetector.hasItem(entities)) {
-//            GameItem item = CellTypeDetector.getFirstItem(entities);
-//            popup.add(new JMenuItem("Item: " + item.getDescription()));
-//        } else if (CellTypeDetector.hasWall(entities)) {
-//            popup.add(new JMenuItem("Wall - impassable to pass"));
-//        } else {
-//            popup.add(new JMenuItem("Empty tile"));
-//        }
-//
-//        popup.show(sourceButton, sourceButton.getWidth() / 2, sourceButton.getHeight() / 2);
-//    }
-//    public void handleArrowKey(String direction) {
-//        int currentRow = getPlayer().getPosition().getRow();
-//        int currentCol = getPlayer().getPosition().getCol();
-//
-//        int newRow = currentRow;
-//        int newCol = currentCol;
-//
-//        switch (direction) {
-//            case "UP":
-//                newRow--;
-//                break;
-//            case "DOWN":
-//                newRow++;
-//                break;
-//            case "LEFT":
-//                newCol--;
-//                break;
-//            case "RIGHT":
-//                newCol++;
-//                break;
-//        }
-//
-//        if (newRow >= 0 && newRow < getMapRows() && newCol >= 0 && newCol < getMapCols()) {
-//            handleLeftClick(newRow, newCol);
-//        }
-//    }
-//    public ImageIcon getIconForTile(int row, int col) {
-//        Position pos = new Position(row, col);
-//        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
-//
-//        if (entities == null || !engine.isVisibleToPlayer(row, col)) {
-//            return null;
-//        }
-//
-//        String path = "/images/";
-//
-//        if (CellTypeDetector.hasPlayer(entities)) {
-//            PlayerCharacter player = CellTypeDetector.getFirstPlayer(entities);
-//            path += player.getDisplaySymbol() + ".png";
-//        } else if (CellTypeDetector.hasEnemy(entities)) {
-//            Enemy enemy = CellTypeDetector.getFirstEnemy(entities);
-//            path += enemy.getDisplaySymbol() + ".png";
-//        } else if (CellTypeDetector.hasItem(entities)) {
-//            GameItem item = CellTypeDetector.getFirstItem(entities);
-//            path += item.getDisplaySymbol() + ".png";
-//        } else if (CellTypeDetector.hasWall(entities)) {
-//            path += "Wall.png";
-//        } else {
-//            return null;
-//
-//        }
-//        java.net.URL imgURL = getClass().getResource(path);
-//        if (imgURL != null) {
-//            ImageIcon originalIcon = new ImageIcon(imgURL);
-//            Image scaledImage = originalIcon.getImage().getScaledInstance(tileSize, tileSize, Image.SCALE_SMOOTH);
-//            return new ImageIcon(scaledImage);
-//        } else {
-//            return null;
-//        }
-//    }
-//    public ImageIcon getIconWithHealthBar(int row, int col) {
-//        Position pos = new Position(row, col);
-//        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
-//
-//        if (entities == null || !engine.isVisibleToPlayer(row, col)) {
-//            return null;
-//        }
-//
-//        ImageIcon baseIcon = getIconForTile(row, col);
-//        if (baseIcon == null) return null;
-//
-//        Image baseImage = baseIcon.getImage();
-//        int width = baseImage.getWidth(null);
-//
-//        int healthBarHeight = 4;
-//        int iconYOffset = 3;
-//
-//        BufferedImage imageWithBar = new BufferedImage(tileSize, tileSize + iconYOffset, BufferedImage.TYPE_INT_ARGB);
-//        Graphics2D g = imageWithBar.createGraphics();
-//
-//        g.drawImage(baseImage, 0, iconYOffset, tileSize, tileSize, null);
-//
-//        for (GameEntity entity : entities) {
-//            int health = -1;
-//            int maxHealth = -1;
-//
-//            if (entity instanceof PlayerCharacter p) {
-//                health = p.getHealth();
-//                maxHealth = p.getMaxHealth();
-//            } else if (entity instanceof Enemy e) {
-//                health = e.getHealth();
-//                maxHealth = e.getMaxHealth();
-//            }
-//
-//            if (health >= 0) {
-//                double percent = (double) health / maxHealth;
-//                Color barColor = percent > 0.7 ? Color.GREEN : (percent > 0.3 ? Color.ORANGE : Color.RED);
-//
-//                g.setColor(Color.DARK_GRAY);
-//                g.fillRect(0, 0, width, healthBarHeight);
-//
-//                g.setColor(barColor);
-//                g.fillRect(0, 0, (int)(width * percent), healthBarHeight);
-//
-//                g.setColor(Color.BLACK);
-//                g.drawRect(0, 0, width - 1, healthBarHeight - 1);
-//
-//                break;
-//            }
-//        }
-//
-//        g.dispose();
-//        return new ImageIcon(imageWithBar);
-//    }
-//    private void checkVictory() {
-//        if (engine.getPlayer().getTreasurePoints() >= 500) {
-//            JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
-//            System.exit(0);
-//        }
-//    }
-//    public int getMapRows() {
-//        return engine.getMap().getSize();
-//    }
-//    public int getMapCols() {
-//        return engine.getMap().getSize();
-//    }
-//    public PlayerCharacter getPlayer() {
-//        return engine.getPlayer();
-//    }
-//    public void setTileSize(int tileSize) {
-//        this.tileSize = tileSize;
-//    }
-//
-//
-//    private int tileSize = 64;
-//    private GameWorld engine;
-//    private GameFrame frame;
-//}
-
-
 package game.controller;
 
 import javax.swing.*;
@@ -232,16 +16,37 @@ import java.util.List;
 import java.util.ArrayList;
 import game.observer.GameObserver;
 
+/**
+ * The GameController class is responsible for handling user input,
+ * updating the game state, and notifying observers of changes.
+ * It acts as the main interface between the GUI and the game engine.
+ */
 public class GameController {
+
+    /**
+     * Constructs a GameController for the given GameWorld engine.
+     * @param engine the GameWorld instance used to manage the game logic.
+     */
     public GameController(GameWorld engine) {
         this.engine = engine;
         this.observers = new ArrayList<>();
     }
 
+    /**
+     * Sets the GameFrame used by this controller.
+     * @param frame the main game window frame.
+     */
     public void setFrame(GameFrame frame) {
         this.frame = frame;
     }
 
+    /**
+     * Handles a left-click at a specific row and column.
+     * Depending on the tile contents, this may trigger player movement,
+     * combat, or item pickup.
+     * @param row the row clicked.
+     * @param col the column clicked.
+     */
     public void handleLeftClick(int row, int col) {
         Position clickedPos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
@@ -255,7 +60,7 @@ public class GameController {
             } else if (CellTypeDetector.hasEnemy(entities)) {
                 engine.fightEnemyAt(clickedPos);
                 if (engine.getPlayer().isDead()) {
-                    JOptionPane.showMessageDialog(frame, "GAME OVER!", "You Died", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
                     System.exit(0);
                 }
                 SoundPlayer.playSound("classic_attack.wav");
@@ -276,6 +81,13 @@ public class GameController {
         }
     }
 
+    /**
+     * Handles a right-click at a specific cell by showing a contextual popup
+     * with information about the tile contents (enemy, item, wall, or empty).
+     * @param row the clicked row.
+     * @param col the clicked column.
+     * @param sourceButton the button that was right-clicked.
+     */
     public void handleRightClick(int row, int col, JButton sourceButton) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -298,6 +110,11 @@ public class GameController {
 
         popup.show(sourceButton, sourceButton.getWidth() / 2, sourceButton.getHeight() / 2);
     }
+
+    /**
+     * Handles keyboard arrow key input to move the player in the specified direction.
+     * @param direction one of "UP", "DOWN", "LEFT", or "RIGHT".
+     */
     public void handleArrowKey(String direction) {
         int currentRow = getPlayer().getPosition().getRow();
         int currentCol = getPlayer().getPosition().getCol();
@@ -317,7 +134,13 @@ public class GameController {
         }
     }
 
-
+    /**
+     * Retrieves an ImageIcon for the tile at the specified position,
+     * based on visible game entities.
+     * @param row the row index.
+     * @param col the column index.
+     * @return an ImageIcon representing the tile content, or null if not visible.
+     */
     public ImageIcon getIconForTile(int row, int col) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -353,6 +176,13 @@ public class GameController {
         }
     }
 
+    /**
+     * Retrieves an ImageIcon for the tile with a health bar overlay,
+     * useful for displaying characters' health.
+     * @param row the row index.
+     * @param col the column index.
+     * @return an ImageIcon with a health bar or null if tile is not visible.
+     */
     public ImageIcon getIconWithHealthBar(int row, int col) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -408,6 +238,10 @@ public class GameController {
         return new ImageIcon(imageWithBar);
     }
 
+    /**
+     * Checks if the player has reached the required treasure points to win ( 500 )
+     * If victory is achieved, a message is shown and the application exits.
+     */
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
@@ -415,38 +249,72 @@ public class GameController {
         }
     }
 
+    /**
+     * Gets the number of rows in the map.
+     * @return map size (rows).
+     */
     public int getMapRows() {
         return engine.getMap().getSize();
     }
 
+    /**
+     * Gets the number of columns in the map.
+     * @return map size (columns).
+     */
     public int getMapCols() {
         return engine.getMap().getSize();
     }
 
+    /**
+     * Returns the player character.
+     * @return the PlayerCharacter instance.
+     */
     public PlayerCharacter getPlayer() {
         return engine.getPlayer();
     }
 
+    /**
+     * Returns the game engine.
+     * @return the GameWorld instance.
+     */
     public GameWorld getEngine() {
         return engine;
     }
 
+    /**
+     * Sets the size of tiles in pixels.
+     * @param tileSize the tile size.
+     */
     public void setTileSize(int tileSize) {
         this.tileSize = tileSize;
     }
 
+    /**
+     * Registers an observer that will be notified when the game state changes.
+     * @param observer the observer to add.
+     */
     public void addObserver(GameObserver observer) {
         observers.add(observer);
     }
 
+    /**
+     * Notifies all registered observers about a game update.
+     */
     public void notifyObservers() {
         for (GameObserver observer : observers) {
             observer.GameUpdated();
         }
     }
-    private  List<GameObserver> observers = new ArrayList<>();
+    // --- Fields ---
+    /** List of observers watching for game updates. */
+    private List<GameObserver> observers = new ArrayList<>();
+
+    /** The size of each tile in the grid. */
     private int tileSize = 64;
+
+    /** The game engine instance. */
     private GameWorld engine;
+
+    /** The main game frame (UI). */
     private GameFrame frame;
 }
-
