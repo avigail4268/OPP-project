@@ -1,3 +1,9 @@
+/**
+ * Rotem Dino 209168442
+ * Avigail Musai 322227711
+ * Chira Borohov 345887046
+ */
+
 package game;
 
 import game.engine.GameWorld;
