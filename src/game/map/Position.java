@@ -8,7 +8,6 @@ public class Position {
 
     /**
      * Constructs a position with the specified row and column.
-     *
      * @param r the row of the position
      * @param c the column of the position
      */
@@ -20,7 +19,6 @@ public class Position {
     /**
      * Calculates the Manhattan distance to another position.
      * The Manhattan distance is the sum of the absolute differences of their row and column coordinates.
-     *
      * @param otherPos the other position to calculate the distance to
      * @return the Manhattan distance between this position and the other position
      */
@@ -32,7 +30,6 @@ public class Position {
 
     /**
      * Returns the row of the position.
-     *
      * @return the row of the position
      */
     public int getRow() {
@@ -41,7 +38,6 @@ public class Position {
 
     /**
      * Returns the column of the position.
-     *
      * @return the column of the position
      */
     public int getCol() {
@@ -51,7 +47,6 @@ public class Position {
     /**
      * Checks if this position is equal to another position.
      * Two positions are equal if their row and column are the same.
-     *
      * @param otherPos the other position to compare with
      * @return true if the positions are equal, false otherwise
      */
@@ -62,7 +57,6 @@ public class Position {
     /**
      * Checks if this position is equal to another object.
      * This method overrides the default equals method to compare Position objects.
-     *
      * @param obj the object to compare with
      * @return true if the object is a Position and has the same row and column, false otherwise
      */
@@ -77,7 +71,6 @@ public class Position {
     /**
      * Returns a string representation of the position.
      * The format is "(row, column)".
-     *
      * @return a string representation of the position
      */
     @Override
@@ -88,7 +81,6 @@ public class Position {
     /**
      * Returns the hash code for this position.
      * The hash code is computed based on the row and column of the position.
-     *
      * @return the hash code for the position
      */
     @Override

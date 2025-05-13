@@ -1,14 +1,20 @@
 package game.characters;
+import game.engine.GameWorld;
 import game.items.Treasure;
 import game.map.Position;
+
+import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Enemy represents a character that can be defeated by a player.
  * It extends the AbstractCharacter class and adds loot functionality.
  * When defeated, it may drop a treasure for the player to collect.
  */
-public abstract class Enemy extends AbstractCharacter {
+public abstract class Enemy extends AbstractCharacter implements Runnable {
 
     /**
      * Constructs a new Enemy with the given position and health.
@@ -44,6 +50,136 @@ public abstract class Enemy extends AbstractCharacter {
     public int getLoot() {
         return loot;
     }
+
+
+    @Override
+    public void run() {
+        Random random = new Random();
+        while (isRunning.get()) {
+            try {
+                List<PlayerCharacter> players = GameWorld.getPlayers();
+                int delay = 500 + random.nextInt(1001);
+                Thread.sleep(delay);
+
+                enemyMovement(players);
+
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
+            }
+        }
+    }
+
+
+//    public void enemyMovement(List <PlayerCharacter> players) {
+//        //TODO recheck
+//        if (players.isEmpty()) {
+//            return;
+//        }
+//        for (int i = 0; i < players.size(); i++) {
+//            Position playerPos = players.get(i).getPosition();
+//            if (this.getPosition().distanceTo(playerPos) <= 2) {
+//                if (isInRange(this.getPosition(), playerPos)) {
+//                    this.attack(players.get(i));
+//                }
+//                else
+//                {
+//                    moveTowards(playerPos);
+//                }
+//                return;
+//            }
+//            else
+//            {
+//                double rand = Math.random();
+//                if ( rand <= 0.2) {
+//                    Position newPos = getRandomPosition();
+//                    this.setPosition(newPos);
+//                    return;
+//                }
+//            }
+//        }
+//    }
+
+
+    public void enemyMovement(List<PlayerCharacter> players) {
+        if (players.isEmpty()) return;
+
+        for (PlayerCharacter player : players) {
+            Position playerPos = player.getPosition();
+
+            if (this.getPosition().distanceTo(playerPos) <= 2) {
+                ReentrantLock playerLock = player.getCombatLock();
+
+                try {
+                    if (playerLock.tryLock(500, TimeUnit.MILLISECONDS)) {
+                        try {
+                            if (isInRange(this.getPosition(), playerPos)) {
+                                this.attack(player);
+                            } else {
+                                moveTowards(playerPos);
+                            }
+                        } finally {
+                            playerLock.unlock();
+                        }
+                    } else {
+                        System.out.println("Player " + player.getName() + " is currently in combat. Skipping.");
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    return;
+                }
+
+                return;
+            }
+        }
+
+        if (Math.random() <= 0.2) {
+            Position newPos = getRandomPosition();
+            this.setPosition(newPos);
+        }
+    }
+
+
+    private Position getRandomPosition() {
+        double rand = Math.random();
+        int row = this.getPosition().getRow();
+        int col = this.getPosition().getCol();
+        if (rand <= 0.25) {
+            return new Position(row + 1, col);
+        } else if (rand <= 0.5) {
+            return new Position(row - 1, col);
+        } else if (rand <= 0.75) {
+            return new Position(row, col + 1);
+        } else {
+            return new Position(row, col - 1);
+        }
+
+    }
+
+    private void moveTowards (Position position) {
+        int rowDiff = position.getRow() - this.getPosition().getRow();
+        int colDiff = position.getCol() - this.getPosition().getCol();
+
+        if (Math.abs(rowDiff) > Math.abs(colDiff)) {
+            if (rowDiff > 0) {
+                this.setPosition(new Position(this.getPosition().getRow() + 1, this.getPosition().getCol()));
+            } else {
+                this.setPosition(new Position(this.getPosition().getRow() - 1, this.getPosition().getCol()));
+            }
+        } else {
+            if (colDiff > 0) {
+                this.setPosition(new Position(this.getPosition().getRow(), this.getPosition().getCol() + 1));
+            } else {
+                this.setPosition(new Position(this.getPosition().getRow(), this.getPosition().getCol() - 1));
+            }
+        }
+    }
+
+    public void stop() {
+        isRunning.set(false);
+    }
+
+
     /**
      * Returns the maximum health points of the enemy.
      * This method can be overridden in subclasses to provide different health values.
@@ -84,4 +220,5 @@ public abstract class Enemy extends AbstractCharacter {
      * This is a random value between 100 and 300.
      */
     private final int loot;
+    private final AtomicBoolean isRunning = new AtomicBoolean(true);
 }

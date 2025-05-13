@@ -221,6 +221,7 @@ public class GameWorld {
     public PlayerCharacter getPlayer() {
         return players.get(0);
     }
+    public static List<PlayerCharacter> getPlayers() { return players;}
 
     /**
      * Returns a list of all game items on the map.
