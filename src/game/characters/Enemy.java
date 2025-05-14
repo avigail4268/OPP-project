@@ -48,6 +48,8 @@ public abstract class Enemy extends AbstractCharacter implements Runnable {
      * @return the amount of loot
      */
     public int getLoot() {
+        //TODO delete this statement
+        System.out.println("hello");
         return loot;
     }
 
@@ -69,37 +71,6 @@ public abstract class Enemy extends AbstractCharacter implements Runnable {
             }
         }
     }
-
-
-//    public void enemyMovement(List <PlayerCharacter> players) {
-//        //TODO recheck
-//        if (players.isEmpty()) {
-//            return;
-//        }
-//        for (int i = 0; i < players.size(); i++) {
-//            Position playerPos = players.get(i).getPosition();
-//            if (this.getPosition().distanceTo(playerPos) <= 2) {
-//                if (isInRange(this.getPosition(), playerPos)) {
-//                    this.attack(players.get(i));
-//                }
-//                else
-//                {
-//                    moveTowards(playerPos);
-//                }
-//                return;
-//            }
-//            else
-//            {
-//                double rand = Math.random();
-//                if ( rand <= 0.2) {
-//                    Position newPos = getRandomPosition();
-//                    this.setPosition(newPos);
-//                    return;
-//                }
-//            }
-//        }
-//    }
-
 
     public void enemyMovement(List<PlayerCharacter> players) {
         if (players.isEmpty()) return;
