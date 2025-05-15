@@ -37,7 +37,8 @@ public class Main {
 
             // Initialize the game controller with the world
             GameController controller = new GameController(world);
-            controller.setTileSize(tileSize); // Set size of each tile
+            controller.setTileSize(tileSize);
+            world.setController(controller);// Set size of each tile
 
             // Create the GUI frame and link it to the controller
             GameFrame frame = new GameFrame(controller);
@@ -81,7 +82,7 @@ public class Main {
 
         return choice + 1;
     }
-    //TEST TEST
+    //TEST
 
     /**
      * Prompts the user to input a name for the player character.
