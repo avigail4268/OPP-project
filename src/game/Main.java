@@ -1,11 +1,4 @@
-/**
- * Rotem Dino 209168442
- * Avigail Musai 322227711
- * Chira Borohov 345887046
- */
-
 package game;
-
 import game.engine.GameWorld;
 import game.controller.GameController;
 import game.gui.GameFrame;
@@ -49,7 +42,7 @@ public class Main {
             // Create the GUI frame and link it to the controller
             GameFrame frame = new GameFrame(controller);
             controller.setFrame(frame);
-
+            world.startEnemyTask();
             // Make the GUI visible
             frame.setVisible(true);
         });

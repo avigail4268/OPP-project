@@ -6,6 +6,7 @@ import game.items.Potion;
 import game.items.PowerPotion;
 import game.map.Position;
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * PlayerCharacter represents a playable character in the game.
@@ -112,6 +113,11 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getTreasurePoints(){
         return treasurePoints;
     }
+
+    public ReentrantLock getCombatLock() {
+        return combatLock;
+    }
+
     /**
      * Returns the maximum health points of the enemy.
      * This method can be overridden in subclasses to provide different health values.
@@ -140,4 +146,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
      * The maximum number of items the player can carry in their inventory.
      * This value is used to limit the size of the player's inventory.
      */
+
+    private final ReentrantLock combatLock = new ReentrantLock(true); // fair lock
 }

@@ -29,7 +29,6 @@ public class GameController {
      */
     public GameController(GameWorld engine) {
         this.engine = engine;
-        this.observers = new ArrayList<>();
     }
 
     /**
@@ -56,7 +55,7 @@ public class GameController {
             if (engine.getMap().isEmpty(clickedPos)) {
                 engine.movePlayerTo(clickedPos);
                 SoundPlayer.playSound("footsteps.wav");
-                notifyObservers();
+                engine.notifyObservers();
             } else if (CellTypeDetector.hasEnemy(entities)) {
                 engine.fightEnemyAt(clickedPos);
                 if (engine.getPlayer().isDead()) {
@@ -67,7 +66,7 @@ public class GameController {
                 if (frame instanceof game.gui.GameFrame gf) {
                     gf.getMapPanel().highlightCell(row, col, Color.RED);
                 }
-                notifyObservers();
+                engine.notifyObservers();
             } else if (CellTypeDetector.hasItem(entities)) {
                 engine.pickUpItemAt(clickedPos);
                 SoundPlayer.playSound("item_pickup.wav");
@@ -76,7 +75,7 @@ public class GameController {
                     gf.getMapPanel().highlightCell(row, col, Color.GREEN);
                 }
                 engine.movePlayerTo(clickedPos);
-                notifyObservers();
+                engine.notifyObservers();
             }
         }
     }
@@ -289,26 +288,8 @@ public class GameController {
         this.tileSize = tileSize;
     }
 
-    /**
-     * Registers an observer that will be notified when the game state changes.
-     * @param observer the observer to add.
-     */
-    public void addObserver(GameObserver observer) {
-        observers.add(observer);
-    }
 
-    /**
-     * Notifies all registered observers about a game update.
-     */
-    public void notifyObservers() {
-        for (GameObserver observer : observers) {
-            observer.GameUpdated();
-        }
-    }
     // --- Fields ---
-    /** List of observers watching for game updates. */
-    private List<GameObserver> observers = new ArrayList<>();
-
     /** The size of each tile in the grid. */
     private int tileSize = 64;
 
@@ -317,4 +298,8 @@ public class GameController {
 
     /** The main game frame (UI). */
     private GameFrame frame;
+
+    public GameWorld getGameWorld() {
+        return engine;
+    }
 }

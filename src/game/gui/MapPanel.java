@@ -113,8 +113,10 @@ public class MapPanel extends JPanel implements GameObserver {
      * Triggers a refresh of the map grid.
      */
     @Override
-    public void GameUpdated() {
+    public void onGameUpdated() {
         refresh();
+        System.out.println("MapPanel updated.");
+
     }
     // --- Fields ---
     private final JButton[][] cellButtons;

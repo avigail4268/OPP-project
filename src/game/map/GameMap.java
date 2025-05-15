@@ -122,4 +122,8 @@ public class GameMap {
 
     // Size of the map (width and height of the grid)
     private final int size;
+
+    public boolean isWithinBounds(Position newPos) {
+        return newPos.getCol() >= 0 && newPos.getCol() < size && newPos.getRow() >= 0 && newPos.getRow() < size;
+    }
 }

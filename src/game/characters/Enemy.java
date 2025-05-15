@@ -1,7 +1,13 @@
 package game.characters;
+import game.engine.GameWorld;
 import game.items.Treasure;
 import game.map.Position;
+
+import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Enemy represents a character that can be defeated by a player.
@@ -22,7 +28,6 @@ public abstract class Enemy extends AbstractCharacter {
         Random r = new Random();
         this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
     }
-
     /**
      * Defeats the enemy and returns a Treasure object if the enemy is dead.
      * If the enemy is alive, no treasure is dropped.
@@ -42,8 +47,16 @@ public abstract class Enemy extends AbstractCharacter {
      * @return the amount of loot
      */
     public int getLoot() {
+        //TODO delete this statement
+        System.out.println("hello");
         return loot;
     }
+
+    public void stop() {
+        isRunning.set(false);
+    }
+
+
     /**
      * Returns the maximum health points of the enemy.
      * This method can be overridden in subclasses to provide different health values.
@@ -84,4 +97,5 @@ public abstract class Enemy extends AbstractCharacter {
      * This is a random value between 100 and 300.
      */
     private final int loot;
+    private final AtomicBoolean isRunning = new AtomicBoolean(true);
 }
