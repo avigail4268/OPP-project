@@ -68,14 +68,14 @@ public class Main {
      */
 
     public static int askMapSize() {
-        JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 30, 15);
+        JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 30, 10);
         slider.setMajorTickSpacing(5);
         slider.setMinorTickSpacing(1);
         slider.setPaintTicks(true);
         slider.setPaintLabels(true);
         slider.setOpaque(false);
 
-        JLabel label = new JLabel("Map size: 15x15", SwingConstants.CENTER);
+        JLabel label = new JLabel("Map size: min 10x10", SwingConstants.CENTER);
         label.setForeground(Color.WHITE);
         label.setFont(new Font("Serif", Font.BOLD, 16));
 
@@ -87,7 +87,7 @@ public class Main {
         Image background = new ImageIcon(Main.class.getResource("/images/map.jpg")).getImage();
 
         JLabel titleLabel = new JLabel("Choose the map size:", SwingConstants.CENTER);
-        titleLabel.setForeground(Color.WHITE); // צבע לבן
+        titleLabel.setForeground(Color.WHITE);
         titleLabel.setFont(new Font("Serif", Font.BOLD, 20));
 
         JPanel panel = new JPanel() {
