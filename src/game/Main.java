@@ -81,6 +81,7 @@ public class Main {
 
         return choice + 1;
     }
+    //TEST TEST
 
     /**
      * Prompts the user to input a name for the player character.
