@@ -35,16 +35,6 @@ public class EnemyTask implements Runnable {
             moveRandomly();
         }
     }
-
-//    private void moveTowards(Position targetPos) {
-//        Position currentPos = enemy.getPosition();
-//        int dx = Integer.compare(targetPos.getRow() - currentPos.getRow(), 0);
-//        int dy = Integer.compare(targetPos.getCol() - currentPos.getCol(), 0);
-//        Position newPos = new Position(currentPos.getRow() + dx, currentPos.getCol() + dy);
-//
-//        attemptMove(newPos);
-//    }
-
     private void moveTowards(Position targetPos) {
         Position currentPos = enemy.getPosition();
         int rowDiff = targetPos.getRow() - currentPos.getRow();
@@ -52,17 +42,15 @@ public class EnemyTask implements Runnable {
 
         Position newPos;
 
-        // אם יש מרחק בשורה – זזים שורה קודם
         if (Math.abs(rowDiff) > 0) {
             int dx = Integer.compare(rowDiff, 0);
             newPos = new Position(currentPos.getRow() + dx, currentPos.getCol());
         }
-        // אחרת זזים בעמודה
         else if (Math.abs(colDiff) > 0) {
             int dy = Integer.compare(colDiff, 0);
             newPos = new Position(currentPos.getRow(), currentPos.getCol() + dy);
         } else {
-            return; // כבר על המטרה
+            return;
         }
 
         attemptMove(newPos);
