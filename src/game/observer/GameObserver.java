@@ -8,6 +8,6 @@ public interface GameObserver {
     /**
      * Called when the game state is updated.
      */
-    void GameUpdated();
+    void onGameUpdated();
 }
 

@@ -32,8 +32,8 @@ public class GameFrame extends JFrame {
         statusPanel = new StatusPanel(controller.getPlayer());
 
         // Register the panels as observers to the controller
-        controller.addObserver(mapPanel);
-        controller.addObserver(statusPanel);
+        controller.getGameWorld().addObserver(mapPanel);
+        controller.getGameWorld().addObserver(statusPanel);
 
         // Add panels to the frame
         add(mapPanel, BorderLayout.CENTER);

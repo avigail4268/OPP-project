@@ -130,7 +130,7 @@ public class StatusPanel extends JPanel implements GameObserver {
      * Called when the game state is updated. Refreshes the panel.
      */
     @Override
-    public void GameUpdated() {
+    public void onGameUpdated() {
         refresh(player);
     }
 

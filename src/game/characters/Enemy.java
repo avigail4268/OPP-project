@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * It extends the AbstractCharacter class and adds loot functionality.
  * When defeated, it may drop a treasure for the player to collect.
  */
-public abstract class Enemy extends AbstractCharacter implements Runnable {
+public abstract class Enemy extends AbstractCharacter {
 
     /**
      * Constructs a new Enemy with the given position and health.
@@ -28,7 +28,6 @@ public abstract class Enemy extends AbstractCharacter implements Runnable {
         Random r = new Random();
         this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
     }
-
     /**
      * Defeats the enemy and returns a Treasure object if the enemy is dead.
      * If the enemy is alive, no treasure is dropped.
@@ -51,99 +50,6 @@ public abstract class Enemy extends AbstractCharacter implements Runnable {
         //TODO delete this statement
         System.out.println("hello");
         return loot;
-    }
-
-
-    @Override
-    public void run() {
-        Random random = new Random();
-        while (isRunning.get()) {
-            try {
-                List<PlayerCharacter> players = GameWorld.getPlayers();
-                int delay = 500 + random.nextInt(1001);
-                Thread.sleep(delay);
-
-                enemyMovement(players);
-
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
-            }
-        }
-    }
-
-    public void enemyMovement(List<PlayerCharacter> players) {
-        if (players.isEmpty()) return;
-
-        for (PlayerCharacter player : players) {
-            Position playerPos = player.getPosition();
-
-            if (this.getPosition().distanceTo(playerPos) <= 2) {
-                ReentrantLock playerLock = player.getCombatLock();
-
-                try {
-                    if (playerLock.tryLock(500, TimeUnit.MILLISECONDS)) {
-                        try {
-                            if (isInRange(this.getPosition(), playerPos)) {
-                                this.attack(player);
-                            } else {
-                                moveTowards(playerPos);
-                            }
-                        } finally {
-                            playerLock.unlock();
-                        }
-                    } else {
-                        System.out.println("Player " + player.getName() + " is currently in combat. Skipping.");
-                    }
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    return;
-                }
-
-                return;
-            }
-        }
-
-        if (Math.random() <= 0.2) {
-            Position newPos = getRandomPosition();
-            this.setPosition(newPos);
-        }
-    }
-
-
-    private Position getRandomPosition() {
-        double rand = Math.random();
-        int row = this.getPosition().getRow();
-        int col = this.getPosition().getCol();
-        if (rand <= 0.25) {
-            return new Position(row + 1, col);
-        } else if (rand <= 0.5) {
-            return new Position(row - 1, col);
-        } else if (rand <= 0.75) {
-            return new Position(row, col + 1);
-        } else {
-            return new Position(row, col - 1);
-        }
-
-    }
-
-    private void moveTowards (Position position) {
-        int rowDiff = position.getRow() - this.getPosition().getRow();
-        int colDiff = position.getCol() - this.getPosition().getCol();
-
-        if (Math.abs(rowDiff) > Math.abs(colDiff)) {
-            if (rowDiff > 0) {
-                this.setPosition(new Position(this.getPosition().getRow() + 1, this.getPosition().getCol()));
-            } else {
-                this.setPosition(new Position(this.getPosition().getRow() - 1, this.getPosition().getCol()));
-            }
-        } else {
-            if (colDiff > 0) {
-                this.setPosition(new Position(this.getPosition().getRow(), this.getPosition().getCol() + 1));
-            } else {
-                this.setPosition(new Position(this.getPosition().getRow(), this.getPosition().getCol() - 1));
-            }
-        }
     }
 
     public void stop() {
