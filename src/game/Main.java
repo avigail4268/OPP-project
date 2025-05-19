@@ -155,7 +155,7 @@ public class Main {
             panel.add(button);
         }
 
-        buttons[1].setSelected(true);
+//        buttons[1].setSelected(true);
 
         int result = JOptionPane.showConfirmDialog(
                 null, panel, "Choose Player Type", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE

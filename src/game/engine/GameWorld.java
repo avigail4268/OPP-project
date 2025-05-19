@@ -40,7 +40,7 @@ public class GameWorld {
         this.items = new ArrayList<>();
         this.enemyTasks = new ArrayList<>();
         this.enemyExecutor = Executors.newScheduledThreadPool(4);
-        // why 4 ?
+
 
         createPlayer(playerType, playerName);
         populateGameMap();

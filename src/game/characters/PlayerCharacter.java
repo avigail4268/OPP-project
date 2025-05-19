@@ -127,6 +127,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public int getMaxHealth() {
         return 100;
     }
+
     // --- Fields ---
     /**
      * The name of the player character.
