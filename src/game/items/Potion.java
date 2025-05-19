@@ -61,11 +61,7 @@ public class Potion extends GameItem implements Interactable {
      */
     @Override
     public void collect(PlayerCharacter c) {
-        if (c.addToInventory(this)) {
-            LogManager.addLog("Potion added to inventory!");
-        } else {
-            LogManager.addLog("Potion did not added to inventory!");
-        }
+        c.addToInventory(this);
     }
 
     /**

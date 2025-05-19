@@ -14,8 +14,7 @@ import game.map.Position;
 import game.core.GameEntity;
 import java.awt.*;
 import java.util.List;
-import java.util.ArrayList;
-import game.observer.GameObserver;
+
 
 /**
  * The GameController class is responsible for handling user input,
@@ -62,6 +61,7 @@ public class GameController {
                 if (engine.getPlayer().isDead()) {
                     JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
                     LogManager.addLog("Game ended");
+                    engine.shutdown();
                     LogManager.stop();
                     System.exit(0);
                 }
@@ -248,10 +248,9 @@ public class GameController {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
             LogManager.addLog("Game ended");
+            engine.shutdown();
             LogManager.stop();
             System.exit(0);
-
-
         }
     }
 

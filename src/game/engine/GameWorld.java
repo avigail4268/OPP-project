@@ -60,7 +60,7 @@ public class GameWorld {
         }
         map.addToGrid(pos, player);
         players.add(player);
-        LogManager.addLog("Game started with player type " + playerType + " and name " + playerName);
+        LogManager.addLog("Game started with player type " + player.getDisplaySymbol() + " and name " + playerName);
     }
 
     /**
@@ -141,11 +141,14 @@ public class GameWorld {
      */
     public boolean isValidMove(Position from, Position to, PlayerCharacter player) {
         if (to.getRow() < 0 || to.getRow() >= map.getSize() || to.getCol() < 0 || to.getCol() >= map.getSize()) {
+            LogManager.addLog("Move out of bounds");
             return false;
         }
         int rowDiff = Math.abs(to.getRow() - from.getRow());
         int colDiff = Math.abs(to.getCol() - from.getCol());
-        if (rowDiff + colDiff > 1) return false;
+        if (rowDiff + colDiff > 1) {
+            return false;
+        }
         if (from.distanceTo(to) >= 2) return false;
 
         List<GameEntity> entities = map.getEntitiesAt(to);
@@ -221,7 +224,7 @@ public class GameWorld {
         Position playerPos = getPlayer().getPosition();
         Position newPos = new Position(row, col);
         int distance = playerPos.distanceTo(newPos);
-        return distance <= 3;
+        return distance <= 2;
     }
 
     /**
@@ -255,9 +258,10 @@ public class GameWorld {
             EnemyTask enemy_Task = new EnemyTask(enemy, this);
             enemyTasks.add(enemy_Task);
 
-            // Schedule enemy movement with random intervals between 2 and 3 seconds
-            long initialDelay = random.nextInt(2000);
-            long period = 2000 + random.nextInt(1000);
+            // Schedule enemy movement with random intervals between 1 and 1.5 seconds
+            //todo recheck this
+            long initialDelay = random.nextInt(1000);
+            long period = 1000 + random.nextInt(500);
 
             ScheduledFuture<?> task = enemyExecutor.scheduleAtFixedRate(enemy_Task, initialDelay, period, TimeUnit.MILLISECONDS);
             enemy_Task.setScheduledTask(task);
@@ -271,10 +275,10 @@ public class GameWorld {
     public GameController getController() {
         return controller;
     }
-
+    //todo USE THIS METHOD
     public void shutdown() {
-        for (EnemyTask ai : enemyTasks) {
-            ai.stop();
+        for (EnemyTask ET : enemyTasks) {
+            ET.stop();
         }
         enemyExecutor.shutdown();
         try {

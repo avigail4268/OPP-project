@@ -48,9 +48,7 @@ public class PowerPotion extends Potion {
      */
     @Override
     public void collect(PlayerCharacter c) {
-        if (c.addToInventory(this)) {
-            LogManager.addLog("Power Potion added to the inventory!");
-        }
+        c.addToInventory(this);
     }
 
     /**

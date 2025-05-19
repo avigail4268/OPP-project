@@ -10,11 +10,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class EnemyTask implements Runnable {
-    private final Enemy enemy;
-    private final GameWorld gameWorld;
-    private final Random random = new Random();
-    private boolean isRunning = true;
-    private ScheduledFuture<?> scheduledTask;
 
     public EnemyTask(Enemy enemy, GameWorld gameWorld) {
         this.enemy = enemy;
@@ -24,12 +19,12 @@ public class EnemyTask implements Runnable {
     @Override
     public void run() {
         if (!isRunning || enemy.isDead()) return;
-        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
 
+        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();
         Position enemyPos = enemy.getPosition();
         Position playerPos = player.getPosition();
-
+        //todo ask tamar about distanceTo
         if (enemyPos.distanceTo(playerPos) <= 3) {
             moveTowards(playerPos);
         } else if (random.nextDouble() <= 0.2) {
@@ -53,7 +48,6 @@ public class EnemyTask implements Runnable {
         } else {
             return;
         }
-
         attemptMove(newPos);
     }
 
@@ -67,7 +61,10 @@ public class EnemyTask implements Runnable {
     }
 
     private void attemptMove(Position newPos) {
-        if (!gameWorld.getMap().isWithinBounds(newPos)) return;
+        if (!gameWorld.getMap().isWithinBounds(newPos)) {
+            LogManager.addLog("Enemy tried to move out of bounds: " + newPos);
+            return;
+        }
 
         ReentrantLock lock = GameWorld.getMapLock(newPos);
         try {
@@ -80,7 +77,7 @@ public class EnemyTask implements Runnable {
                         gameWorld.getMap().addToGrid(newPos, enemy);
 
                         if (gameWorld.getController() != null) {
-                            SwingUtilities.invokeLater(() -> gameWorld.notifyObservers());
+                            SwingUtilities.invokeLater(gameWorld::notifyObservers);
                         }
                     }
                 } finally {
@@ -102,4 +99,10 @@ public class EnemyTask implements Runnable {
     public void setScheduledTask(ScheduledFuture<?> task) {
         this.scheduledTask = task;
     }
+
+    private final Enemy enemy;
+    private final GameWorld gameWorld;
+    private final Random random = new Random();
+    private boolean isRunning = true;
+    private ScheduledFuture<?> scheduledTask;
 }
