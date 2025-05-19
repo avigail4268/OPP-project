@@ -55,9 +55,9 @@ public class GameWorld {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
         switch (playerType) {
-            case 1 -> player = new Warrior(playerName, pos, 100);
+            case 1 -> player = new Archer(playerName, pos, 100);
             case 2 -> player = new Mage(playerName, pos, 100);
-            case 3 -> player = new Archer(playerName, pos, 100);
+            case 3 -> player = new Warrior(playerName, pos, 100);
             default -> throw new IllegalArgumentException("Invalid player type: " + playerType);
         }
         map.addToGrid(pos, player);

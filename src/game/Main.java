@@ -31,7 +31,7 @@ public class Main {
             int size = askMapSize();
 
             // Ask the user for the type of player (Warrior, Mage, Archer)
-            int playerType = askPlayerType()+1;
+            int playerType = askPlayerType() + 1;
 
             // Ask the user to enter a character name
             String name = askPlayerName();
@@ -168,7 +168,6 @@ public class Main {
                 }
             }
         }
-
         return 1;
     }
     public static String askPlayerName() {
