@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
@@ -83,10 +84,10 @@ Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
         int damage = this.getPower();
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            System.out.println("Warrior attacked with Critical hit! for " + getPower() * 2 + " damage.");
+            LogManager.addLog("Warrior attacked with Critical hit! for " + getPower() * 2 + " damage.");
         } else {
             target.receiveDamage(getPower(), this);
-            System.out.println(this.getName() + " attacked the enemy for: " + damage + " damage.");
+            LogManager.addLog(this.getName() + " attacked the enemy for: " + damage + " damage.");
         }
     }
 
@@ -113,7 +114,7 @@ Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAttacker {
     public void receiveDamage(int amount, Combatant source) {
         int damage = (int) (amount * (1 - Math.min(0.6, defence / 200.0)));
         this.setHealth(this.getHealth() - damage);
-        System.out.println("Enemy attacked " + this.getName() + " for: " + amount + " damage, you received only " + damage);
+        LogManager.addLog("Enemy attacked " + this.getName() + " for: " + amount + " damage, you received only " + damage);
     }
 
     /**

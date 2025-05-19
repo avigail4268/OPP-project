@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
@@ -80,10 +81,10 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     public void attack(Combatant target) {
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            System.out.println("Goblin attack back with Critical hit! for: " + getPower() * 2 + " damage.");
+            LogManager.addLog("Goblin attack back with Critical hit! for: " + getPower() * 2 + " damage.");
         } else {
             target.receiveDamage(getPower(), this);
-            System.out.println("Goblin attacked for: " + getPower() + " damage.");
+            LogManager.addLog("Goblin attacked for: " + getPower() + " damage.");
         }
     }
 

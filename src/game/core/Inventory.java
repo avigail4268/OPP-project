@@ -1,6 +1,8 @@
 package game.core;
 
 import game.items.GameItem;
+import game.log.LogManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,7 @@ public class Inventory {
     public boolean addItem(GameItem item) {
         if (item != null) {
             items.add(item);
+            LogManager.addLog("Added item: " + item.getDisplaySymbol());
             return true;
         }
         return false;
@@ -39,6 +42,7 @@ public class Inventory {
     public boolean removeItem(GameItem item) {
         if (items.contains(item)) {
             items.remove(item);
+            LogManager.addLog("Removed item: " + item.getDisplaySymbol());
             return true;
         }
         return false;

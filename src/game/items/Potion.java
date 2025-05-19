@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
@@ -48,7 +49,7 @@ public class Potion extends GameItem implements Interactable {
             c.heal(amount);
             setIsUsed();
             if (c.getInventory().removeItem(this)) {
-                System.out.println("Your health was " + (c.getHealth() - amount) + " now is " + c.getHealth());
+                LogManager.addLog("Health was " + (c.getHealth() - amount) + " now is " + c.getHealth());
             }
         }
     }
@@ -61,9 +62,9 @@ public class Potion extends GameItem implements Interactable {
     @Override
     public void collect(PlayerCharacter c) {
         if (c.addToInventory(this)) {
-            System.out.println("Potion added to the inventory!");
+            LogManager.addLog("Potion added to inventory!");
         } else {
-            System.out.println("Potion not added to the inventory!");
+            LogManager.addLog("Potion did not added to inventory!");
         }
     }
 
@@ -116,6 +117,7 @@ public class Potion extends GameItem implements Interactable {
      */
     protected boolean setIsUsed() {
         if (!isUsed) {
+            LogManager.addLog("Potion used!");
             this.isUsed = true;
             return true;
         }

@@ -1,6 +1,7 @@
 package game.engine;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
+import game.log.LogManager;
 import game.map.Position;
 import javax.swing.*;
 import java.util.Random;
@@ -23,7 +24,7 @@ public class EnemyTask implements Runnable {
     @Override
     public void run() {
         if (!isRunning || enemy.isDead()) return;
-        System.out.println("Enemy running: " + enemy.getPosition());
+        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
 
         PlayerCharacter player = gameWorld.getPlayer();
         Position enemyPos = enemy.getPosition();

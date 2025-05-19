@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
@@ -36,10 +37,10 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
             // Calculate reduced magic damage based on resistance
             double magicDamage = amount * (1 - resistance);
             super.receiveDamage((int) magicDamage, source);
-            System.out.println("Orc received " + (int) magicDamage + " damage from magic attack.");
+            LogManager.addLog("Orc received " + (int) magicDamage + " damage from magic attack.");
         } else {
             super.receiveDamage(amount, source);
-            System.out.println("Orc received " + amount + " damage from physical attack.");
+            LogManager.addLog("Orc received " + amount + " damage from physical attack.");
         }
     }
 
@@ -95,13 +96,13 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         if (isInRange(this.getPosition(), target.getPosition())) {
             if (isCriticalHit()) {
                 target.receiveDamage(getPower() * 2, this);
-                System.out.println("The orc attacked back with Critical hit! for: " + getPower() * 2 + " damage.");
+                LogManager.addLog("The orc attacked back with Critical hit! for: " + getPower() * 2 + " damage.");
             } else {
                 target.receiveDamage(getPower(), this);
-                System.out.println("The orc attacked back for: " + getPower() + " damage.");
+                LogManager.addLog("The orc attacked back for: " + getPower() + " damage.");
             }
         } else {
-            System.out.println(target + " is out of melee range.");
+            LogManager.addLog(target + " is out of melee range.");
         }
     }
 

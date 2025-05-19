@@ -1,4 +1,5 @@
 package game.combat;
+import game.log.LogManager;
 import game.map.Position;
 
 public class CombatSystem {
@@ -9,23 +10,21 @@ public class CombatSystem {
      */
     public static void resolveCombat(Combatant attacker, Combatant defender) {
         if (!isInRange(attacker, defender)) {
-            System.out.println("You are not in range!");
+            LogManager.addLog("Player is out of range!");
             return;
         }
         // ATTACKER'S TURN
         if (defender.tryEvade()) {
-            System.out.println("The enemy evaded the attack!");
+            LogManager.addLog("The enemy evaded the attack!");
         } else {
-            System.out.println("try attack");
             attacker.attack(defender);
         }
 
         // DEFENDER'S TURN (only if still alive)
         if (!defender.isDead()) {
             if (attacker.tryEvade()) {
-                System.out.println("You evaded the enemy's attack!");
+                LogManager.addLog("Player evaded the enemy's attack!");
             } else {
-                System.out.println("enemy try attack");
                 defender.attack(attacker);
             }
         }
@@ -34,7 +33,7 @@ public class CombatSystem {
         if (attacker.isDead()) {
             return;
         } else if (defender.isDead()) {
-            System.out.println("Enemy is dead! You won the fight!");
+            LogManager.addLog("Enemy is dead! You won the fight!");
         }
     }
 

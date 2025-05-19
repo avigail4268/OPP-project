@@ -9,6 +9,7 @@ import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
 import game.items.GameItem;
+import game.log.LogManager;
 import game.map.Position;
 import game.core.GameEntity;
 import java.awt.*;
@@ -60,6 +61,8 @@ public class GameController {
                 engine.fightEnemyAt(clickedPos);
                 if (engine.getPlayer().isDead()) {
                     JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
+                    LogManager.addLog("Game ended");
+                    LogManager.stop();
                     System.exit(0);
                 }
                 SoundPlayer.playSound("classic_attack.wav");
@@ -244,7 +247,11 @@ public class GameController {
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
+            LogManager.addLog("Game ended");
+            LogManager.stop();
             System.exit(0);
+
+
         }
     }
 

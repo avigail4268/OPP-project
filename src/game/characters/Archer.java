@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.PhysicalAttacker;
 import game.combat.RangeFighter;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
@@ -35,18 +36,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     public String getDisplaySymbol() {
         return "Archer";
     }
-    /**
-     * Tries to evade an incoming attack.
-     * The chance to evade is modified by the Archer's accuracy.
-     *
-     * @return true if the evasion is successful, false otherwise
-     */
-    @Override
-    public boolean tryEvade() {
-        double enemyEvasion = getEvasionChance();
-        double evadeChance = enemyEvasion * (1 - accuracy);
-        return evadeChance <= 0.25;
-    }
 
     /**
      * Performs an attack on a target Combatant.
@@ -59,10 +48,10 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         int damage = this.getPower();
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            System.out.println("Archer attacked with Critical hit! for " + getPower() * 2 + " damage.");
+            LogManager.addLog("Archer attacked with Critical hit! for " + getPower() * 2 + " damage.");
         } else {
             target.receiveDamage(getPower(), this);
-            System.out.println(this.getName() + " attacked the enemy for " + damage + " damage.");
+            LogManager.addLog(this.getName() + " attacked the enemy for " + damage + " damage.");
         }
     }
 

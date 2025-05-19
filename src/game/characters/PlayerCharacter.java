@@ -4,6 +4,7 @@ import game.core.Inventory;
 import game.items.GameItem;
 import game.items.Potion;
 import game.items.PowerPotion;
+import game.log.LogManager;
 import game.map.Position;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
@@ -71,9 +72,8 @@ public abstract class PlayerCharacter extends AbstractCharacter {
 
     public void usePotion(Potion potion) {
         int healingAmount = potion.getIncreaseAmount();
-        int currentHealth = getHealth();
         potion.interact(this);
-        System.out.println(getName() + " used a potion and healed " + healingAmount + " HP!");
+        LogManager.addLog(getName() + " used a potion and healed " + healingAmount + " HP!");
     }
 
     /**
@@ -84,7 +84,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public void usePowerPotion(PowerPotion potion) {
         int powerBoost = potion.getIncreaseAmount();
         potion.interact(this);
-        System.out.println(getName() + " used a power potion and gained " + powerBoost + " attack power!");
+        LogManager.addLog(getName() + " used a power potion and gained " + powerBoost + " attack power!");
     }
     /**
      * Gets the player's inventory.

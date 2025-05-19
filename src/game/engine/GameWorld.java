@@ -1,5 +1,4 @@
 
-
 package game.engine;
 
 import game.controller.GameController;
@@ -7,14 +6,13 @@ import game.characters.*;
 import game.combat.CombatSystem;
 import game.core.GameEntity;
 import game.items.*;
+import game.log.LogManager;
 import game.map.GameMap;
 import game.map.Position;
 
 import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.Random;
-import game.engine.EnemyTask;
 import game.observer.GameObserver;
 
 import java.util.ArrayList;
@@ -41,7 +39,7 @@ public class GameWorld {
         this.enemyTasks = new ArrayList<>();
         this.enemyExecutor = Executors.newScheduledThreadPool(4);
 
-
+        LogManager.startLogger();
         createPlayer(playerType, playerName);
         populateGameMap();
     }
@@ -62,6 +60,7 @@ public class GameWorld {
         }
         map.addToGrid(pos, player);
         players.add(player);
+        LogManager.addLog("Game started with player type " + playerType + " and name " + playerName);
     }
 
     /**
@@ -151,7 +150,11 @@ public class GameWorld {
 
         List<GameEntity> entities = map.getEntitiesAt(to);
         for (GameEntity entity : entities) {
-            if (entity instanceof Wall) return false;
+            if (entity instanceof Wall) {
+                LogManager.addLog("Cannot move through wall at " + to);
+                return false;
+            }
+
         }
 
         return true;
@@ -165,6 +168,7 @@ public class GameWorld {
         PlayerCharacter player = getPlayer();
         Position oldPos = player.getPosition();
         player.setPosition(newPos);
+        LogManager.addLog("Player moved from " + oldPos + " to " + newPos);
         map.removeFromGrid(oldPos, player);
         map.addToGrid(newPos, player);
     }

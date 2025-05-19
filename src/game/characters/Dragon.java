@@ -1,6 +1,7 @@
 package game.characters;
 import game.combat.MagicElement;
 import game.combat.*;
+import game.log.LogManager;
 import game.map.Position;
 
 /**
@@ -53,12 +54,12 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         double magicPower = this.getPower() * 1.5;
         if (this.element.isElementStrongerThan(target.getMagicElement())) {
             target.receiveDamage((int)(magicPower * 1.2), this);
-            System.out.println("Dragon's element is stronger than yours");
-            System.out.println("Dragon attacked by magic for: " + (int)(magicPower * 1.2) + " damage.");
+            LogManager.addLog("Dragon's element is stronger than yours");
+            LogManager.addLog("Dragon attacked by magic for: " + (int)(magicPower * 1.2) + " damage.");
         } else {
             target.receiveDamage((int)(magicPower * 0.8), this);
-            System.out.println("Dragon's element is weaker than yours");
-            System.out.println("Dragon attacked by magic for: " + (int)(magicPower * 0.8) + " damage.");
+            LogManager.addLog("Dragon's element is weaker than yours");
+            LogManager.addLog("Dragon attacked by magic for: " + (int)(magicPower * 0.8) + " damage.");
         }
     }
 
@@ -73,7 +74,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         if (target.getMagicElement() == null) {
             double powerAttack = this.getPower() * 1.5;
             target.receiveDamage((int) powerAttack, this);
-            System.out.println("Dragon attacked physically for: " + (int) powerAttack + " damage.");
+            LogManager.addLog("Dragon attacked physically for: " + (int) powerAttack + " damage.");
         } else {
             calculateMagicDamage(target);
         }
@@ -101,10 +102,10 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         double powerAttack = this.getPower();
         if (isCriticalHit()) {
             target.receiveDamage((int) powerAttack * 2, this);
-            System.out.println("Dragon attacked back with a Critical hit! for " + (int) powerAttack * 2 + " damage.");
+            LogManager.addLog("Dragon attacked back with a Critical hit! for " + (int) powerAttack * 2 + " damage.");
         } else {
             target.receiveDamage((int) powerAttack, this);
-            System.out.println("Dragon attacked back for " + (int) powerAttack + " damage.");
+            LogManager.addLog("Dragon attacked back for " + (int) powerAttack + " damage.");
         }
     }
 

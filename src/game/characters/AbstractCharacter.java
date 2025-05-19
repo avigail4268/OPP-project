@@ -86,6 +86,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
         return evadeChance < this.evasionChance;
     }
 
+
     /**
      * Gets the current position of the character.
      *

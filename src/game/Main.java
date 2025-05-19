@@ -186,7 +186,7 @@ public class Main {
         panel.setOpaque(false);
 
         JLabel label = new JLabel("Enter your name, brave hero:", SwingConstants.CENTER);
-        label.setForeground(new Color(255, 255, 230)); // זהוב-קרמי
+        label.setForeground(new Color(255, 255, 230));
         label.setFont(new Font("Serif", Font.BOLD, 20));
 
         JTextField nameField = new JTextField();

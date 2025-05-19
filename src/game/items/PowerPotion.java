@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.log.LogManager;
 import game.map.Position;
 
 /**
@@ -34,7 +35,7 @@ public class PowerPotion extends Potion {
             c.setPower(amount);
             if (this.setIsUsed()) {
                 if (c.getInventory().removeItem(this)) {
-                    System.out.println("Your power was " + (c.getPower() - amount) + " now is " + c.getPower());
+                    LogManager.addLog("Power was " + (c.getPower() - amount) + " now is " + c.getPower());
                 }
             }
         }
@@ -48,7 +49,7 @@ public class PowerPotion extends Potion {
     @Override
     public void collect(PlayerCharacter c) {
         if (c.addToInventory(this)) {
-            System.out.println("Power Potion added to the inventory!");
+            LogManager.addLog("Power Potion added to the inventory!");
         }
     }
 

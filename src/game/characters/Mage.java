@@ -3,6 +3,7 @@ import game.combat.Combatant;
 import game.combat.MagicAttacker;
 import game.combat.MagicElement;
 import game.combat.RangeFighter;
+import game.log.LogManager;
 import game.map.Position;
 
 /**
@@ -71,13 +72,13 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         if (targetElement != null) {
             if (this.element.isElementStrongerThan(targetElement)) {
                 totalDamage *= 1.2; // Element stronger than the target's element
-                System.out.println("Mage attack by magic, his element is stronger than the enemy's");
+                LogManager.addLog("Mage attack by magic, his element is stronger than the enemy's");
             } else if (targetElement.isElementStrongerThan(this.element)) {
                 totalDamage *= 0.8; // Element weaker than the target's element
-                System.out.println("Mage attack by magic, his element is weaker than the enemy's");
+                LogManager.addLog("Mage attack by magic, his element is weaker than the enemy's");
             }
         }
-        System.out.println(this.getName() + " attacked the enemy for: " + (int) totalDamage + " damage.");
+        LogManager.addLog(this.getName() + " attacked the enemy for: " + (int) totalDamage + " damage.");
         target.receiveDamage((int) totalDamage, this);
     }
 

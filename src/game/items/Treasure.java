@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.log.LogManager;
 import game.map.Position;
 
 /**
@@ -50,7 +51,7 @@ public class Treasure extends GameItem implements Interactable {
             this.collected = true;
         } else if (random <= 1.0 / 2.0 + 1.0 / 3.0) {
             c.updateTreasurePoint(value);
-            System.out.println("You collected " + value + " treasure points!");
+            LogManager.addLog("Collected " + value + " treasure points!");
             this.collected = true;
         } else {
             PowerPotion powerPotion = new PowerPotion(this.getPosition(), false, 5, 1);

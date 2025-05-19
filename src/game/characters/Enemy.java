@@ -1,13 +1,9 @@
 package game.characters;
-import game.engine.GameWorld;
 import game.items.Treasure;
 import game.map.Position;
 
-import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Enemy represents a character that can be defeated by a player.
@@ -47,8 +43,6 @@ public abstract class Enemy extends AbstractCharacter {
      * @return the amount of loot
      */
     public int getLoot() {
-        //TODO delete this statement
-        System.out.println("hello");
         return loot;
     }
 
