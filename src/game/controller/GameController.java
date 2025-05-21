@@ -3,6 +3,8 @@ package game.controller;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
+
+import game.Main;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
@@ -72,8 +74,6 @@ public class GameController {
                             LogManager.stop();
                             System.exit(0);
                         }
-                        //TODO
-                        System.out.println("Player HP: " + engine.getPlayer().getHealth());
                         SoundPlayer.playSound("classic_attack.wav");
                         if (frame instanceof game.gui.GameFrame gf) {
                             gf.getMapPanel().highlightCell(row, col, Color.RED);
@@ -261,8 +261,22 @@ public class GameController {
      */
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
-            JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
             LogManager.addLog("Game ended");
+            SoundPlayer.playSound("winner.wav");
+
+            Image background = new ImageIcon(Main.class.getResource("/images/winner.jpg")).getImage();
+
+
+            JPanel backgroundPanel = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+                }
+            };
+            backgroundPanel.setLayout(new BorderLayout());
+
+            backgroundPanel.setPreferredSize(new Dimension(400, 300));
             engine.shutdown();
             LogManager.stop();
             System.exit(0);
