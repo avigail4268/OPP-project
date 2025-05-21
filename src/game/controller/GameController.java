@@ -72,6 +72,8 @@ public class GameController {
                             LogManager.stop();
                             System.exit(0);
                         }
+                        //TODO
+                        System.out.println("Player HP: " + engine.getPlayer().getHealth());
                         SoundPlayer.playSound("classic_attack.wav");
                         if (frame instanceof game.gui.GameFrame gf) {
                             gf.getMapPanel().highlightCell(row, col, Color.RED);
