@@ -27,7 +27,7 @@ public class Main {
      */
 
     public static void main(String[] args) {
-
+        System.out.println("Welcome to the Dungeons & Dragons Game!");
         SwingUtilities.invokeLater(() -> {
             // Ask the user for map size (min 10)
             int size = askMapSize();
