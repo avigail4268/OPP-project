@@ -10,6 +10,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
+
 
 /**
  * The Main class serves as the entry point to the game application.
@@ -68,7 +70,7 @@ public class Main {
      */
 
     public static int askMapSize() {
-        JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 30, 10);
+        JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 20, 10);
         slider.setMajorTickSpacing(5);
         slider.setMinorTickSpacing(1);
         slider.setPaintTicks(true);
@@ -111,9 +113,11 @@ public class Main {
 
         if (result == JOptionPane.OK_OPTION) {
             return slider.getValue();
-        } else {
-            return 15;
+        } else if (result == JOptionPane.CANCEL_OPTION) {
+            System.exit(0);
+            return -1;
         }
+        return 10;
     }
 
     /**
@@ -168,6 +172,10 @@ public class Main {
                 }
             }
         }
+        else if (result == JOptionPane.CANCEL_OPTION) {
+            System.exit(0);
+            return -1;
+        }
         return 1;
     }
     public static String askPlayerName() {
@@ -187,11 +195,11 @@ public class Main {
 
         JLabel label = new JLabel("Enter your name, brave hero:", SwingConstants.CENTER);
         label.setForeground(new Color(255, 255, 230));
-        label.setFont(new Font("Serif", Font.BOLD, 20));
+        label.setFont(new Font("Serif", Font.BOLD, 28));
 
         JTextField nameField = new JTextField();
         nameField.setHorizontalAlignment(JTextField.CENTER);
-        nameField.setFont(new Font("Serif", Font.PLAIN, 18));
+        nameField.setFont(new Font("Serif", Font.PLAIN, 26));
         nameField.setOpaque(false);
         nameField.setForeground(Color.WHITE);
         nameField.setBorder(BorderFactory.createLineBorder(Color.WHITE, 1));
@@ -205,9 +213,14 @@ public class Main {
 
         if (result == JOptionPane.OK_OPTION) {
             return nameField.getText().trim().isEmpty() ? "Player" : nameField.getText().trim();
-        } else {
-            return "Player";
+        } else if (result == JOptionPane.CANCEL_OPTION) {
+            {
+                System.exit(0);
+                return null;
+            }
         }
+        else
+            return "Player";
     }
     public static void showAutoClosingWelcome(String name) {
         JWindow window = new JWindow();
@@ -217,7 +230,7 @@ public class Main {
         message.setForeground(Color.BLACK);
 
         JPanel panel = new JPanel(new BorderLayout());
-        panel.setBackground(new Color(255, 215, 0)); // זהב
+        panel.setBackground(new Color(243, 164, 243));
         panel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         panel.add(message, BorderLayout.CENTER);
 
