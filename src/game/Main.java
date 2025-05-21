@@ -158,9 +158,6 @@ public class Main {
         for (JRadioButton button : buttons) {
             panel.add(button);
         }
-
-//        buttons[1].setSelected(true);
-
         int result = JOptionPane.showConfirmDialog(
                 null, panel, "Choose Player Type", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
         );
@@ -241,7 +238,7 @@ public class Main {
         window.setOpacity(0f);
         window.setVisible(true);
 
-        Timer fadeIn = new Timer(10, null);
+        Timer fadeIn = new Timer(5, null);
         fadeIn.addActionListener(new ActionListener() {
             float opacity = 0f;
             public void actionPerformed(ActionEvent e) {
@@ -251,11 +248,11 @@ public class Main {
                     fadeIn.stop();
 
 
-                    Timer delay = new Timer(1500, null);
+                    Timer delay = new Timer(500, null);
                     delay.setRepeats(false);
                     delay.addActionListener(new ActionListener() {
                         public void actionPerformed(ActionEvent e) {
-                            Timer fadeOut = new Timer(30, null);
+                            Timer fadeOut = new Timer(10, null);
                             fadeOut.addActionListener(new ActionListener() {
                                 float op = 1f;
                                 public void actionPerformed(ActionEvent e) {

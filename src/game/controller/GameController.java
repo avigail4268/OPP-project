@@ -1,8 +1,12 @@
 package game.controller;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
+
+import game.Main;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
@@ -66,14 +70,8 @@ public class GameController {
                     } else if (CellTypeDetector.hasEnemy(entities)) {
                         engine.fightEnemyAt(clickedPos);
                         if (engine.getPlayer().isDead()) {
-                            JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
-                            LogManager.addLog("Game ended");
-                            engine.shutdown();
-                            LogManager.stop();
-                            System.exit(0);
+                            gameOver();
                         }
-                        //TODO
-                        System.out.println("Player HP: " + engine.getPlayer().getHealth());
                         SoundPlayer.playSound("classic_attack.wav");
                         if (frame instanceof game.gui.GameFrame gf) {
                             gf.getMapPanel().highlightCell(row, col, Color.RED);
@@ -261,12 +259,123 @@ public class GameController {
      */
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
-            JOptionPane.showMessageDialog(frame, "You Win!", "You achieved more than 500 points!", JOptionPane.INFORMATION_MESSAGE);
             LogManager.addLog("Game ended");
-            engine.shutdown();
-            LogManager.stop();
-            System.exit(0);
+            SoundPlayer.playSound("winner.wav");
+
+            // טוען את התמונה כ-ImageIcon
+            ImageIcon icon = new ImageIcon(Main.class.getResource("/images/winner.jpg"));
+            JLabel label = new JLabel(icon);
+
+            // JWindow שקוף עם תמונה בלבד
+            JWindow window = new JWindow();
+            window.getContentPane().add(label);
+            window.pack(); // מתאים את גודל החלון לגודל התמונה
+            window.setLocationRelativeTo(null);
+            window.setAlwaysOnTop(true);
+            window.setOpacity(0f); // שקוף בהתחלה
+            window.setVisible(true);
+
+            // Fade-in
+            Timer fadeIn = new Timer(30, null);
+            fadeIn.addActionListener(new ActionListener() {
+                float opacity = 0f;
+                public void actionPerformed(ActionEvent e) {
+                    opacity += 0.05f;
+                    window.setOpacity(Math.min(opacity, 1f));
+                    if (opacity >= 1f) {
+                        ((Timer) e.getSource()).stop();
+
+                        // שהייה קצרה לפני יציאה
+                        Timer delay = new Timer(1500, null);
+                        delay.setRepeats(false);
+                        delay.addActionListener(ev -> {
+                            // Fade-out
+                            Timer fadeOut = new Timer(30, null);
+                            fadeOut.addActionListener(new ActionListener() {
+                                float op = 1f;
+                                public void actionPerformed(ActionEvent e) {
+                                    op -= 0.05f;
+                                    window.setOpacity(Math.max(op, 0f));
+                                    if (op <= 0f) {
+                                        ((Timer) e.getSource()).stop();
+                                        window.dispose();
+                                        engine.shutdown();
+                                        LogManager.stop();
+                                        System.exit(0);
+                                    }
+                                }
+                            });
+                            fadeOut.start();
+                        });
+                        delay.start();
+                    }
+                }
+            });
+            fadeIn.start();
         }
+    }
+    private void gameOver() {
+        SoundPlayer.playSound("losing.wav");
+
+        Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenWidth = screenSize.width;
+        int screenHeight = screenSize.height;
+
+        JPanel fullScreenPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(background, 0, 0, screenWidth, screenHeight, this);
+            }
+        };
+        fullScreenPanel.setPreferredSize(screenSize);
+
+        JWindow window = new JWindow();
+        window.getContentPane().add(fullScreenPanel);
+        window.setSize(screenSize);
+        window.setLocation(0, 0);
+        window.setAlwaysOnTop(true);
+        window.setOpacity(0f);
+        window.setVisible(true);
+
+        Timer fadeIn = new Timer(30, null);
+        fadeIn.addActionListener(new ActionListener() {
+            float opacity = 0f;
+            public void actionPerformed(ActionEvent e) {
+                opacity += 0.05f;
+                window.setOpacity(Math.min(opacity, 1f));
+                if (opacity >= 1f) {
+                    ((Timer) e.getSource()).stop();
+
+                    Timer delay = new Timer(1500, null);
+                    delay.setRepeats(false);
+                    delay.addActionListener(ev -> {
+                        // אפקט יציאה
+                        Timer fadeOut = new Timer(30, null);
+                        fadeOut.addActionListener(new ActionListener() {
+                            float op = 1f;
+                            public void actionPerformed(ActionEvent e) {
+                                op -= 0.05f;
+                                window.setOpacity(Math.max(op, 0f));
+                                if (op <= 0f) {
+                                    ((Timer) e.getSource()).stop();
+                                    window.dispose();
+                                    LogManager.addLog("Game ended, player is dead");
+                                    engine.shutdown();
+                                    LogManager.stop();
+                                    System.exit(0);
+                                }
+                            }
+                        });
+                        fadeOut.start();
+                    });
+                    delay.start();
+                }
+            }
+        });
+        fadeIn.start();
     }
 
     /**
@@ -324,3 +433,5 @@ public class GameController {
         return engine;
     }
 }
+
+
