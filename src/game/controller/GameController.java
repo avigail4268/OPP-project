@@ -14,6 +14,8 @@ import game.map.Position;
 import game.core.GameEntity;
 import java.awt.*;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
@@ -52,33 +54,44 @@ public class GameController {
         Position playerPos = engine.getPlayer().getPosition();
 
         if (engine.isValidMove(playerPos, clickedPos, engine.getPlayer())) {
-            if (engine.getMap().isEmpty(clickedPos)) {
-                engine.movePlayerTo(clickedPos);
-                SoundPlayer.playSound("footsteps.wav");
-                engine.notifyObservers();
-            } else if (CellTypeDetector.hasEnemy(entities)) {
-                engine.fightEnemyAt(clickedPos);
-                if (engine.getPlayer().isDead()) {
-                    JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
-                    LogManager.addLog("Game ended");
-                    engine.shutdown();
-                    LogManager.stop();
-                    System.exit(0);
+            ReentrantLock lock = GameWorld.getMapLock(clickedPos);
+            boolean acquired = false;
+            try {
+                acquired = lock.tryLock(100, TimeUnit.MILLISECONDS);
+                if (acquired) {
+                    if (engine.getMap().isEmpty(clickedPos)) {
+                        engine.movePlayerTo(clickedPos);
+                        SoundPlayer.playSound("footsteps.wav");
+                        engine.notifyObservers();
+                    } else if (CellTypeDetector.hasEnemy(entities)) {
+                        engine.fightEnemyAt(clickedPos);
+                        if (engine.getPlayer().isDead()) {
+                            JOptionPane.showMessageDialog(frame, "GAME OVER!", "You're dead", JOptionPane.ERROR_MESSAGE);
+                            LogManager.addLog("Game ended");
+                            engine.shutdown();
+                            LogManager.stop();
+                            System.exit(0);
+                        }
+                        SoundPlayer.playSound("classic_attack.wav");
+                        if (frame instanceof game.gui.GameFrame gf) {
+                            gf.getMapPanel().highlightCell(row, col, Color.RED);
+                        }
+                        engine.notifyObservers();
+                    } else if (CellTypeDetector.hasItem(entities)) {
+                        engine.pickUpItemAt(clickedPos);
+                        SoundPlayer.playSound("item_pickup.wav");
+                        checkVictory();
+                        if (frame instanceof game.gui.GameFrame gf) {
+                            gf.getMapPanel().highlightCell(row, col, Color.GREEN);
+                        }
+                        engine.movePlayerTo(clickedPos);
+                        engine.notifyObservers();
+                    }
                 }
-                SoundPlayer.playSound("classic_attack.wav");
-                if (frame instanceof game.gui.GameFrame gf) {
-                    gf.getMapPanel().highlightCell(row, col, Color.RED);
-                }
-                engine.notifyObservers();
-            } else if (CellTypeDetector.hasItem(entities)) {
-                engine.pickUpItemAt(clickedPos);
-                SoundPlayer.playSound("item_pickup.wav");
-                checkVictory();
-                if (frame instanceof game.gui.GameFrame gf) {
-                    gf.getMapPanel().highlightCell(row, col, Color.GREEN);
-                }
-                engine.movePlayerTo(clickedPos);
-                engine.notifyObservers();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            } finally {
+                if (acquired) lock.unlock();
             }
         }
     }
