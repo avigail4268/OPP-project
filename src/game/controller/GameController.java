@@ -76,14 +76,6 @@ public class GameController {
     }
 
     /**
-     * Returns the game engine.
-     * @return the GameWorld instance.
-     */
-    public GameWorld getEngine() {
-        return engine;
-    }
-
-    /**
      * Alias for getEngine().
      * @return the GameWorld instance.
      */
@@ -313,6 +305,7 @@ public class GameController {
                                         window.dispose();
                                         engine.shutdown();
                                         LogManager.stop();
+                                        engine.getIsGameRunning().set(false);
                                         System.exit(0);
                                     }
                                 }
@@ -371,6 +364,7 @@ public class GameController {
                                     LogManager.addLog("Game ended, player is dead");
                                     engine.shutdown();
                                     LogManager.stop();
+                                    engine.getIsGameRunning().set(false);
                                     System.exit(0);
                                 }
                             }

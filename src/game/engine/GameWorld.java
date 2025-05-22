@@ -10,6 +10,7 @@ import game.log.LogManager;
 import game.map.GameMap;
 import game.map.Position;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.Random;
 import game.observer.GameObserver;
@@ -332,6 +333,14 @@ public class GameWorld {
         return lockMap.computeIfAbsent(pos, p -> new ReentrantLock());
     }
 
+    /**
+     * @return the flag that indicates if the game is running
+     */
+    public AtomicBoolean getIsGameRunning() {
+        return isGameRunning;
+    }
+
+
 
     // --- Fields ---
     // Map for locking specific positions in the game world
@@ -349,4 +358,7 @@ public class GameWorld {
     private List<GameObserver> observers = new ArrayList<>();
     // Controller for handling game interactions
     private GameController controller;
+    // Flag to indicate if the game is running
+    private final AtomicBoolean isGameRunning = new AtomicBoolean(true);
+
 }

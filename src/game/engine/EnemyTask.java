@@ -33,24 +33,8 @@ public class EnemyTask implements Runnable {
      * If the enemy is alive, it will attempt to move toward the player if within range,
      * or move randomly with a 20% chance otherwise.
      */
-//    @Override
-//    public void run() {
-//        if (!isRunning || enemy.isDead()) return;
-//
-//        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
-//        PlayerCharacter player = gameWorld.getPlayer();
-//        Position enemyPos = enemy.getPosition();
-//        Position playerPos = player.getPosition();
-//
-//        // If player is close, move toward them. Else, move randomly with 20% chance.
-//        if (enemyPos.distanceTo(playerPos) <= 2) {
-//            moveTowards(playerPos);
-//        } else if (random.nextDouble() <= 0.2) {
-//            moveRandomly();
-//        }
-//    }
     public void run() {
-        if (!isRunning || enemy.isDead()) return;
+        if (!gameWorld.getIsGameRunning().get() || enemy.isDead()) return;
 
         LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();
@@ -146,7 +130,6 @@ public class EnemyTask implements Runnable {
      * Stops the enemy's scheduled behavior by canceling the scheduled task.
      */
     public void stop() {
-        isRunning = false;
         if (scheduledTask != null) {
             scheduledTask.cancel(true);
         }
@@ -169,9 +152,6 @@ public class EnemyTask implements Runnable {
 
     /** Random number generator for random movements. */
     private final Random random = new Random();
-
-    /** Indicates whether the task is active and should run. */
-    private boolean isRunning = true;
 
     /** Reference to the scheduled task, used for cancellation. */
     private ScheduledFuture<?> scheduledTask;
