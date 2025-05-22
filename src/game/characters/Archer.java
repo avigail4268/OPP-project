@@ -16,7 +16,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * Constructs a new Archer with a given name, position, and health.
      * The Archer's accuracy is randomly set between 0 and 0.8.
-     *
      * @param name the name of the Archer
      * @param pos the position of the Archer
      * @param health the health of the Archer
@@ -29,7 +28,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     /**
      * Gets the display symbol representing the Archer.
-     *
      * @return the string "Archer"
      */
     @Override
@@ -40,7 +38,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * Performs an attack on a target Combatant.
      * The attack may be a critical hit, dealing double damage.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -58,7 +55,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * Determines if the Archer's attack is a critical hit.
      * The chance of a critical hit is 10%.
-     *
      * @return true if it's a critical hit, false otherwise
      */
     @Override
@@ -69,7 +65,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     /**
      * Executes a ranged attack on the target if they are within range.
-     *
      * @param target the Combatant to attack
      */
     @Override
@@ -81,7 +76,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     /**
      * Checks if the target is within the attack range of the Archer.
-     *
      * @param self the Archer's position
      * @param target the target's position
      * @return true if the target is within range, false otherwise
@@ -94,7 +88,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * Gets the range of the Archer's attacks.
      * The Archer can attack up to 2 units away.
-     *
      * @return the attack range (2)
      */
     @Override
@@ -105,7 +98,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * Checks if two Archer objects are equal.
      * They are considered equal if their name and position are the same.
-     *
      * @param obj the object to compare
      * @return true if the objects are equal, false otherwise
      */
@@ -119,7 +111,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     /**
      * Gets a string representation of the Archer.
-     *
      * @return a string in the format "Archer: [name]"
      */
     @Override

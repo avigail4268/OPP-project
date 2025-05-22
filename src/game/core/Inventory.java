@@ -20,7 +20,6 @@ public class Inventory {
 
     /**
      * Adds a new item to the inventory.
-     *
      * @param item the GameItem to add
      * @return true if the item was added successfully, false if the item was null
      */
@@ -35,7 +34,6 @@ public class Inventory {
 
     /**
      * Removes an item from the inventory.
-     *
      * @param item the GameItem to remove
      * @return true if the item was present and removed, false otherwise
      */
@@ -50,7 +48,6 @@ public class Inventory {
 
     /**
      * Returns the list of items currently in the inventory.
-     *
      * @return a List of GameItem objects
      */
     public List<GameItem> getItems() {
@@ -60,7 +57,6 @@ public class Inventory {
     /**
      * Compares this inventory to another object for equality.
      * Two inventories are considered equal if they contain the same items.
-     *
      * @param obj the object to compare with
      * @return true if the inventories are equal, false otherwise
      */
@@ -74,7 +70,6 @@ public class Inventory {
 
     /**
      * Returns a string representation of the inventory.
-     *
      * @return the string "Inventory"
      */
     @Override

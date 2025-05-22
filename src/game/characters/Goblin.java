@@ -15,7 +15,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     /**
      * Constructs a new Goblin with the given position and health.
      * A random agility value between 0 and 80 is assigned to the goblin.
-     *
      * @param pos the position of the goblin
      * @param health the health of the goblin
      */
@@ -26,16 +25,15 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
 
     /**
      * Returns the symbol representing the Goblin.
-     *
      * @return the string "GOBLIN"
      */
     @Override
     public String getDisplaySymbol() {
         return "Goblin";
     }
+
     /**
      * Performs a melee attack on the target if the target is in range.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -47,7 +45,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
 
     /**
      * Checks if the target is within melee range (distance <= 1).
-     *
      * @param self the position of the Goblin
      * @param target the position of the target
      * @return true if the target is within melee range, false otherwise
@@ -62,7 +59,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
      * The chance of evading an attack is calculated as the agility divided by 100,
      * and it is capped at 0.8. If the evade chance is less than or equal to 0.25,
      * the Goblin successfully evades.
-     *
      * @return true if the Goblin successfully evades the attack, false otherwise
      */
     @Override
@@ -74,7 +70,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     /**
      * Attacks the target with a physical attack. If a critical hit is rolled (10% chance),
      * the damage is doubled.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -91,7 +86,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     /**
      * Determines if the Goblin's attack is a critical hit.
      * A critical hit occurs if a random number between 0 and 1 is less than or equal to 0.1.
-     *
      * @return true if the attack is a critical hit, false otherwise
      */
     @Override
@@ -99,10 +93,10 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
         double rand = Math.random();
         return rand <= 0.1;
     }
+
     /**
      * Checks if the Goblin is within range to attack the target.
      * The Goblin can attack if the target is within melee range.
-     *
      * @param self the position of the Goblin
      * @param target the position of the target
      * @return true if the Goblin can attack, false otherwise
@@ -115,7 +109,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     /**
      * Compares this Goblin to another object to check for equality.
      * Goblins are considered equal if they have the same position and agility.
-     *
      * @param obj the object to compare
      * @return true if the objects are equal, false otherwise
      */
@@ -129,7 +122,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
 
     /**
      * Returns a string representation of the Goblin.
-     *
      * @return the string representation of the Goblin
      */
     @Override
@@ -139,7 +131,6 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
 
     /**
      * Gets the agility of the Goblin.
-     *
      * @return the agility value of the Goblin
      */
     protected int getAgility() {

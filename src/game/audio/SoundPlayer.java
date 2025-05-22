@@ -19,7 +19,7 @@ public class SoundPlayer {
                 System.err.println("Could not find sound file: " + fileName);
                 return;
             }
-
+            // Create an AudioInputStream from the sound file
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundURL);
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);

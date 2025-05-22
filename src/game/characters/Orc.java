@@ -15,7 +15,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     /**
      * Constructs a new Orc with the given position and health.
      * The Orc is assigned a random resistance to magic attacks.
-     *
      * @param pos the position of the Orc
      * @param health the health of the Orc
      */
@@ -27,7 +26,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     /**
      * Receives damage from an attack. If the attack is magical, the damage is reduced based on the Orc's resistance.
      * If the attack is physical, the damage is applied normally.
-     *
      * @param amount the amount of damage received
      * @param source the source of the attack
      */
@@ -46,16 +44,15 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
 
     /**
      * Returns the symbol representing the Orc.
-     *
      * @return the string "ORC"
      */
     @Override
     public String getDisplaySymbol() {
         return "Orc";
     }
+
     /**
      * Executes a close-range melee attack on the target.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -67,7 +64,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
 
     /**
      * Checks if the target is within melee range.
-     *
      * @param self the position of the Orc
      * @param target the position of the target
      * @return true if the target is within melee range, false otherwise
@@ -76,19 +72,19 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     public boolean isInMeleeRange(Position self, Position target) {
         return self.distanceTo(target) <= 1;
     }
+
     /**
      * Returns the range of the Orc's attack.
-     *
      * @return the range of the Orc's attack (1)
      */
     @Override
     public boolean isInRange(Position self, Position target) {
         return isInMeleeRange(self, target);
     }
+
     /**
      * Performs an attack on the target. If the attack is a critical hit, the damage is doubled.
      * The damage is applied based on the Orc's power.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -108,7 +104,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
 
     /**
      * Determines if the attack is a critical hit. The chance of a critical hit is 10%.
-     *
      * @return true if the attack is a critical hit, false otherwise
      */
     @Override
@@ -120,7 +115,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     /**
      * Compares this Orc to another object for equality.
      * Orcs are considered equal if they have the same position and resistance.
-     *
      * @param obj the object to compare
      * @return true if the Orcs are equal, false otherwise
      */
@@ -134,16 +128,15 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
 
     /**
      * Returns a string representation of the Orc.
-     *
      * @return the string representation of the Orc, including its display symbol
      */
     @Override
     public String toString() {
         return this.getDisplaySymbol();
     }
+
     /**
      * Returns the Orc's resistance to magic damage.
-     *
      * @return the Orc's magic damage resistance
      */
     protected double getResistance() {

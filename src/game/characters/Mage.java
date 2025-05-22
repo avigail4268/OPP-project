@@ -15,7 +15,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     /**
      * Constructs a new Mage with the given name, position, and health.
      * The Mage is assigned a magic element.
-     *
      * @param name the name of the Mage
      * @param pos the position of the Mage
      * @param health the health of the Mage
@@ -27,7 +26,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Returns the symbol representing the Mage.
-     *
      * @return the string "MAGE"
      */
     @Override
@@ -37,7 +35,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Returns the magic element of the Mage.
-     *
      * @return the Mage's magic element
      */
     @Override
@@ -48,7 +45,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     /**
      * Attacks the target by casting a spell. The magic damage is calculated based on the Mage's element
      * and the target's element, and the target receives the corresponding damage.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -60,7 +56,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
      * Calculates the magic damage dealt to the target.
      * The damage is influenced by the Mage's power and the comparison between the Mage's
      * element and the target's element.
-     *
      * @param target the target Combatant to calculate damage for
      */
     @Override
@@ -84,7 +79,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Casts a spell on the target, which is essentially performing the magic attack.
-     *
      * @param target the target Combatant to cast the spell on
      */
     @Override
@@ -94,7 +88,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Checks if the Mage's magic element is stronger than the other magic attacker's element.
-     *
      * @param other the other MagicAttacker to compare elements with
      * @return true if the Mage's magic element is stronger, false otherwise
      */
@@ -106,7 +99,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     /**
      * Attempts to attack a target from a ranged distance. The Mage will cast a spell
      * if the target is within the Mage's range.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -118,7 +110,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Returns the range of the Mage's attack.
-     *
      * @return the range of the Mage's attack (2)
      */
     @Override
@@ -128,7 +119,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Checks if the target is within the Mage's attack range.
-     *
      * @param self the position of the Mage
      * @param target the position of the target
      * @return true if the target is within range, false otherwise
@@ -141,7 +131,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     /**
      * Compares this Mage to another object to check for equality.
      * Mages are considered equal if they have the same name and position.
-     *
      * @param obj the object to compare
      * @return true if the objects are equal, false otherwise
      */
@@ -155,7 +144,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
 
     /**
      * Returns a string representation of the Mage.
-     *
      * @return the string representation of the Mage player character
      */
     @Override

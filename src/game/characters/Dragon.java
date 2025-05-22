@@ -14,7 +14,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Constructs a new Dragon with a given position and health.
      * The Dragon's magic element is set to a default MagicElement.
-     *
      * @param pos the position of the Dragon
      * @param health the health of the Dragon
      */
@@ -25,7 +24,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Gets the display symbol representing the Dragon.
-     *
      * @return the string "DRAGON"
      */
     @Override
@@ -35,7 +33,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Gets the magic element associated with the Dragon.
-     *
      * @return the Dragon's MagicElement
      */
     @Override
@@ -46,7 +43,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Calculates the magical damage dealt by the Dragon to the target.
      * The damage depends on whether the Dragon's element is stronger or weaker than the target's element.
-     *
      * @param target the target Combatant to calculate damage for
      */
     @Override
@@ -66,7 +62,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Casts a spell or attacks physically, depending on the target's magic element.
      * If the target has no magic element, the Dragon will attack physically; otherwise, it will use magic.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -111,7 +106,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Checks if the target is within melee range of the Dragon.
-     *
      * @param self the Dragon's position
      * @param target the target's position
      * @return true if the target is within melee range, false otherwise
@@ -123,7 +117,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Attacks a target, either physically (if in melee range) or using magic (if out of melee range).
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -138,7 +131,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Determines if the Dragon's attack is a critical hit.
      * The chance of a critical hit is 10%.
-     *
      * @return true if it's a critical hit, false otherwise
      */
     @Override
@@ -146,10 +138,10 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         double rand = Math.random();
         return rand <= 0.1;
     }
+
     /**
      * Checks if the target is within range for a melee attack.
      * This method is used to determine if the Dragon can attack the target.
-     *
      * @param self the Dragon's position
      * @param target the target's position
      * @return true if the target is within melee range, false otherwise
@@ -158,6 +150,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     public boolean isInRange(Position self, Position target) {
         return isInMeleeRange(self, target);
     }
+
     /**
      * Checks if two Dragon objects are equal.
      * They are considered equal if their position and magic element are the same.
@@ -175,7 +168,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Gets a string representation of the Dragon.
-     *
      * @return a string in the format "DRAGON"
      */
     @Override
