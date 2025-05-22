@@ -1,6 +1,4 @@
-
 package game.gui;
-
 import game.controller.GameController;
 import game.observer.GameObserver;
 import javax.swing.*;

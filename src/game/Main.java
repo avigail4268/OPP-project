@@ -1,4 +1,3 @@
-// Project: Dungeons & Dragons Game
 package game;
 
 import game.engine.GameWorld;

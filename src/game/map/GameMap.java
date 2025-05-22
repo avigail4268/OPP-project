@@ -1,6 +1,5 @@
 
 package game.map;
-
 import game.core.GameEntity;
 import java.util.*;
 
