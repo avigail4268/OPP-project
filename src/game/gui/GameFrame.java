@@ -14,7 +14,6 @@ public class GameFrame extends JFrame {
     /**
      * Constructs the game frame with the given game controller.
      * Initializes the layout, adds the panels, and registers observers.
-     *
      * @param controller The game controller that manages the game state and player
      */
     public GameFrame(GameController controller) {
@@ -60,16 +59,18 @@ public class GameFrame extends JFrame {
 
     /**
      * Returns the map panel component.
-     *
      * @return The MapPanel instance used in the GUI
      */
     public MapPanel getMapPanel() {
         return mapPanel;
     }
 
-    // Private instance variables
+    // --- Fields ---
+    /** Panel responsible for displaying the game map. */
     private MapPanel mapPanel;
+    /** Panel responsible for showing player status and stats. */
     private StatusPanel statusPanel;
+    /** The controller that manages game logic and state. */
     private GameController controller;
 }
 
