@@ -2,25 +2,40 @@ package game.characters;
 
 import game.characterBuilders.*;
 import game.map.Position;
+
 import java.util.*;
 import java.util.function.Supplier;
 
 public class EnemyFactory {
-    private final Map<String, Supplier<CharacterBuilder>> enemySuppliers = new HashMap<>();
+    private final Map<String, Supplier<AbstractCharacter>> creators = new HashMap<>();
 
-    public EnemyFactory() {
-        enemySuppliers.put("Goblin", GoblinBuilder::new);
-        enemySuppliers.put("Orc", OrcBuilder::new);
-        enemySuppliers.put("Dragon", DragonBuilder::new);
+    public EnemyFactory(Position pos) {
+        creators.put("Goblin", () -> {
+            EnemyBuilder builder = new EnemyBuilder();
+            builder.setPosition(pos);
+            builder.randomizeStats();
+            return builder.build("Goblin");
+        });
+
+        creators.put("Orc", () -> {
+            EnemyBuilder builder = new EnemyBuilder();
+            builder.setPosition(pos);
+            builder.randomizeStats();
+            return builder.build("Orc");
+        });
+
+        creators.put("Dragon", () -> {
+            EnemyBuilder builder = new EnemyBuilder();
+            builder.setPosition(pos);
+            builder.randomizeStats();
+            return builder.build("Dragon");
+        });
     }
 
-    public Enemy createEnemy(Position pos) {
-        List<String> types = new ArrayList<>(enemySuppliers.keySet());
-        String selected = types.get(new Random().nextInt(types.size()));
-
-        CharacterBuilder builder = enemySuppliers.get(selected).get();
-        builder.setPosition(pos);
-        builder.randomizeStats();
-        return (Enemy) builder.build();
+    public AbstractCharacter create(String type) {
+        Supplier<AbstractCharacter> creator = creators.get(type);
+        if (creator == null)
+            throw new IllegalArgumentException("Unknown enemy type: " + type);
+        return creator.get();
     }
 }

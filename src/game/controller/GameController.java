@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
+
 import game.Main;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
@@ -16,8 +17,10 @@ import game.items.GameItem;
 import game.log.LogManager;
 import game.map.Position;
 import game.core.GameEntity;
+
 import java.awt.*;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -29,6 +32,7 @@ public class GameController {
 
     /**
      * Constructs a GameController for the given GameWorld engine.
+     *
      * @param engine the GameWorld instance used to manage the game logic.
      */
     public GameController(GameWorld engine) {
@@ -37,6 +41,7 @@ public class GameController {
 
     /**
      * Sets the GameFrame used by this controller.
+     *
      * @param frame the main game window frame.
      */
     public void setFrame(GameFrame frame) {
@@ -45,6 +50,7 @@ public class GameController {
 
     /**
      * Sets the size of tiles in pixels.
+     *
      * @param tileSize the tile size.
      */
     public void setTileSize(int tileSize) {
@@ -53,6 +59,7 @@ public class GameController {
 
     /**
      * Gets the number of rows in the map.
+     *
      * @return map size (rows).
      */
     public int getMapRows() {
@@ -61,6 +68,7 @@ public class GameController {
 
     /**
      * Gets the number of columns in the map.
+     *
      * @return map size (columns).
      */
     public int getMapCols() {
@@ -69,6 +77,7 @@ public class GameController {
 
     /**
      * Returns the player character.
+     *
      * @return the PlayerCharacter instance.
      */
     public PlayerCharacter getPlayer() {
@@ -77,6 +86,7 @@ public class GameController {
 
     /**
      * Alias for getEngine().
+     *
      * @return the GameWorld instance.
      */
     public GameWorld getGameWorld() {
@@ -86,6 +96,7 @@ public class GameController {
     /**
      * Handles a left-click at a specific tile.
      * Moves the player, triggers combat, or picks up items.
+     *
      * @param row the row clicked.
      * @param col the column clicked.
      */
@@ -131,8 +142,9 @@ public class GameController {
     /**
      * Displays context info on right-click at a tile.
      * Shows enemy/item/wall/empty tile descriptions.
-     * @param row clicked row.
-     * @param col clicked column.
+     *
+     * @param row          clicked row.
+     * @param col          clicked column.
      * @param sourceButton button source of the click.
      */
     public void handleRightClick(int row, int col, JButton sourceButton) {
@@ -160,6 +172,7 @@ public class GameController {
 
     /**
      * Moves the player using arrow key direction input.
+     *
      * @param direction one of "UP", "DOWN", "LEFT", "RIGHT".
      */
     public void handleArrowKey(String direction) {
@@ -170,10 +183,18 @@ public class GameController {
         int newCol = currentCol;
 
         switch (direction) {
-            case "UP": newRow--; break;
-            case "DOWN": newRow++; break;
-            case "LEFT": newCol--; break;
-            case "RIGHT": newCol++; break;
+            case "UP":
+                newRow--;
+                break;
+            case "DOWN":
+                newRow++;
+                break;
+            case "LEFT":
+                newCol--;
+                break;
+            case "RIGHT":
+                newCol++;
+                break;
         }
 
         if (newRow >= 0 && newRow < getMapRows() && newCol >= 0 && newCol < getMapCols()) {
@@ -183,6 +204,7 @@ public class GameController {
 
     /**
      * Generates the image for a tile based on its contents.
+     *
      * @param row tile row.
      * @param col tile column.
      * @return icon representing the tile.
@@ -217,6 +239,7 @@ public class GameController {
 
     /**
      * Generates a tile image with a health bar overlay.
+     *
      * @param row tile row.
      * @param col tile column.
      * @return icon with health bar overlay.
@@ -286,6 +309,7 @@ public class GameController {
             Timer fadeIn = new Timer(30, null);
             fadeIn.addActionListener(new ActionListener() {
                 float opacity = 0f;
+
                 public void actionPerformed(ActionEvent e) {
                     opacity += 0.05f;
                     window.setOpacity(Math.min(opacity, 1f));
@@ -297,6 +321,7 @@ public class GameController {
                             Timer fadeOut = new Timer(30, null);
                             fadeOut.addActionListener(new ActionListener() {
                                 float op = 1f;
+
                                 public void actionPerformed(ActionEvent e) {
                                     op -= 0.05f;
                                     window.setOpacity(Math.max(op, 0f));
@@ -344,6 +369,7 @@ public class GameController {
         Timer fadeIn = new Timer(30, null);
         fadeIn.addActionListener(new ActionListener() {
             float opacity = 0f;
+
             public void actionPerformed(ActionEvent e) {
                 opacity += 0.05f;
                 window.setOpacity(Math.min(opacity, 1f));
@@ -355,6 +381,7 @@ public class GameController {
                         Timer fadeOut = new Timer(30, null);
                         fadeOut.addActionListener(new ActionListener() {
                             float op = 1f;
+
                             public void actionPerformed(ActionEvent e) {
                                 op -= 0.05f;
                                 window.setOpacity(Math.max(op, 0f));
@@ -377,15 +404,22 @@ public class GameController {
         });
         fadeIn.start();
     }
-    // --- Fields ---
-    /** Tile size in pixels. */
-    private int tileSize = 64;
 
-    /** Reference to the game world engine. */
-    private GameWorld engine;
+// --- Fields ---
+/**
+ * Tile size in pixels.
+ */
+private int tileSize = 64;
 
-    /** Reference to the game frame GUI. */
-    private GameFrame frame;
+/**
+ * Reference to the game world engine.
+ */
+private GameWorld engine;
+
+/**
+ * Reference to the game frame GUI.
+ */
+private GameFrame frame;
 
 }
 
