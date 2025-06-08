@@ -1,8 +1,6 @@
-
 package game.characters;
 import game.items.Treasure;
 import game.map.Position;
-
 import java.util.Random;
 
 /**

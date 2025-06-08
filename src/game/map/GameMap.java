@@ -1,4 +1,3 @@
-
 package game.map;
 import game.core.GameEntity;
 import java.util.*;
@@ -8,7 +7,12 @@ import java.util.*;
  * Each grid cell (Position) may contain multiple entities.
  */
 public class GameMap {
-
+    public static GameMap getInstance(int size) {
+        if (instance == null) {
+            instance = new GameMap(size);
+        }
+        return instance;
+    }
     /**
      * Creates a new game map of given size.
      *
@@ -124,6 +128,7 @@ public class GameMap {
                 newPos.getRow() >= 0 && newPos.getRow() < size;
     }
     // --- Fields ---
+    private static GameMap instance = null;
     /**
      * Internal representation of the map: maps a position to a list of entities at that position.
      */

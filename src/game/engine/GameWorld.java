@@ -1,6 +1,4 @@
-
 package game.engine;
-
 import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
@@ -31,12 +29,15 @@ public class GameWorld {
      * @param playerName the name of the player character
      */
     public GameWorld(int size, int playerType, String playerName) {
-        this.map = new GameMap(size);
+        this.map = GameMap.getInstance(size);
         this.players = new ArrayList<>();
         this.enemies = new ArrayList<>();
         this.items = new ArrayList<>();
         this.enemyTasks = new ArrayList<>();
-        this.enemyExecutor = Executors.newScheduledThreadPool(4);
+        int N = (int) (map.getSize()* map.getSize()*0.03);
+        if (N > 10 )
+            N = 10;
+        this.enemyExecutor = Executors.newFixedThreadPool(N);
 
         LogManager.startLogger();
         createPlayer(playerType, playerName);
@@ -254,17 +255,11 @@ public class GameWorld {
      * Each enemy gets its own scheduled task for movement or behavior.
      */
     public void startEnemyTask() {
-        Random random = new Random();
         for (Enemy enemy : enemies) {
             EnemyTask enemy_Task = new EnemyTask(enemy, this);
             enemyTasks.add(enemy_Task);
 
-            // Schedule enemy movement with random intervals between 1 and 1.5 seconds
-            long initialDelay = random.nextInt(1000);
-            long period = 1000 + random.nextInt(500);
-
-            ScheduledFuture<?> task = enemyExecutor.scheduleAtFixedRate(enemy_Task, initialDelay, period, TimeUnit.MILLISECONDS);
-            enemy_Task.setScheduledTask(task);
+            enemyExecutor.submit(enemy_Task);
         }
     }
 
@@ -351,7 +346,7 @@ public class GameWorld {
     private List<Enemy> enemies;
     private List<GameItem> items;
     // Executor for running enemy behavior on a schedule
-    private final ScheduledExecutorService enemyExecutor;
+    private final ExecutorService enemyExecutor;
     // List of enemy tasks that control enemy behavior
     private final List<EnemyTask> enemyTasks;
     // List of observers to be notified when the game state updates

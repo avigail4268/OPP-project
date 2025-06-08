@@ -1,5 +1,10 @@
-package game;
+/**
+ * avigail musai 322227711
+ * rotem dino 209168442
+ * chira borochov 345887046
+ */
 
+package game;
 import game.engine.GameWorld;
 import game.controller.GameController;
 import game.gui.GameFrame;
