@@ -1,11 +1,11 @@
 package game.characterBuilders;
-
 import game.characters.AbstractCharacter;
 import game.map.Position;
 
 public interface CharacterBuilder {
-    AbstractCharacter build( String type);
-    void setPosition(Position pos);
-    void setPower(int power);
+    AbstractCharacter build();
+    void buildPosition(Position pos);
+    void buildPower(int power);
+    void buildHealth(int health);
     void randomizeStats();
 }

@@ -2,6 +2,7 @@
 package game.engine;
 
 import game.characters.Enemy;
+import game.characters.EnemyFactory;
 import game.characters.PlayerCharacter;
 import game.log.LogManager;
 import game.map.Position;
@@ -34,7 +35,34 @@ public class EnemyTask implements Runnable {
      * or move randomly with a 20% chance otherwise.
      */
     public void run() {
-        if (!gameWorld.getIsGameRunning().get() || enemy.isDead()) return;
+        if (!gameWorld.getIsGameRunning().get()) return;
+
+        if (enemy.isDead()) {
+            Position pos = enemy.getPosition();
+            ReentrantLock lock = GameWorld.getMapLock(pos);
+            lock.unlock();
+            try {
+                gameWorld.getEnemies().remove(enemy);
+                if (gameWorld.getEnemies().size() < 10) {
+                    Position newPos = gameWorld.getMap().getRandomEmptyPosition();
+                    ReentrantLock newLock = GameWorld.getMapLock(newPos);
+                    try {
+                        newLock.lock();
+                        EnemyFactory enemyFactory = new EnemyFactory();
+                        Enemy newEnemy = enemyFactory.createEnemy(newPos);
+                        gameWorld.getEnemies().add(newEnemy);
+                        EnemyTask task = new EnemyTask(newEnemy, gameWorld);
+                        gameWorld.getEnemyTasks().add(task);
+                        gameWorld.getEnemyExecutor().submit(task);
+                    }
+
+                }
+
+            } finally {
+                lock.unlock();
+            }
+            return;
+        }
 
         LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();

@@ -1,4 +1,6 @@
 package game.engine;
+import game.characterBuilders.CharacterBuilder;
+import game.characterBuilders.DragonBuilder;
 import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
@@ -225,7 +227,16 @@ public class GameWorld {
         int distance = playerPos.distanceTo(newPos);
         return distance <= 2;
     }
-
+    public List<EnemyTask> getEnemyTasks() {
+        return enemyTasks;
+    }
+    /**
+     * Returns a list of all players in the game.
+     * @return the list of PlayerCharacter instances
+     */
+    public List<Enemy> getEnemies() {
+        return enemies;
+    }
     /**
      * Returns the game map.
      * @return the GameMap instance
@@ -258,7 +269,6 @@ public class GameWorld {
         for (Enemy enemy : enemies) {
             EnemyTask enemy_Task = new EnemyTask(enemy, this);
             enemyTasks.add(enemy_Task);
-
             enemyExecutor.submit(enemy_Task);
         }
     }
@@ -278,7 +288,9 @@ public class GameWorld {
     public GameController getController() {
         return controller;
     }
-
+    public ExecutorService getEnemyExecutor() {
+        return enemyExecutor;
+    }
     /**
      * Shuts down all enemy tasks and terminates the executor.
      * Ensures graceful termination, and forces shutdown if it takes too long.
@@ -355,5 +367,7 @@ public class GameWorld {
     private GameController controller;
     // Flag to indicate if the game is running
     private final AtomicBoolean isGameRunning = new AtomicBoolean(true);
+
+
 
 }

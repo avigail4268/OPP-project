@@ -18,12 +18,12 @@ public class PlayerBuilder implements CharacterBuilder {
     }
 
     @Override
-    public void setPosition(Position pos) {
+    public void buildPosition(Position pos) {
         this.position = pos;
     }
 
     @Override
-    public void setPower(int power) {//TODO
+    public void buildPower(int power) {//TODO
     }
 
     public void setName(String name) {
@@ -32,7 +32,7 @@ public class PlayerBuilder implements CharacterBuilder {
 
 
     @Override
-    public AbstractCharacter build(String type) {
+    public AbstractCharacter build() {
         return switch (type) {
             case "Archer" -> new Archer(name, position, health);
             case "Mage" -> new Mage(name, position, health);
