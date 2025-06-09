@@ -38,38 +38,45 @@ public class EnemyTask implements Runnable {
         if (!gameWorld.getIsGameRunning().get()) return;
 
         if (enemy.isDead()) {
-            Position pos = enemy.getPosition();
-            ReentrantLock lock = GameWorld.getMapLock(pos);
-            lock.unlock();
+            Position oldPos = enemy.getPosition();
+            ReentrantLock oldLock = GameWorld.getMapLock(oldPos);
+            oldLock.lock(); // נועלים את התא שהאויב המת נמצא בו
+
             try {
-                gameWorld.getEnemies().remove(enemy);
+                gameWorld.getEnemies().remove(enemy); // מסירים מהרשימה
+
                 if (gameWorld.getEnemies().size() < 10) {
+                    // מוצאים מיקום רנדומלי חדש
                     Position newPos = gameWorld.getMap().getRandomEmptyPosition();
                     ReentrantLock newLock = GameWorld.getMapLock(newPos);
-                    try {
-                        newLock.lock();
-                        EnemyFactory enemyFactory = new EnemyFactory();
-                        Enemy newEnemy = enemyFactory.createEnemy(newPos);
-                        gameWorld.getEnemies().add(newEnemy);
-                        EnemyTask task = new EnemyTask(newEnemy, gameWorld);
-                        gameWorld.getEnemyTasks().add(task);
-                        gameWorld.getEnemyExecutor().submit(task);
-                    }
+                    newLock.lock(); // מוודאים שנעול לפני הכנסה של אויב חדש
 
+                    try {
+                        EnemyFactory factory = new EnemyFactory();
+                        Enemy newEnemy = factory.createEnemy(newPos);
+                        gameWorld.getEnemies().add(newEnemy);
+                        gameWorld.getMap().addToGrid(newPos, newEnemy);
+
+                        EnemyTask newTask = new EnemyTask(newEnemy, gameWorld);
+                        gameWorld.getEnemyTasks().add(newTask);
+                        gameWorld.getEnemyExecutor().submit(newTask); // לא מתוזמן אלא רגיל
+                    }
+                    finally {
+                        newLock.unlock(); // שחרור המיקום החדש לאחר סיום הפעולה
+                    }
                 }
 
             } finally {
-                lock.unlock();
+                oldLock.unlock(); // שחרור התא של האויב המת
             }
             return;
         }
-
+        // התנהגות אויב רגיל (חי)
         LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();
         Position enemyPos = enemy.getPosition();
         Position playerPos = player.getPosition();
 
-        // If player is close, move toward them. Else, move randomly with 20% chance.
         if (enemyPos.distanceTo(playerPos) <= 2) {
             moveTowards(playerPos);
         } else if (random.nextDouble() <= 0.2) {
@@ -77,11 +84,12 @@ public class EnemyTask implements Runnable {
         }
 
         try {
-            Thread.sleep(300); // 300 milliseconds pause between enemy actions
+            Thread.sleep(300); // השהיה קצרה בין פעולות
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // restore interrupted status
+            Thread.currentThread().interrupt();
         }
     }
+
 
     /**
      * Moves the enemy one tile toward the target position .
