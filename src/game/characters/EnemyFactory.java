@@ -11,9 +11,9 @@ public class EnemyFactory {
 
 
     public EnemyFactory() {
-        builders.put("Goblin", GoblinBuilder::new);
-        builders.put("Orc", OrcBuilder::new);
-        builders.put("Dragon", DragonBuilder::new);
+        builders.put("Goblin", EnemyBuilder::new);
+        builders.put("Orc", EnemyBuilder::new);
+        builders.put("Dragon", EnemyBuilder::new);
     }
 
     public Enemy createEnemy(Position pos) {
@@ -21,8 +21,8 @@ public class EnemyFactory {
         String selected = types.get(new Random().nextInt(types.size()));
 
         CharacterBuilder builder = builders.get(selected).get();
-        builder.buildPosition(pos);
+//        builder.buildPosition(pos);
         builder.randomizeStats();
-        return (Enemy) builder.build();
+        return (Enemy) builder.build(selected,pos);
     }
 }

@@ -9,6 +9,7 @@ import game.map.Position;
 
 import javax.swing.*;
 import java.util.Random;
+import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
@@ -40,38 +41,50 @@ public class EnemyTask implements Runnable {
         if (enemy.isDead()) {
             Position oldPos = enemy.getPosition();
             ReentrantLock oldLock = GameWorld.getMapLock(oldPos);
-            oldLock.lock(); // נועלים את התא שהאויב המת נמצא בו
+            oldLock.unlock();
 
             try {
-                gameWorld.getEnemies().remove(enemy); // מסירים מהרשימה
-
+                gameWorld.getEnemies().remove(enemy);
                 if (gameWorld.getEnemies().size() < 10) {
-                    // מוצאים מיקום רנדומלי חדש
+
                     Position newPos = gameWorld.getMap().getRandomEmptyPosition();
                     ReentrantLock newLock = GameWorld.getMapLock(newPos);
-                    newLock.lock(); // מוודאים שנעול לפני הכנסה של אויב חדש
+                    if (newLock.tryLock(100, TimeUnit.MILLISECONDS)){
+                        try {
+                            if (newPos == null) throw new NullPointerException("newPos is null");
 
-                    try {
-                        EnemyFactory factory = new EnemyFactory();
-                        Enemy newEnemy = factory.createEnemy(newPos);
-                        gameWorld.getEnemies().add(newEnemy);
-                        gameWorld.getMap().addToGrid(newPos, newEnemy);
+                            EnemyFactory factory = new EnemyFactory();
+                            Enemy newEnemy = factory.createEnemy(newPos);
+                            if (newEnemy == null) throw new NullPointerException("newEnemy is null");
 
-                        EnemyTask newTask = new EnemyTask(newEnemy, gameWorld);
-                        gameWorld.getEnemyTasks().add(newTask);
-                        gameWorld.getEnemyExecutor().submit(newTask); // לא מתוזמן אלא רגיל
-                    }
-                    finally {
-                        newLock.unlock(); // שחרור המיקום החדש לאחר סיום הפעולה
+                            gameWorld.getEnemies().add(newEnemy);
+                            gameWorld.getMap().addToGrid(newPos, newEnemy);
+
+                            EnemyTask newTask = new EnemyTask(newEnemy, gameWorld);
+                            gameWorld.getEnemyTasks().add(newTask);
+                            gameWorld.getEnemyExecutor().submit(newTask);
+
+                        } catch (NullPointerException e) {
+                            System.err.println("Null pointer issue: " + e.getMessage());
+                        } catch (IllegalArgumentException e) {
+                            System.err.println("Illegal argument: " + e.getMessage());
+                        } catch (RejectedExecutionException e) {
+                            System.err.println("Executor rejected the task: " + e.getMessage());
+                        } catch (Exception e) {
+                            System.err.println("Unexpected error: " + e.getMessage());
+                            e.printStackTrace();
+                        }
+
                     }
                 }
 
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             } finally {
-                oldLock.unlock(); // שחרור התא של האויב המת
+                oldLock.unlock();
             }
             return;
         }
-        // התנהגות אויב רגיל (חי)
         LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();
         Position enemyPos = enemy.getPosition();
@@ -84,12 +97,24 @@ public class EnemyTask implements Runnable {
         }
 
         try {
-            Thread.sleep(300); // השהיה קצרה בין פעולות
+            Thread.sleep(300);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
     }
-
+//try {
+//        EnemyFactory factory = new EnemyFactory();
+//        Enemy newEnemy = factory.createEnemy(newPos);
+//        gameWorld.getEnemies().add(newEnemy);
+//        gameWorld.getMap().addToGrid(newPos, newEnemy);
+//
+//        EnemyTask newTask = new EnemyTask(newEnemy, gameWorld);
+//        gameWorld.getEnemyTasks().add(newTask);
+//        gameWorld.getEnemyExecutor().submit(newTask);
+//    }
+//                        catch () {
+//
+//    }
 
     /**
      * Moves the enemy one tile toward the target position .

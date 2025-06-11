@@ -1,6 +1,4 @@
 package game.engine;
-import game.characterBuilders.CharacterBuilder;
-import game.characterBuilders.DragonBuilder;
 import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
@@ -12,7 +10,7 @@ import game.map.Position;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.Random;
+
 import game.observer.GameObserver;
 import java.util.ArrayList;
 import java.util.List;
