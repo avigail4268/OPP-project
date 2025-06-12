@@ -1,9 +1,14 @@
 package game.gui;
 
 import game.Main;
+import game.characters.Enemy;
+import game.characters.PlayerCharacter;
 import game.combat.MagicElement;
 import game.controller.GameController;
 import game.engine.GameWorld;
+import game.gameSaver.GameCaretaker;
+import game.gameSaver.GameMemento;
+import game.gameSaver.GameOriginator;
 import game.log.LogManager;
 
 import javax.swing.*;
@@ -17,10 +22,11 @@ import java.util.Map;
 public class GameSetUp {
 
     public GameSetUp() {
-
+        // Constructor can be used for any necessary initialization
     }
 
     public void start() {
+
         SwingUtilities.invokeLater(() -> {
             int size = askMapSize();                      // Get map size from user
             int playerType = askPlayerType() + 1;
@@ -93,6 +99,7 @@ public class GameSetUp {
         panel.setPreferredSize(new Dimension(450, 220));
         panel.setOpaque(false);
 
+
         int result = JOptionPane.showConfirmDialog(
                 null, panel, "Map Size", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
         );
@@ -107,7 +114,6 @@ public class GameSetUp {
 
     /**
      * Prompts the user to select the type of player character.
-     *
      * @return the index of the selected character class (0 = Archer, 1 = Mage, 2 = Warrior)
      */
     public static int askPlayerType() {
@@ -210,7 +216,7 @@ public class GameSetUp {
         JSpinner powerSpinner = new JSpinner(new SpinnerNumberModel(0, -3, 3, 1));
         JSpinner defenseSpinner = includeDefense ? new JSpinner(new SpinnerNumberModel(0, -3, 3, 1)) : null;
 
-        JLabel statusLabel = new JLabel("total have to be 0");
+        JLabel statusLabel = new JLabel("Total must be 0");
 
         JPanel panel = new JPanel(new GridLayout(0, 2));
         panel.add(new JLabel("Health:"));
@@ -236,7 +242,7 @@ public class GameSetUp {
             }
 
             if (total == 0) {
-                statusLabel.setText("balance is 0");
+                statusLabel.setText("Balance is 0");
                 okButton.setEnabled(true);
             } else {
                 statusLabel.setText("You need to subtract" + total + ")");
@@ -274,7 +280,6 @@ public class GameSetUp {
     /**
      * Displays a welcome popup message with a fade-in and fade-out animation.
      * The message disappears automatically after a short delay.
-     *
      * @param name the name of the player to include in the message
      */
     public static void showAutoClosingWelcome(String name) {
@@ -472,5 +477,58 @@ public class GameSetUp {
         }
         return MagicElement.FIRE; // default
     }
+
+    public void exitGame (GameWorld game) {
+        int choice = JOptionPane.showConfirmDialog (
+                null, "Do you want to save the game?", "Save Game",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
+        );
+        if (choice == JOptionPane.YES_OPTION) {
+            GameOriginator originator = new GameOriginator ();
+            originator.setEnemies(game.getEnemies());
+            originator.setGameMap(game.getMap());
+            originator.setItems(game.getItems());
+            originator.setPlayer(game.getPlayer());
+
+            GameMemento memento = originator.createMemento();
+            GameCaretaker caretaker = GameCaretaker.getInstance();
+            caretaker.addMemento(memento); // Save the current game state
+            LogManager.addLog("Player exited the game.");
+            System.exit(0);
+        }
+        else {
+            LogManager.addLog("Player exited the game without saving.");
+            System.exit(0);
+        }
+    }
+
+    public boolean restoreGame() {
+        int choice = JOptionPane.showConfirmDialog(
+                null, "Do you want to restore the previous game?", "Restore Game",
+                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
+        );
+
+        if (choice == JOptionPane.YES_OPTION) {
+            GameCaretaker caretaker = GameCaretaker.getInstance(); // שוב כאן Singleton!
+            if (caretaker.hasSavedGames()) {
+                GameMemento memento = caretaker.getMemento();
+                if (memento != null) {
+                    GameOriginator originator = new GameOriginator();
+                    originator.setMemento(memento);
+
+
+//                    world.setEnemies(originator.getEnemies());
+//                    world.setItems(originator.getItems());
+//                    world.setController(new GameController(world));
+//                    world.getController().setFrame(new GameFrame(world.getController()));
+//                    world.startEnemyTask();
+
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
+
 

@@ -48,7 +48,6 @@ public class LogManager {
         executor.shutdownNow();
 
         try {
-            // מחכים עד שיסיים לעבד את התור (Waits for the queue to finish processing)
             if (!executor.awaitTermination(2, TimeUnit.SECONDS)) {
                 System.err.println(" Logger thread did not shut down cleanly.");
             }

@@ -8,7 +8,6 @@ import game.items.*;
 import game.log.LogManager;
 import game.map.GameMap;
 import game.map.Position;
-
 import java.util.Map;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -94,7 +93,6 @@ public class GameWorld {
 
     /**
      * Creates and places a health potion.
-     *
      * @param pos the position to place the potion
      */
     private void createPotion(Position pos) {
@@ -212,11 +210,13 @@ public class GameWorld {
         Position playerPos = getPlayer().getPosition();
         Position newPos = new Position(row, col);
         int distance = playerPos.distanceTo(newPos);
-        return distance <= 2;
+        return distance <= 15;
     }
+
     public List<EnemyTask> getEnemyTasks() {
         return enemyTasks;
     }
+
     /**
      * Returns a list of all players in the game.
      * @return the list of PlayerCharacter instances
@@ -224,6 +224,7 @@ public class GameWorld {
     public List<Enemy> getEnemies() {
         return enemies;
     }
+
     /**
      * Returns the game map.
      * @return the GameMap instance
@@ -275,6 +276,7 @@ public class GameWorld {
     public GameController getController() {
         return controller;
     }
+
     public ExecutorService getEnemyExecutor() {
         return enemyExecutor;
     }

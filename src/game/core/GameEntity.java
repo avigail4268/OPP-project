@@ -1,5 +1,6 @@
 package game.core;
 
+import game.characters.AbstractCharacter;
 import game.map.Position;
 
 /**
@@ -43,5 +44,4 @@ public interface GameEntity {
      * @return true if the entity is visible, false otherwise
      */
     boolean getVisible();
-
 }

@@ -2,12 +2,9 @@
 package game.controller;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
-
-import game.Main;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
@@ -18,10 +15,8 @@ import game.items.GameItem;
 import game.log.LogManager;
 import game.map.Position;
 import game.core.GameEntity;
-
 import java.awt.*;
 import java.util.List;
-import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -33,7 +28,6 @@ public class GameController {
 
     /**
      * Constructs a GameController for the given GameWorld engine.
-     *
      * @param engine the GameWorld instance used to manage the game logic.
      */
     public GameController(GameWorld engine) {
@@ -42,7 +36,6 @@ public class GameController {
 
     /**
      * Sets the GameFrame used by this controller.
-     *
      * @param frame the main game window frame.
      */
     public void setFrame(GameFrame frame) {
@@ -51,7 +44,6 @@ public class GameController {
 
     /**
      * Sets the size of tiles in pixels.
-     *
      * @param tileSize the tile size.
      */
     public void setTileSize(int tileSize) {
@@ -60,7 +52,6 @@ public class GameController {
 
     /**
      * Gets the number of rows in the map.
-     *
      * @return map size (rows).
      */
     public int getMapRows() {
@@ -69,7 +60,6 @@ public class GameController {
 
     /**
      * Gets the number of columns in the map.
-     *
      * @return map size (columns).
      */
     public int getMapCols() {
@@ -78,7 +68,6 @@ public class GameController {
 
     /**
      * Returns the player character.
-     *
      * @return the PlayerCharacter instance.
      */
     public PlayerCharacter getPlayer() {
@@ -87,7 +76,6 @@ public class GameController {
 
     /**
      * Alias for getEngine().
-     *
      * @return the GameWorld instance.
      */
     public GameWorld getGameWorld() {
@@ -97,7 +85,6 @@ public class GameController {
     /**
      * Handles a left-click at a specific tile.
      * Moves the player, triggers combat, or picks up items.
-     *
      * @param row the row clicked.
      * @param col the column clicked.
      */
@@ -143,7 +130,6 @@ public class GameController {
     /**
      * Displays context info on right-click at a tile.
      * Shows enemy/item/wall/empty tile descriptions.
-     *
      * @param row          clicked row.
      * @param col          clicked column.
      * @param sourceButton button source of the click.
@@ -173,7 +159,6 @@ public class GameController {
 
     /**
      * Moves the player using arrow key direction input.
-     *
      * @param direction one of "UP", "DOWN", "LEFT", "RIGHT".
      */
     public void handleArrowKey(String direction) {
@@ -205,7 +190,6 @@ public class GameController {
 
     /**
      * Generates the image for a tile based on its contents.
-     *
      * @param row tile row.
      * @param col tile column.
      * @return icon representing the tile.
@@ -240,7 +224,6 @@ public class GameController {
 
     /**
      * Generates a tile image with a health bar overlay.
-     *
      * @param row tile row.
      * @param col tile column.
      * @return icon with health bar overlay.
@@ -285,16 +268,18 @@ public class GameController {
                 break;
             }
         }
-
         g.dispose();
         return new ImageIcon(imageWithBar);
+    }
+
+    public GameSetUp getSetUp() {
+        return setUp;
     }
 
     /**
      * Checks victory condition (500 treasure points).
      * Displays victory screen and shuts down game.
      */
-
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             LogManager.addLog("Game ended");
@@ -322,6 +307,7 @@ public class GameController {
         setUp.GameOverPanel(() -> {
             System.exit(0);
         });
+
     }
 
 // --- Fields ---

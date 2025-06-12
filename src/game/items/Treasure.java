@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -23,6 +24,11 @@ public class Treasure extends GameItem implements Interactable {
         this.value = value;
         collected = false;
         this.setDescription("This is a Treasure! It might be a health potion, power potion, or treasure points.");
+    }
+
+    @Override
+    public GameItem deepCopy() {
+        return new Treasure(getPosition(), this.isBlocksMovement(), this.value);
     }
 
     /**

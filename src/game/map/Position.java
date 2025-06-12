@@ -16,6 +16,11 @@ public class Position {
         this.col = c;
     }
 
+    public Position (Position pos) {
+        this.row = pos.row;
+        this.col = pos.col;
+    }
+
     /**
      * Calculates the Manhattan distance to another position.
      * The Manhattan distance is the sum of the absolute differences of their row and column coordinates.

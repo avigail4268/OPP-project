@@ -1,5 +1,6 @@
 package game.items;
 
+import game.core.GameEntity;
 import game.map.Position;
 
 /**
@@ -18,6 +19,11 @@ public class Wall extends GameItem {
     public Wall(Position position, boolean blocksMovement) {
         super(position, blocksMovement);
         this.setDescription("This is a Wall, you can't pass it.");
+    }
+
+    @Override
+    public GameItem deepCopy() {
+        return new Wall(getPosition(), this.isBlocksMovement());
     }
 
     /**

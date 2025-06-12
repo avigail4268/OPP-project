@@ -1,5 +1,6 @@
 package game.items;
 
+import game.characters.Goblin;
 import game.core.GameEntity;
 import game.map.Position;
 
@@ -23,6 +24,9 @@ public abstract class GameItem implements GameEntity {
         this.visible = false;
         this.description = "This is a game item";
     }
+
+    public abstract GameItem deepCopy();
+
 
     /**
      * Returns the current position of the item.

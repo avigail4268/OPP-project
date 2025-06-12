@@ -87,7 +87,6 @@ public class EnemyTask implements Runnable {
             }
             return;
         }
-        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
         PlayerCharacter player = gameWorld.getPlayer();
         Position enemyPos = enemy.getPosition();
         Position playerPos = player.getPosition();
@@ -165,7 +164,9 @@ public class EnemyTask implements Runnable {
                         Position oldPos = enemy.getPosition();
                         gameWorld.getMap().removeFromGrid(oldPos, enemy);
                         enemy.setPosition(newPos);
+                        LogManager.addLog("Enemy moved to: " + enemy.getPosition());
                         gameWorld.getMap().addToGrid(newPos, enemy);
+
 
                         if (gameWorld.getController() != null) {
                             SwingUtilities.invokeLater(gameWorld::notifyObservers);

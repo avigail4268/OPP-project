@@ -3,6 +3,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -24,6 +25,13 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         super(playerName, position, health);
         Random random = new Random();
         this.defence = random.nextInt(120);
+    }
+
+    @Override
+    public GameEntity deepCopy () {
+        Warrior warrior = new Warrior(this.getName(), this.getPosition(), this.getHealth());
+        warrior.setDefence(this.defence);
+        return warrior;
     }
 
     /**

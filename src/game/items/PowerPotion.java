@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -21,6 +22,11 @@ public class PowerPotion extends Potion {
     public PowerPotion(Position position, boolean blocksMovement, int max, int min) {
         super(position, blocksMovement, max, min);
         this.setDescription("This is a power potion, increases power by " + this.getIncreaseAmount());
+    }
+
+    @Override
+    public GameItem deepCopy() {
+        return new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount(), this.getIncreaseAmount());
     }
 
     /**

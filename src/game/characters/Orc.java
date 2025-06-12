@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -21,6 +22,12 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     public Orc(Position pos, int health) {
         super(pos, health);
         resistance = new Random().nextDouble() * 0.5; // Resistance value between 0 and 0.5
+    }
+
+    public GameEntity deepCopy() {
+        Orc orc = new Orc(this.getPosition(), this.getHealth());
+        orc.setResistance(this.resistance);
+        return orc;
     }
 
     /**
@@ -92,10 +99,10 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         if (isInRange(this.getPosition(), target.getPosition())) {
             if (isCriticalHit()) {
                 target.receiveDamage(getPower() * 2, this);
-                LogManager.addLog("The orc attacked back with Critical hit! for: " + getPower() * 2 + " damage.");
+                LogManager.addLog("The orc attacked with Critical hit! for: " + getPower() * 2 + " damage.");
             } else {
                 target.receiveDamage(getPower(), this);
-                LogManager.addLog("The orc attacked back for: " + getPower() + " damage.");
+                LogManager.addLog("The orc attacked for: " + getPower() + " damage.");
             }
         } else {
             LogManager.addLog(target + " is out of melee range.");
@@ -139,13 +146,18 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
      * Returns the Orc's resistance to magic damage.
      * @return the Orc's magic damage resistance
      */
-    protected double getResistance() {
+    public double getResistance() {
         return resistance;
     }
+
+    public void setResistance (double resistance) {
+        this.resistance = resistance;
+    }
+
 
     // --- Fields ---
     /**
      * The Orc's resistance to magic damage.
      */
-    private final double resistance;
+    private double resistance;
 }

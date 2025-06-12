@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.PhysicalAttacker;
 import game.combat.RangeFighter;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -24,6 +25,19 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         super(name, pos, health);
         Random rand = new Random();
         accuracy = rand.nextDouble(0.8);
+    }
+
+
+    public void setAccuracy (double accuracy) {
+        this.accuracy = accuracy;
+
+    }
+
+    @Override
+    public GameEntity deepCopy() {
+       Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
+        archer.setAccuracy(this.accuracy);
+        return archer;
     }
 
     /**
@@ -122,5 +136,5 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     /**
      * The accuracy of the Archer, affecting the chance to evade attacks.
      */
-    private final double accuracy;
+    private double accuracy;
 }

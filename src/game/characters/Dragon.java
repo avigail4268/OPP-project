@@ -1,6 +1,7 @@
 package game.characters;
 import game.combat.MagicElement;
 import game.combat.*;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -20,6 +21,17 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     public Dragon(Position pos, int health) {
         super(pos, health);
         this.element = MagicElement.getElement();
+    }
+
+    public GameEntity deepCopy() {
+        Dragon dragon = new Dragon(this.getPosition(), this.getHealth());
+        dragon.setPower(this.getPower());
+        dragon.setElement(this.element);
+        return dragon;
+    }
+
+    public void setElement(MagicElement element) {
+        this.element = element;
     }
 
     /**
@@ -97,10 +109,10 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         double powerAttack = this.getPower();
         if (isCriticalHit()) {
             target.receiveDamage((int) powerAttack * 2, this);
-            LogManager.addLog("Dragon attacked back with a Critical hit! for " + (int) powerAttack * 2 + " damage.");
+            LogManager.addLog("Dragon attacked with a Critical hit! for " + (int) powerAttack * 2 + " damage.");
         } else {
             target.receiveDamage((int) powerAttack, this);
-            LogManager.addLog("Dragon attacked back for " + (int) powerAttack + " damage.");
+            LogManager.addLog("Dragon attacked for " + (int) powerAttack + " damage.");
         }
     }
 
@@ -180,5 +192,5 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
      * The magic element of the Dragon.
      * This element determines the type of magic damage the Dragon can deal.
      */
-    private final MagicElement element;
+    private MagicElement element;
 }

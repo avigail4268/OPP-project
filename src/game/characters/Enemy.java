@@ -1,4 +1,5 @@
 package game.characters;
+import game.core.GameEntity;
 import game.items.Treasure;
 import game.map.Position;
 import java.util.Random;
@@ -21,6 +22,8 @@ public abstract class Enemy extends AbstractCharacter {
         Random r = new Random();
         this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
     }
+
+    public abstract GameEntity deepCopy();
 
     /**
      * Defeats the enemy and returns a Treasure object if the enemy is dead.

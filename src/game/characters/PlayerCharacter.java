@@ -1,6 +1,7 @@
 
 package game.characters;
 
+import game.core.GameEntity;
 import game.core.Inventory;
 import game.items.GameItem;
 import game.items.Potion;
@@ -29,6 +30,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         this.inventory = new Inventory();
         this.treasurePoints = 0;
     }
+    public abstract GameEntity deepCopy();
 
     /**
      * Gets the player's name.

@@ -3,6 +3,7 @@ import game.combat.Combatant;
 import game.combat.MagicAttacker;
 import game.combat.MagicElement;
 import game.combat.RangeFighter;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -22,6 +23,13 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     public Mage(String name, Position pos, int health) {
         super(name, pos, health);
         this.element = MagicElement.getElement(); // Assign a magic element to the Mage
+    }
+
+    @Override
+    public GameEntity deepCopy() {
+        Mage mage = new Mage(this.getName(), this.getPosition(), this.getHealth());
+        mage.setElement(this.element);
+        return mage;
     }
 
     /**

@@ -1,6 +1,7 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -25,6 +26,11 @@ public class Potion extends GameItem implements Interactable {
         this.increaseAmount = new Random().nextInt(min, max);
         this.isUsed = false;
         this.setDescription("This is a health potion, increased by " + increaseAmount);
+    }
+
+    @Override
+    public GameItem deepCopy() {
+        return new Potion(getPosition(), this.isBlocksMovement(), increaseAmount, increaseAmount);
     }
 
     /**

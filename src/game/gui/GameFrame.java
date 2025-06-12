@@ -2,6 +2,9 @@ package game.gui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import game.controller.GameController;
 
 /**
@@ -21,7 +24,28 @@ public class GameFrame extends JFrame {
 
         // Set the title and default close operation of the frame
         setTitle("Dungeons & Dragons Game");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int option = JOptionPane.showConfirmDialog (
+                        GameFrame.this,
+                        "Are you sure you want to exit the game?",
+                        "Exit Confirmation",
+                        JOptionPane.YES_NO_OPTION);
+
+                if (option == JOptionPane.YES_OPTION) {
+                   controller.getSetUp().exitGame(controller.getGameWorld()); // Call the controller's exit method to handle game exit logic
+                }
+                else
+                {
+                    // If the user chooses not to exit, do nothing
+                    return;
+                }
+            }
+        });
 
         // Set layout manager to BorderLayout
         setLayout(new BorderLayout());
@@ -48,7 +72,7 @@ public class GameFrame extends JFrame {
         setVisible(true);
     }
 
-    /**
+/**
      * Refreshes the display of both the map panel and the status panel.
      * Called when the game state changes and the GUI needs to update.
      */

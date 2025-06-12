@@ -2,6 +2,7 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
+import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -21,6 +22,12 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     public Goblin(Position pos, int health) {
         super(pos, health);
         agility = new Random().nextInt(80); // Random agility between 0 and 80
+    }
+
+    public GameEntity deepCopy() {
+        Goblin goblin = new Goblin(this.getPosition(), this.getHealth());
+        goblin.setAgility(this.agility);
+        return goblin;
     }
 
     /**
@@ -76,7 +83,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
     public void attack(Combatant target) {
         if (isCriticalHit()) {
             target.receiveDamage(getPower() * 2, this);
-            LogManager.addLog("Goblin attack back with Critical hit! for: " + getPower() * 2 + " damage.");
+            LogManager.addLog("Goblin attack with Critical hit! for: " + getPower() * 2 + " damage.");
         } else {
             target.receiveDamage(getPower(), this);
             LogManager.addLog("Goblin attacked for: " + getPower() + " damage.");
@@ -133,13 +140,19 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
      * Gets the agility of the Goblin.
      * @return the agility value of the Goblin
      */
-    protected int getAgility() {
+    public int getAgility() {
         return agility;
     }
+
+    public void setAgility(int agility) {
+        this.agility = agility;
+    }
+
+
 
     // --- Fields ---
     /**
      * The agility of the Goblin that affects its evasion.
      */
-    private final int agility; // Agility of the Goblin that affects evasion
+    private int agility; // Agility of the Goblin that affects evasion
 }
