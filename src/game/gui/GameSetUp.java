@@ -304,64 +304,6 @@ public class GameSetUp {
         fadeIn.start();
     }
 
-//    public void GameOverPanel(GameWorld engine)
-//    {
-//        Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
-//        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-//        JPanel fullScreenPanel = new JPanel() {
-//            protected void paintComponent(Graphics g) {
-//                super.paintComponent(g);
-//                g.drawImage(background, 0, 0, screenSize.width, screenSize.height, this);
-//            }
-//        };
-//        fullScreenPanel.setPreferredSize(screenSize);
-//        JWindow window = new JWindow();
-//        window.getContentPane().add(fullScreenPanel);
-//        window.setSize(screenSize);
-//        window.setLocation(0, 0);
-//        window.setAlwaysOnTop(true);
-//        window.setOpacity(0f);
-//        window.setVisible(true);
-//        Timer fadeIn = new Timer(30, null);
-//        fadeIn.addActionListener(new ActionListener() {
-//            float opacity = 0f;
-//
-//            public void actionPerformed(ActionEvent e) {
-//                opacity += 0.05f;
-//                window.setOpacity(Math.min(opacity, 1f));
-//                if (opacity >= 1f) {
-//                    ((Timer) e.getSource()).stop();
-//                    Timer delay = new Timer(1500, null);
-//                    delay.setRepeats(false);
-//                    delay.addActionListener(ev -> {
-//                        Timer fadeOut = new Timer(30, null);
-//                        fadeOut.addActionListener(new ActionListener() {
-//                            float op = 1f;
-//
-//                            public void actionPerformed(ActionEvent e) {
-//                                op -= 0.05f;
-//                                window.setOpacity(Math.max(op, 0f));
-//                                if (op <= 0f) {
-//                                    ((Timer) e.getSource()).stop();
-//                                    window.dispose();
-//                                    LogManager.addLog("Game ended, player is dead");
-
-    /// /                                    engine.shutdown();
-    /// /                                    LogManager.stop();
-    /// /                                    engine.getIsGameRunning().set(false);
-    /// /                                    System.exit(0);
-//                                }
-//                            }
-//                        });
-//                        fadeOut.start();
-//                    });
-//                    delay.start();
-//                }
-//            }
-//        });
-//        fadeIn.start();
-//    }
-//}
     public void GameOverPanel(GameWorld engine, Runnable onFinish) {
         Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

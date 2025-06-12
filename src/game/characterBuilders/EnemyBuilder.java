@@ -27,7 +27,6 @@ public class EnemyBuilder implements CharacterBuilder {
         return enemy;
     }
 
-    @Override
     public void randomizeStats() {
         int total = health + power;
         if (r.nextBoolean()) {

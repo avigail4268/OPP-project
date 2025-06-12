@@ -7,6 +7,5 @@ public interface CharacterBuilder {
 //    void buildPosition(Position pos);
     void buildPower(int power);
     void buildHealth(int health);
-    void randomizeStats();
     AbstractCharacter getCharacter();
 }

@@ -45,8 +45,13 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     /**
      * Attacks the target by casting a spell. The magic damage is calculated based on the Mage's element
      * and the target's element, and the target receives the corresponding damage.
-     * @param target the target Combatant to attack
+     * @param element the target Combatant to attack
      */
+
+    public void setElement(MagicElement element) {
+        this.element = element;
+    }
+
     @Override
     public void attack(Combatant target) {
         fightRanged(target);
@@ -156,5 +161,5 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
      * The magic element of the Mage.
      * This field is used to determine the type of magic attacks the Mage can perform.
      */
-    private final MagicElement element; // Mage's magic element
+    private MagicElement element; // Mage's magic element
 }

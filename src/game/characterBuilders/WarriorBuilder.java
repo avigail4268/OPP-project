@@ -7,18 +7,18 @@ public class WarriorBuilder implements CharacterBuilder {
 
     private Warrior warrior;
 
-    public WarriorBuilder( String name , Position pos) {
-        warrior = new Warrior( name , pos, 100);
+    public WarriorBuilder() {
+
     }
 
     public void buildHealth(int health) {
         warrior.setHealth(health);
     }
 
-    @Override
-    public void randomizeStats() {
-        // לא חובה אם הכל מגיע מה-GUI
+    public AbstractCharacter getCharacter() {
+        return warrior;
     }
+
     @Override
     public void buildPower(int power) {
         warrior.setPower(power);
@@ -28,9 +28,8 @@ public class WarriorBuilder implements CharacterBuilder {
         warrior.setDefence(defence);
     }
 
-    @Override
-    public Warrior build() {
+    public void build(String name , Position pos ) {
+        warrior = new Warrior(name, pos , 100);
 
-        };
     }
 }

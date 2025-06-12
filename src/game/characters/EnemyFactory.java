@@ -21,7 +21,9 @@ public class EnemyFactory {
         String selected = types.get(new Random().nextInt(types.size()));
         CharacterBuilder builder = builders.get(selected).get();
         builder.build(selected,pos);
-        builder.randomizeStats();
+        if ( builder instanceof EnemyBuilder enemyBuilder){
+            enemyBuilder.randomizeStats();
+        }
         return (Enemy)builder.getCharacter();
     }
 }
