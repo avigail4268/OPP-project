@@ -12,12 +12,13 @@ public class MageBuilder implements CharacterBuilder {
 
     @Override
     public void buildPower(int power) {
-       mage.setPower(power);
+        int oldPower = mage.getPower();
+        mage.setPower(oldPower + power);
     }
 
     @Override
     public void buildHealth(int health) {
-        mage.setHealth(health);
+        mage.setHealth(100 + health);
     }
 
     public void buildElement( MagicElement element) {

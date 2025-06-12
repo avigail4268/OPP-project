@@ -7,9 +7,12 @@ import game.engine.GameWorld;
 import game.log.LogManager;
 
 import javax.swing.*;
+import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.Map;
 
 public class GameSetUp {
 
@@ -21,12 +24,16 @@ public class GameSetUp {
         SwingUtilities.invokeLater(() -> {
             int size = askMapSize();                      // Get map size from user
             int playerType = askPlayerType() + 1;
+            MagicElement element = null;
             if ( playerType == 2 ) {
-                askElementType();       // Get player class (adjusted to internal format)
+                 element = askElementType();       // Get player class (adjusted to internal format)
             }
+            Map<String, Integer> attributes;
+            boolean includeDefense = playerType == 3;
+            attributes = askPlayerStatChanges(includeDefense);
             String name = askPlayerName();                // Get player name
 
-            GameWorld world = new GameWorld(size, playerType, name);
+            GameWorld world = new GameWorld(size, playerType, name, attributes,element); // Initialize game world with user settings
             int panelSize = 640;                          // Fixed size of display panel
             int tileSize = panelSize / size;              // Tile size determined dynamically
 
@@ -196,6 +203,74 @@ public class GameSetUp {
 
     }
 
+    public static Map<String, Integer> askPlayerStatChanges(boolean includeDefense) {
+        Map<String, Integer> result = new HashMap<>();
+
+        JSpinner healthSpinner = new JSpinner(new SpinnerNumberModel(0, -3, 3, 1));
+        JSpinner powerSpinner = new JSpinner(new SpinnerNumberModel(0, -3, 3, 1));
+        JSpinner defenseSpinner = includeDefense ? new JSpinner(new SpinnerNumberModel(0, -3, 3, 1)) : null;
+
+        JLabel statusLabel = new JLabel("total have to be 0");
+
+        JPanel panel = new JPanel(new GridLayout(0, 2));
+        panel.add(new JLabel("Health:"));
+        panel.add(healthSpinner);
+        panel.add(new JLabel("Power:"));
+        panel.add(powerSpinner);
+
+        if (includeDefense) {
+            panel.add(new JLabel("Defense:"));
+            panel.add(defenseSpinner);
+        }
+
+        panel.add(statusLabel);
+
+        JButton okButton = new JButton("OK");
+        okButton.setEnabled(true);
+        panel.add(okButton);
+
+        ChangeListener listener = e -> {
+            int total = (int) healthSpinner.getValue() + (int) powerSpinner.getValue();
+            if (includeDefense) {
+                total += (int) defenseSpinner.getValue();
+            }
+
+            if (total == 0) {
+                statusLabel.setText("balance is 0");
+                okButton.setEnabled(true);
+            } else {
+                statusLabel.setText("You need to subtract" + total + ")");
+                okButton.setEnabled(false);
+            }
+        };
+
+        healthSpinner.addChangeListener(listener);
+        powerSpinner.addChangeListener(listener);
+        if (includeDefense) {
+            defenseSpinner.addChangeListener(listener);
+        }
+
+        JDialog dialog = new JDialog((Frame) null, "Choose how much to increase and decrease", true);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.getContentPane().add(panel);
+
+        dialog.setSize(400, includeDefense ? 250 : 200);
+
+        dialog.setLocationRelativeTo(null);
+
+        okButton.addActionListener(e -> {
+            result.put("Health", (int) healthSpinner.getValue());
+            result.put("Power", (int) powerSpinner.getValue());
+            if (includeDefense) {
+                result.put("Defence", (int) defenseSpinner.getValue());
+            }
+            dialog.dispose();
+        });
+
+        dialog.setVisible(true);
+        return result;
+    }
+
     /**
      * Displays a welcome popup message with a fade-in and fade-out animation.
      * The message disappears automatically after a short delay.
@@ -256,7 +331,7 @@ public class GameSetUp {
         fadeIn.start();
     }
 
-    public void showVictoryPannel(GameWorld engine, Runnable onFinish) {
+    public void showVictoryPanel(Runnable onFinish) {
         ImageIcon icon = new ImageIcon(Main.class.getResource("/images/winner.jpg"));
         JLabel label = new JLabel(icon);
         JWindow window = new JWindow();
@@ -304,7 +379,7 @@ public class GameSetUp {
         fadeIn.start();
     }
 
-    public void GameOverPanel(GameWorld engine, Runnable onFinish) {
+    public void GameOverPanel(Runnable onFinish) {
         Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         JPanel fullScreenPanel = new JPanel() {
@@ -365,9 +440,9 @@ public class GameSetUp {
         MagicElement[] elements = MagicElement.values();
         String[] imagePaths = {
                 "/images/fire.jpg",
-                "/images/acid.jpg",
                 "/images/ice.jpg",
-                "/images/lightning.jpg"
+                "/images/lightning.jpg",
+                "/images/acid.jpg"
         };
 
         JPanel panel = new JPanel(new GridLayout(1, 4, 10, 10));

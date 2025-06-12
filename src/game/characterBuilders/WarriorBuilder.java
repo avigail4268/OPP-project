@@ -12,7 +12,7 @@ public class WarriorBuilder implements CharacterBuilder {
     }
 
     public void buildHealth(int health) {
-        warrior.setHealth(health);
+        warrior.setHealth(100 + health);
     }
 
     public AbstractCharacter getCharacter() {
@@ -21,11 +21,13 @@ public class WarriorBuilder implements CharacterBuilder {
 
     @Override
     public void buildPower(int power) {
-        warrior.setPower(power);
+        int oldPower = warrior.getPower();
+        warrior.setPower(oldPower + power);
     }
 
     public void buildDefence(int defence) {
-        warrior.setDefence(defence);
+        int oldDefence = warrior.getDefence();
+        warrior.setDefence(oldDefence + defence);
     }
 
     public void build(String name , Position pos ) {

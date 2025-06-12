@@ -1,4 +1,5 @@
 package game.engine;
+import game.combat.MagicElement;
 import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
@@ -7,6 +8,8 @@ import game.items.*;
 import game.log.LogManager;
 import game.map.GameMap;
 import game.map.Position;
+
+import java.util.Map;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
@@ -28,7 +31,7 @@ public class GameWorld {
      * @param playerType the type of player: 1-Warrior, 2-Mage, 3-Archer
      * @param playerName the name of the player character
      */
-    public GameWorld(int size, int playerType, String playerName) {
+    public GameWorld(int size, int playerType, String playerName, Map <String, Integer> attributes, MagicElement element) {
         this.map = GameMap.getInstance(size);
         this.players = new ArrayList<>();
         this.enemies = new ArrayList<>();
@@ -38,9 +41,8 @@ public class GameWorld {
         if (N > 10 )
             N = 10;
         this.enemyExecutor = Executors.newFixedThreadPool(N);
-
         LogManager.startLogger();
-        createPlayer(playerType, playerName);
+        createPlayer(playerType, playerName,attributes,element);
         populateGameMap();
     }
 
@@ -49,15 +51,10 @@ public class GameWorld {
      * @param playerType the selected player type (1-3)
      * @param playerName the name of the player
      */
-    private void createPlayer(int playerType, String playerName) {
+    private void createPlayer(int playerType, String playerName, Map <String, Integer> attributes, MagicElement element) {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
-        switch (playerType) {
-            case 1 -> player = new Archer(playerName, pos, 100);
-            case 2 -> player = new Mage(playerName, pos, 100);
-            case 3 -> player = new Warrior(playerName, pos, 100);
-            default -> throw new IllegalArgumentException("Invalid player type: " + playerType);
-        }
+        player = playerFactory.createPlayerFactory(playerType, playerName, pos, attributes, element);
         map.addToGrid(pos, player);
         players.add(player);
         LogManager.addLog("Game started with player type: " + player.getDisplaySymbol() + " and name: " + playerName);
@@ -90,15 +87,7 @@ public class GameWorld {
      * @param pos the position to place the enemy
      */
     public void createEnemy(Position pos) {
-        double random = Math.random();
-        Enemy enemy;
-        if (random <= 1.0 / 3.0) {
-            enemy = new Dragon(pos, 50);
-        } else if (random <= 2.0 / 3.0) {
-            enemy = new Orc(pos, 50);
-        } else {
-            enemy = new Goblin(pos, 50);
-        }
+        Enemy enemy = enemyFactory.createEnemy(pos);
         enemies.add(enemy);
         map.addToGrid(pos, enemy);
     }
@@ -365,7 +354,8 @@ public class GameWorld {
     private GameController controller;
     // Flag to indicate if the game is running
     private final AtomicBoolean isGameRunning = new AtomicBoolean(true);
-
+    private final PlayerFactory playerFactory = new PlayerFactory();
+    private final EnemyFactory enemyFactory = new EnemyFactory();
 
 
 }

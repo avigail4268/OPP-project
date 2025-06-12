@@ -1,6 +1,7 @@
 
 package game.engine;
 
+import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.EnemyFactory;
 import game.characters.PlayerCharacter;
@@ -36,6 +37,7 @@ public class EnemyTask implements Runnable {
      * or move randomly with a 20% chance otherwise.
      */
     public void run() {
+        SoundPlayer soundPlayer = new SoundPlayer();
         if (!gameWorld.getIsGameRunning().get()) return;
 
         if (enemy.isDead()) {
@@ -92,6 +94,10 @@ public class EnemyTask implements Runnable {
 
         if (enemyPos.distanceTo(playerPos) <= 2) {
             moveTowards(playerPos);
+            if (enemy.isInRange(enemy.getPosition(),playerPos)){
+                enemy.attack(player);
+                SoundPlayer.playSound("classic_attack.wav");
+            }
         } else if (random.nextDouble() <= 0.2) {
             moveRandomly();
         }
@@ -102,19 +108,6 @@ public class EnemyTask implements Runnable {
             Thread.currentThread().interrupt();
         }
     }
-//try {
-//        EnemyFactory factory = new EnemyFactory();
-//        Enemy newEnemy = factory.createEnemy(newPos);
-//        gameWorld.getEnemies().add(newEnemy);
-//        gameWorld.getMap().addToGrid(newPos, newEnemy);
-//
-//        EnemyTask newTask = new EnemyTask(newEnemy, gameWorld);
-//        gameWorld.getEnemyTasks().add(newTask);
-//        gameWorld.getEnemyExecutor().submit(newTask);
-//    }
-//                        catch () {
-//
-//    }
 
     /**
      * Moves the enemy one tile toward the target position .

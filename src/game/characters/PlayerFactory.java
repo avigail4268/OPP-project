@@ -8,15 +8,15 @@ import java.util.*;
 import java.util.function.Supplier;
 
 public class PlayerFactory {
-    private final Map<String, Supplier<CharacterBuilder>> builders = new HashMap<>();
+    private final Map<Integer, Supplier<CharacterBuilder>> builders = new HashMap<>();
 
     public PlayerFactory() {
-        builders.put("Warrior", WarriorBuilder::new);
-        builders.put("Archer", ArcherBuilder::new);
-        builders.put("Mage", MageBuilder::new);
+        builders.put(3, WarriorBuilder::new);
+        builders.put(1, ArcherBuilder::new);
+        builders.put(2, MageBuilder::new);
     }
 
-    public PlayerCharacter createPlayer(String type, String name, Position pos, Map<String, Integer> attributes, MagicElement element) {
+    public PlayerCharacter createPlayerFactory(int type, String name, Position pos, Map<String, Integer> attributes, MagicElement element) {
         CharacterBuilder builder = builders.get(type).get();
         if (builder == null) {
             throw new IllegalArgumentException("Unknown player type: " + type);

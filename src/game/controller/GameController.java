@@ -300,12 +300,12 @@ public class GameController {
             LogManager.addLog("Game ended");
             SoundPlayer.playSound("winner.wav");
 
-            engine.shutdown(); // אפשר לעצור כבר עכשיו
+            engine.shutdown();
             LogManager.stop();
             engine.getIsGameRunning().set(false);
 
-            setUp.showVictoryPannel(engine, () -> {
-                System.exit(0); // תצא רק אחרי שהחלון נעלם
+            setUp.showVictoryPanel(() -> {
+                System.exit(0);
             });
         }
     }
@@ -315,11 +315,11 @@ public class GameController {
      */
     private void gameOver() {
         SoundPlayer.playSound("losing.wav");
-        engine.shutdown(); // אפשר לעצור כבר עכשיו
+        engine.shutdown();
         LogManager.stop();
         engine.getIsGameRunning().set(false);
 
-        setUp.GameOverPanel(engine, () -> {
+        setUp.GameOverPanel(() -> {
             System.exit(0);
         });
     }

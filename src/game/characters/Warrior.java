@@ -137,6 +137,13 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     public String toString() {
         return "Warrior: " + this.getName();
     }
+    /**
+     * Gets the Warrior's defense stat.
+     * @return the defense value
+     */
+    public int getDefence() {
+        return defence;
+    }
 
     // --- Fields ---
 

@@ -10,12 +10,13 @@ public class ArcherBuilder implements CharacterBuilder {
 
     @Override
     public void buildPower(int power) {
-        archer.setPower(power);
+        int oldPower = archer.getPower();
+        archer.setPower(oldPower + power);
     }
 
     @Override
     public void buildHealth(int health) {
-         archer.setHealth(health);
+         archer.setHealth(100 + health);
     }
 
     @Override
