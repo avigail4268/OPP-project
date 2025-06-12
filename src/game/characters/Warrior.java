@@ -111,6 +111,10 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         LogManager.addLog("Enemy attacked " + this.getName() + " for: " + amount + " damage, you received only " + damage);
     }
 
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
     /**
      * Checks if this Warrior is equal to another object.
      * Two Warriors are equal if they have the same name and position.
@@ -139,5 +143,5 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     /**
      * The Warrior's defense stat, which reduces incoming damage.
      */
-    private final int defence;
+    private int defence;
 }

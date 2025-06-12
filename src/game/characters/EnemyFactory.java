@@ -19,10 +19,9 @@ public class EnemyFactory {
     public Enemy createEnemy(Position pos) {
         List<String> types = new ArrayList<>(builders.keySet());
         String selected = types.get(new Random().nextInt(types.size()));
-
         CharacterBuilder builder = builders.get(selected).get();
-//        builder.buildPosition(pos);
+        builder.build(selected,pos);
         builder.randomizeStats();
-        return (Enemy) builder.build(selected,pos);
+        return (Enemy)builder.getCharacter();
     }
 }

@@ -13,6 +13,7 @@ import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
+import game.gui.GameSetUp;
 import game.items.GameItem;
 import game.log.LogManager;
 import game.map.Position;
@@ -293,55 +294,19 @@ public class GameController {
      * Checks victory condition (500 treasure points).
      * Displays victory screen and shuts down game.
      */
+
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
             LogManager.addLog("Game ended");
             SoundPlayer.playSound("winner.wav");
-            ImageIcon icon = new ImageIcon(Main.class.getResource("/images/winner.jpg"));
-            JLabel label = new JLabel(icon);
-            JWindow window = new JWindow();
-            window.getContentPane().add(label);
-            window.pack();
-            window.setLocationRelativeTo(null);
-            window.setAlwaysOnTop(true);
-            window.setOpacity(0f);
-            window.setVisible(true);
-            Timer fadeIn = new Timer(30, null);
-            fadeIn.addActionListener(new ActionListener() {
-                float opacity = 0f;
 
-                public void actionPerformed(ActionEvent e) {
-                    opacity += 0.05f;
-                    window.setOpacity(Math.min(opacity, 1f));
-                    if (opacity >= 1f) {
-                        ((Timer) e.getSource()).stop();
-                        Timer delay = new Timer(1500, null);
-                        delay.setRepeats(false);
-                        delay.addActionListener(ev -> {
-                            Timer fadeOut = new Timer(30, null);
-                            fadeOut.addActionListener(new ActionListener() {
-                                float op = 1f;
+            engine.shutdown(); // אפשר לעצור כבר עכשיו
+            LogManager.stop();
+            engine.getIsGameRunning().set(false);
 
-                                public void actionPerformed(ActionEvent e) {
-                                    op -= 0.05f;
-                                    window.setOpacity(Math.max(op, 0f));
-                                    if (op <= 0f) {
-                                        ((Timer) e.getSource()).stop();
-                                        window.dispose();
-                                        engine.shutdown();
-                                        LogManager.stop();
-                                        engine.getIsGameRunning().set(false);
-                                        System.exit(0);
-                                    }
-                                }
-                            });
-                            fadeOut.start();
-                        });
-                        delay.start();
-                    }
-                }
+            setUp.showVictoryPannel(engine, () -> {
+                System.exit(0); // תצא רק אחרי שהחלון נעלם
             });
-            fadeIn.start();
         }
     }
 
@@ -350,59 +315,13 @@ public class GameController {
      */
     private void gameOver() {
         SoundPlayer.playSound("losing.wav");
-        Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        JPanel fullScreenPanel = new JPanel() {
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(background, 0, 0, screenSize.width, screenSize.height, this);
-            }
-        };
-        fullScreenPanel.setPreferredSize(screenSize);
-        JWindow window = new JWindow();
-        window.getContentPane().add(fullScreenPanel);
-        window.setSize(screenSize);
-        window.setLocation(0, 0);
-        window.setAlwaysOnTop(true);
-        window.setOpacity(0f);
-        window.setVisible(true);
-        Timer fadeIn = new Timer(30, null);
-        fadeIn.addActionListener(new ActionListener() {
-            float opacity = 0f;
+        engine.shutdown(); // אפשר לעצור כבר עכשיו
+        LogManager.stop();
+        engine.getIsGameRunning().set(false);
 
-            public void actionPerformed(ActionEvent e) {
-                opacity += 0.05f;
-                window.setOpacity(Math.min(opacity, 1f));
-                if (opacity >= 1f) {
-                    ((Timer) e.getSource()).stop();
-                    Timer delay = new Timer(1500, null);
-                    delay.setRepeats(false);
-                    delay.addActionListener(ev -> {
-                        Timer fadeOut = new Timer(30, null);
-                        fadeOut.addActionListener(new ActionListener() {
-                            float op = 1f;
-
-                            public void actionPerformed(ActionEvent e) {
-                                op -= 0.05f;
-                                window.setOpacity(Math.max(op, 0f));
-                                if (op <= 0f) {
-                                    ((Timer) e.getSource()).stop();
-                                    window.dispose();
-                                    LogManager.addLog("Game ended, player is dead");
-                                    engine.shutdown();
-                                    LogManager.stop();
-                                    engine.getIsGameRunning().set(false);
-                                    System.exit(0);
-                                }
-                            }
-                        });
-                        fadeOut.start();
-                    });
-                    delay.start();
-                }
-            }
+        setUp.GameOverPanel(engine, () -> {
+            System.exit(0);
         });
-        fadeIn.start();
     }
 
 // --- Fields ---
@@ -420,6 +339,9 @@ private GameWorld engine;
  * Reference to the game frame GUI.
  */
 private GameFrame frame;
+
+private GameSetUp setUp = new GameSetUp();
+
 
 }
 
