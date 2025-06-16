@@ -23,7 +23,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         this.element = MagicElement.getElement();
     }
 
-    public GameEntity deepCopy() {
+    public Enemy deepCopy() {
         Dragon dragon = new Dragon(this.getPosition(), this.getHealth());
         dragon.setPower(this.getPower());
         dragon.setElement(this.element);

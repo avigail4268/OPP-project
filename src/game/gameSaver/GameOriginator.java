@@ -2,33 +2,47 @@ package game.gameSaver;
 
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
+import game.core.GameEntity;
+import game.engine.GameWorld;
 import game.items.GameItem;
 import game.map.GameMap;
+import game.map.Position;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class GameOriginator {
     private PlayerCharacter player;
     private GameMap gameMap;
-    private List <Enemy> enemies;
-    private List <GameItem> items;
+    private Map<Position, List<GameEntity>> savedGrid;
+    private List<Enemy> enemies;
+    private List<GameItem> items;
 
     public PlayerCharacter getPlayer() {
         return player;
     }
+
     public void setPlayer(PlayerCharacter player) {
         this.player = (PlayerCharacter) player.deepCopy();
     }
+
     public GameMap getGameMap() {
         return gameMap;
     }
-    public void setGameMap(GameMap gameMap) {
-        this.gameMap = gameMap;
+
+    public void setGameMap() {
+        GameMap.getInstance(gameMap.getSize()).setGrid(savedGrid);
     }
+
+    public void setGrid(GameMap gameMap) {
+        this.savedGrid = gameMap.copyGrid();
+    }
+
     public List<Enemy> getEnemies() {
         return enemies;
     }
+
     public void setEnemies(List<Enemy> enemies) {
         this.enemies = new ArrayList<>();
         for (Enemy enemy : enemies) {
@@ -36,19 +50,22 @@ public class GameOriginator {
         }
 
     }
+
     public List<GameItem> getItems() {
         return items;
     }
+
     public void setItems(List<GameItem> items) {
         this.items = new ArrayList<>();
         for (GameItem item : items) {
-            this.items.add((GameItem) item.deepCopy());
+            this.items.add(item.deepCopy());
         }
     }
 
     public GameMemento createMemento() {
         return new GameMemento(player, gameMap, enemies, items);
     }
+
     public void setMemento(GameMemento memento) {
         this.player = memento.getPlayer();
         this.gameMap = memento.getGameMap();

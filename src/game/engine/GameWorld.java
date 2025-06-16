@@ -45,6 +45,10 @@ public class GameWorld {
         populateGameMap();
     }
 
+    public GameWorld() {
+
+    }
+
     /**
      * Creates and adds a player of the selected type to a random empty position on the map.
      * @param playerType the selected player type (1-3)
@@ -318,6 +322,13 @@ public class GameWorld {
             observer.onGameUpdated();
         }
     }
+    public void setEnemies(List<Enemy> enemies) {
+        this.enemies = enemies;
+    }
+
+    public void setItems(List<GameItem> items) {
+        this.items = items;
+    }
 
     /**
      * Returns a lock object for a specific position in the map.
@@ -347,9 +358,9 @@ public class GameWorld {
     private List<Enemy> enemies;
     private List<GameItem> items;
     // Executor for running enemy behavior on a schedule
-    private final ExecutorService enemyExecutor;
+    private ExecutorService enemyExecutor;
     // List of enemy tasks that control enemy behavior
-    private final List<EnemyTask> enemyTasks;
+    private List<EnemyTask> enemyTasks;
     // List of observers to be notified when the game state updates
     private List<GameObserver> observers = new ArrayList<>();
     // Controller for handling game interactions
@@ -358,6 +369,7 @@ public class GameWorld {
     private final AtomicBoolean isGameRunning = new AtomicBoolean(true);
     private final PlayerFactory playerFactory = new PlayerFactory();
     private final EnemyFactory enemyFactory = new EnemyFactory();
+
 
 
 }

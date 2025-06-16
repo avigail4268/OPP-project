@@ -1,0 +1,17 @@
+[2025-06-15T21:53:32.492548] Game started with player type: Mage and name: avigail
+[2025-06-15T21:53:34.665872600] Enemy tried to move out of bounds: (1,-1)
+[2025-06-15T21:53:54.453959400] Player moved from (1,5) to (2,5)
+[2025-06-15T21:53:56.535825] Added item: Health Potion
+[2025-06-15T21:53:56.537819500] Player moved from (2,5) to (3,5)
+[2025-06-15T21:53:58.848561400] The enemy evaded the attack!
+[2025-06-15T21:53:58.848561400] Goblin attacked for: 21 damage.
+[2025-06-15T21:54:00.041142] The enemy evaded the attack!
+[2025-06-15T21:54:00.041142] Player evaded the enemy's attack!
+[2025-06-15T21:54:01.211105100] Player moved from (3,5) to (3,6)
+[2025-06-15T21:54:02.721382300] Player moved from (3,6) to (4,6)
+[2025-06-15T21:54:04.139191300] The enemy evaded the attack!
+[2025-06-15T21:54:04.139191300] The orc attacked with Critical hit! for: 36 damage.
+[2025-06-15T21:54:05.247287900] avigail attacked the enemy for: 27 damage.
+[2025-06-15T21:54:05.248286600] Orc received 25 damage from magic attack.
+[2025-06-15T21:54:05.248286600] Player evaded the enemy's attack!
+[2025-06-15T21:54:27.436098800] Player exited the game without saving.

@@ -29,26 +29,24 @@ public class GameMap {
         return size;
     }
 
-    public GameMap copy() {
-        GameMap copy = new GameMap(this.size);
+    public Map<Position, List<GameEntity>> copyGrid() {
         Map<Position, List<GameEntity>> copiedGrid = new HashMap<>();
 
         for (Map.Entry<Position, List<GameEntity>> entry : this.grid.entrySet()) {
             Position originalPos = entry.getKey();
             List<GameEntity> originalEntities = entry.getValue();
 
-            // נניח ש־Position הוא Immutable, אז אפשר לשמור אותו כמו שהוא. אחרת צריך להעתיק גם אותו.
             List<GameEntity> copiedEntities = new ArrayList<>();
             for (GameEntity entity : originalEntities) {
-                copiedEntities.add(entity.deepCopy()); // נדרשת מתודה deepCopy לכל ישות
+                copiedEntities.add(entity.deepCopy());
             }
 
             copiedGrid.put(originalPos, copiedEntities);
         }
 
-        copy.setGrid(copiedGrid);
-        return copy;
+        return copiedGrid;
     }
+
 
 
 

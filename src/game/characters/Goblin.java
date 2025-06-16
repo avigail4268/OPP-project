@@ -24,7 +24,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
         agility = new Random().nextInt(80); // Random agility between 0 and 80
     }
 
-    public GameEntity deepCopy() {
+    public Enemy deepCopy() {
         Goblin goblin = new Goblin(this.getPosition(), this.getHealth());
         goblin.setAgility(this.agility);
         return goblin;

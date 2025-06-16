@@ -26,7 +26,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     @Override
-    public GameEntity deepCopy() {
+    public PlayerCharacter deepCopy() {
         Mage mage = new Mage(this.getName(), this.getPosition(), this.getHealth());
         mage.setElement(this.element);
         return mage;

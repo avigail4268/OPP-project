@@ -24,7 +24,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         resistance = new Random().nextDouble() * 0.5; // Resistance value between 0 and 0.5
     }
 
-    public GameEntity deepCopy() {
+    public Enemy deepCopy() {
         Orc orc = new Orc(this.getPosition(), this.getHealth());
         orc.setResistance(this.resistance);
         return orc;

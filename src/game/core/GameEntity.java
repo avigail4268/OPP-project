@@ -44,4 +44,6 @@ public interface GameEntity {
      * @return true if the entity is visible, false otherwise
      */
     boolean getVisible();
+
+    GameEntity deepCopy();
 }

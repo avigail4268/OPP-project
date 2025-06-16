@@ -1,8 +1,6 @@
 package game.gui;
 
 import game.Main;
-import game.characters.Enemy;
-import game.characters.PlayerCharacter;
 import game.combat.MagicElement;
 import game.controller.GameController;
 import game.engine.GameWorld;
@@ -10,7 +8,6 @@ import game.gameSaver.GameCaretaker;
 import game.gameSaver.GameMemento;
 import game.gameSaver.GameOriginator;
 import game.log.LogManager;
-
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -25,37 +22,76 @@ public class GameSetUp {
         // Constructor can be used for any necessary initialization
     }
 
-    public void start() {
+//    public void start() {
+//
+//        SwingUtilities.invokeLater(() -> {
+//
+//            int size = askMapSize();
+//            // Get map size from user
+//            int playerType = askPlayerType() + 1;
+//            MagicElement element = null;
+//            if ( playerType == 2 ) {
+//                 element = askElementType();       // Get player class (adjusted to internal format)
+//            }
+//            Map<String, Integer> attributes;
+//            boolean includeDefense = playerType == 3;
+//            attributes = askPlayerStatChanges(includeDefense);
+//            String name = askPlayerName();                // Get player name
+//
+//            GameWorld world = new GameWorld(size, playerType, name, attributes,element); // Initialize game world with user settings
+//            int panelSize = 640;                          // Fixed size of display panel
+//            int tileSize = panelSize / size;              // Tile size determined dynamically
+//
+//            GameController controller = new GameController(world);
+//            controller.setTileSize(tileSize);
+//            world.setController(controller);
+//
+//            GameFrame frame = new GameFrame(controller);  // Set up GUI frame
+//            controller.setFrame(frame);
+//
+//            showAutoClosingWelcome(name);                 // Show welcome message
+//            world.startEnemyTask();                       // Start enemy AI tasks
+//            frame.setVisible(true);                       // Display GUI
+//        });
+//    }
+public void start() {
+    SwingUtilities.invokeLater(() -> {
 
-        SwingUtilities.invokeLater(() -> {
-            int size = askMapSize();                      // Get map size from user
-            int playerType = askPlayerType() + 1;
-            MagicElement element = null;
-            if ( playerType == 2 ) {
-                 element = askElementType();       // Get player class (adjusted to internal format)
-            }
-            Map<String, Integer> attributes;
-            boolean includeDefense = playerType == 3;
-            attributes = askPlayerStatChanges(includeDefense);
-            String name = askPlayerName();                // Get player name
+        GameWorld world = new GameWorld();
 
-            GameWorld world = new GameWorld(size, playerType, name, attributes,element); // Initialize game world with user settings
-            int panelSize = 640;                          // Fixed size of display panel
-            int tileSize = panelSize / size;              // Tile size determined dynamically
+        if (restoreGame(world)) {
+            return;
+        }
 
-            GameController controller = new GameController(world);
-            controller.setTileSize(tileSize);
-            world.setController(controller);
+        int size = askMapSize();
+        int playerType = askPlayerType() + 1;
+        MagicElement element = null;
 
-            GameFrame frame = new GameFrame(controller);  // Set up GUI frame
-            controller.setFrame(frame);
+        if (playerType == 2) {
+            element = askElementType();
+        }
 
-            showAutoClosingWelcome(name);                 // Show welcome message
-            world.startEnemyTask();                       // Start enemy AI tasks
-            frame.setVisible(true);                       // Display GUI
-        });
-    }
+        boolean includeDefense = playerType == 3;
+        Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
+        String name = askPlayerName();
 
+        world = new GameWorld(size, playerType, name, attributes, element);
+
+        int panelSize = 640;
+        int tileSize = panelSize / size;
+
+        GameController controller = new GameController(world);
+        controller.setTileSize(tileSize);
+        world.setController(controller);
+
+        GameFrame frame = new GameFrame(controller);
+        controller.setFrame(frame);
+
+        showAutoClosingWelcome(name);
+        world.startEnemyTask();
+        frame.setVisible(true);
+    });
+}
     /**
      * Displays a slider dialog allowing the user to select a map size.
      * The value is restricted to be between 10 and 20.
@@ -486,7 +522,7 @@ public class GameSetUp {
         if (choice == JOptionPane.YES_OPTION) {
             GameOriginator originator = new GameOriginator ();
             originator.setEnemies(game.getEnemies());
-            originator.setGameMap(game.getMap());
+            originator.setGameMap();
             originator.setItems(game.getItems());
             originator.setPlayer(game.getPlayer());
 
@@ -502,14 +538,14 @@ public class GameSetUp {
         }
     }
 
-    public boolean restoreGame() {
+    public boolean restoreGame(GameWorld world) {
         int choice = JOptionPane.showConfirmDialog(
                 null, "Do you want to restore the previous game?", "Restore Game",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
         );
 
         if (choice == JOptionPane.YES_OPTION) {
-            GameCaretaker caretaker = GameCaretaker.getInstance(); // שוב כאן Singleton!
+            GameCaretaker caretaker = GameCaretaker.getInstance();
             if (caretaker.hasSavedGames()) {
                 GameMemento memento = caretaker.getMemento();
                 if (memento != null) {
@@ -517,11 +553,11 @@ public class GameSetUp {
                     originator.setMemento(memento);
 
 
-//                    world.setEnemies(originator.getEnemies());
-//                    world.setItems(originator.getItems());
-//                    world.setController(new GameController(world));
-//                    world.getController().setFrame(new GameFrame(world.getController()));
-//                    world.startEnemyTask();
+                    world.setEnemies(originator.getEnemies());
+                    world.setItems(originator.getItems());
+                    world.setController(new GameController(world));
+                    world.getController().setFrame(new GameFrame(world.getController()));
+                    world.startEnemyTask();
 
                     return true;
                 }
@@ -529,6 +565,8 @@ public class GameSetUp {
         }
         return false;
     }
+
+
 }
 
 

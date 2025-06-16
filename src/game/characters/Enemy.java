@@ -23,8 +23,6 @@ public abstract class Enemy extends AbstractCharacter {
         this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
     }
 
-    public abstract GameEntity deepCopy();
-
     /**
      * Defeats the enemy and returns a Treasure object if the enemy is dead.
      * If the enemy is alive, no treasure is dropped.

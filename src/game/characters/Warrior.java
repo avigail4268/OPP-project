@@ -28,7 +28,7 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     }
 
     @Override
-    public GameEntity deepCopy () {
+    public PlayerCharacter deepCopy () {
         Warrior warrior = new Warrior(this.getName(), this.getPosition(), this.getHealth());
         warrior.setDefence(this.defence);
         return warrior;

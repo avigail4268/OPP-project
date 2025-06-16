@@ -34,7 +34,7 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
 
     @Override
-    public GameEntity deepCopy() {
+    public PlayerCharacter deepCopy() {
        Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
         archer.setAccuracy(this.accuracy);
         return archer;
