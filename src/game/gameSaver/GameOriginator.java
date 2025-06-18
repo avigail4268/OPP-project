@@ -72,5 +72,4 @@ public class GameOriginator {
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
     }
-
 }

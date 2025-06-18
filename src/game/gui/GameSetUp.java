@@ -23,44 +23,41 @@ public class GameSetUp {
     }
 
 
-public void start() {
-    SwingUtilities.invokeLater(() -> {
+    public void start() {
+        SwingUtilities.invokeLater(() -> {
 
-        GameWorld world = new GameWorld();
+            GameWorld world = restoreGame();
+            if ( world == null){
+                int size = askMapSize();
+                int playerType = askPlayerType() + 1;
+                MagicElement element = null;
 
-        if (restoreGame(world)) {
-            return;
-        }
+                if (playerType == 2) {
+                    element = askElementType();
+                }
 
-        int size = askMapSize();
-        int playerType = askPlayerType() + 1;
-        MagicElement element = null;
+                boolean includeDefense = playerType == 3;
+                Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
+                String name = askPlayerName();
 
-        if (playerType == 2) {
-            element = askElementType();
-        }
+                world = new GameWorld(size, playerType, name, attributes, element);
+            }
 
-        boolean includeDefense = playerType == 3;
-        Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
-        String name = askPlayerName();
+            int panelSize = 640;
+            int tileSize = panelSize / world.getMap().getSize();
 
-        world = new GameWorld(size, playerType, name, attributes, element);
+            GameController controller = new GameController(world);
+            controller.setTileSize(tileSize);
+            world.setController(controller);
 
-        int panelSize = 640;
-        int tileSize = panelSize / size;
+            GameFrame frame = new GameFrame(controller);
+            controller.setFrame(frame);
 
-        GameController controller = new GameController(world);
-        controller.setTileSize(tileSize);
-        world.setController(controller);
-
-        GameFrame frame = new GameFrame(controller);
-        controller.setFrame(frame);
-
-        showAutoClosingWelcome(name);
-        world.startEnemyTask();
-        frame.setVisible(true);
-    });
-}
+            showAutoClosingWelcome(world.getPlayer().getName());
+            world.startEnemyTask();
+            frame.setVisible(true);
+        });
+    }
     /**
      * Displays a slider dialog allowing the user to select a map size.
      * The value is restricted to be between 10 and 20.
@@ -489,7 +486,7 @@ public void start() {
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
         );
         if (choice == JOptionPane.YES_OPTION) {
-            GameOriginator originator = new GameOriginator ();
+            GameOriginator originator = new GameOriginator();
             originator.setEnemies(game.getEnemies());
             originator.setGameMap();
             originator.setItems(game.getItems());
@@ -507,7 +504,7 @@ public void start() {
         }
     }
 
-    public boolean restoreGame(GameWorld world) {
+    public GameWorld restoreGame() {
         int choice = JOptionPane.showConfirmDialog(
                 null, "Do you want to restore the previous game?", "Restore Game",
                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
@@ -520,22 +517,17 @@ public void start() {
                 if (memento != null) {
                     GameOriginator originator = new GameOriginator();
                     originator.setMemento(memento);
-
-
+                    GameWorld world = new GameWorld();
                     world.setEnemies(originator.getEnemies());
                     world.setItems(originator.getItems());
                     world.setController(new GameController(world));
                     world.getController().setFrame(new GameFrame(world.getController()));
                     world.startEnemyTask();
 
-                    return true;
+                    return world;
                 }
             }
         }
-        return false;
+        return null;
     }
-
-
 }
-
-
