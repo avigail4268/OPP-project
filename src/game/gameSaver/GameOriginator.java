@@ -31,13 +31,18 @@ public class GameOriginator {
         return gameMap;
     }
 
-    public void setGameMap() {
-        GameMap.getInstance(gameMap.getSize()).setGrid(savedGrid);
+//    public void setGameMap( GameMap gameMap ) {
+//        GameMap.getInstance(gameMap.getSize()).setGrid(savedGrid);
+//    }
+    public void setGameMap(GameMap map) {
+        this.gameMap = GameMap.getInstance(map.getSize()); // שומרת את האינסטנס בגודל הנכון
+        this.savedGrid = map.copyGrid(); // מעתיקה את תוכן הגריד
     }
 
-    public void setGrid(GameMap gameMap) {
-        this.savedGrid = gameMap.copyGrid();
-    }
+
+//    public void setGrid(GameMap gameMap) {
+//        this.savedGrid = gameMap.copyGrid();
+//    }
 
     public List<Enemy> getEnemies() {
         return enemies;

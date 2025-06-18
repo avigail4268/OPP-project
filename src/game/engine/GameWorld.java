@@ -273,6 +273,8 @@ public class GameWorld {
         this.controller = controller;
     }
 
+    public void setMap(GameMap map) {this.map = map;}
+
     /**
      * Gets the current game controller.
      * @return the controller

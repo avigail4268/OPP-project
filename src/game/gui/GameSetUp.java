@@ -488,7 +488,8 @@ public class GameSetUp {
         if (choice == JOptionPane.YES_OPTION) {
             GameOriginator originator = new GameOriginator();
             originator.setEnemies(game.getEnemies());
-            originator.setGameMap();
+            //originator.setGrid(game.getMap());
+            originator.setGameMap(game.getMap());
             originator.setItems(game.getItems());
             originator.setPlayer(game.getPlayer());
 
@@ -518,6 +519,7 @@ public class GameSetUp {
                     GameOriginator originator = new GameOriginator();
                     originator.setMemento(memento);
                     GameWorld world = new GameWorld();
+                    world.setMap(originator.getGameMap());
                     world.setEnemies(originator.getEnemies());
                     world.setItems(originator.getItems());
                     world.setController(new GameController(world));

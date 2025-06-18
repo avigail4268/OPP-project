@@ -137,3 +137,66 @@
 [2025-06-18T10:39:11.086358900] SHIRA attacked the enemy for 6 damage.
 [2025-06-18T10:39:11.086358900] The orc attacked with Critical hit! for: 34 damage.
 [2025-06-18T10:39:12.225002300] Player moved from (7,2) to (7,3)
+[2025-06-18T10:49:15.630442500] Game started with player type: Warrior and name: shira
+[2025-06-18T10:49:17.226141200] Enemy moved to: (3,1)
+[2025-06-18T10:49:17.529213300] Enemy moved to: (3,4)
+[2025-06-18T10:49:18.456946800] Enemy moved to: (5,4)
+[2025-06-18T10:49:18.771914400] Enemy moved to: (6,4)
+[2025-06-18T10:49:19.234103300] Player moved from (0,1) to (0,2)
+[2025-06-18T10:49:22.826302500] Player moved from (0,2) to (1,2)
+[2025-06-18T10:49:24.216324500] Player moved from (1,2) to (2,2)
+[2025-06-18T10:49:25.327500500] Player moved from (2,2) to (3,2)
+[2025-06-18T10:49:26.477949300] Added item: Health Potion
+[2025-06-18T10:49:26.481948900] Player moved from (3,2) to (4,2)
+[2025-06-18T10:58:13.753293500] Game started with player type: Warrior and name: SHIRA
+[2025-06-18T10:58:15.979044200] Enemy moved to: (1,8)
+[2025-06-18T10:58:16.922438] Enemy moved to: (5,9)
+[2025-06-18T10:58:17.031463100] Added item: Health Potion
+[2025-06-18T10:58:17.102478900] Player moved from (9,1) to (9,2)
+[2025-06-18T10:58:17.224506100] Enemy moved to: (8,2)
+[2025-06-18T10:58:17.228507400] Enemy attacked SHIRA for: 26 damage, you received only 24
+[2025-06-18T10:58:17.229508200] Dragon attacked with a Critical hit! for 26 damage.
+[2025-06-18T10:58:17.532603400] Enemy moved to: (9,3)
+[2025-06-18T10:58:17.532603400] Enemy attacked SHIRA for: 21 damage, you received only 19
+[2025-06-18T10:58:17.532603400] Dragon attacked for 21 damage.
+[2025-06-18T10:58:17.954699300] The enemy evaded the attack!
+[2025-06-18T10:58:17.954699300] Player evaded the enemy's attack!
+[2025-06-18T10:58:21.568363900] Player moved from (9,2) to (9,1)
+[2025-06-18T10:58:22.319557700] Added item: Health Potion
+[2025-06-18T10:58:22.321558100] Player moved from (9,1) to (9,0)
+[2025-06-18T11:01:47.397468900] Game started with player type: Warrior and name: SHIRA
+[2025-06-18T11:01:49.283659800] Enemy moved to: (1,6)
+[2025-06-18T11:01:49.601830200] Enemy attacked SHIRA for: 14 damage, you received only 6
+[2025-06-18T11:01:49.601830200] Dragon attacked for 14 damage.
+[2025-06-18T11:01:49.980529900] Enemy attacked SHIRA for: 24 damage, you received only 11
+[2025-06-18T11:01:49.980529900] Goblin attacked for: 24 damage.
+[2025-06-18T11:01:50.201834700] Enemy moved to: (3,7)
+[2025-06-18T11:01:50.201834700] Enemy attacked SHIRA for: 19 damage, you received only 9
+[2025-06-18T11:01:50.202839] The orc attacked for: 19 damage.
+[2025-06-18T11:01:51.235026700] Orc received 54 damage from physical attack.
+[2025-06-18T11:01:51.235026700] SHIRA attacked with Critical hit! for 54 damage.
+[2025-06-18T11:01:51.235026700] Enemy is dead! You won the fight!
+[2025-06-18T11:01:52.364621700] SHIRA attacked the enemy for: 27 damage.
+[2025-06-18T11:01:52.364621700] Enemy attacked SHIRA for: 24 damage, you received only 11
+[2025-06-18T11:01:52.364621700] Goblin attacked for: 24 damage.
+[2025-06-18T11:01:52.391615800] Enemy moved to: (9,2)
+[2025-06-18T11:01:52.614170100] Enemy moved to: (9,5)
+[2025-06-18T11:10:25.730095200] Game started with player type: Warrior and name: SHIRA
+[2025-06-18T11:10:26.914323600] Enemy moved to: (0,1)
+[2025-06-18T11:10:28.126274500] Player moved from (5,6) to (5,7)
+[2025-06-18T11:10:28.454347600] Enemy moved to: (5,6)
+[2025-06-18T11:10:28.457344300] Enemy attacked SHIRA for: 17 damage, you received only 9
+[2025-06-18T11:10:28.457344300] The orc attacked for: 17 damage.
+[2025-06-18T11:10:28.860459600] Enemy attacked SHIRA for: 11 damage, you received only 6
+[2025-06-18T11:10:28.860459600] Dragon attacked for 11 damage.
+[2025-06-18T11:10:33.978657200] Player exited the game.
+[2025-06-18T11:15:52.329288900] Game started with player type: Warrior and name: SHIRA
+[2025-06-18T11:15:54.162987300] Enemy attacked SHIRA for: 15 damage, you received only 14
+[2025-06-18T11:15:54.162987300] Goblin attacked for: 15 damage.
+[2025-06-18T11:15:54.461295800] Enemy attacked SHIRA for: 22 damage, you received only 21
+[2025-06-18T11:15:54.461295800] Dragon attacked for 22 damage.
+[2025-06-18T11:15:55.110657] Enemy tried to move out of bounds: (6,10)
+[2025-06-18T11:15:56.075179400] Added item: Power Potion
+[2025-06-18T11:15:56.078188100] Player moved from (2,6) to (1,6)
+[2025-06-18T11:15:57.041975] Player moved from (1,6) to (1,7)
+[2025-06-18T11:16:01.798376800] Player exited the game.

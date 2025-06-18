@@ -24,9 +24,14 @@ public class PowerPotion extends Potion {
         this.setDescription("This is a power potion, increases power by " + this.getIncreaseAmount());
     }
 
+    public PowerPotion ( Position position, boolean blocksMovement , int increaseAmount) {
+        super(position, blocksMovement, increaseAmount);
+        this.setDescription("This is a power potion, increased by " + increaseAmount);
+    }
+
     @Override
     public GameItem deepCopy() {
-        return new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount(), this.getIncreaseAmount());
+        return new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount());
     }
 
     /**

@@ -28,9 +28,15 @@ public class Potion extends GameItem implements Interactable {
         this.setDescription("This is a health potion, increased by " + increaseAmount);
     }
 
+    public Potion ( Position position, boolean blocksMovement , int increaseAmount) {
+        super(position, blocksMovement);
+        this.increaseAmount = increaseAmount;
+        this.isUsed = false;
+        this.setDescription("This is a health potion, increased by " + increaseAmount);
+    }
     @Override
     public GameItem deepCopy() {
-        return new Potion(getPosition(), this.isBlocksMovement(), increaseAmount, increaseAmount);
+        return new Potion(getPosition(), this.isBlocksMovement(), increaseAmount);
     }
 
     /**
