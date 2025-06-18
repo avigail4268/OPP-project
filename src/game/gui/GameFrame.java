@@ -52,7 +52,7 @@ public class GameFrame extends JFrame {
 
         // Create and add the map panel (center) and status panel (east)
         mapPanel = new MapPanel(controller);
-        statusPanel = new StatusPanel(controller.getPlayer());
+        statusPanel = new StatusPanel(controller.getPlayer(), controller.getGameWorld());
 
         // Register the panels as observers to the controller
         controller.getGameWorld().addObserver(mapPanel);

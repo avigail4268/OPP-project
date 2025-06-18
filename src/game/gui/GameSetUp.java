@@ -8,6 +8,7 @@ import game.gameSaver.GameCaretaker;
 import game.gameSaver.GameMemento;
 import game.gameSaver.GameOriginator;
 import game.log.LogManager;
+
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -26,22 +27,19 @@ public class GameSetUp {
     public void start() {
         SwingUtilities.invokeLater(() -> {
 
-            GameWorld world = restoreGame();
-            if ( world == null){
-                int size = askMapSize();
-                int playerType = askPlayerType() + 1;
-                MagicElement element = null;
+            int size = askMapSize();
+            int playerType = askPlayerType() + 1;
+            MagicElement element = null;
 
-                if (playerType == 2) {
-                    element = askElementType();
-                }
-
-                boolean includeDefense = playerType == 3;
-                Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
-                String name = askPlayerName();
-
-                world = new GameWorld(size, playerType, name, attributes, element);
+            if (playerType == 2) {
+                element = askElementType();
             }
+
+            boolean includeDefense = playerType == 3;
+            Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
+            String name = askPlayerName();
+
+            GameWorld world = new GameWorld(size, playerType, name, attributes, element);
 
             int panelSize = 640;
             int tileSize = panelSize / world.getMap().getSize();
@@ -58,6 +56,7 @@ public class GameSetUp {
             frame.setVisible(true);
         });
     }
+
     /**
      * Displays a slider dialog allowing the user to select a map size.
      * The value is restricted to be between 10 and 20.
@@ -116,6 +115,7 @@ public class GameSetUp {
 
     /**
      * Prompts the user to select the type of player character.
+     *
      * @return the index of the selected character class (0 = Archer, 1 = Mage, 2 = Warrior)
      */
     public static int askPlayerType() {
@@ -282,6 +282,7 @@ public class GameSetUp {
     /**
      * Displays a welcome popup message with a fade-in and fade-out animation.
      * The message disappears automatically after a short delay.
+     *
      * @param name the name of the player to include in the message
      */
     public static void showAutoClosingWelcome(String name) {
@@ -480,56 +481,7 @@ public class GameSetUp {
         return MagicElement.FIRE; // default
     }
 
-    public void exitGame (GameWorld game) {
-        int choice = JOptionPane.showConfirmDialog (
-                null, "Do you want to save the game?", "Save Game",
-                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
-        );
-        if (choice == JOptionPane.YES_OPTION) {
-            GameOriginator originator = new GameOriginator();
-            originator.setEnemies(game.getEnemies());
-            //originator.setGrid(game.getMap());
-            originator.setGameMap(game.getMap());
-            originator.setItems(game.getItems());
-            originator.setPlayer(game.getPlayer());
-
-            GameMemento memento = originator.createMemento();
-            GameCaretaker caretaker = GameCaretaker.getInstance();
-            caretaker.addMemento(memento); // Save the current game state
-            LogManager.addLog("Player exited the game.");
-            System.exit(0);
-        }
-        else {
-            LogManager.addLog("Player exited the game without saving.");
-            System.exit(0);
-        }
-    }
-
-    public GameWorld restoreGame() {
-        int choice = JOptionPane.showConfirmDialog(
-                null, "Do you want to restore the previous game?", "Restore Game",
-                JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE
-        );
-
-        if (choice == JOptionPane.YES_OPTION) {
-            GameCaretaker caretaker = GameCaretaker.getInstance();
-            if (caretaker.hasSavedGames()) {
-                GameMemento memento = caretaker.getMemento();
-                if (memento != null) {
-                    GameOriginator originator = new GameOriginator();
-                    originator.setMemento(memento);
-                    GameWorld world = new GameWorld();
-                    world.setMap(originator.getGameMap());
-                    world.setEnemies(originator.getEnemies());
-                    world.setItems(originator.getItems());
-                    world.setController(new GameController(world));
-                    world.getController().setFrame(new GameFrame(world.getController()));
-                    world.startEnemyTask();
-
-                    return world;
-                }
-            }
-        }
-        return null;
+    public void exitGame(GameWorld game) {
+        System.exit(0);
     }
 }

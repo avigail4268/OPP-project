@@ -31,6 +31,12 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         this.treasurePoints = 0;
     }
 //    public abstract PlayerCharacter deepCopy();
+    public PlayerCharacter(PlayerCharacter player) {
+        super(player.getPosition(), player.getHealth());
+        this.inventory = player.getInventory();
+        this.name = player.getName();
+        this.treasurePoints = player.getTreasurePoints();
+    }
 
     /**
      * Gets the player's name.

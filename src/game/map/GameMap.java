@@ -48,8 +48,6 @@ public class GameMap {
     }
 
 
-
-
     /**
      * Checks whether the given position contains no entities.
      * @param pos position to check

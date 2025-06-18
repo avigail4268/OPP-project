@@ -1,202 +1,97 @@
-[2025-06-12T14:23:54.151815700] Game started with player type: Mage and name: Player
-[2025-06-12T14:23:54.370374200] Enemy moved to: (1,1)
-[2025-06-12T14:23:54.370374200] Enemy moved to: (1,4)
-[2025-06-12T14:23:54.370374200] Enemy moved to: (1,0)
-[2025-06-12T14:23:54.673634900] Enemy moved to: (1,8)
-[2025-06-12T14:23:54.673634900] Enemy moved to: (1,9)
-[2025-06-12T14:23:54.673634900] Enemy moved to: (2,0)
-[2025-06-12T14:23:54.983805700] Enemy moved to: (3,0)
-[2025-06-12T14:23:54.983805700] Enemy moved to: (3,5)
-[2025-06-12T14:23:54.983805700] Enemy moved to: (3,1)
-[2025-06-12T14:23:55.295034700] Enemy moved to: (3,8)
-[2025-06-12T14:23:55.295034700] Enemy moved to: (3,9)
-[2025-06-12T14:23:55.295034700] Enemy moved to: (4,0)
-[2025-06-12T14:23:55.605290800] Enemy moved to: (4,1)
-[2025-06-12T14:23:55.605290800] Enemy moved to: (4,9)
-[2025-06-12T14:23:55.605290800] Enemy moved to: (5,2)
-[2025-06-12T14:23:55.918838300] Enemy moved to: (5,5)
-[2025-06-12T14:23:55.918838300] Enemy moved to: (5,6)
-[2025-06-12T14:23:55.918838300] Enemy moved to: (5,4)
-[2025-06-12T14:23:56.230758300] Enemy moved to: (5,7)
-[2025-06-12T14:23:56.230758300] Enemy moved to: (6,1)
-[2025-06-12T14:23:56.230758300] Enemy moved to: (6,3)
-[2025-06-12T14:23:56.540293200] Enemy moved to: (6,4)
-[2025-06-12T14:23:56.540293200] Enemy moved to: (6,5)
-[2025-06-12T14:23:56.540293200] Enemy moved to: (6,8)
-[2025-06-12T14:23:56.850610900] Enemy moved to: (7,7)
-[2025-06-12T14:23:56.850610900] Enemy moved to: (7,2)
-[2025-06-12T14:23:56.850610900] Enemy moved to: (7,4)
-[2025-06-12T14:23:57.161076700] Enemy moved to: (8,5)
-[2025-06-12T14:23:57.161076700] Enemy moved to: (8,6)
-[2025-06-12T14:23:57.161076700] Enemy moved to: (7,9)
-[2025-06-12T14:23:57.476675400] Enemy moved to: (9,3)
-[2025-06-12T14:23:57.476675400] Enemy moved to: (8,8)
-[2025-06-12T14:23:57.476675400] Enemy moved to: (8,7)
-[2025-06-12T14:25:52.836688700] Game started with player type: Mage and name: Player
-[2025-06-12T14:25:53.163887400] Enemy moved to: (1,8)
-[2025-06-12T14:25:53.163887400] Enemy moved to: (1,9)
-[2025-06-12T14:25:53.163887400] Enemy moved to: (0,6)
-[2025-06-12T14:25:53.467611700] Enemy moved to: (2,5)
-[2025-06-12T14:25:53.467611700] Enemy moved to: (2,6)
-[2025-06-12T14:25:53.467611700] Enemy moved to: (2,8)
-[2025-06-12T14:25:53.779389400] Enemy moved to: (3,5)
-[2025-06-12T14:25:53.779389400] Enemy moved to: (4,5)
-[2025-06-12T14:25:53.779389400] Enemy moved to: (4,1)
-[2025-06-12T14:25:54.094152100] Enemy moved to: (5,2)
-[2025-06-12T14:25:54.094152100] Enemy moved to: (5,6)
-[2025-06-12T14:25:54.094152100] Enemy moved to: (5,0)
-[2025-06-12T14:25:54.407691100] Enemy moved to: (6,7)
-[2025-06-12T14:25:54.407691100] Enemy moved to: (6,5)
-[2025-06-12T14:25:54.407691100] Enemy moved to: (5,9)
-[2025-06-12T14:25:54.721404] Enemy moved to: (6,9)
-[2025-06-12T14:25:54.721404] Enemy moved to: (7,5)
-[2025-06-12T14:25:54.721404] Enemy moved to: (6,8)
-[2025-06-12T14:25:55.028953300] Enemy moved to: (8,2)
-[2025-06-12T14:25:55.028953300] Enemy moved to: (7,9)
-[2025-06-12T14:25:55.028953300] Enemy moved to: (8,1)
-[2025-06-12T14:25:55.340336700] Enemy moved to: (8,3)
-[2025-06-12T14:25:55.340336700] Enemy moved to: (8,7)
-[2025-06-12T14:25:55.340336700] Enemy moved to: (8,4)
-[2025-06-12T14:25:55.641240700] Enemy moved to: (9,7)
-[2025-06-12T14:25:55.641240700] Enemy moved to: (9,5)
-[2025-06-12T14:25:55.641240700] Enemy moved to: (8,8)
-[2025-06-12T14:25:55.641240700] Goblin attacked for: 16 damage.
-[2025-06-12T14:25:55.641240700] Dragon attacked back with a Critical hit! for 32 damage.
-[2025-06-15T21:53:32.492548] Game started with player type: Mage and name: avigail
-[2025-06-15T21:53:34.665872600] Enemy tried to move out of bounds: (1,-1)
-[2025-06-15T21:53:54.453959400] Player moved from (1,5) to (2,5)
-[2025-06-15T21:53:56.535825] Added item: Health Potion
-[2025-06-15T21:53:56.537819500] Player moved from (2,5) to (3,5)
-[2025-06-15T21:53:58.848561400] The enemy evaded the attack!
-[2025-06-15T21:53:58.848561400] Goblin attacked for: 21 damage.
-[2025-06-15T21:54:00.041142] The enemy evaded the attack!
-[2025-06-15T21:54:00.041142] Player evaded the enemy's attack!
-[2025-06-15T21:54:01.211105100] Player moved from (3,5) to (3,6)
-[2025-06-15T21:54:02.721382300] Player moved from (3,6) to (4,6)
-[2025-06-15T21:54:04.139191300] The enemy evaded the attack!
-[2025-06-15T21:54:04.139191300] The orc attacked with Critical hit! for: 36 damage.
-[2025-06-15T21:54:05.247287900] avigail attacked the enemy for: 27 damage.
-[2025-06-15T21:54:05.248286600] Orc received 25 damage from magic attack.
-[2025-06-15T21:54:05.248286600] Player evaded the enemy's attack!
-[2025-06-15T21:54:27.436098800] Player exited the game without saving.
-[2025-06-18T10:01:07.688773600] Game started with player type: Mage and name: SHIRA
-[2025-06-18T10:01:09.492761200] Enemy moved to: (1,1)
-[2025-06-18T10:01:10.110697100] Enemy moved to: (2,8)
-[2025-06-18T10:01:10.411767400] Enemy moved to: (5,7)
-[2025-06-18T10:01:10.411767400] The orc attacked for: 15 damage.
-[2025-06-18T10:01:10.841137700] The orc attacked for: 15 damage.
-[2025-06-18T10:01:11.144206500] Enemy moved to: (6,3)
-[2025-06-18T10:01:15.535384200] Player moved from (5,8) to (4,8)
-[2025-06-18T10:01:16.626237200] Player moved from (4,8) to (3,8)
-[2025-06-18T10:01:17.696620400] Player moved from (3,8) to (3,7)
-[2025-06-18T10:01:19.628737500] Added item: Power Potion
-[2025-06-18T10:01:19.642744500] Player moved from (3,7) to (4,7)
-[2025-06-18T10:01:21.094251400] Player moved from (4,7) to (4,6)
-[2025-06-18T10:01:22.563011900] Added item: Health Potion
-[2025-06-18T10:01:22.566006300] Player moved from (4,6) to (4,5)
-[2025-06-18T10:01:24.262150400] Player moved from (4,5) to (5,5)
-[2025-06-18T10:01:25.436839100] Player moved from (5,5) to (6,5)
-[2025-06-18T10:01:26.662465800] Added item: Health Potion
-[2025-06-18T10:01:26.664477900] Player moved from (6,5) to (7,5)
-[2025-06-18T10:01:28.223007900] Player moved from (7,5) to (7,6)
-[2025-06-18T10:01:29.276298700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-18T10:01:29.276298700] Dragon attacked for 15 damage.
-[2025-06-18T10:01:30.318397400] The enemy evaded the attack!
-[2025-06-18T10:01:30.318397400] Dragon attacked with a Critical hit! for 30 damage.
-[2025-06-18T10:01:31.392373800] SHIRA attacked the enemy for: 7 damage.
-[2025-06-18T10:01:31.392373800] Player evaded the enemy's attack!
-[2025-06-18T10:01:32.315164700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-18T10:01:32.315164700] Dragon attacked for 15 damage.
-[2025-06-18T10:01:33.081570600] SHIRA attacked the enemy for: 7 damage.
-[2025-06-18T10:01:33.081570600] Dragon attacked for 15 damage.
-[2025-06-18T10:01:59.277395900] Game started with player type: Mage and name: SHIRA
-[2025-06-18T10:02:02.365011700] Enemy moved to: (7,0)
-[2025-06-18T10:02:02.366002300] The orc attacked for: 15 damage.
-[2025-06-18T10:02:02.966601800] Goblin attacked for: 19 damage.
-[2025-06-18T10:02:04.375050900] The enemy evaded the attack!
-[2025-06-18T10:02:04.375050900] The orc attacked for: 15 damage.
-[2025-06-18T10:13:13.788801700] Game started with player type: Mage and name: SHIRA
-[2025-06-18T10:13:17.326258600] Enemy moved to: (5,1)
-[2025-06-18T10:13:18.241351500] The orc attacked for: 16 damage.
-[2025-06-18T10:13:18.620452700] Goblin attacked for: 16 damage.
-[2025-06-18T10:13:18.924051600] Enemy moved to: (8,2)
-[2025-06-18T10:13:19.143102100] Enemy moved to: (8,4)
-[2025-06-18T10:13:19.143102100] Goblin attacked for: 15 damage.
-[2025-06-18T10:13:19.143102100] Dragon attacked for 16 damage.
-[2025-06-18T10:13:22.282055500] SHIRA attacked the enemy for: 15 damage.
-[2025-06-18T10:13:22.282055500] Goblin attacked for: 15 damage.
-[2025-06-18T10:39:02.742943] Game started with player type: Archer and name: SHIRA
-[2025-06-18T10:39:06.003139400] Enemy moved to: (4,8)
-[2025-06-18T10:39:06.304232] Enemy moved to: (6,2)
-[2025-06-18T10:39:06.306218] Enemy moved to: (6,9)
-[2025-06-18T10:39:06.604795600] The orc attacked for: 13 damage.
-[2025-06-18T10:39:06.607808600] Enemy moved to: (7,5)
-[2025-06-18T10:39:06.908863700] Enemy tried to move out of bounds: (10,0)
-[2025-06-18T10:39:09.972775700] Player moved from (8,2) to (7,2)
-[2025-06-18T10:39:11.086358900] Orc received 6 damage from physical attack.
-[2025-06-18T10:39:11.086358900] SHIRA attacked the enemy for 6 damage.
-[2025-06-18T10:39:11.086358900] The orc attacked with Critical hit! for: 34 damage.
-[2025-06-18T10:39:12.225002300] Player moved from (7,2) to (7,3)
-[2025-06-18T10:49:15.630442500] Game started with player type: Warrior and name: shira
-[2025-06-18T10:49:17.226141200] Enemy moved to: (3,1)
-[2025-06-18T10:49:17.529213300] Enemy moved to: (3,4)
-[2025-06-18T10:49:18.456946800] Enemy moved to: (5,4)
-[2025-06-18T10:49:18.771914400] Enemy moved to: (6,4)
-[2025-06-18T10:49:19.234103300] Player moved from (0,1) to (0,2)
-[2025-06-18T10:49:22.826302500] Player moved from (0,2) to (1,2)
-[2025-06-18T10:49:24.216324500] Player moved from (1,2) to (2,2)
-[2025-06-18T10:49:25.327500500] Player moved from (2,2) to (3,2)
-[2025-06-18T10:49:26.477949300] Added item: Health Potion
-[2025-06-18T10:49:26.481948900] Player moved from (3,2) to (4,2)
-[2025-06-18T10:58:13.753293500] Game started with player type: Warrior and name: SHIRA
-[2025-06-18T10:58:15.979044200] Enemy moved to: (1,8)
-[2025-06-18T10:58:16.922438] Enemy moved to: (5,9)
-[2025-06-18T10:58:17.031463100] Added item: Health Potion
-[2025-06-18T10:58:17.102478900] Player moved from (9,1) to (9,2)
-[2025-06-18T10:58:17.224506100] Enemy moved to: (8,2)
-[2025-06-18T10:58:17.228507400] Enemy attacked SHIRA for: 26 damage, you received only 24
-[2025-06-18T10:58:17.229508200] Dragon attacked with a Critical hit! for 26 damage.
-[2025-06-18T10:58:17.532603400] Enemy moved to: (9,3)
-[2025-06-18T10:58:17.532603400] Enemy attacked SHIRA for: 21 damage, you received only 19
-[2025-06-18T10:58:17.532603400] Dragon attacked for 21 damage.
-[2025-06-18T10:58:17.954699300] The enemy evaded the attack!
-[2025-06-18T10:58:17.954699300] Player evaded the enemy's attack!
-[2025-06-18T10:58:21.568363900] Player moved from (9,2) to (9,1)
-[2025-06-18T10:58:22.319557700] Added item: Health Potion
-[2025-06-18T10:58:22.321558100] Player moved from (9,1) to (9,0)
-[2025-06-18T11:01:47.397468900] Game started with player type: Warrior and name: SHIRA
-[2025-06-18T11:01:49.283659800] Enemy moved to: (1,6)
-[2025-06-18T11:01:49.601830200] Enemy attacked SHIRA for: 14 damage, you received only 6
-[2025-06-18T11:01:49.601830200] Dragon attacked for 14 damage.
-[2025-06-18T11:01:49.980529900] Enemy attacked SHIRA for: 24 damage, you received only 11
-[2025-06-18T11:01:49.980529900] Goblin attacked for: 24 damage.
-[2025-06-18T11:01:50.201834700] Enemy moved to: (3,7)
-[2025-06-18T11:01:50.201834700] Enemy attacked SHIRA for: 19 damage, you received only 9
-[2025-06-18T11:01:50.202839] The orc attacked for: 19 damage.
-[2025-06-18T11:01:51.235026700] Orc received 54 damage from physical attack.
-[2025-06-18T11:01:51.235026700] SHIRA attacked with Critical hit! for 54 damage.
-[2025-06-18T11:01:51.235026700] Enemy is dead! You won the fight!
-[2025-06-18T11:01:52.364621700] SHIRA attacked the enemy for: 27 damage.
-[2025-06-18T11:01:52.364621700] Enemy attacked SHIRA for: 24 damage, you received only 11
-[2025-06-18T11:01:52.364621700] Goblin attacked for: 24 damage.
-[2025-06-18T11:01:52.391615800] Enemy moved to: (9,2)
-[2025-06-18T11:01:52.614170100] Enemy moved to: (9,5)
-[2025-06-18T11:10:25.730095200] Game started with player type: Warrior and name: SHIRA
-[2025-06-18T11:10:26.914323600] Enemy moved to: (0,1)
-[2025-06-18T11:10:28.126274500] Player moved from (5,6) to (5,7)
-[2025-06-18T11:10:28.454347600] Enemy moved to: (5,6)
-[2025-06-18T11:10:28.457344300] Enemy attacked SHIRA for: 17 damage, you received only 9
-[2025-06-18T11:10:28.457344300] The orc attacked for: 17 damage.
-[2025-06-18T11:10:28.860459600] Enemy attacked SHIRA for: 11 damage, you received only 6
-[2025-06-18T11:10:28.860459600] Dragon attacked for 11 damage.
-[2025-06-18T11:10:33.978657200] Player exited the game.
-[2025-06-18T11:15:52.329288900] Game started with player type: Warrior and name: SHIRA
-[2025-06-18T11:15:54.162987300] Enemy attacked SHIRA for: 15 damage, you received only 14
-[2025-06-18T11:15:54.162987300] Goblin attacked for: 15 damage.
-[2025-06-18T11:15:54.461295800] Enemy attacked SHIRA for: 22 damage, you received only 21
-[2025-06-18T11:15:54.461295800] Dragon attacked for 22 damage.
-[2025-06-18T11:15:55.110657] Enemy tried to move out of bounds: (6,10)
-[2025-06-18T11:15:56.075179400] Added item: Power Potion
-[2025-06-18T11:15:56.078188100] Player moved from (2,6) to (1,6)
-[2025-06-18T11:15:57.041975] Player moved from (1,6) to (1,7)
-[2025-06-18T11:16:01.798376800] Player exited the game.
+[2025-06-18T11:39:55.799764400] Game started with player type: Warrior and name: sdfgh
+[2025-06-18T11:39:56.766650600] Enemy tried to move out of bounds: (-1,3)
+[2025-06-18T11:39:57.674964500] Enemy moved to: (1,6)
+[2025-06-18T11:39:58.290110800] Enemy tried to move out of bounds: (4,10)
+[2025-06-18T11:39:58.590698500] Enemy moved to: (7,1)
+[2025-06-18T11:39:58.593699] Enemy attacked sdfgh for: 38 damage, you received only 22
+[2025-06-18T11:39:58.594702600] Dragon attacked with a Critical hit! for 38 damage.
+[2025-06-18T11:39:58.903683400] Enemy moved to: (6,4)
+[2025-06-18T11:39:58.903683400] Enemy attacked sdfgh for: 21 damage, you received only 12
+[2025-06-18T11:39:58.903683400] Goblin attacked for: 21 damage.
+[2025-06-18T11:39:59.204751500] Enemy moved to: (5,9)
+[2025-06-18T11:39:59.206752] Enemy attacked sdfgh for: 17 damage, you received only 10
+[2025-06-18T11:39:59.206752] Dragon attacked for 17 damage.
+[2025-06-18T11:39:59.509301700] Enemy attacked sdfgh for: 21 damage, you received only 12
+[2025-06-18T11:39:59.510289900] The orc attacked for: 21 damage.
+[2025-06-18T11:39:59.805862300] Enemy moved to: (8,8)
+[2025-06-18T11:40:01.658478400] sdfgh attacked the enemy for: 12 damage.
+[2025-06-18T11:40:01.659478400] Player evaded the enemy's attack!
+[2025-06-18T11:40:05.673028300] Player exited the game.
+[2025-06-18T11:43:29.245629300] Game started with player type: Warrior and name: Player
+[2025-06-18T11:43:30.367975200] Enemy tried to move out of bounds: (-1,0)
+[2025-06-18T11:43:30.672041400] Enemy moved to: (0,9)
+[2025-06-18T11:43:32.856339500] Enemy moved to: (9,2)
+[2025-06-18T11:43:32.859362400] Enemy attacked Player for: 8 damage, you received only 4
+[2025-06-18T11:43:32.859362400] Goblin attacked for: 8 damage.
+[2025-06-18T11:43:33.170432400] Enemy attacked Player for: 11 damage, you received only 5
+[2025-06-18T11:43:33.170432400] Dragon attacked for 11 damage.
+[2025-06-18T11:43:33.700606700] The enemy evaded the attack!
+[2025-06-18T11:43:33.700606700] Player evaded the enemy's attack!
+[2025-06-18T11:43:34.569292700] Added item: Health Potion
+[2025-06-18T11:43:34.572292700] Player moved from (9,1) to (8,1)
+[2025-06-18T11:43:40.059539300] Player exited the game.
+[2025-06-18T11:44:00.106183600] Game started with player type: Mage and name: Player
+[2025-06-18T11:44:01.596116700] Enemy moved to: (3,6)
+[2025-06-18T11:44:02.195952200] Enemy moved to: (4,5)
+[2025-06-18T11:44:02.195952200] Enemy moved to: (3,3)
+[2025-06-18T11:44:02.498027800] Enemy moved to: (4,4)
+[2025-06-18T11:44:03.741475500] The orc attacked for: 6 damage.
+[2025-06-18T11:44:03.741475500] The orc attacked for: 10 damage.
+[2025-06-18T11:44:07.998340400] Player exited the game.
+[2025-06-18T11:46:47.748607500] Game started with player type: Warrior and name: Player
+[2025-06-18T11:46:48.995101400] Enemy moved to: (4,1)
+[2025-06-18T11:46:48.998106200] Enemy attacked Player for: 21 damage, you received only 8
+[2025-06-18T11:46:48.998106200] Dragon attacked for 21 damage.
+[2025-06-18T11:46:49.308626600] Enemy attacked Player for: 14 damage, you received only 5
+[2025-06-18T11:46:49.308626600] Goblin attacked for: 14 damage.
+[2025-06-18T11:46:49.912947900] Enemy moved to: (8,4)
+[2025-06-18T11:46:50.568217800] Added item: Health Potion
+[2025-06-18T11:46:50.571219400] Player moved from (4,2) to (3,2)
+[2025-06-18T11:46:51.537341] Player moved from (3,2) to (2,2)
+[2025-06-18T11:46:52.314692500] Added item: Power Potion
+[2025-06-18T11:46:52.316697] Player moved from (2,2) to (1,2)
+[2025-06-18T11:46:53.407510400] Player moved from (1,2) to (1,3)
+[2025-06-18T11:46:57.788422] Player exited the game.
+[2025-06-18T11:50:38.049704500] Game started with player type: Mage and name: Player
+[2025-06-18T11:50:39.500181] Goblin attacked for: 19 damage.
+[2025-06-18T11:50:40.113228500] Enemy moved to: (2,8)
+[2025-06-18T11:50:41.069690900] Player moved from (2,6) to (2,7)
+[2025-06-18T11:50:41.315757400] Enemy moved to: (6,2)
+[2025-06-18T11:50:41.316757700] Enemy moved to: (7,6)
+[2025-06-18T11:50:41.917504400] Enemy moved to: (9,3)
+[2025-06-18T11:50:44.627515600] Added item: Health Potion
+[2025-06-18T11:50:44.632516500] Player moved from (2,7) to (1,7)
+[2025-06-18T11:50:48.813781900] Player exited the game.
+[2025-06-18T18:17:21.747379500] Game started with player type: Mage and name: SHIRA
+[2025-06-18T18:17:22.658337100] Dragon attacked with a Critical hit! for 26 damage.
+[2025-06-18T18:17:23.559300400] Enemy moved to: (2,4)
+[2025-06-18T18:17:23.575301500] Enemy moved to: (4,7)
+[2025-06-18T18:17:24.876467200] Player moved from (1,0) to (0,0)
+[2025-06-18T18:17:25.699222400] Player moved from (0,0) to (1,0)
+[2025-06-18T18:17:51.246853] Game started with player type: Mage and name: SHIRA
+[2025-06-18T18:17:52.180202300] Enemy tried to move out of bounds: (-1,6)
+[2025-06-18T18:17:52.180202300] Enemy tried to move out of bounds: (-1,5)
+[2025-06-18T18:17:52.491506500] Enemy moved to: (2,3)
+[2025-06-18T18:17:53.109238] The orc attacked for: 19 damage.
+[2025-06-18T18:17:53.406675] Enemy moved to: (5,2)
+[2025-06-18T18:17:53.707932900] Enemy moved to: (5,7)
+[2025-06-18T18:17:53.707932900] The orc attacked for: 16 damage.
+[2025-06-18T18:17:59.995773600] Added item: Power Potion
+[2025-06-18T18:18:00.008824500] Player moved from (4,7) to (4,6)
+[2025-06-18T18:18:01.195193900] Player moved from (4,6) to (4,5)
+[2025-06-18T18:18:02.102327200] Player moved from (4,5) to (5,5)
+[2025-06-18T18:18:02.939258] Player moved from (5,5) to (6,5)
+[2025-06-18T18:18:03.597845500] Added item: Health Potion
+[2025-06-18T18:18:03.599845400] Player moved from (6,5) to (6,6)
+[2025-06-18T18:18:04.497989300] Player moved from (6,6) to (6,7)
+[2025-06-18T18:18:05.365562200] Added item: Health Potion
+[2025-06-18T18:18:05.367555600] Player moved from (6,7) to (7,7)
+[2025-06-18T18:18:14.779342200] Player moved from (7,7) to (6,7)
+[2025-06-18T18:18:15.845990700] Player moved from (6,7) to (6,6)
+[2025-06-18T18:18:16.653224600] Player moved from (6,6) to (5,6)
+[2025-06-18T18:18:17.409061400] Player moved from (5,6) to (4,6)
+[2025-06-18T18:18:18.087187700] Player moved from (4,6) to (4,7)
+[2025-06-18T18:18:19.033568800] Player moved from (4,7) to (3,7)
+[2025-06-18T18:18:19.690817400] Player moved from (3,7) to (2,7)
+[2025-06-18T18:18:20.336724600] Added item: Health Potion
+[2025-06-18T18:18:20.339725700] Player moved from (2,7) to (2,6)

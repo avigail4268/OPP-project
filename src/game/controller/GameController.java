@@ -310,6 +310,10 @@ public class GameController {
 
     }
 
+    public void refresh(){
+        frame.refresh();
+    }
+
 // --- Fields ---
 /**
  * Tile size in pixels.

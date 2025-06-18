@@ -51,7 +51,7 @@ public class GameOriginator {
     public void setEnemies(List<Enemy> enemies) {
         this.enemies = new ArrayList<>();
         for (Enemy enemy : enemies) {
-            this.enemies.add((Enemy) enemy.deepCopy());
+            this.enemies.add((Enemy)enemy.deepCopy());
         }
 
     }

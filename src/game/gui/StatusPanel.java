@@ -3,6 +3,9 @@ package game.gui;
 
 import game.audio.SoundPlayer;
 import game.characters.PlayerCharacter;
+import game.engine.GameWorld;
+import game.gameSaver.GameCaretaker;
+import game.gameSaver.GameMemento;
 import game.items.GameItem;
 import game.observer.GameObserver;
 
@@ -21,8 +24,9 @@ public class StatusPanel extends JPanel implements GameObserver {
      * Constructs a StatusPanel for the given player.
      * @param player The player character whose status will be displayed
      */
-    public StatusPanel(PlayerCharacter player) {
+    public StatusPanel(PlayerCharacter player , GameWorld world) {
         this.player = player;
+        this.world = world;
 
         // Set layout and basic properties
         setLayout(new BorderLayout());
@@ -65,6 +69,32 @@ public class StatusPanel extends JPanel implements GameObserver {
         // Add components to main layout
         add(topPanel, BorderLayout.NORTH);
         add(inventoryScroll, BorderLayout.CENTER);
+
+        JPanel buttonsPanel = new JPanel();
+        buttonsPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+        save = new JButton("Save");
+        load= new JButton("Load");
+
+        buttonsPanel.add(save);
+        buttonsPanel.add(load);
+        // Add buttons panel to the bottom
+        add(buttonsPanel, BorderLayout.SOUTH);
+        save.addActionListener(e -> {
+            GameCaretaker.getInstance().save(world);
+            JOptionPane.showMessageDialog(this, "Game saved!", "Save", JOptionPane.INFORMATION_MESSAGE);
+        });
+
+        load.addActionListener(e -> {
+           GameMemento memento = GameCaretaker.getInstance().load();
+            if (memento != null) {
+                world.restoreFromMemento(memento);
+                JOptionPane.showMessageDialog(this, "Game loaded!", "Load", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "No saved game found.", "Load", JOptionPane.WARNING_MESSAGE);
+            }
+            world.getController().refresh();
+        });
     }
 
     /**
@@ -127,6 +157,7 @@ public class StatusPanel extends JPanel implements GameObserver {
         }
     }
 
+
     /**
      * Called when the game state is updated. Refreshes the panel.
      */
@@ -152,4 +183,8 @@ public class StatusPanel extends JPanel implements GameObserver {
     private JScrollPane inventoryScroll;
     /** The player character whose status this panel displays. */
     private PlayerCharacter player;
+    private GameWorld world;
+    private JButton save;
+    private JButton load ;
+
 }

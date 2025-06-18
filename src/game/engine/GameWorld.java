@@ -4,6 +4,7 @@ import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
 import game.core.GameEntity;
+import game.gameSaver.GameMemento;
 import game.items.*;
 import game.log.LogManager;
 import game.map.GameMap;
@@ -45,9 +46,21 @@ public class GameWorld {
         populateGameMap();
     }
 
-    public GameWorld() {
-
+    public GameWorld(GameMap map, List<Enemy> enemies, List<GameItem> items, PlayerCharacter player) {
+        System.out.println("Creating a new world");
+        this.map = map;
+        this.players = new ArrayList<>();
+        this.players.add(player); // הוספת השחקן לרשימת השחקנים
+        this.enemies = enemies;
+        this.items = items;
+        this.enemyTasks = new ArrayList<>();
+        int N = (int) (map.getSize() * map.getSize() * 0.03);
+        if (N > 10)
+            N = 10;
+        this.enemyExecutor = Executors.newFixedThreadPool(N);
+        LogManager.startLogger();
     }
+
 
     /**
      * Creates and adds a player of the selected type to a random empty position on the map.
@@ -214,7 +227,7 @@ public class GameWorld {
         Position playerPos = getPlayer().getPosition();
         Position newPos = new Position(row, col);
         int distance = playerPos.distanceTo(newPos);
-        return distance <= 15;
+        return distance <= 2;
     }
 
     public List<EnemyTask> getEnemyTasks() {
@@ -349,6 +362,14 @@ public class GameWorld {
         return isGameRunning;
     }
 
+    public void restoreFromMemento(GameMemento memento) {
+        this.players.add(memento.getPlayer());
+        this.map = memento.getGameMap();
+        this.enemies = memento.getEnemies();
+        this.items = memento.getItems();
+
+        // אם צריך לעדכן listeners, controller וכו'
+    }
 
 
     // --- Fields ---
