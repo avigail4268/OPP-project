@@ -22,38 +22,7 @@ public class GameSetUp {
         // Constructor can be used for any necessary initialization
     }
 
-//    public void start() {
-//
-//        SwingUtilities.invokeLater(() -> {
-//
-//            int size = askMapSize();
-//            // Get map size from user
-//            int playerType = askPlayerType() + 1;
-//            MagicElement element = null;
-//            if ( playerType == 2 ) {
-//                 element = askElementType();       // Get player class (adjusted to internal format)
-//            }
-//            Map<String, Integer> attributes;
-//            boolean includeDefense = playerType == 3;
-//            attributes = askPlayerStatChanges(includeDefense);
-//            String name = askPlayerName();                // Get player name
-//
-//            GameWorld world = new GameWorld(size, playerType, name, attributes,element); // Initialize game world with user settings
-//            int panelSize = 640;                          // Fixed size of display panel
-//            int tileSize = panelSize / size;              // Tile size determined dynamically
-//
-//            GameController controller = new GameController(world);
-//            controller.setTileSize(tileSize);
-//            world.setController(controller);
-//
-//            GameFrame frame = new GameFrame(controller);  // Set up GUI frame
-//            controller.setFrame(frame);
-//
-//            showAutoClosingWelcome(name);                 // Show welcome message
-//            world.startEnemyTask();                       // Start enemy AI tasks
-//            frame.setVisible(true);                       // Display GUI
-//        });
-//    }
+
 public void start() {
     SwingUtilities.invokeLater(() -> {
 
