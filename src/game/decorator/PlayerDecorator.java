@@ -44,4 +44,5 @@ public abstract class PlayerDecorator extends PlayerCharacter {
     public PlayerCharacter getDecoratorPlayer() {
         return decoratorPlayer;
     }
+
 }

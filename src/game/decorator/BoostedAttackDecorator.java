@@ -14,11 +14,9 @@ public class BoostedAttackDecorator extends PlayerDecorator {
 
     @Override
     public void attack(Combatant target) {
-        int targetHealthBefore = target.getHealth();
-        super.attack(target);
-        int currentDamage = targetHealthBefore - target.getHealth();
+        int currentDamage = target.getHealth();
         if (currentDamage > 0) {
-            target.setHealth(target.getHealth() - extraDamage);
+            target.receiveDamage(getDecoratorPlayer().getPower() + extraDamage , this);
             System.out.println("[BoostedAttackDecorator] Bonus damage: " + extraDamage);
         }
     }
