@@ -1,4 +1,5 @@
 package game.engine;
+
 import game.combat.MagicElement;
 import game.controller.GameController;
 import game.characters.*;
@@ -9,12 +10,14 @@ import game.items.*;
 import game.log.LogManager;
 import game.map.GameMap;
 import game.map.Position;
+
 import java.util.Map;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
 
 import game.observer.GameObserver;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,22 +30,23 @@ public class GameWorld {
 
     /**
      * Constructs a new GameWorld with a given map size, player type, and player name.
+     *
      * @param size       the size of the game map (NxN)
      * @param playerType the type of player: 1-Warrior, 2-Mage, 3-Archer
      * @param playerName the name of the player character
      */
-    public GameWorld(int size, int playerType, String playerName, Map <String, Integer> attributes, MagicElement element) {
+    public GameWorld(int size, int playerType, String playerName, Map<String, Integer> attributes, MagicElement element) {
         this.map = GameMap.getInstance(size);
         this.players = new ArrayList<>();
         this.enemies = new ArrayList<>();
         this.items = new ArrayList<>();
         this.enemyTasks = new ArrayList<>();
-        int N = (int) (map.getSize()* map.getSize()*0.03);
-        if (N > 10 )
+        int N = (int) (map.getSize() * map.getSize() * 0.03);
+        if (N > 10)
             N = 10;
         this.enemyExecutor = Executors.newFixedThreadPool(N);
         LogManager.startLogger();
-        createPlayer(playerType, playerName,attributes,element);
+        createPlayer(playerType, playerName, attributes, element);
         populateGameMap();
     }
 
@@ -64,10 +68,11 @@ public class GameWorld {
 
     /**
      * Creates and adds a player of the selected type to a random empty position on the map.
+     *
      * @param playerType the selected player type (1-3)
      * @param playerName the name of the player
      */
-    private void createPlayer(int playerType, String playerName, Map <String, Integer> attributes, MagicElement element) {
+    private void createPlayer(int playerType, String playerName, Map<String, Integer> attributes, MagicElement element) {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
         player = playerFactory.createPlayerFactory(playerType, playerName, pos, attributes, element);
@@ -100,6 +105,7 @@ public class GameWorld {
     /**
      * Creates and places an enemy at the specified position.
      * The type of enemy is randomly selected from Dragon, Orc, or Goblin.
+     *
      * @param pos the position to place the enemy
      */
     public void createEnemy(Position pos) {
@@ -110,6 +116,7 @@ public class GameWorld {
 
     /**
      * Creates and places a health potion.
+     *
      * @param pos the position to place the potion
      */
     private void createPotion(Position pos) {
@@ -120,6 +127,7 @@ public class GameWorld {
 
     /**
      * Creates and places a power potion.
+     *
      * @param pos the position to place the power potion
      */
     private void createPowerPotion(Position pos) {
@@ -130,6 +138,7 @@ public class GameWorld {
 
     /**
      * Creates and places a wall.
+     *
      * @param pos the position to place the wall
      */
     private void createWall(Position pos) {
@@ -140,8 +149,9 @@ public class GameWorld {
 
     /**
      * Checks if a player's move from one position to another is valid.
-     * @param from   the original position
-     * @param to     the intended new position
+     *
+     * @param from the original position
+     * @param to   the intended new position
      * @return true if the move is valid, false otherwise
      */
     public boolean isValidMove(Position from, Position to) {
@@ -243,7 +253,9 @@ public class GameWorld {
         this.controller = controller;
     }
 
-    public void setMap(GameMap map) {this.map = map;}
+    public void setMap(GameMap map) {
+        this.map = map;
+    }
 
     public GameController getController() {
         return controller;
@@ -294,14 +306,18 @@ public class GameWorld {
     }
 
     public void restoreFromMemento(GameMemento memento) {
-        movePlayerTo(memento.getPlayer().getPosition());
+
+        PlayerCharacter oldPlayer = getPlayer();
+        map.removeFromGrid(oldPlayer.getPosition(), oldPlayer);
         this.players.clear();
         this.players.add(memento.getPlayer());
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
         this.map.setGrid(memento.getGameMap().copyGrid());
+        map.addToGrid(memento.getPlayer().getPosition(), memento.getPlayer());
         this.controller.refresh();
     }
+
 
     // --- Fields ---
     // Map for locking specific positions in the game world
@@ -323,7 +339,6 @@ public class GameWorld {
     private final AtomicBoolean isGameRunning = new AtomicBoolean(true);
     private final PlayerFactory playerFactory = new PlayerFactory();
     private final EnemyFactory enemyFactory = new EnemyFactory();
-
 
 
 }

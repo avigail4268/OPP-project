@@ -14,29 +14,30 @@ public abstract class PlayerDecorator extends PlayerCharacter {
      * @param health     the initial health of the player
      */
 
-    private PlayerCharacter player ;
+    private final PlayerCharacter decoratorPlayer ;
 
     public PlayerDecorator(PlayerCharacter player) {
         super(player);
+        decoratorPlayer = player;
     }
 
     @Override
     public String getDisplaySymbol() {
-        return "";
+        return decoratorPlayer.getDisplaySymbol();
     }
 
     @Override
     public GameEntity deepCopy() {
-        return null;
+        return decoratorPlayer.deepCopy();
     }
 
     @Override
     public void attack(Combatant target) {
-
+        decoratorPlayer.attack(target);
     }
 
     @Override
     public boolean isInRange(Position self, Position target) {
-        return false;
+        return decoratorPlayer.isInRange(self, target);
     }
 }

@@ -1220,3 +1220,77 @@
 [2025-06-19T12:03:40.798844100] The orc attacked for: 12 damage.
 [2025-06-19T12:03:41.156772500] The enemy evaded the attack!
 [2025-06-19T12:03:41.156772500] The orc attacked for: 12 damage.
+[2025-06-19T12:22:43.343427900] Game started with player type: Warrior and name: Player
+[2025-06-19T12:22:43.889620600] Enemy moved to: (0,6)
+[2025-06-19T12:22:44.821511500] Enemy attacked Player for: 5 damage, you received only 4
+[2025-06-19T12:22:44.821511500] Dragon attacked for 5 damage.
+[2025-06-19T12:22:45.312573700] Player moved from (3,4) to (3,5)
+[2025-06-19T12:22:45.446585500] Enemy moved to: (6,3)
+[2025-06-19T12:22:45.508023800] Enemy moved to: (8,7)
+[2025-06-19T12:22:45.747624] Enemy moved to: (9,7)
+[2025-06-19T12:22:45.874555700] Player moved from (3,5) to (3,6)
+[2025-06-19T12:22:46.322641800] Player moved from (3,6) to (4,6)
+[2025-06-19T12:22:51.384115500] Cannot move through wall at (5,6)
+[2025-06-19T12:22:51.867789400] Player moved from (4,6) to (4,7)
+[2025-06-19T12:22:52.245569400] Player moved from (4,7) to (5,7)
+[2025-06-19T12:22:52.953583300] Added item: Health Potion
+[2025-06-19T12:22:52.968917300] Player moved from (5,7) to (6,7)
+[2025-06-19T12:22:54.737257100] Player moved from (6,7) to (5,7)
+[2025-06-19T12:22:55.234780] Player moved from (5,7) to (4,7)
+[2025-06-19T12:22:55.484827600] Player moved from (4,7) to (4,6)
+[2025-06-19T12:23:02.414171500] Player moved from (4,6) to (4,7)
+[2025-06-19T12:23:02.682962800] Player moved from (4,7) to (5,7)
+[2025-06-19T12:23:02.917885700] Player moved from (5,7) to (6,7)
+[2025-06-19T12:23:03.074167500] Player moved from (6,7) to (7,7)
+[2025-06-19T12:23:03.276818] Player attacked the enemy for: 13 damage.
+[2025-06-19T12:23:03.276818] Player evaded the enemy's attack!
+[2025-06-19T12:32:22.700301700] Game started with player type: Warrior and name: Player
+[2025-06-19T12:32:23.629412300] Enemy moved to: (2,8)
+[2025-06-19T12:32:24.808797400] Player moved from (1,7) to (1,6)
+[2025-06-19T12:32:25.178269900] Player moved from (1,6) to (1,5)
+[2025-06-19T12:32:25.802135500] Player moved from (1,5) to (2,5)
+[2025-06-19T12:32:26.773921300] Player moved from (2,5) to (3,5)
+[2025-06-19T12:32:40.799516500] Added item: Health Potion
+[2025-06-19T12:32:40.803392500] Player moved from (3,5) to (3,6)
+[2025-06-19T12:32:42.342503700] Added item: Health Potion
+[2025-06-19T12:32:42.345506] Player moved from (3,6) to (2,6)
+[2025-06-19T12:32:42.810792] Player moved from (2,6) to (2,5)
+[2025-06-19T12:32:43.005940400] Player moved from (2,5) to (2,4)
+[2025-06-19T12:32:43.214386700] Added item: Health Potion
+[2025-06-19T12:32:43.217391800] Player moved from (2,4) to (2,3)
+[2025-06-19T12:32:43.842194] Player moved from (2,3) to (2,2)
+[2025-06-19T12:32:44.231875400] Player moved from (2,2) to (3,2)
+[2025-06-19T12:32:52.084356800] Player moved from (3,2) to (4,2)
+[2025-06-19T12:32:52.332386700] Player moved from (4,2) to (4,3)
+[2025-06-19T12:32:52.960354600] Player moved from (4,3) to (4,4)
+[2025-06-19T12:32:53.665379600] Orc received 9 damage from physical attack.
+[2025-06-19T12:32:53.665379600] Player attacked the enemy for: 9 damage.
+[2025-06-19T12:32:53.670383] Enemy attacked Player for: 4 damage, you received only 3
+[2025-06-19T12:32:53.670383] The orc attacked for: 4 damage.
+[2025-06-19T12:32:53.902436200] Orc received 9 damage from physical attack.
+[2025-06-19T12:32:53.903445] Player attacked the enemy for: 9 damage.
+[2025-06-19T12:32:53.903445] Enemy attacked Player for: 8 damage, you received only 7
+[2025-06-19T12:32:53.903445] The orc attacked with Critical hit! for: 8 damage.
+[2025-06-19T12:32:54.120482700] The enemy evaded the attack!
+[2025-06-19T12:32:54.120482700] Enemy attacked Player for: 4 damage, you received only 3
+[2025-06-19T12:32:54.120482700] The orc attacked for: 4 damage.
+[2025-06-19T12:32:54.306518600] The enemy evaded the attack!
+[2025-06-19T12:32:54.306518600] Player evaded the enemy's attack!
+[2025-06-19T12:33:05.740898900] Player moved from (4,4) to (5,4)
+[2025-06-19T12:33:06.599080600] Player moved from (5,4) to (5,3)
+[2025-06-19T12:33:07.236489400] Player moved from (5,3) to (6,3)
+[2025-06-19T12:33:32.811407800] Player moved from (4,4) to (4,3)
+[2025-06-19T12:33:33.617897800] Player moved from (4,3) to (5,3)
+[2025-06-19T12:33:34.470309] Player moved from (5,3) to (5,4)
+[2025-06-19T12:33:35.121965] Player moved from (5,4) to (4,4)
+[2025-06-19T12:33:35.531331500] Player moved from (4,4) to (4,3)
+[2025-06-19T12:33:35.849775500] Added item: Power Potion
+[2025-06-19T12:33:35.852784200] Player moved from (4,3) to (3,3)
+[2025-06-19T12:33:37.409219200] Player moved from (3,3) to (3,2)
+[2025-06-19T12:33:37.828305700] Player moved from (3,2) to (4,2)
+[2025-06-19T12:33:38.251463600] Player moved from (4,2) to (4,3)
+[2025-06-19T12:33:38.420534] Player moved from (4,3) to (4,4)
+[2025-06-19T12:33:38.604864700] Player attacked with Critical hit! for 18 damage.
+[2025-06-19T12:33:38.604864700] Enemy attacked Player for: 22 damage, you received only 21
+[2025-06-19T12:33:38.605867900] Dragon attacked with a Critical hit! for 22 damage.
+[2025-06-19T12:33:38.934378600] Player moved from (4,4) to (5,4)
