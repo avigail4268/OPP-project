@@ -40,4 +40,8 @@ public abstract class PlayerDecorator extends PlayerCharacter {
     public boolean isInRange(Position self, Position target) {
         return decoratorPlayer.isInRange(self, target);
     }
+
+    public PlayerCharacter getDecoratorPlayer() {
+        return decoratorPlayer;
+    }
 }

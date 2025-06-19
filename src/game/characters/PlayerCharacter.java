@@ -136,6 +136,11 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         return 100;
     }
 
+    public boolean isMagicUser() {
+        return false;
+    }
+
+
     // --- Fields ---
     /**
      * The name of the player character.

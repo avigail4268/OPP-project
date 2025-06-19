@@ -1294,3 +1294,178 @@
 [2025-06-19T12:33:38.604864700] Enemy attacked Player for: 22 damage, you received only 21
 [2025-06-19T12:33:38.605867900] Dragon attacked with a Critical hit! for 22 damage.
 [2025-06-19T12:33:38.934378600] Player moved from (4,4) to (5,4)
+[2025-06-19T15:34:26.972459800] Game started with player type: Warrior and name: SHIRA
+[2025-06-19T15:34:29.620177800] Enemy moved to: (9,0)
+[2025-06-19T15:34:29.623164400] Enemy attacked SHIRA for: 11 damage, you received only 7
+[2025-06-19T15:34:29.623164400] Goblin attacked for: 11 damage.
+[2025-06-19T15:34:29.919553300] Enemy attacked SHIRA for: 12 damage, you received only 8
+[2025-06-19T15:34:29.920269200] The orc attacked for: 12 damage.
+[2025-06-19T15:34:30.298798800] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:34:30.298798800] Goblin attacked for: 7 damage.
+[2025-06-19T15:34:30.849496400] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:30.849496400] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:30.849496400] Enemy attacked SHIRA for: 12 damage, you received only 8
+[2025-06-19T15:34:30.849496400] The orc attacked for: 12 damage.
+[2025-06-19T15:34:31.420201900] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:31.421226200] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:31.421226200] Player evaded the enemy's attack!
+[2025-06-19T15:34:31.955366500] The enemy evaded the attack!
+[2025-06-19T15:34:31.956391] Enemy attacked SHIRA for: 24 damage, you received only 17
+[2025-06-19T15:34:31.956391] The orc attacked with Critical hit! for: 24 damage.
+[2025-06-19T15:34:32.442752100] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:32.442752100] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:32.442752100] Enemy attacked SHIRA for: 12 damage, you received only 8
+[2025-06-19T15:34:32.442752100] The orc attacked for: 12 damage.
+[2025-06-19T15:34:32.945944800] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:32.945944800] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:32.945944800] Enemy attacked SHIRA for: 12 damage, you received only 8
+[2025-06-19T15:34:32.945944800] The orc attacked for: 12 damage.
+[2025-06-19T15:34:33.354136300] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:33.354136300] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:33.354136300] Enemy attacked SHIRA for: 12 damage, you received only 8
+[2025-06-19T15:34:33.354136300] The orc attacked for: 12 damage.
+[2025-06-19T15:34:33.827222500] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:33.827222500] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:33.827222500] Player evaded the enemy's attack!
+[2025-06-19T15:34:34.395197300] The enemy evaded the attack!
+[2025-06-19T15:34:34.395197300] Player evaded the enemy's attack!
+[2025-06-19T15:34:34.878868700] Orc received 7 damage from physical attack.
+[2025-06-19T15:34:34.878868700] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:34.878868700] Enemy is dead! You won the fight!
+[2025-06-19T15:34:35.402372] Added item: Health Potion
+[2025-06-19T15:34:35.405376300] Player moved from (9,1) to (8,1)
+[2025-06-19T15:34:35.976086] Player moved from (8,1) to (7,1)
+[2025-06-19T15:34:36.354525400] Added item: Health Potion
+[2025-06-19T15:34:36.356529400] Player moved from (7,1) to (6,1)
+[2025-06-19T15:34:36.807803100] Player moved from (6,1) to (6,2)
+[2025-06-19T15:34:37.116576500] Added item: Health Potion
+[2025-06-19T15:34:37.118566200] Player moved from (6,2) to (6,3)
+[2025-06-19T15:34:38.993833500] Potion used!
+[2025-06-19T15:34:38.993833500] Removed item: Health Potion
+[2025-06-19T15:34:38.993833500] Health was 33 now is 66
+[2025-06-19T15:34:38.993833500] SHIRA used a potion and healed 33 HP!
+[2025-06-19T15:34:39.481513100] Potion used!
+[2025-06-19T15:34:39.481513100] Removed item: Health Potion
+[2025-06-19T15:34:39.481513100] Health was 66 now is 94
+[2025-06-19T15:34:39.481513100] SHIRA used a potion and healed 28 HP!
+[2025-06-19T15:34:40.559296900] Player moved from (6,3) to (5,3)
+[2025-06-19T15:34:41.053227500] Player moved from (5,3) to (5,4)
+[2025-06-19T15:34:41.307546200] Added item: Health Potion
+[2025-06-19T15:34:41.309531500] Player moved from (5,4) to (5,5)
+[2025-06-19T15:34:44.630521] Added item: Health Potion
+[2025-06-19T15:34:44.632511200] Player moved from (5,5) to (5,6)
+[2025-06-19T15:34:45.835723200] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:45.836749400] Player evaded the enemy's attack!
+[2025-06-19T15:34:46.304451700] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:34:46.304451700] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:34:46.305455400] Dragon attacked for 7 damage.
+[2025-06-19T15:34:46.857897700] The enemy evaded the attack!
+[2025-06-19T15:34:46.857897700] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:34:46.857897700] Dragon attacked for 7 damage.
+[2025-06-19T15:34:50.276877] Added item: Health Potion
+[2025-06-19T15:34:50.278869300] Player moved from (5,6) to (5,7)
+[2025-06-19T15:34:55.751551900] Player moved from (5,7) to (6,7)
+[2025-06-19T15:34:56.210746400] Player moved from (6,7) to (7,7)
+[2025-06-19T15:34:58.442647400] Player moved from (7,7) to (7,6)
+[2025-06-19T15:34:58.782141500] Added item: Health Potion
+[2025-06-19T15:34:58.784131600] Player moved from (7,6) to (8,6)
+[2025-06-19T15:35:05.528187700] Added item: Health Potion
+[2025-06-19T15:35:05.530194900] Player moved from (5,7) to (4,7)
+[2025-06-19T15:35:08.104932400] Player moved from (4,7) to (5,7)
+[2025-06-19T15:35:08.811668800] Player moved from (5,7) to (6,7)
+[2025-06-19T15:35:09.295596100] Added item: Health Potion
+[2025-06-19T15:35:09.296585] Player moved from (6,7) to (6,8)
+[2025-06-19T15:35:10.053336500] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:10.053336500] Enemy attacked SHIRA for: 8 damage, you received only 5
+[2025-06-19T15:35:10.053336500] Goblin attacked for: 8 damage.
+[2025-06-19T15:35:10.351597500] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:10.352597400] Enemy attacked SHIRA for: 16 damage, you received only 11
+[2025-06-19T15:35:10.352597400] Goblin attack with Critical hit! for: 16 damage.
+[2025-06-19T15:35:10.540613400] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:10.540613400] Enemy attacked SHIRA for: 8 damage, you received only 5
+[2025-06-19T15:35:10.540613400] Goblin attacked for: 8 damage.
+[2025-06-19T15:35:10.721159200] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:10.721159200] Enemy attacked SHIRA for: 8 damage, you received only 5
+[2025-06-19T15:35:10.721159200] Goblin attacked for: 8 damage.
+[2025-06-19T15:35:10.880551800] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:10.880551800] Enemy attacked SHIRA for: 8 damage, you received only 5
+[2025-06-19T15:35:10.880551800] Goblin attacked for: 8 damage.
+[2025-06-19T15:35:11.054309400] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:11.054309400] Enemy attacked SHIRA for: 8 damage, you received only 5
+[2025-06-19T15:35:11.054309400] Goblin attacked for: 8 damage.
+[2025-06-19T15:35:11.183465700] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:11.183465700] Enemy is dead! You won the fight!
+[2025-06-19T15:35:11.383279300] Collected 183 treasure points!
+[2025-06-19T15:35:11.385288500] Player moved from (6,8) to (7,8)
+[2025-06-19T15:35:12.414339700] Player moved from (7,8) to (7,7)
+[2025-06-19T15:35:13.471769500] Player moved from (7,7) to (7,8)
+[2025-06-19T15:35:13.794785700] Added item: Health Potion
+[2025-06-19T15:35:13.796799900] Player moved from (7,8) to (8,8)
+[2025-06-19T15:35:15.480552100] Potion used!
+[2025-06-19T15:35:15.481556400] Removed item: Health Potion
+[2025-06-19T15:35:15.481556400] Health was 48 now is 76
+[2025-06-19T15:35:15.481556400] SHIRA used a potion and healed 28 HP!
+[2025-06-19T15:35:15.885375300] Potion used!
+[2025-06-19T15:35:15.885375300] Removed item: Health Potion
+[2025-06-19T15:35:15.885375300] Health was 76 now is 99
+[2025-06-19T15:35:15.885375300] SHIRA used a potion and healed 23 HP!
+[2025-06-19T15:35:16.139729900] Potion used!
+[2025-06-19T15:35:16.139729900] Removed item: Health Potion
+[2025-06-19T15:35:16.139729900] Health was 99 now is 100
+[2025-06-19T15:35:16.140728200] SHIRA used a potion and healed 13 HP!
+[2025-06-19T15:35:16.517620500] Potion used!
+[2025-06-19T15:35:16.517620500] Removed item: Health Potion
+[2025-06-19T15:35:16.517620500] Health was 100 now is 100
+[2025-06-19T15:35:16.517620500] SHIRA used a potion and healed 32 HP!
+[2025-06-19T15:35:17.805577700] Potion used!
+[2025-06-19T15:35:17.805577700] Removed item: Health Potion
+[2025-06-19T15:35:17.805577700] Health was 100 now is 100
+[2025-06-19T15:35:17.805577700] SHIRA used a potion and healed 17 HP!
+[2025-06-19T15:35:18.893266100] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:18.893266100] Player evaded the enemy's attack!
+[2025-06-19T15:35:19.066946100] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.066946100] Player evaded the enemy's attack!
+[2025-06-19T15:35:19.221893900] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.221893900] Enemy attacked SHIRA for: 5 damage, you received only 3
+[2025-06-19T15:35:19.221893900] Goblin attacked for: 5 damage.
+[2025-06-19T15:35:19.385615300] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.386627700] Enemy attacked SHIRA for: 5 damage, you received only 3
+[2025-06-19T15:35:19.386627700] Goblin attacked for: 5 damage.
+[2025-06-19T15:35:19.549951600] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.549951600] Player evaded the enemy's attack!
+[2025-06-19T15:35:19.699441300] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.700467800] Enemy attacked SHIRA for: 5 damage, you received only 3
+[2025-06-19T15:35:19.700467800] Goblin attacked for: 5 damage.
+[2025-06-19T15:35:19.929261800] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:19.929261800] Enemy attacked SHIRA for: 10 damage, you received only 7
+[2025-06-19T15:35:19.929261800] Goblin attack with Critical hit! for: 10 damage.
+[2025-06-19T15:35:20.312521700] SHIRA attacked with Critical hit! for 14 damage.
+[2025-06-19T15:35:20.312521700] Enemy is dead! You won the fight!
+[2025-06-19T15:35:20.720660500] Collected 166 treasure points!
+[2025-06-19T15:35:20.722673700] Player moved from (8,8) to (8,7)
+[2025-06-19T15:35:21.847594500] Player moved from (8,7) to (8,6)
+[2025-06-19T15:35:22.360104800] Added item: Health Potion
+[2025-06-19T15:35:22.362124800] Player moved from (8,6) to (9,6)
+[2025-06-19T15:35:22.983319] Player moved from (9,6) to (8,6)
+[2025-06-19T15:35:23.312135200] Player moved from (8,6) to (7,6)
+[2025-06-19T15:35:23.671879300] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:23.671879300] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:35:23.671879300] Dragon attacked for 7 damage.
+[2025-06-19T15:35:23.920063700] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:23.920063700] Player evaded the enemy's attack!
+[2025-06-19T15:35:24.125216500] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:24.125216500] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:35:24.125216500] Dragon attacked for 7 damage.
+[2025-06-19T15:35:24.509015800] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:24.509015800] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:35:24.509015800] Dragon attacked for 7 damage.
+[2025-06-19T15:35:24.728155300] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:24.728155300] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:35:24.728155300] Dragon attacked for 7 damage.
+[2025-06-19T15:35:24.973259900] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:24.973259900] Enemy attacked SHIRA for: 7 damage, you received only 5
+[2025-06-19T15:35:24.973259900] Dragon attacked for 7 damage.
+[2025-06-19T15:35:25.440487] SHIRA attacked the enemy for: 7 damage.
+[2025-06-19T15:35:25.440487] Enemy is dead! You won the fight!
+[2025-06-19T15:35:25.855427400] Collected 166 treasure points!
+[2025-06-19T15:35:25.856414900] Game ended
