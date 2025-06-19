@@ -3,11 +3,9 @@ package game.gameSaver;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.core.GameEntity;
-import game.engine.GameWorld;
 import game.items.GameItem;
 import game.map.GameMap;
 import game.map.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -27,25 +25,9 @@ public class GameOriginator {
         this.player = (PlayerCharacter) player.deepCopy();
     }
 
-    public GameMap getGameMap() {
-        return gameMap;
-    }
-
-//    public void setGameMap( GameMap gameMap ) {
-//        GameMap.getInstance(gameMap.getSize()).setGrid(savedGrid);
-//    }
     public void setGameMap(GameMap map) {
-        this.gameMap = GameMap.getInstance(map.getSize()); // שומרת את האינסטנס בגודל הנכון
-        this.savedGrid = map.copyGrid(); // מעתיקה את תוכן הגריד
-    }
-
-
-//    public void setGrid(GameMap gameMap) {
-//        this.savedGrid = gameMap.copyGrid();
-//    }
-
-    public List<Enemy> getEnemies() {
-        return enemies;
+        this.gameMap = GameMap.getInstance(map.getSize());
+        this.savedGrid = map.copyGrid();
     }
 
     public void setEnemies(List<Enemy> enemies) {

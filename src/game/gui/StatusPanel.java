@@ -93,7 +93,6 @@ public class StatusPanel extends JPanel implements GameObserver {
             } else {
                 JOptionPane.showMessageDialog(this, "No saved game found.", "Load", JOptionPane.WARNING_MESSAGE);
             }
-            world.getController().refresh();
         });
     }
 

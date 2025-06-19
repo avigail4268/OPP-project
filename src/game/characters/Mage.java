@@ -29,8 +29,12 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     public PlayerCharacter deepCopy() {
         Mage mage = new Mage(this.getName(), this.getPosition(), this.getHealth());
         mage.setElement(this.element);
+        mage.setPower(this.getPower());
+        mage.setInventory(this.getInventory().deepCopy());
+        mage.setTreasurePoints(this.getTreasurePoints());
         return mage;
     }
+
 
     /**
      * Returns the symbol representing the Mage.

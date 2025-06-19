@@ -68,12 +68,12 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      * @param amount the amount to add to power
      * @return true if the power was increased, false if the amount is not positive
      */
-    public boolean setPower(int amount) {
-        if (amount > 0){
+    public void setPower(int amount) {
+        if (amount <= 3){
             this.power += amount;
-            return true;
+        }else{
+            this.power = amount;
         }
-        return false;
     }
 
     /**

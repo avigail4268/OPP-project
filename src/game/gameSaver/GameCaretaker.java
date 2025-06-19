@@ -26,17 +26,11 @@ public class GameCaretaker {
 
     public GameMemento getMemento() {
         if (mementos.isEmpty()){
-            System.out.println("memento is empty");
             return null;
         }
-        System.out.println("getMemento");
         return mementos.pop();
     }
 
-    public boolean hasSavedGames() {
-        System.out.println("hasSavedGames before");
-        return !mementos.isEmpty();
-    }
     public void save (GameWorld game) {
         GameOriginator originator = new GameOriginator();
         originator.setEnemies(game.getEnemies());

@@ -13,18 +13,11 @@ public class GameMap {
         }
         return instance;
     }
-    /**
-     * Creates a new game map of given size.
-     * @param size the width and height of the square map
-     */
+
     public GameMap(int size) {
         this.size = size;
     }
 
-    /**
-     * Returns the size (width/height) of the map.
-     * @return map size
-     */
     public int getSize() {
         return size;
     }
@@ -47,23 +40,11 @@ public class GameMap {
         return copiedGrid;
     }
 
-
-    /**
-     * Checks whether the given position contains no entities.
-     * @param pos position to check
-     * @return true if the position is empty, false otherwise
-     */
     public boolean isEmpty(Position pos) {
         List<GameEntity> entities = grid.get(pos);
         return entities == null || entities.isEmpty();
     }
 
-    /**
-     * Returns a random empty position on the map.
-     * Attempts up to size * size times.
-     * @return a random empty Position
-     * @throws RuntimeException if no empty position is found
-     */
     public Position getRandomEmptyPosition() {
         Random random = new Random();
         int maxTries = size * size;
@@ -78,13 +59,7 @@ public class GameMap {
         throw new RuntimeException("No empty position found on the board");
     }
 
-    /**
-     * Adds a game entity to a position on the map.
-     * Initializes the list if necessary.
-     * @param pos the position to add to
-     * @param gameEntity the entity to place
-     * @return true if the entity was added, false if already present
-     */
+
     public boolean addToGrid(Position pos, GameEntity gameEntity) {
         List<GameEntity> entities = grid.get(pos);
         if (entities == null) {
@@ -100,13 +75,7 @@ public class GameMap {
         return false;
     }
 
-    /**
-     * Removes a game entity from the given position.
-     * Removes the position from the map if the entity list becomes empty.
-     * @param pos the position to remove from
-     * @param gameEntity the entity to remove
-     * @return true if the entity was removed, false otherwise
-     */
+
     public boolean removeFromGrid(Position pos, GameEntity gameEntity) {
         List<GameEntity> entities = grid.get(pos);
         if (entities == null || !entities.contains(gameEntity)) {
@@ -119,28 +88,14 @@ public class GameMap {
         return true;
     }
 
-    /**
-     * Gets all entities at a specific position.
-     * Returns an empty list if the position is unoccupied.
-     * @param pos the position to query
-     * @return a list of entities at the position
-     */
     public List<GameEntity> getEntitiesAt(Position pos) {
         return grid.getOrDefault(pos, new ArrayList<>());
     }
 
-    public Map<Position, List<GameEntity>> getGrid() {
-        return grid;
-    }
     public void setGrid(Map<Position, List<GameEntity>> grid) {
         this.grid = grid;
     }
 
-    /**
-     * Checks whether a position is within the map bounds.
-     * @param newPos the position to check
-     * @return true if within bounds, false otherwise
-     */
     public boolean isWithinBounds(Position newPos) {
         return newPos.getCol() >= 0 && newPos.getCol() < size &&
                 newPos.getRow() >= 0 && newPos.getRow() < size;
@@ -158,4 +113,5 @@ public class GameMap {
      * Size of the grid (map is size x size).
      */
     private final int size;
+
 }

@@ -150,6 +150,8 @@ public class GameController {
             popup.add(new JMenuItem("Item: " + item.getDescription()));
         } else if (CellTypeDetector.hasWall(entities)) {
             popup.add(new JMenuItem("Wall - impassable to pass"));
+        } else if (CellTypeDetector.hasPlayer(entities)) {
+            popup.add(new JMenuItem("Player: " + getPlayer().toString()));
         } else {
             popup.add(new JMenuItem("Empty tile"));
         }

@@ -46,6 +46,12 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         return name;
     }
 
+    protected void setTreasurePoints(int treasurePoints) {
+        this.treasurePoints = treasurePoints;
+    }
+    protected void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
     /**
      * Adds an item to the player's inventory.
      * @param item the item to add

@@ -5,19 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * The MapPanel class represents the UI component displaying the game grid.
- * It uses a JButton grid to visually represent map cells and respond to user interactions.
- * Implements GameObserver to support automatic UI refresh on game state changes.
- */
 public class MapPanel extends JPanel implements GameObserver {
 
-    /**
-     * Constructs the MapPanel by initializing the grid layout and populating it
-     * with interactive buttons, each representing a game cell.
-     *
-     * @param controller the GameController responsible for coordinating UI and logic
-     */
+
     public MapPanel(GameController controller) {
         this.controller = controller;
         int rows = controller.getMapRows();
@@ -53,10 +43,6 @@ public class MapPanel extends JPanel implements GameObserver {
         setupKeyBindings();
     }
 
-    /**
-     * Defines key bindings for arrow keys to move the player via keyboard input.
-     * Binds to UP, DOWN, LEFT, and RIGHT keys.
-     */
     private void setupKeyBindings() {
         InputMap inputMap = getInputMap(WHEN_IN_FOCUSED_WINDOW);
         ActionMap actionMap = getActionMap();
@@ -88,10 +74,6 @@ public class MapPanel extends JPanel implements GameObserver {
         });
     }
 
-    /**
-     * Updates the entire grid by refreshing each tile's icon
-     * according to the current state in the game world.
-     */
     public void refresh() {
         for (int row = 0; row < cellButtons.length; row++) {
             for (int col = 0; col < cellButtons[0].length; col++) {
@@ -100,14 +82,6 @@ public class MapPanel extends JPanel implements GameObserver {
         }
     }
 
-    /**
-     * Highlights a specific tile with a temporary color (e.g. on action result).
-     * After a short delay, the background is reset to its original color.
-     *
-     * @param row the row index of the cell
-     * @param col the column index of the cell
-     * @param color the color to highlight the cell with
-     */
     public void highlightCell(int row, int col, Color color) {
         JButton cell = cellButtons[row][col];
         Color original = cell.getBackground();
@@ -115,11 +89,6 @@ public class MapPanel extends JPanel implements GameObserver {
         new Timer(300, e -> cell.setBackground(original)).start();
     }
 
-    /**
-     * Implementation of the GameObserver interface.
-     * Called when the game state is updated.
-     * Refreshes the grid display.
-     */
     @Override
     public void onGameUpdated() {
         refresh();

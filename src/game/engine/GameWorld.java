@@ -166,10 +166,6 @@ public class GameWorld {
         return true;
     }
 
-    /**
-     * Moves the player to a new position on the map.
-     * @param newPos the new position to move to
-     */
     public void movePlayerTo(Position newPos) {
         PlayerCharacter player = getPlayer();
         Position oldPos = player.getPosition();
@@ -179,11 +175,6 @@ public class GameWorld {
         map.addToGrid(newPos, player);
     }
 
-    /**
-     * Initiates combat with an enemy at the given position.
-     * If the enemy is defeated, replaces it with a treasure.
-     * @param pos the position where the combat occurs
-     */
     public void fightEnemyAt(Position pos) {
         List<GameEntity> entities = map.getEntitiesAt(pos);
         for (GameEntity entity : entities) {
@@ -201,10 +192,6 @@ public class GameWorld {
         }
     }
 
-    /**
-     * Picks up an interactable item at the specified position.
-     * @param pos the position of the item to pick up
-     */
     public void pickUpItemAt(Position pos) {
         List<GameEntity> entities = map.getEntitiesAt(pos);
         for (GameEntity entity : entities) {
@@ -217,12 +204,6 @@ public class GameWorld {
         }
     }
 
-    /**
-     * Checks if a map cell at (row, col) is visible to the player (within distance 2).
-     * @param row the row index
-     * @param col the column index
-     * @return true if the cell is within visibility range, false otherwise
-     */
     public boolean isVisibleToPlayer(int row, int col) {
         Position playerPos = getPlayer().getPosition();
         Position newPos = new Position(row, col);
@@ -234,42 +215,22 @@ public class GameWorld {
         return enemyTasks;
     }
 
-    /**
-     * Returns a list of all players in the game.
-     * @return the list of PlayerCharacter instances
-     */
     public List<Enemy> getEnemies() {
         return enemies;
     }
 
-    /**
-     * Returns the game map.
-     * @return the GameMap instance
-     */
     public GameMap getMap() {
         return map;
     }
 
-    /**
-     * Returns the main player character.
-     * @return the PlayerCharacter instance
-     */
     public PlayerCharacter getPlayer() {
         return players.get(0);
     }
 
-    /**
-     * Returns a list of all game items on the map.
-     * @return the list of GameItem instances
-     */
     public List<GameItem> getItems() {
         return items;
     }
 
-    /**
-     * Starts the scheduled enemy tasks with random intervals.
-     * Each enemy gets its own scheduled task for movement or behavior.
-     */
     public void startEnemyTask() {
         for (Enemy enemy : enemies) {
             EnemyTask enemy_Task = new EnemyTask(enemy, this);
@@ -278,20 +239,12 @@ public class GameWorld {
         }
     }
 
-    /**
-     * Sets the game controller.
-     * @param controller the controller to set
-     */
     public void setController(GameController controller) {
         this.controller = controller;
     }
 
     public void setMap(GameMap map) {this.map = map;}
 
-    /**
-     * Gets the current game controller.
-     * @return the controller
-     */
     public GameController getController() {
         return controller;
     }
@@ -299,10 +252,7 @@ public class GameWorld {
     public ExecutorService getEnemyExecutor() {
         return enemyExecutor;
     }
-    /**
-     * Shuts down all enemy tasks and terminates the executor.
-     * Ensures graceful termination, and forces shutdown if it takes too long.
-     */
+
     public void shutdown() {
         // Stop all enemy tasks
         for (EnemyTask ET : enemyTasks) {
@@ -321,56 +271,37 @@ public class GameWorld {
         }
     }
 
-    /**
-     * Registers an observer to receive updates from the game world.
-     * @param observer the observer to add
-     */
     public void addObserver(GameObserver observer) {
         observers.add(observer);
     }
 
-    /**
-     * Notifies all registered observers that the game state has been updated.
-     */
     public void notifyObservers() {
         for (GameObserver observer : observers) {
             observer.onGameUpdated();
         }
-    }
-    public void setEnemies(List<Enemy> enemies) {
-        this.enemies = enemies;
     }
 
     public void setItems(List<GameItem> items) {
         this.items = items;
     }
 
-    /**
-     * Returns a lock object for a specific position in the map.
-     * Ensures that access to that position can be synchronized across threads.
-     * @param pos the position to lock
-     * @return the corresponding ReentrantLock
-     */
     public static ReentrantLock getMapLock(Position pos) {
         return lockMap.computeIfAbsent(pos, p -> new ReentrantLock());
     }
 
-    /**
-     * @return the flag that indicates if the game is running
-     */
     public AtomicBoolean getIsGameRunning() {
         return isGameRunning;
     }
 
     public void restoreFromMemento(GameMemento memento) {
+        movePlayerTo(memento.getPlayer().getPosition());
+        this.players.clear();
         this.players.add(memento.getPlayer());
-        this.map = memento.getGameMap();
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
-
-        // אם צריך לעדכן listeners, controller וכו'
+        this.map.setGrid(memento.getGameMap().copyGrid());
+        this.controller.refresh();
     }
-
 
     // --- Fields ---
     // Map for locking specific positions in the game world

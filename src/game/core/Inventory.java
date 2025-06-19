@@ -83,4 +83,12 @@ public class Inventory {
      * The list of items in the inventory.
      */
     private List<GameItem> items;
+
+    public Inventory deepCopy() {
+        Inventory copy = new Inventory();
+        for (GameItem item : items) {
+            copy.addItem(item.deepCopy());
+        }
+        return copy;
+    }
 }

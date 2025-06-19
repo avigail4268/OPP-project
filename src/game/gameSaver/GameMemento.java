@@ -1,10 +1,8 @@
 package game.gameSaver;
-
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.items.GameItem;
 import game.map.GameMap;
-
 import java.util.List;
 
 public class GameMemento {

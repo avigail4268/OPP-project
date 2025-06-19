@@ -2,7 +2,6 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.PhysicalAttacker;
 import game.combat.RangeFighter;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -14,13 +13,7 @@ import java.util.Random;
  */
 public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAttacker {
 
-    /**
-     * Constructs a new Archer with a given name, position, and health.
-     * The Archer's accuracy is randomly set between 0 and 0.8.
-     * @param name the name of the Archer
-     * @param pos the position of the Archer
-     * @param health the health of the Archer
-     */
+
     public Archer(String name, Position pos, int health) {
         super(name, pos, health);
         Random rand = new Random();
@@ -35,25 +28,21 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
 
     @Override
     public PlayerCharacter deepCopy() {
-       Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
+        Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
         archer.setAccuracy(this.accuracy);
+        archer.setPower(this.getPower());
+        archer.setInventory(this.getInventory());
+        archer.setTreasurePoints(this.getTreasurePoints());
         return archer;
     }
 
-    /**
-     * Gets the display symbol representing the Archer.
-     * @return the string "Archer"
-     */
+
     @Override
     public String getDisplaySymbol() {
         return "Archer";
     }
 
-    /**
-     * Performs an attack on a target Combatant.
-     * The attack may be a critical hit, dealing double damage.
-     * @param target the target Combatant to attack
-     */
+
     @Override
     public void attack(Combatant target) {
         int damage = this.getPower();
