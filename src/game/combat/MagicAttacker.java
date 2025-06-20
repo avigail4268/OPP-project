@@ -16,7 +16,7 @@ public interface MagicAttacker {
      *
      * @param target the combatant receiving the magical attack
      */
-    void calculateMagicDamage(Combatant target);
+    int calculateMagicDamage(Combatant target);
 
     /**
      * Casts a spell on the specified target.

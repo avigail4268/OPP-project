@@ -76,7 +76,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
      * @param target the target Combatant to calculate damage for
      */
     @Override
-    public void calculateMagicDamage(Combatant target) {
+    public int calculateMagicDamage(Combatant target) {
         double totalDamage = this.getPower() * 1.5;
         MagicElement targetElement = target.getMagicElement();
 
@@ -91,7 +91,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
             }
         }
         LogManager.addLog(this.getName() + " attacked the enemy for: " + (int) totalDamage + " damage.");
-        target.receiveDamage((int) totalDamage, this);
+        return (int) totalDamage;
     }
 
     /**
@@ -100,7 +100,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
      */
     @Override
     public void castSpell(Combatant target) {
-        calculateMagicDamage(target);
+        target.receiveDamage(calculateMagicDamage(target), this);
     }
 
     /**

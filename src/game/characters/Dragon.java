@@ -58,7 +58,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
      * @param target the target Combatant to calculate damage for
      */
     @Override
-    public void calculateMagicDamage(Combatant target) {
+    public int calculateMagicDamage(Combatant target) {
         double magicPower = this.getPower() * 1.5;
         if (this.element.isElementStrongerThan(target.getMagicElement())) {
             target.receiveDamage((int)(magicPower * 1.2), this);
@@ -69,6 +69,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             LogManager.addLog("Dragon's element is weaker than yours");
             LogManager.addLog("Dragon attacked by magic for: " + (int)(magicPower * 0.8) + " damage.");
         }
+        return (int) magicPower;
     }
 
     /**
@@ -83,7 +84,7 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
             target.receiveDamage((int) powerAttack, this);
             LogManager.addLog("Dragon attacked physically for: " + (int) powerAttack + " damage.");
         } else {
-            calculateMagicDamage(target);
+            target.receiveDamage(calculateMagicDamage(target), this);
         }
     }
 

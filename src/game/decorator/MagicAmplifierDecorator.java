@@ -1,8 +1,8 @@
 package game.decorator;
-
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.combat.MagicAttacker;
+import game.log.LogManager;
 
 public class MagicAmplifierDecorator extends PlayerDecorator implements MagicAttacker {
 
@@ -10,41 +10,27 @@ public class MagicAmplifierDecorator extends PlayerDecorator implements MagicAtt
         super(player);
     }
 
-//    @Override
-//    public void attack(Combatant target) {
-//        int targetHealthBefore = target.getHealth();
-//        if (isMagicAttack()) {
-//            int currentDamage = targetHealthBefore - target.getHealth();
-//            if (currentDamage > 0) {
-//                double amplificationRate = 0.04;
-//                int bonusDamage = (int)(currentDamage * amplificationRate);
-//                target.setHealth(target.getHealth() - bonusDamage);
-//                System.out.println("[MagicAmplifierDecorator] תוספת נזק קסום: " + bonusDamage);
-//            }
-//        }
-//    }
-
-
-
     private boolean isMagicAttack() {
         return getDecoratorPlayer().isMagicUser();
     }
 
     @Override
-    public void calculateMagicDamage(Combatant target) {
+    public int calculateMagicDamage(Combatant target) {
          if ( getDecoratorPlayer() instanceof MagicAttacker magicAttacker)
          {
-             magicAttacker.calculateMagicDamage(target);
+            return magicAttacker.calculateMagicDamage(target);
          }
+         return 0;
     }
 
     @Override
     public void castSpell(Combatant target) {
-        target.receiveDamage(calculateMagicDamage(target) * 0.04, target);
+        target.receiveDamage((int) (calculateMagicDamage(target)*1.04), this);
+        LogManager.addLog("Magic Amplifier: Spell cast with amplified damage.");
     }
 
     @Override
     public boolean isElementStrongerThan(MagicAttacker other) {
-        return false;
+        return getDecoratorPlayer().getMagicElement().isElementStrongerThan(other.getMagicElement());
     }
 }

@@ -1,7 +1,7 @@
 package game.decorator;
-
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
+import game.log.LogManager;
 
 public class BoostedAttackDecorator extends PlayerDecorator {
 
@@ -14,10 +14,8 @@ public class BoostedAttackDecorator extends PlayerDecorator {
 
     @Override
     public void attack(Combatant target) {
-        int currentDamage = target.getHealth();
-        if (currentDamage > 0) {
-            target.receiveDamage(getDecoratorPlayer().getPower() + extraDamage , this);
-            System.out.println("[BoostedAttackDecorator] Bonus damage: " + extraDamage);
-        }
+        getDecoratorPlayer().attack(target);
+        target.receiveDamage(extraDamage, this);
+        LogManager.addLog("Extra damage");
     }
 }
