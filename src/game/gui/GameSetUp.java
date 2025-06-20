@@ -4,25 +4,26 @@ import game.Main;
 import game.combat.MagicElement;
 import game.controller.GameController;
 import game.engine.GameWorld;
-import game.gameSaver.GameCaretaker;
-import game.gameSaver.GameMemento;
-import game.gameSaver.GameOriginator;
 import game.log.LogManager;
-
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+
 
 public class GameSetUp {
 
     public GameSetUp() {
         // Constructor can be used for any necessary initialization
     }
-
 
     public void start() {
         SwingUtilities.invokeLater(() -> {
@@ -38,8 +39,10 @@ public class GameSetUp {
             boolean includeDefense = playerType == 3;
             Map<String, Integer> attributes = askPlayerStatChanges(includeDefense);
             String name = askPlayerName();
+            List <String> decorators = askDecorators();
 
-            GameWorld world = new GameWorld(size, playerType, name, attributes, element);
+
+            GameWorld world = new GameWorld(size, playerType, name, attributes, element, decorators);
 
             int panelSize = 640;
             int tileSize = panelSize / world.getMap().getSize();
@@ -57,12 +60,6 @@ public class GameSetUp {
         });
     }
 
-    /**
-     * Displays a slider dialog allowing the user to select a map size.
-     * The value is restricted to be between 10 and 20.
-     *
-     * @return the selected map size
-     */
     public static int askMapSize() {
         JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 20, 10);
         slider.setMajorTickSpacing(5);
@@ -113,11 +110,6 @@ public class GameSetUp {
         }
     }
 
-    /**
-     * Prompts the user to select the type of player character.
-     *
-     * @return the index of the selected character class (0 = Archer, 1 = Mage, 2 = Warrior)
-     */
     public static int askPlayerType() {
         String[] names = {"Archer", "Mage", "Warrior"};
         Image background = new ImageIcon(Main.class.getResource("/images/character_selection_bg.jpg")).getImage();
@@ -163,14 +155,9 @@ public class GameSetUp {
             System.exit(0);
             return -1;
         }
-        return 1; // default: Mage
+        return 1;
     }
 
-    /**
-     * Prompts the user to enter a name for the player character.
-     *
-     * @return the trimmed name, or "Player" if left empty
-     */
     public static String askPlayerName() {
         Image background = new ImageIcon(Main.class.getResource("/images/map.jpg")).getImage();
 
@@ -279,12 +266,6 @@ public class GameSetUp {
         return result;
     }
 
-    /**
-     * Displays a welcome popup message with a fade-in and fade-out animation.
-     * The message disappears automatically after a short delay.
-     *
-     * @param name the name of the player to include in the message
-     */
     public static void showAutoClosingWelcome(String name) {
         JWindow window = new JWindow();
 
@@ -443,6 +424,64 @@ public class GameSetUp {
         });
         fadeIn.start();
     }
+
+    public static List<String> askDecorators() {
+        String[] decoratorNames = {"Boosted Attack", "Auto Heal", "Magic Amplifier"};
+        String[] decoratorKeys = {"boost", "regen", "magicamplifier"};
+
+        JCheckBox[] checkBoxes = new JCheckBox[decoratorNames.length];
+        JPanel panel = new JPanel(new GridLayout(decoratorNames.length, 1, 5, 5));
+        panel.setPreferredSize(new Dimension(300, 120));
+        panel.setOpaque(false);
+
+        // נעקב אחרי כמה תיבות סומנו
+        final int[] selectedCount = {0};
+
+        for (int i = 0; i < decoratorNames.length; i++) {
+            JCheckBox checkBox = new JCheckBox(decoratorNames[i]);
+            checkBox.setFont(new Font("Serif", Font.PLAIN, 14));
+
+            // מאזין לשינויים בתיבה
+            checkBox.addItemListener(new ItemListener() {
+                @Override
+                public void itemStateChanged(ItemEvent e) {
+                    if (checkBox.isSelected()) {
+                        if (selectedCount[0] >= 2) {
+                            // לא ניתן לבחור יותר משניים
+                            checkBox.setSelected(false);
+                            JOptionPane.showMessageDialog(null, "You can select up to 2 decorators only.", "Limit Reached", JOptionPane.WARNING_MESSAGE);
+                        } else {
+                            selectedCount[0]++;
+                        }
+                    } else {
+                        selectedCount[0]--;
+                    }
+                }
+            });
+
+            checkBoxes[i] = checkBox;
+            panel.add(checkBox);
+        }
+
+        int result = JOptionPane.showConfirmDialog(
+                null, panel, "Choose up to 2 Decorators", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
+        );
+
+        List<String> chosen = new ArrayList<>();
+
+        if (result == JOptionPane.OK_OPTION) {
+            for (int i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].isSelected()) {
+                    chosen.add(decoratorKeys[i]);
+                }
+            }
+        } else {
+            System.exit(0); // או return null
+        }
+
+        return chosen;
+    }
+
 
     public static MagicElement askElementType() {
         MagicElement[] elements = MagicElement.values();

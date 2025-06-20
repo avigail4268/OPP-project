@@ -5,6 +5,9 @@ import game.controller.GameController;
 import game.characters.*;
 import game.combat.CombatSystem;
 import game.core.GameEntity;
+import game.decorator.BoostedAttackDecorator;
+import game.decorator.MagicAmplifierDecorator;
+import game.decorator.RegenerationDecorator;
 import game.gameSaver.GameMemento;
 import game.items.*;
 import game.log.LogManager;
@@ -21,21 +24,11 @@ import game.observer.GameObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * The GameWorld class manages the overall game state, including the map,
- * player, enemies, and items. It initializes the game, places entities on
- * the map, and handles player actions like movement, combat, and item pickup.
- */
+
 public class GameWorld {
 
-    /**
-     * Constructs a new GameWorld with a given map size, player type, and player name.
-     *
-     * @param size       the size of the game map (NxN)
-     * @param playerType the type of player: 1-Warrior, 2-Mage, 3-Archer
-     * @param playerName the name of the player character
-     */
-    public GameWorld(int size, int playerType, String playerName, Map<String, Integer> attributes, MagicElement element) {
+
+    public GameWorld(int size, int playerType, String playerName, Map<String, Integer> attributes, MagicElement element, List<String> decorators) {
         this.map = GameMap.getInstance(size);
         this.players = new ArrayList<>();
         this.enemies = new ArrayList<>();
@@ -46,45 +39,49 @@ public class GameWorld {
             N = 10;
         this.enemyExecutor = Executors.newFixedThreadPool(N);
         LogManager.startLogger();
-        createPlayer(playerType, playerName, attributes, element);
+        createPlayer(playerType, playerName, attributes, element,decorators);
         populateGameMap();
     }
 
-    public GameWorld(GameMap map, List<Enemy> enemies, List<GameItem> items, PlayerCharacter player) {
-        System.out.println("Creating a new world");
-        this.map = map;
-        this.players = new ArrayList<>();
-        this.players.add(player); // הוספת השחקן לרשימת השחקנים
-        this.enemies = enemies;
-        this.items = items;
-        this.enemyTasks = new ArrayList<>();
-        int N = (int) (map.getSize() * map.getSize() * 0.03);
-        if (N > 10)
-            N = 10;
-        this.enemyExecutor = Executors.newFixedThreadPool(N);
-        LogManager.startLogger();
-    }
 
 
-    /**
-     * Creates and adds a player of the selected type to a random empty position on the map.
-     *
-     * @param playerType the selected player type (1-3)
-     * @param playerName the name of the player
-     */
-    private void createPlayer(int playerType, String playerName, Map<String, Integer> attributes, MagicElement element) {
+    private void createPlayer(int playerType, String playerName, Map<String, Integer> attributes, MagicElement element, List<String> decorators)  {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
         player = playerFactory.createPlayerFactory(playerType, playerName, pos, attributes, element);
+        applyDecorators(player, decorators);
         map.addToGrid(pos, player);
         players.add(player);
         LogManager.addLog("Game started with player type: " + player.getDisplaySymbol() + " and name: " + playerName);
     }
 
-    /**
-     * Populates the map with random entities such as enemies, walls, and items.
-     * Uses random probabilities to determine what to place in each empty cell.
-     */
+    private PlayerCharacter applyDecorators(PlayerCharacter basePlayer, List<String> decoratorNames) {
+        PlayerCharacter result = basePlayer;
+
+        for (String name : decoratorNames) {
+            switch (name.toLowerCase()) {
+                case "boost":
+                    result = new BoostedAttackDecorator(result, 5);
+                    LogManager.addLog("Boosted attack decorator applied.");
+                    break;
+                case "regen":
+                    result = new RegenerationDecorator(result, 5, 3);
+                    LogManager.addLog("Regeneration decorator applied.");
+                    break;
+                case "magicamplifier":
+                    result = new MagicAmplifierDecorator(result);
+                    LogManager.addLog("Magic amplifier decorator applied.");
+                    break;
+                default: {
+                    System.out.println("Unknown decorator: " + name);
+                    LogManager.addLog("Unknown decorator");
+                }
+            }
+        }
+        return result;
+    }
+
+
     private void populateGameMap() {
         // Randomly place enemies, walls, and items on the map
         for (int i = 0; i < map.getSize(); i++) {
@@ -102,58 +99,35 @@ public class GameWorld {
         }
     }
 
-    /**
-     * Creates and places an enemy at the specified position.
-     * The type of enemy is randomly selected from Dragon, Orc, or Goblin.
-     *
-     * @param pos the position to place the enemy
-     */
+
     public void createEnemy(Position pos) {
         Enemy enemy = enemyFactory.createEnemy(pos);
         enemies.add(enemy);
         map.addToGrid(pos, enemy);
     }
 
-    /**
-     * Creates and places a health potion.
-     *
-     * @param pos the position to place the potion
-     */
+
     private void createPotion(Position pos) {
         Potion potion = new Potion(pos, false, 50, 10);
         items.add(potion);
         map.addToGrid(pos, potion);
     }
 
-    /**
-     * Creates and places a power potion.
-     *
-     * @param pos the position to place the power potion
-     */
+
     private void createPowerPotion(Position pos) {
         PowerPotion powerPotion = new PowerPotion(pos, false, 5, 1);
         items.add(powerPotion);
         map.addToGrid(pos, powerPotion);
     }
 
-    /**
-     * Creates and places a wall.
-     *
-     * @param pos the position to place the wall
-     */
+
     private void createWall(Position pos) {
         Wall wall = new Wall(pos, true);
         items.add(wall);
         map.addToGrid(pos, wall);
     }
 
-    /**
-     * Checks if a player's move from one position to another is valid.
-     *
-     * @param from the original position
-     * @param to   the intended new position
-     * @return true if the move is valid, false otherwise
-     */
+
     public boolean isValidMove(Position from, Position to) {
         if (to.getRow() < 0 || to.getRow() >= map.getSize() || to.getCol() < 0 || to.getCol() >= map.getSize()) {
             LogManager.addLog("Move out of bounds");

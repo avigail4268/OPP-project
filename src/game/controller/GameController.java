@@ -8,6 +8,7 @@ import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
+import game.decorator.RegenerationDecorator;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
 import game.gui.GameSetUp;
@@ -89,9 +90,14 @@ public class GameController {
      * @param col the column clicked.
      */
     public void handleLeftClick(int row, int col) {
+
         Position clickedPos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
         Position playerPos = engine.getPlayer().getPosition();
+
+        if (engine.getPlayer() instanceof RegenerationDecorator regPlayer) {
+            regPlayer.update(); // Update health regeneration if applicable
+        }
 
         if (engine.isValidMove(playerPos, clickedPos)) {
             ReentrantLock lock = GameWorld.getMapLock(clickedPos);
