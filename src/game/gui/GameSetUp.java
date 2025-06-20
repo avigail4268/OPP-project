@@ -426,62 +426,71 @@ public class GameSetUp {
     }
 
     public static List<String> askDecorators() {
-        String[] decoratorNames = {"Boosted Attack", "Auto Heal", "Magic Amplifier"};
-        String[] decoratorKeys = {"boost", "regen", "magicamplifier"};
+            String[] decoratorNames = {"Boosted Attack", "Auto Heal", "Magic Amplifier"};
+            String[] decoratorKeys = {"boost", "regen", "magicamplifier"};
 
-        JCheckBox[] checkBoxes = new JCheckBox[decoratorNames.length];
-        JPanel panel = new JPanel(new GridLayout(decoratorNames.length, 1, 5, 5));
-        panel.setPreferredSize(new Dimension(300, 120));
-        panel.setOpaque(false);
+            JCheckBox[] checkBoxes = new JCheckBox[decoratorNames.length];
+            final int[] selectedCount = {0};
 
-        // נעקב אחרי כמה תיבות סומנו
-        final int[] selectedCount = {0};
 
-        for (int i = 0; i < decoratorNames.length; i++) {
-            JCheckBox checkBox = new JCheckBox(decoratorNames[i]);
-            checkBox.setFont(new Font("Serif", Font.PLAIN, 14));
+            Image background = new ImageIcon(Main.class.getResource("/images/decorator_selection.jpg")).getImage();
 
-            // מאזין לשינויים בתיבה
-            checkBox.addItemListener(new ItemListener() {
+
+            JPanel panel = new JPanel() {
                 @Override
-                public void itemStateChanged(ItemEvent e) {
-                    if (checkBox.isSelected()) {
-                        if (selectedCount[0] >= 2) {
-                            // לא ניתן לבחור יותר משניים
-                            checkBox.setSelected(false);
-                            JOptionPane.showMessageDialog(null, "You can select up to 2 decorators only.", "Limit Reached", JOptionPane.WARNING_MESSAGE);
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+                }
+            };
+            panel.setLayout(new GridLayout(decoratorNames.length, 1, 5, 5));
+            panel.setPreferredSize(new Dimension(300, 120));
+            panel.setOpaque(false);
+
+            for (int i = 0; i < decoratorNames.length; i++) {
+                JCheckBox checkBox = new JCheckBox(decoratorNames[i]);
+                checkBox.setFont(new Font("Serif", Font.BOLD, 14));
+                checkBox.setOpaque(false); // שקוף כדי שיראו את הרקע
+                checkBox.setForeground(Color.WHITE); // צבע טקסט מתאים לרקע כהה
+
+                checkBox.addItemListener(new ItemListener() {
+                    @Override
+                    public void itemStateChanged(ItemEvent e) {
+                        if (checkBox.isSelected()) {
+                            if (selectedCount[0] >= 2) {
+                                checkBox.setSelected(false);
+                                JOptionPane.showMessageDialog(null, "You can select up to 2 decorators only.", "Limit Reached", JOptionPane.WARNING_MESSAGE);
+                            } else {
+                                selectedCount[0]++;
+                            }
                         } else {
-                            selectedCount[0]++;
+                            selectedCount[0]--;
                         }
-                    } else {
-                        selectedCount[0]--;
+                    }
+                });
+
+                checkBoxes[i] = checkBox;
+                panel.add(checkBox);
+            }
+
+            int result = JOptionPane.showConfirmDialog(
+                    null, panel, "Choose up to 2 Decorators", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
+            );
+
+            List<String> chosen = new ArrayList<>();
+
+            if (result == JOptionPane.OK_OPTION) {
+                for (int i = 0; i < checkBoxes.length; i++) {
+                    if (checkBoxes[i].isSelected()) {
+                        chosen.add(decoratorKeys[i]);
                     }
                 }
-            });
-
-            checkBoxes[i] = checkBox;
-            panel.add(checkBox);
-        }
-
-        int result = JOptionPane.showConfirmDialog(
-                null, panel, "Choose up to 2 Decorators", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
-        );
-
-        List<String> chosen = new ArrayList<>();
-
-        if (result == JOptionPane.OK_OPTION) {
-            for (int i = 0; i < checkBoxes.length; i++) {
-                if (checkBoxes[i].isSelected()) {
-                    chosen.add(decoratorKeys[i]);
-                }
+            } else {
+                System.exit(0); // או return null
             }
-        } else {
-            System.exit(0); // או return null
+
+            return chosen;
         }
-
-        return chosen;
-    }
-
 
     public static MagicElement askElementType() {
         MagicElement[] elements = MagicElement.values();

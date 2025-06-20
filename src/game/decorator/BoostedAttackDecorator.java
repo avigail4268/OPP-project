@@ -18,4 +18,14 @@ public class BoostedAttackDecorator extends PlayerDecorator {
         target.receiveDamage(extraDamage, this);
         LogManager.addLog("Extra damage");
     }
+    @Override
+    public int getHealth() {
+        return getDecoratorPlayer().getHealth();
+    }
+    @Override
+    public boolean setHealth(int health) {
+        getDecoratorPlayer().setHealth(health);
+        return true;
+    }
+
 }

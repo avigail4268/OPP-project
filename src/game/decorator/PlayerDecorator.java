@@ -1,18 +1,10 @@
 package game.decorator;
-
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.core.GameEntity;
 import game.map.Position;
 
 public abstract class PlayerDecorator extends PlayerCharacter {
-    /**
-     * Constructs a new PlayerCharacter with a given name, position, and health.
-     *
-     * @param playerName the name of the player
-     * @param position   the starting position of the player
-     * @param health     the initial health of the player
-     */
 
     private final PlayerCharacter decoratorPlayer ;
 
@@ -45,4 +37,23 @@ public abstract class PlayerDecorator extends PlayerCharacter {
         return decoratorPlayer;
     }
 
+    @Override
+    public void update() {
+        getDecoratorPlayer().update();
+    }
+
+    @Override
+    public boolean setHealth(int health) {
+        getDecoratorPlayer().setHealth(health);
+        return true;
+    }
+
+    @Override
+    public int getHealth() {
+        return getDecoratorPlayer().getHealth();
+    }
+    @Override
+    public int getMaxHealth() {
+        return decoratorPlayer.getMaxHealth();
+    }
 }

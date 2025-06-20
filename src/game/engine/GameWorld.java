@@ -43,13 +43,11 @@ public class GameWorld {
         populateGameMap();
     }
 
-
-
     private void createPlayer(int playerType, String playerName, Map<String, Integer> attributes, MagicElement element, List<String> decorators)  {
         Position pos = map.getRandomEmptyPosition();
         PlayerCharacter player;
         player = playerFactory.createPlayerFactory(playerType, playerName, pos, attributes, element);
-        applyDecorators(player, decorators);
+        player = applyDecorators(player, decorators);
         map.addToGrid(pos, player);
         players.add(player);
         LogManager.addLog("Game started with player type: " + player.getDisplaySymbol() + " and name: " + playerName);
@@ -65,7 +63,7 @@ public class GameWorld {
                     LogManager.addLog("Boosted attack decorator applied.");
                     break;
                 case "regen":
-                    result = new RegenerationDecorator(result, 5, 3);
+                    result = new RegenerationDecorator(result, 5, 10);
                     LogManager.addLog("Regeneration decorator applied.");
                     break;
                 case "magicamplifier":
@@ -80,7 +78,6 @@ public class GameWorld {
         }
         return result;
     }
-
 
     private void populateGameMap() {
         // Randomly place enemies, walls, and items on the map
@@ -99,13 +96,11 @@ public class GameWorld {
         }
     }
 
-
     public void createEnemy(Position pos) {
         Enemy enemy = enemyFactory.createEnemy(pos);
         enemies.add(enemy);
         map.addToGrid(pos, enemy);
     }
-
 
     private void createPotion(Position pos) {
         Potion potion = new Potion(pos, false, 50, 10);

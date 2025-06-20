@@ -8,7 +8,6 @@ import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
-import game.decorator.RegenerationDecorator;
 import game.engine.GameWorld;
 import game.gui.GameFrame;
 import game.gui.GameSetUp;
@@ -95,9 +94,9 @@ public class GameController {
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
         Position playerPos = engine.getPlayer().getPosition();
 
-        if (engine.getPlayer() instanceof RegenerationDecorator regPlayer) {
-            regPlayer.update(); // Update health regeneration if applicable
-        }
+
+        engine.getPlayer().update(); // Update health regeneration if applicable
+
 
         if (engine.isValidMove(playerPos, clickedPos)) {
             ReentrantLock lock = GameWorld.getMapLock(clickedPos);
@@ -133,13 +132,6 @@ public class GameController {
         }
     }
 
-    /**
-     * Displays context info on right-click at a tile.
-     * Shows enemy/item/wall/empty tile descriptions.
-     * @param row          clicked row.
-     * @param col          clicked column.
-     * @param sourceButton button source of the click.
-     */
     public void handleRightClick(int row, int col, JButton sourceButton) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);

@@ -33,4 +33,13 @@ public class MagicAmplifierDecorator extends PlayerDecorator implements MagicAtt
     public boolean isElementStrongerThan(MagicAttacker other) {
         return getDecoratorPlayer().getMagicElement().isElementStrongerThan(other.getMagicElement());
     }
+    @Override
+    public int getHealth() {
+        return getDecoratorPlayer().getHealth();
+    }
+    @Override
+    public boolean setHealth(int health) {
+        getDecoratorPlayer().setHealth(health);
+        return true;
+    }
 }

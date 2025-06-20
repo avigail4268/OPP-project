@@ -1,26 +1,5 @@
-//package game.decorator;
-//
-//import game.characters.PlayerCharacter;
-//
-//public class RegenerationDecorator extends PlayerDecorator {
-//    private final int regenerationAmount = 2; // Amount of health to regenerate per turn
-//    public RegenerationDecorator(PlayerCharacter player) {
-//        super(player);
-//    }
-//
-//    private void regenerate() {
-//        if (getDecoratorPlayer().getHealth() < getDecoratorPlayer().getMaxHealth()) {
-//            getDecoratorPlayer().setHealth(getDecoratorPlayer().getHealth() + regenerationAmount);
-//            if (getDecoratorPlayer().getHealth() > getDecoratorPlayer().getMaxHealth()) {
-//                getDecoratorPlayer().setHealth(getDecoratorPlayer().getMaxHealth());
-//            }
-//        }
-//    }
-//}
 package game.decorator;
-
 import game.characters.PlayerCharacter;
-import game.decorator.PlayerDecorator;
 
 public class RegenerationDecorator extends PlayerDecorator {
 
@@ -35,19 +14,29 @@ public class RegenerationDecorator extends PlayerDecorator {
         this.lastRegenTime = System.currentTimeMillis();
     }
 
+
+    @Override
     public void update() {
-        long now = System.currentTimeMillis();
-        if (now - lastRegenTime >= intervalMillis) {
-            int currentHealth = getDecoratorPlayer().getHealth();
-            int maxHealth = getDecoratorPlayer().getMaxHealth();
-
-            if (currentHealth < maxHealth) {
-                int newHealth = Math.min(currentHealth + regenAmount, maxHealth);
-                getDecoratorPlayer().setHealth(newHealth);
-                System.out.println("[HealthRegenDecorator] Regenerated " + regenAmount + " HP → " + newHealth + "/" + maxHealth);
-            }
-
-            lastRegenTime = now;
-        }
+    long now = System.currentTimeMillis();
+    System.out.println("enter to the first level");
+    if (now - lastRegenTime >= intervalMillis) {
+        System.out.println("enter to the second level");
+        int currentHealth = getDecoratorPlayer().getHealth();
+        int maxHealth = getDecoratorPlayer().getMaxHealth();
+        int newHealth = Math.min(currentHealth + regenAmount, maxHealth);
+        getDecoratorPlayer().setHealth(newHealth);
+        System.out.println("[HealthRegenDecorator] Regenerated " + regenAmount + " HP → " + newHealth + "/" + maxHealth);
+        lastRegenTime = now;
+    }
+    super.update();
+}
+    @Override
+    public int getHealth() {
+        return getDecoratorPlayer().getHealth();
+    }
+    @Override
+    public boolean setHealth(int health) {
+        getDecoratorPlayer().setHealth(health);
+        return true;
     }
 }

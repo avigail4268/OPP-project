@@ -1,15 +1,12 @@
 
 package game.characters;
-
-import game.core.GameEntity;
 import game.core.Inventory;
 import game.items.GameItem;
 import game.items.Potion;
 import game.items.PowerPotion;
 import game.log.LogManager;
 import game.map.Position;
-import java.util.List;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 /**
  * PlayerCharacter represents a playable character in the game.
@@ -18,19 +15,13 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public abstract class PlayerCharacter extends AbstractCharacter {
 
-    /**
-     * Constructs a new PlayerCharacter with a given name, position, and health.
-     * @param playerName the name of the player
-     * @param position the starting position of the player
-     * @param health the initial health of the player
-     */
     public PlayerCharacter(String playerName, Position position,int health) {
         super(position, health);
         this.name = playerName;
         this.inventory = new Inventory();
         this.treasurePoints = 0;
     }
-//    public abstract PlayerCharacter deepCopy();
+
     public PlayerCharacter(PlayerCharacter player) {
         super(player.getPosition(), player.getHealth());
         this.inventory = player.getInventory();
@@ -38,10 +29,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         this.treasurePoints = player.getTreasurePoints();
     }
 
-    /**
-     * Gets the player's name.
-     * @return the name of the player
-     */
     public String getName() {
         return name;
     }
@@ -49,14 +36,11 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     protected void setTreasurePoints(int treasurePoints) {
         this.treasurePoints = treasurePoints;
     }
+
     protected void setInventory(Inventory inventory) {
         this.inventory = inventory;
     }
-    /**
-     * Adds an item to the player's inventory.
-     * @param item the item to add
-     * @return true if the item was added, false if null or failed
-     */
+
     public boolean addToInventory(GameItem item) {
         if (item == null) {
             return false;
@@ -64,10 +48,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         return inventory.addItem(item);
     }
 
-    /**
-     * Uses the first available Potion in the inventory that is usable via usePotion().
-     * @return true if a potion was found and used, false otherwise
-     */
     public boolean useItem(GameItem item) {
         if (item instanceof PowerPotion) {
             usePowerPotion((PowerPotion) item);
@@ -81,56 +61,30 @@ public abstract class PlayerCharacter extends AbstractCharacter {
         return false;
     }
 
-    /**
-     * Uses the first available Potion in the inventory.
-     * @return true if a potion was found and used, false otherwise
-     */
     public void usePotion(Potion potion) {
         int healingAmount = potion.getIncreaseAmount();
         potion.interact(this);
         LogManager.addLog(getName() + " used a potion and healed " + healingAmount + " HP!");
     }
 
-    /**
-     * Uses the first available PowerPotion in the inventory.
-     * @return true if a power potion was found and used, false otherwise
-     */
     public void usePowerPotion(PowerPotion potion) {
         int powerBoost = potion.getIncreaseAmount();
         potion.interact(this);
         LogManager.addLog(getName() + " used a power potion and gained " + powerBoost + " attack power!");
     }
 
-    /**
-     * Gets the player's inventory.
-     * @return the Inventory object
-     */
     public Inventory getInventory () {
         return inventory;
     }
 
-    /**
-     * Updates the player's treasure points by the specified amount.
-     * @param amount the amount to add
-     */
     public void updateTreasurePoint(int amount){
         this.treasurePoints += amount;
     }
 
-    /**
-     * Gets the current number of treasure points the player has.
-     * @return the treasure points
-     */
     public int getTreasurePoints(){
         return treasurePoints;
     }
 
-
-    /**
-     * Returns the maximum health points of the enemy.
-     * This method can be overridden in subclasses to provide different health values.
-     * @return the maximum health (default is 100 )
-     */
     @Override
     public int getMaxHealth() {
         return 100;
@@ -139,6 +93,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     public boolean isMagicUser() {
         return false;
     }
+    public void update() {}
 
 
     // --- Fields ---
@@ -156,9 +111,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
      * This value is used to track the player's progress in collecting treasures.
      */
     private int treasurePoints;
-    /**
-     * The maximum number of items the player can carry in their inventory.
-     * This value is used to limit the size of the player's inventory.
-     */
+
+
 
 }
