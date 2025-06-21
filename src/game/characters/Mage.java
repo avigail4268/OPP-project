@@ -176,9 +176,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         return "Mage: " + this.getName();
     }
 
-    @Override
-    public boolean isMagicUser(){return true;}
-
     // --- Fields ---
     private MagicElement element; // Mage's magic element
 }

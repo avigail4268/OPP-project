@@ -26,6 +26,7 @@ public class GameController {
 
     /**
      * Constructs a GameController for the given GameWorld engine.
+     *
      * @param engine the GameWorld instance used to manage the game logic.
      */
     public GameController(GameWorld engine) {
@@ -34,6 +35,7 @@ public class GameController {
 
     /**
      * Sets the GameFrame used by this controller.
+     *
      * @param frame the main game window frame.
      */
     public void setFrame(GameFrame frame) {
@@ -42,6 +44,7 @@ public class GameController {
 
     /**
      * Sets the size of tiles in pixels.
+     *
      * @param tileSize the tile size.
      */
     public void setTileSize(int tileSize) {
@@ -50,6 +53,7 @@ public class GameController {
 
     /**
      * Gets the number of rows in the map.
+     *
      * @return map size (rows).
      */
     public int getMapRows() {
@@ -58,6 +62,7 @@ public class GameController {
 
     /**
      * Gets the number of columns in the map.
+     *
      * @return map size (columns).
      */
     public int getMapCols() {
@@ -66,6 +71,7 @@ public class GameController {
 
     /**
      * Returns the player character.
+     *
      * @return the PlayerCharacter instance.
      */
     public PlayerCharacter getPlayer() {
@@ -74,6 +80,7 @@ public class GameController {
 
     /**
      * Alias for getEngine().
+     *
      * @return the GameWorld instance.
      */
     public GameWorld getGameWorld() {
@@ -83,6 +90,7 @@ public class GameController {
     /**
      * Handles a left-click at a specific tile.
      * Moves the player, triggers combat, or picks up items.
+     *
      * @param row the row clicked.
      * @param col the column clicked.
      */
@@ -130,6 +138,14 @@ public class GameController {
         }
     }
 
+    /**
+     * Handles a right-click at a specific tile.
+     * Displays information about the tile contents in a popup menu.
+     *
+     * @param row          the row clicked.
+     * @param col          the column clicked.
+     * @param sourceButton the button that was clicked.
+     */
     public void handleRightClick(int row, int col, JButton sourceButton) {
         Position pos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
@@ -157,6 +173,7 @@ public class GameController {
 
     /**
      * Moves the player using arrow key direction input.
+     *
      * @param direction one of "UP", "DOWN", "LEFT", "RIGHT".
      */
     public void handleArrowKey(String direction) {
@@ -188,6 +205,7 @@ public class GameController {
 
     /**
      * Generates the image for a tile based on its contents.
+     *
      * @param row tile row.
      * @param col tile column.
      * @return icon representing the tile.
@@ -222,6 +240,7 @@ public class GameController {
 
     /**
      * Generates a tile image with a health bar overlay.
+     *
      * @param row tile row.
      * @param col tile column.
      * @return icon with health bar overlay.
@@ -272,6 +291,7 @@ public class GameController {
 
     /**
      * Gets the current game setup instance.
+     *
      * @return the GameSetUp instance.
      */
     public GameSetUp getSetUp() {
@@ -281,7 +301,7 @@ public class GameController {
     /**
      * Refreshes the game frame to update the GUI.
      */
-    public void refresh(){
+    public void refresh() {
         frame.refresh();
     }
 
@@ -322,11 +342,8 @@ public class GameController {
 
 // --- Fields ---
 
-private int tileSize = 64;
-private GameWorld engine;
-private GameFrame frame;
-private GameSetUp setUp = new GameSetUp();
-
-
+    private int tileSize = 64;
+    private GameWorld engine;
+    private GameFrame frame;
+    private GameSetUp setUp = new GameSetUp();
 }
-

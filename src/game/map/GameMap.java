@@ -183,4 +183,5 @@ public class GameMap {
     private Map<Position, List<GameEntity>> grid = new HashMap<>();
     private final int size;
 
+
 }

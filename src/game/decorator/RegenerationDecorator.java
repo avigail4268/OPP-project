@@ -1,7 +1,10 @@
 package game.decorator;
 
 import game.characters.PlayerCharacter;
+import game.gui.GameFrame;
 import game.log.LogManager;
+
+import java.awt.*;
 
 /**
  * RegenerationDecorator is a decorator for PlayerCharacter that provides health regeneration functionality.
@@ -38,7 +41,6 @@ public class RegenerationDecorator extends PlayerDecorator {
                 this.setHealth(newHealth);
                 LogManager.addLog("[HealthRegenDecorator] Regenerated " + regenAmount + " HP → " + newHealth + "/" + maxHealth);
             }
-
             lastRegenTime = now;
         }
     }
@@ -48,6 +50,7 @@ public class RegenerationDecorator extends PlayerDecorator {
     private final long intervalMillis;
     private long lastRegenTime;
 }
+
 
 
 

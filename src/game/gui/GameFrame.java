@@ -22,7 +22,6 @@ public class GameFrame extends JFrame {
     public GameFrame(GameController controller) {
         this.controller = controller;
 
-        // Set the title and default close operation of the frame
         setTitle("Dungeons & Dragons Game");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
@@ -37,11 +36,6 @@ public class GameFrame extends JFrame {
 
                 if (option == JOptionPane.YES_OPTION) {
                    controller.getSetUp().exitGame(controller.getGameWorld()); // Call the controller's exit method to handle game exit logic
-                }
-                else
-                {
-                    // If the user chooses not to exit, do nothing
-                    return;
                 }
             }
         });
@@ -71,7 +65,7 @@ public class GameFrame extends JFrame {
         setVisible(true);
     }
 
-/**
+    /**
      * Refreshes the display of both the map panel and the status panel.
      * Called when the game state changes and the GUI needs to update.
      */

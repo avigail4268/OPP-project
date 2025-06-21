@@ -13,8 +13,10 @@ import java.awt.event.*;
  */
 public class MapPanel extends JPanel implements GameObserver {
 
-    /** Constructs a MapPanel with the specified game controller.
+    /**
+     * Constructs a MapPanel with the specified game controller.
      * Initializes the grid of buttons and sets up event listeners for user interactions.
+     *
      * @param controller The game controller that manages the game state and player actions
      */
     public MapPanel(GameController controller) {
@@ -101,8 +103,9 @@ public class MapPanel extends JPanel implements GameObserver {
     /**
      * Highlights a specific cell in the map with a temporary color change.
      * This is used to visually indicate actions such as successful moves or attacks.
-     * @param row The row index of the cell to highlight
-     * @param col The column index of the cell to highlight
+     *
+     * @param row   The row index of the cell to highlight
+     * @param col   The column index of the cell to highlight
      * @param color The color to use for highlighting
      */
     public void highlightCell(int row, int col, Color color) {
@@ -124,6 +127,4 @@ public class MapPanel extends JPanel implements GameObserver {
     private final JButton[][] cellButtons;
     private final GameController controller;
 }
-
-
 
