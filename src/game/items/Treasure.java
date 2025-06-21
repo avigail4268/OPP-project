@@ -1,20 +1,17 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
 /**
  * Represents a treasure that can be collected by a player character.
- * <p>
  * A treasure can either give a health potion, a power potion, or treasure points randomly.
  */
 public class Treasure extends GameItem implements Interactable {
 
     /**
      * Creates a new treasure at the specified position.
-     *
      * @param position       the initial position of the treasure
      * @param blocksMovement true if the treasure blocks movement, false otherwise
      * @param value          the number of treasure points this treasure provides if selected
@@ -33,7 +30,6 @@ public class Treasure extends GameItem implements Interactable {
 
     /**
      * Returns the display symbol for the treasure.
-     *
      * @return "TREASURE" as the symbol representing the treasure
      */
     @Override
@@ -43,9 +39,7 @@ public class Treasure extends GameItem implements Interactable {
 
     /**
      * Interacts with the treasure, providing the player with a random reward.
-     * <p>
      * Rewards can be: a health potion, treasure points, or a power potion.
-     *
      * @param c the player character interacting with the treasure
      */
     @Override
@@ -68,7 +62,6 @@ public class Treasure extends GameItem implements Interactable {
 
     /**
      * Collects the treasure if it has not been collected yet.
-     *
      * @param c the player character collecting the treasure
      */
     @Override
@@ -80,7 +73,6 @@ public class Treasure extends GameItem implements Interactable {
 
     /**
      * Returns a string representation of the treasure.
-     *
      * @return a string describing the treasure and its position
      */
     @Override
@@ -91,7 +83,6 @@ public class Treasure extends GameItem implements Interactable {
     /**
      * Compares this treasure to another object for equality.
      * Two treasures are equal if they have the same value and position.
-     *
      * @param obj the object to compare with
      * @return true if the treasures are equal, false otherwise
      */
@@ -104,12 +95,6 @@ public class Treasure extends GameItem implements Interactable {
     }
 
     // --- Fields ---
-    /**
-     * The number of treasure points this treasure provides.
-     */
     private final int value;
-    /**
-     * Indicates whether the treasure has been collected.
-     */
     private boolean collected;
 }

@@ -8,6 +8,7 @@ import java.net.URL;
  */
 
 public class SoundPlayer {
+
     /**
      * Plays the specified sound file from the /sounds/ resource folder.
      * @param fileName Name of the sound file

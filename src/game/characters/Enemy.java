@@ -1,5 +1,4 @@
 package game.characters;
-import game.core.GameEntity;
 import game.items.Treasure;
 import game.map.Position;
 import java.util.Random;
@@ -21,6 +20,15 @@ public abstract class Enemy extends AbstractCharacter {
         super(position, health);
         Random r = new Random();
         this.loot = r.nextInt(100, 300); // Random loot between 100 and 300
+    }
+
+    /**
+     * This constructor is used to clone an existing enemy.
+     * @param enemy the Enemy object to copy
+     */
+    public Enemy (Enemy enemy) {
+        super(enemy.getPosition(), enemy.getHealth());
+        this.loot = enemy.getLoot();
     }
 
     /**
@@ -51,7 +59,7 @@ public abstract class Enemy extends AbstractCharacter {
      */
     @Override
     public int getMaxHealth() {
-        return 50; // Example max health, can be overridden in subclasses
+        return 50;
     }
 
     /**
@@ -77,11 +85,8 @@ public abstract class Enemy extends AbstractCharacter {
         return false;
     }
 
-
     // --- Fields ---
-    /**
-     * The amount of loot that the enemy holds.
-     * This is a random value between 100 and 300.
-     */
     private final int loot;
+
+
 }

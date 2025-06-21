@@ -198,17 +198,11 @@ public class EnemyTask implements Runnable {
     public void setScheduledTask(ScheduledFuture<?> task) {
         this.scheduledTask = task;
     }
+
     // --- Fields ---
-    /** The enemy character associated with this task. */
     private final Enemy enemy;
-
-    /** The game world in which the enemy exists. */
     private final GameWorld gameWorld;
-
-    /** Random number generator for random movements. */
     private final Random random = new Random();
-
-    /** Reference to the scheduled task, used for cancellation. */
     private ScheduledFuture<?> scheduledTask;
 }
 

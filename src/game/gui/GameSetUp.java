@@ -18,14 +18,26 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 
-
+/**
+ * The GameSetUp class is responsible for setting up the game environment,
+ * including player selection, map size, and other configurations.
+ * It provides methods to gather user input and initialize the game world.
+ */
 public class GameSetUp {
 
+    /**
+     * Constructs a GameSetUp instance.
+     * This constructor can be used for any necessary initialization before starting the game.
+     */
     public GameSetUp() {
         // Constructor can be used for any necessary initialization
     }
 
+    /**
+     * Starts the game setup process, including gathering player information and initializing the game world.
+     */
     public void start() {
+        LogManager.startLogger();
         SwingUtilities.invokeLater(() -> {
 
             int size = askMapSize();
@@ -60,6 +72,10 @@ public class GameSetUp {
         });
     }
 
+    /**
+     * Asks the user to choose the size of the game map.
+     * @return the size of the map as an integer (between 10 and 20)
+     */
     public static int askMapSize() {
         JSlider slider = new JSlider(JSlider.HORIZONTAL, 10, 20, 10);
         slider.setMajorTickSpacing(5);
@@ -110,6 +126,10 @@ public class GameSetUp {
         }
     }
 
+    /**
+     * Asks the user to choose a player type.
+     * @return an integer representing the selected player type (0 for Archer, 1 for Mage, 2 for Warrior)
+     */
     public static int askPlayerType() {
         String[] names = {"Archer", "Mage", "Warrior"};
         Image background = new ImageIcon(Main.class.getResource("/images/character_selection_bg.jpg")).getImage();
@@ -158,6 +178,10 @@ public class GameSetUp {
         return 1;
     }
 
+    /**
+     * Asks the player to enter their name.
+     * @return the player's name as a String, or "Player" if no name is entered
+     */
     public static String askPlayerName() {
         Image background = new ImageIcon(Main.class.getResource("/images/map.jpg")).getImage();
 
@@ -198,6 +222,11 @@ public class GameSetUp {
 
     }
 
+    /**
+     * Asks the player to choose how much to increase or decrease their stats.
+     * @param includeDefense whether to include defense in the stat changes
+     * @return a map containing the stat changes for health, power, and optionally defense
+     */
     public static Map<String, Integer> askPlayerStatChanges(boolean includeDefense) {
         Map<String, Integer> result = new HashMap<>();
 
@@ -266,6 +295,10 @@ public class GameSetUp {
         return result;
     }
 
+    /**
+     * Displays a welcome message in a JWindow that fades in and out automatically.
+     * @param name the name of the player to display in the welcome message
+     */
     public static void showAutoClosingWelcome(String name) {
         JWindow window = new JWindow();
 
@@ -320,6 +353,11 @@ public class GameSetUp {
         fadeIn.start();
     }
 
+    /**
+     * Displays a victory panel with a congratulatory message and an image.
+     * The panel fades in, stays visible for a short time, and then fades out.
+     * @param onFinish a Runnable to execute after the panel fades out
+     */
     public void showVictoryPanel(Runnable onFinish) {
         ImageIcon icon = new ImageIcon(Main.class.getResource("/images/winner.jpg"));
         JLabel label = new JLabel(icon);
@@ -368,8 +406,14 @@ public class GameSetUp {
         fadeIn.start();
     }
 
-    public void GameOverPanel(Runnable onFinish) {
+    /**
+     * Displays a game over panel with an image and fades it in and out.
+     * After fading out, it executes the provided Runnable.
+     * @param onFinish a Runnable to execute after the panel fades out
+     */
+    public void gameOverPanel(Runnable onFinish) {
         Image background = new ImageIcon(Main.class.getResource("/images/gameOver.jpg")).getImage();
+
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         JPanel fullScreenPanel = new JPanel() {
             protected void paintComponent(Graphics g) {
@@ -409,7 +453,6 @@ public class GameSetUp {
                                 if (op <= 0f) {
                                     ((Timer) e.getSource()).stop();
                                     window.dispose();
-                                    LogManager.addLog("Game ended, player is dead");
                                     if (onFinish != null) {
                                         onFinish.run();
                                     }
@@ -425,73 +468,69 @@ public class GameSetUp {
         fadeIn.start();
     }
 
+    /**
+     * Asks the user to choose up to 2 decorators for their character.
+     * @return a list of selected decorator keys
+     */
     public static List<String> askDecorators() {
-            String[] decoratorNames = {"Boosted Attack", "Auto Heal", "Magic Amplifier"};
-            String[] decoratorKeys = {"boost", "regen", "magicamplifier"};
+        String[] decoratorNames = {"Boosted Attack", "Auto Heal", "Magic Amplifier *For Mages Only*"};
+        String[] decoratorKeys = {"boost", "regen", "magicamplifier"};
 
-            JCheckBox[] checkBoxes = new JCheckBox[decoratorNames.length];
-            final int[] selectedCount = {0};
+        JCheckBox[] checkBoxes = new JCheckBox[decoratorNames.length];
+        JPanel panel = new JPanel(new GridLayout(decoratorNames.length, 1, 5, 5));
+        panel.setPreferredSize(new Dimension(300, 120));
+        panel.setOpaque(false);
 
+        // נעקב אחרי כמה תיבות סומנו
+        final int[] selectedCount = {0};
 
-            Image background = new ImageIcon(Main.class.getResource("/images/decorator_selection.jpg")).getImage();
+        for (int i = 0; i < decoratorNames.length; i++) {
+            JCheckBox checkBox = new JCheckBox(decoratorNames[i]);
+            checkBox.setFont(new Font("Serif", Font.PLAIN, 14));
 
-
-            JPanel panel = new JPanel() {
+            checkBox.addItemListener(new ItemListener() {
                 @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
-                }
-            };
-            panel.setLayout(new GridLayout(decoratorNames.length, 1, 5, 5));
-            panel.setPreferredSize(new Dimension(300, 120));
-            panel.setOpaque(false);
-
-            for (int i = 0; i < decoratorNames.length; i++) {
-                JCheckBox checkBox = new JCheckBox(decoratorNames[i]);
-                checkBox.setFont(new Font("Serif", Font.BOLD, 14));
-                checkBox.setOpaque(false); // שקוף כדי שיראו את הרקע
-                checkBox.setForeground(Color.WHITE); // צבע טקסט מתאים לרקע כהה
-
-                checkBox.addItemListener(new ItemListener() {
-                    @Override
-                    public void itemStateChanged(ItemEvent e) {
-                        if (checkBox.isSelected()) {
-                            if (selectedCount[0] >= 2) {
-                                checkBox.setSelected(false);
-                                JOptionPane.showMessageDialog(null, "You can select up to 2 decorators only.", "Limit Reached", JOptionPane.WARNING_MESSAGE);
-                            } else {
-                                selectedCount[0]++;
-                            }
+                public void itemStateChanged(ItemEvent e) {
+                    if (checkBox.isSelected()) {
+                        if (selectedCount[0] >= 2) {
+                            checkBox.setSelected(false);
+                            JOptionPane.showMessageDialog(null, "You can select up to 2 decorators only.", "Limit Reached", JOptionPane.WARNING_MESSAGE);
                         } else {
-                            selectedCount[0]--;
+                            selectedCount[0]++;
                         }
-                    }
-                });
-
-                checkBoxes[i] = checkBox;
-                panel.add(checkBox);
-            }
-
-            int result = JOptionPane.showConfirmDialog(
-                    null, panel, "Choose up to 2 Decorators", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
-            );
-
-            List<String> chosen = new ArrayList<>();
-
-            if (result == JOptionPane.OK_OPTION) {
-                for (int i = 0; i < checkBoxes.length; i++) {
-                    if (checkBoxes[i].isSelected()) {
-                        chosen.add(decoratorKeys[i]);
+                    } else {
+                        selectedCount[0]--;
                     }
                 }
-            } else {
-                System.exit(0); // או return null
-            }
+            });
 
-            return chosen;
+            checkBoxes[i] = checkBox;
+            panel.add(checkBox);
         }
 
+        int result = JOptionPane.showConfirmDialog(
+                null, panel, "Choose up to 2 Decorators", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE
+        );
+
+        List<String> chosen = new ArrayList<>();
+
+        if (result == JOptionPane.OK_OPTION) {
+            for (int i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].isSelected()) {
+                    chosen.add(decoratorKeys[i]);
+                }
+            }
+        } else {
+            System.exit(0); // או return null
+        }
+
+        return chosen;
+    }
+
+    /**
+     * Asks the user to choose a magic element type.
+     * @return
+     */
     public static MagicElement askElementType() {
         MagicElement[] elements = MagicElement.values();
         String[] imagePaths = {
@@ -529,6 +568,10 @@ public class GameSetUp {
         return MagicElement.FIRE; // default
     }
 
+    /**
+     * Exits the game application.
+     * @param game the current game world instance (not used in this method)
+     */
     public void exitGame(GameWorld game) {
         System.exit(0);
     }

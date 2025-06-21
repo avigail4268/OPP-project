@@ -1,4 +1,3 @@
-
 package game.characters;
 
 import game.combat.Combatant;
@@ -34,6 +33,14 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     public abstract int getMaxHealth();
 
     /**
+     * Increases the power of the character by the given amount if positive.
+     * @param amount the amount to add to power
+     */
+    public void setPower(int amount) {
+        this.power += amount;
+    }
+
+    /**
      * Heals the character by a specified amount.
      * @param amount the amount to heal
      */
@@ -60,20 +67,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public int getPower() {
-        return power;
-    }
-
-    /**
-     * Increases the power of the character by the given amount if positive.
-     * @param amount the amount to add to power
-     * @return true if the power was increased, false if the amount is not positive
-     */
-    public void setPower(int amount) {
-        if (amount <= 3){
-            this.power += amount;
-        }else{
-            this.power = amount;
-        }
+        return this.power;
     }
 
     /**
@@ -116,7 +110,7 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public boolean setHealth(int health) {
-        this.health = Math.max(health, 0);
+        this.health = Math.min(health, getMaxHealth()); // כדי שלא תחרג
         return true;
     }
 
@@ -151,13 +145,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     }
 
     /**
-     * Gets the display symbol representing the character on the map.
-     * @return the display symbol (implemented by subclasses)
-     */
-    @Override
-    public abstract String getDisplaySymbol();
-
-    /**
      * Gets the magic element associated with the character.
      * @return the character's magic element (implemented by subclasses)
      */
@@ -174,8 +161,15 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public void receiveDamage(int amount, Combatant source) {
-        this.health -= amount;
+        setHealth(Math.max(0, getHealth() - amount));
     }
+
+    /**
+     * Gets the display symbol representing the character on the map.
+     * @return the display symbol (implemented by subclasses)
+     */
+    @Override
+    public abstract String getDisplaySymbol();
 
     /**
      * Performs an attack on the given target.
@@ -193,34 +187,11 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     @Override
     public abstract boolean isInRange (Position self, Position target);
 
-    /**
-     * Gets the chance for the character to evade an attack.
-     * @return the evasion chance (default is 25%)
-     */
-    protected double getEvasionChance () {
-        return evasionChance;
-    }
-
-
     // --- Fields ---
-    /**
-     * The position of the character on the map.
-     */
+
     private Position position;
-    /**
-     * The health of the character.
-     */
     private int health;
-    /**
-     * The power of the character, representing its attack strength.
-     */
     private int power;
-    /**
-     * The visibility state of the character.
-     */
     private boolean visible;
-    /**
-     * The evasion chance of the character, default is 25%.
-     */
     private final double evasionChance = 0.25;
 }

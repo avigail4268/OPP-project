@@ -1,7 +1,7 @@
 /**
- * avigail musai 322227711
- * rotem dino 209168442
- * chira borochov 345887046
+ * Avigail Musai 322227711
+ * Rotem Dino 209168442
+ * Chira Borochov 345887046
  */
 
 package game;

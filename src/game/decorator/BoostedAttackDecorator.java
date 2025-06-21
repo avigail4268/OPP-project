@@ -1,31 +1,39 @@
+
 package game.decorator;
+
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.log.LogManager;
 
+/**
+ * BoostedAttackDecorator is a decorator for PlayerCharacter that adds extra damage to attacks.
+ * It extends the functionality of the PlayerCharacter by allowing it to deal additional damage
+ * when attacking a target.
+ */
 public class BoostedAttackDecorator extends PlayerDecorator {
 
-    private final int extraDamage;
-
+    /**
+     * Constructs a BoostedAttackDecorator with the specified player character and extra damage.
+     * @param player the PlayerCharacter to decorate
+     * @param extraDamage the additional damage to be added to attacks
+     */
     public BoostedAttackDecorator(PlayerCharacter player, int extraDamage) {
         super(player);
         this.extraDamage = extraDamage;
     }
 
+    /**
+     * Attacks the target Combatant, dealing the player's normal attack damage
+     * and adding extra damage.
+     */
     @Override
     public void attack(Combatant target) {
-        getDecoratorPlayer().attack(target);
-        target.receiveDamage(extraDamage, this);
-        LogManager.addLog("Extra damage");
+        super.attack(target); // מתקפה רגילה
+        target.receiveDamage(extraDamage, this); // תוספת נזק
+        LogManager.addLog("Boosted attack: +" + extraDamage + " damage dealt!");
     }
-    @Override
-    public int getHealth() {
-        return getDecoratorPlayer().getHealth();
-    }
-    @Override
-    public boolean setHealth(int health) {
-        getDecoratorPlayer().setHealth(health);
-        return true;
-    }
+
+    // --- Fields ---
+    private final int extraDamage;
 
 }

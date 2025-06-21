@@ -3,7 +3,6 @@ import game.combat.Combatant;
 import game.combat.MagicAttacker;
 import game.combat.MagicElement;
 import game.combat.RangeFighter;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -25,6 +24,20 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         this.element = MagicElement.getElement(); // Assign a magic element to the Mage
     }
 
+    /**
+     * Sets the magic element of the Mage.
+     * This method allows changing the Mage's magic element.
+     * @param element the new magic element to set
+     */
+    public void setElement(MagicElement element) {
+        this.element = element;
+    }
+
+    /**
+     * Creates a deep copy of the Mage character.
+     * This method creates a new Mage instance with the same attributes as the original.
+     * @return a new Mage instance that is a deep copy of this Mage
+     */
     @Override
     public PlayerCharacter deepCopy() {
         Mage mage = new Mage(this.getName(), this.getPosition(), this.getHealth());
@@ -34,7 +47,6 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
         mage.setTreasurePoints(this.getTreasurePoints());
         return mage;
     }
-
 
     /**
      * Returns the symbol representing the Mage.
@@ -55,15 +67,11 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     }
 
     /**
-     * Attacks the target by casting a spell. The magic damage is calculated based on the Mage's element
-     * and the target's element, and the target receives the corresponding damage.
-     * @param element the target Combatant to attack
+     * Attacks a target Combatant using magic.
+     * This method is called when the Mage decides to attack an enemy.
+     * It will invoke the fightRanged method to perform the attack.
+     * @param target the target Combatant to attack
      */
-
-    public void setElement(MagicElement element) {
-        this.element = element;
-    }
-
     @Override
     public void attack(Combatant target) {
         fightRanged(target);
@@ -131,7 +139,7 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
      */
     @Override
     public int getRange() {
-        return 2; // Mage has a range of 2
+        return 2;
     }
 
     /**
@@ -172,9 +180,5 @@ public class Mage extends PlayerCharacter implements RangeFighter, MagicAttacker
     public boolean isMagicUser(){return true;}
 
     // --- Fields ---
-    /**
-     * The magic element of the Mage.
-     * This field is used to determine the type of magic attacks the Mage can perform.
-     */
     private MagicElement element; // Mage's magic element
 }

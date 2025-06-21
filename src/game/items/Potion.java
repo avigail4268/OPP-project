@@ -1,21 +1,18 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
 
 /**
  * Represents a health potion that can be collected and used by a player character.
-
  * When used, the potion restores a random amount of health to the player.
  */
 public class Potion extends GameItem implements Interactable {
 
     /**
      * Creates a new health potion at the specified position.
-     *
      * @param position the initial position of the potion
      * @param blocksMovement true if the potion blocks movement, false otherwise
      * @param max the maximum amount of health the potion can restore
@@ -28,12 +25,31 @@ public class Potion extends GameItem implements Interactable {
         this.setDescription("This is a health potion, increased by " + increaseAmount);
     }
 
+    /**
+     * Creates a copy constructor for the potion.
+     * @param position the initial position of the potion
+     * @param blocksMovement true if the potion blocks movement, false otherwise
+     * @param increaseAmount the fixed amount of health this potion restores
+     */
     public Potion ( Position position, boolean blocksMovement , int increaseAmount) {
         super(position, blocksMovement);
         this.increaseAmount = increaseAmount;
         this.isUsed = false;
         this.setDescription("This is a health potion, increased by " + increaseAmount);
     }
+
+    /**
+     * Returns the amount of health this potion restores.
+     * @return the health increase amount
+     */
+    public int getIncreaseAmount() {
+        return increaseAmount;
+    }
+
+    /**
+     * Creates a deep copy of this potion.
+     * @return a new instance of Potion with the same properties
+     */
     @Override
     public GameItem deepCopy() {
         return new Potion(getPosition(), this.isBlocksMovement(), increaseAmount);
@@ -41,7 +57,6 @@ public class Potion extends GameItem implements Interactable {
 
     /**
      * Returns the display symbol for the potion.
-     *
      * @return "HP" as the symbol representing the potion
      */
     @Override
@@ -51,7 +66,6 @@ public class Potion extends GameItem implements Interactable {
 
     /**
      * Interacts with the player character by healing them and marking the potion as used.
-     *
      * @param c the player character interacting with the potion
      */
     @Override
@@ -68,7 +82,6 @@ public class Potion extends GameItem implements Interactable {
 
     /**
      * Collects the potion into the player character's inventory.
-     *
      * @param c the player character collecting the potion
      */
     @Override
@@ -79,7 +92,6 @@ public class Potion extends GameItem implements Interactable {
     /**
      * Compares this potion to another object for equality.
      * Two potions are equal if they have the same usage status and position.
-     *
      * @param obj the object to compare with
      * @return true if the potions are equal, false otherwise
      */
@@ -93,25 +105,15 @@ public class Potion extends GameItem implements Interactable {
 
     /**
      * Returns a string representation of the potion.
-     *
      * @return a string describing the potion and its position
      */
     @Override
     public String toString() {
         return "Health Potion " + getPosition();
     }
-    /**
-     * Checks if the potion can be used in a usable-in-use context.
-     *
-     * @return always true
-     */
-    public boolean isUsableInUsePotion() {
-        return true;
-    }
 
     /**
      * Returns whether the potion has already been used.
-     *
      * @return true if the potion has been used, false otherwise
      */
     protected boolean getIsUsed() {
@@ -120,7 +122,6 @@ public class Potion extends GameItem implements Interactable {
 
     /**
      * Marks the potion as used.
-     *
      * @return true if the potion was not already used and is now marked used, false otherwise
      */
     protected boolean setIsUsed() {
@@ -132,22 +133,7 @@ public class Potion extends GameItem implements Interactable {
         return false;
     }
 
-    /**
-     * Returns the amount of health this potion restores.
-     *
-     * @return the health increase amount
-     */
-    public int getIncreaseAmount() {
-        return increaseAmount;
-    }
-
     // --- Fields ---
-    /**
-     * The amount of health this potion restores.
-     */
     private final int increaseAmount;
-    /**
-     * Indicates whether the potion has been used.
-     */
     private boolean isUsed;
 }

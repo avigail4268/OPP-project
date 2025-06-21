@@ -16,6 +16,11 @@ public class Position {
         this.col = c;
     }
 
+    /**
+     * Copy constructor that creates a new Position object from an existing Position object.
+     * This allows for creating a new position with the same row and column as the given position.
+     * @param pos the Position object to copy
+     */
     public Position (Position pos) {
         this.row = pos.row;
         this.col = pos.col;
@@ -93,6 +98,6 @@ public class Position {
         return java.util.Objects.hash(row, col);
     }
 
-    // Private fields for row and column
+    // --- Fields ---
     private int row, col;
 }

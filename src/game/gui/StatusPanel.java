@@ -1,4 +1,3 @@
-
 package game.gui;
 
 import game.audio.SoundPlayer;
@@ -14,15 +13,16 @@ import java.awt.*;
 import java.util.List;
 
 /**
- * StatusPanel displays the player's current status, including name, type,
- * treasure points, power, health, and inventory. It updates dynamically
- * based on the player's current state and reacts to game updates.
+ * The StatusPanel class displays the player's status, including health, inventory,
+ * and other attributes. It allows the player to save and load the game state.
  */
 public class StatusPanel extends JPanel implements GameObserver {
 
     /**
-     * Constructs a StatusPanel for the given player.
-     * @param player The player character whose status will be displayed
+     * Constructs a StatusPanel with the given player character and game world.
+     * Initializes the layout, labels, health bar, and inventory display.
+     * @param player The player character whose status is displayed
+     * @param world The game world context for saving/loading game state
      */
     public StatusPanel(PlayerCharacter player , GameWorld world) {
         this.player = player;
@@ -113,6 +113,14 @@ public class StatusPanel extends JPanel implements GameObserver {
     }
 
     /**
+     * Called when the game state is updated. Refreshes the panel.
+     */
+    @Override
+    public void onGameUpdated() {
+        refresh(player);
+    }
+
+    /**
      * Updates the inventory display with the given list of items.
      * @param items List of GameItem objects to display
      */
@@ -156,34 +164,20 @@ public class StatusPanel extends JPanel implements GameObserver {
         }
     }
 
-
-    /**
-     * Called when the game state is updated. Refreshes the panel.
-     */
-    @Override
-    public void onGameUpdated() {
-        refresh(player);
-    }
-
     // --- Fields ---
-    /** Label displaying the player's name. */
     private JLabel nameLabel;
-    /** Label displaying the player's character class (type). */
     private JLabel classLabel;
-    /** Label displaying the player's accumulated treasure points. */
     private JLabel treasureLabel;
-    /** Progress bar visually representing the player's health (0-100). */
     private JProgressBar healthBar;
-    /** Panel containing item buttons representing the player's inventory. */
     private JPanel inventoryPanel;
-    /** Label displaying the player's power attribute. */
     private JLabel powerPanel;
-    /** Scroll pane that wraps the inventory panel for scrollable display. */
     private JScrollPane inventoryScroll;
-    /** The player character whose status this panel displays. */
     private PlayerCharacter player;
     private GameWorld world;
     private JButton save;
     private JButton load ;
 
 }
+
+
+

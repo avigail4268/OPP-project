@@ -1,18 +1,14 @@
 package game.items;
-
-import game.core.GameEntity;
 import game.map.Position;
 
 /**
  * Represents a wall entity on the game map.
-
  * Walls block player movement and cannot be passed through.
  */
 public class Wall extends GameItem {
 
     /**
      * Creates a new wall at the specified position.
-     *
      * @param position the position of the wall
      * @param blocksMovement true if the wall blocks movement
      */
@@ -21,6 +17,10 @@ public class Wall extends GameItem {
         this.setDescription("This is a Wall, you can't pass it.");
     }
 
+    /**
+     * Creates a deep copy of this wall.
+     * @return a new instance of Wall with the same position and movement blocking status
+     */
     @Override
     public GameItem deepCopy() {
         return new Wall(getPosition(), this.isBlocksMovement());
@@ -28,7 +28,6 @@ public class Wall extends GameItem {
 
     /**
      * Returns a string representation of the wall.
-     *
      * @return a string describing the wall and its position
      */
     @Override
@@ -39,7 +38,6 @@ public class Wall extends GameItem {
     /**
      * Compares this wall to another object for equality.
      * Two walls are equal if they are at the same position.
-     *
      * @param obj the object to compare with
      * @return true if the walls are at the same position, false otherwise
      */
@@ -53,12 +51,10 @@ public class Wall extends GameItem {
 
     /**
      * Returns the display symbol for the wall.
-     *
      * @return "WALL" as the symbol representing the wall
      */
     @Override
     public String getDisplaySymbol() {
         return "Wall";
     }
-
 }

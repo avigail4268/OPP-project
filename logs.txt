@@ -1,1524 +1,296 @@
-[2025-06-12T13:13:15.922529] Game started with player type: Archer and name: Player
-[2025-06-12T13:13:16.565917] Enemy moved to: (0,8)
-[2025-06-12T13:13:16.565933] Dragon attacked for 18 damage.
-[2025-06-12T13:13:16.871404] The orc attacked for: 24 damage.
-[2025-06-12T13:13:16.954309] The orc attacked for: 15 damage.
-[2025-06-12T13:13:22.564249] Orc received 8 damage from physical attack.
-[2025-06-12T13:13:22.566568] Player attacked the enemy for 8 damage.
-[2025-06-12T13:13:22.566601] Player evaded the enemy's attack!
-[2025-06-12T13:13:23.046449] Orc received 8 damage from physical attack.
-[2025-06-12T13:13:23.046501] Player attacked the enemy for 8 damage.
-[2025-06-12T13:13:23.046510] Player evaded the enemy's attack!
-[2025-06-12T13:13:23.515270] Orc received 8 damage from physical attack.
-[2025-06-12T13:13:23.515320] Player attacked the enemy for 8 damage.
-[2025-06-12T13:13:23.515333] The orc attacked for: 15 damage.
-[2025-06-12T13:13:24.129349] Orc received 8 damage from physical attack.
-[2025-06-12T13:13:24.129444] Player attacked the enemy for 8 damage.
-[2025-06-12T13:13:24.129716] The orc attacked with Critical hit! for: 30 damage.
-[2025-06-12T13:26:55.577685] Game started with player type: Mage and name: Player
-[2025-06-12T13:26:56.327120] Dragon attacked for 19 damage.
-[2025-06-12T13:26:56.327147] Enemy moved to: (0,6)
-[2025-06-12T13:26:56.327433] Dragon attacked for 24 damage.
-[2025-06-12T13:26:56.629852] Enemy tried to move out of bounds: (-1,9)
-[2025-06-12T13:26:57.234182] Enemy tried to move out of bounds: (3,10)
-[2025-06-12T13:26:57.932172] Enemy moved to: (5,7)
-[2025-06-12T13:26:58.242134] Enemy moved to: (6,4)
-[2025-06-12T13:27:01.826777] Player attacked the enemy for: 39 damage.
-[2025-06-12T13:27:01.826894] Player evaded the enemy's attack!
-[2025-06-12T13:27:02.357551] Player attacked the enemy for: 39 damage.
-[2025-06-12T13:27:02.357596] Enemy is dead! You won the fight!
-[2025-06-12T13:27:02.858718] Added item: Health Potion
-[2025-06-12T13:27:02.861780] Player moved from (0,5) to (1,5)
-[2025-06-12T13:27:03.339895] Player moved from (1,5) to (0,5)
-[2025-06-12T13:27:03.842379] Added item: Health Potion
-[2025-06-12T13:27:03.844136] Player moved from (0,5) to (0,4)
-[2025-06-12T13:27:05.739226] Potion used!
-[2025-06-12T13:27:05.739396] Removed item: Health Potion
-[2025-06-12T13:27:05.739520] Health was 57 now is 67
-[2025-06-12T13:27:05.739705] Player used a potion and healed 10 HP!
-[2025-06-12T13:27:07.115829] Potion used!
-[2025-06-12T13:27:07.115939] Removed item: Health Potion
-[2025-06-12T13:27:07.115971] Health was 67 now is 87
-[2025-06-12T13:27:07.115992] Player used a potion and healed 20 HP!
-[2025-06-12T13:27:07.978060] Player moved from (0,4) to (1,4)
-[2025-06-12T13:27:09.061011] Player moved from (1,4) to (0,4)
-[2025-06-12T13:27:09.874515] Player moved from (0,4) to (0,5)
-[2025-06-12T13:27:11.375098] Player moved from (0,5) to (1,5)
-[2025-06-12T13:27:12.025421] Added item: Health Potion
-[2025-06-12T13:27:12.029109] Player moved from (1,5) to (1,6)
-[2025-06-12T13:27:13.748234] Potion used!
-[2025-06-12T13:27:13.748337] Removed item: Health Potion
-[2025-06-12T13:27:13.748368] Health was 87 now is 100
-[2025-06-12T13:27:13.748426] Player used a potion and healed 21 HP!
-[2025-06-12T13:27:14.366078] Player moved from (1,6) to (1,5)
-[2025-06-18T11:39:55.799764400] Game started with player type: Warrior and name: sdfgh
-[2025-06-18T11:39:56.766650600] Enemy tried to move out of bounds: (-1,3)
-[2025-06-18T11:39:57.674964500] Enemy moved to: (1,6)
-[2025-06-18T11:39:58.290110800] Enemy tried to move out of bounds: (4,10)
-[2025-06-18T11:39:58.590698500] Enemy moved to: (7,1)
-[2025-06-18T11:39:58.593699] Enemy attacked sdfgh for: 38 damage, you received only 22
-[2025-06-18T11:39:58.594702600] Dragon attacked with a Critical hit! for 38 damage.
-[2025-06-18T11:39:58.903683400] Enemy moved to: (6,4)
-[2025-06-18T11:39:58.903683400] Enemy attacked sdfgh for: 21 damage, you received only 12
-[2025-06-18T11:39:58.903683400] Goblin attacked for: 21 damage.
-[2025-06-18T11:39:59.204751500] Enemy moved to: (5,9)
-[2025-06-18T11:39:59.206752] Enemy attacked sdfgh for: 17 damage, you received only 10
-[2025-06-18T11:39:59.206752] Dragon attacked for 17 damage.
-[2025-06-18T11:39:59.509301700] Enemy attacked sdfgh for: 21 damage, you received only 12
-[2025-06-18T11:39:59.510289900] The orc attacked for: 21 damage.
-[2025-06-18T11:39:59.805862300] Enemy moved to: (8,8)
-[2025-06-18T11:40:01.658478400] sdfgh attacked the enemy for: 12 damage.
-[2025-06-18T11:40:01.659478400] Player evaded the enemy's attack!
-[2025-06-18T11:40:05.673028300] Player exited the game.
-[2025-06-18T11:43:29.245629300] Game started with player type: Warrior and name: Player
-[2025-06-18T11:43:30.367975200] Enemy tried to move out of bounds: (-1,0)
-[2025-06-18T11:43:30.672041400] Enemy moved to: (0,9)
-[2025-06-18T11:43:32.856339500] Enemy moved to: (9,2)
-[2025-06-18T11:43:32.859362400] Enemy attacked Player for: 8 damage, you received only 4
-[2025-06-18T11:43:32.859362400] Goblin attacked for: 8 damage.
-[2025-06-18T11:43:33.170432400] Enemy attacked Player for: 11 damage, you received only 5
-[2025-06-18T11:43:33.170432400] Dragon attacked for 11 damage.
-[2025-06-18T11:43:33.700606700] The enemy evaded the attack!
-[2025-06-18T11:43:33.700606700] Player evaded the enemy's attack!
-[2025-06-18T11:43:34.569292700] Added item: Health Potion
-[2025-06-18T11:43:34.572292700] Player moved from (9,1) to (8,1)
-[2025-06-18T11:43:40.059539300] Player exited the game.
-[2025-06-18T11:44:00.106183600] Game started with player type: Mage and name: Player
-[2025-06-18T11:44:01.596116700] Enemy moved to: (3,6)
-[2025-06-18T11:44:02.195952200] Enemy moved to: (4,5)
-[2025-06-18T11:44:02.195952200] Enemy moved to: (3,3)
-[2025-06-18T11:44:02.498027800] Enemy moved to: (4,4)
-[2025-06-18T11:44:03.741475500] The orc attacked for: 6 damage.
-[2025-06-18T11:44:03.741475500] The orc attacked for: 10 damage.
-[2025-06-18T11:44:07.998340400] Player exited the game.
-[2025-06-18T11:46:47.748607500] Game started with player type: Warrior and name: Player
-[2025-06-18T11:46:48.995101400] Enemy moved to: (4,1)
-[2025-06-18T11:46:48.998106200] Enemy attacked Player for: 21 damage, you received only 8
-[2025-06-18T11:46:48.998106200] Dragon attacked for 21 damage.
-[2025-06-18T11:46:49.308626600] Enemy attacked Player for: 14 damage, you received only 5
-[2025-06-18T11:46:49.308626600] Goblin attacked for: 14 damage.
-[2025-06-18T11:46:49.912947900] Enemy moved to: (8,4)
-[2025-06-18T11:46:50.568217800] Added item: Health Potion
-[2025-06-18T11:46:50.571219400] Player moved from (4,2) to (3,2)
-[2025-06-18T11:46:51.537341] Player moved from (3,2) to (2,2)
-[2025-06-18T11:46:52.314692500] Added item: Power Potion
-[2025-06-18T11:46:52.316697] Player moved from (2,2) to (1,2)
-[2025-06-18T11:46:53.407510400] Player moved from (1,2) to (1,3)
-[2025-06-18T11:46:57.788422] Player exited the game.
-[2025-06-18T11:50:38.049704500] Game started with player type: Mage and name: Player
-[2025-06-18T11:50:39.500181] Goblin attacked for: 19 damage.
-[2025-06-18T11:50:40.113228500] Enemy moved to: (2,8)
-[2025-06-18T11:50:41.069690900] Player moved from (2,6) to (2,7)
-[2025-06-18T11:50:41.315757400] Enemy moved to: (6,2)
-[2025-06-18T11:50:41.316757700] Enemy moved to: (7,6)
-[2025-06-18T11:50:41.917504400] Enemy moved to: (9,3)
-[2025-06-18T11:50:44.627515600] Added item: Health Potion
-[2025-06-18T11:50:44.632516500] Player moved from (2,7) to (1,7)
-[2025-06-18T11:50:48.813781900] Player exited the game.
-[2025-06-18T18:17:21.747379500] Game started with player type: Mage and name: SHIRA
-[2025-06-18T18:17:22.658337100] Dragon attacked with a Critical hit! for 26 damage.
-[2025-06-18T18:17:23.559300400] Enemy moved to: (2,4)
-[2025-06-18T18:17:23.575301500] Enemy moved to: (4,7)
-[2025-06-18T18:17:24.876467200] Player moved from (1,0) to (0,0)
-[2025-06-18T18:17:25.699222400] Player moved from (0,0) to (1,0)
-[2025-06-18T18:17:51.246853] Game started with player type: Mage and name: SHIRA
-[2025-06-18T18:17:52.180202300] Enemy tried to move out of bounds: (-1,6)
-[2025-06-18T18:17:52.180202300] Enemy tried to move out of bounds: (-1,5)
-[2025-06-18T18:17:52.491506500] Enemy moved to: (2,3)
-[2025-06-18T18:17:53.109238] The orc attacked for: 19 damage.
-[2025-06-18T18:17:53.406675] Enemy moved to: (5,2)
-[2025-06-18T18:17:53.707932900] Enemy moved to: (5,7)
-[2025-06-18T18:17:53.707932900] The orc attacked for: 16 damage.
-[2025-06-18T18:17:59.995773600] Added item: Power Potion
-[2025-06-18T18:18:00.008824500] Player moved from (4,7) to (4,6)
-[2025-06-18T18:18:01.195193900] Player moved from (4,6) to (4,5)
-[2025-06-18T18:18:02.102327200] Player moved from (4,5) to (5,5)
-[2025-06-18T18:18:02.939258] Player moved from (5,5) to (6,5)
-[2025-06-18T18:18:03.597845500] Added item: Health Potion
-[2025-06-18T18:18:03.599845400] Player moved from (6,5) to (6,6)
-[2025-06-18T18:18:04.497989300] Player moved from (6,6) to (6,7)
-[2025-06-18T18:18:05.365562200] Added item: Health Potion
-[2025-06-18T18:18:05.367555600] Player moved from (6,7) to (7,7)
-[2025-06-18T18:18:14.779342200] Player moved from (7,7) to (6,7)
-[2025-06-18T18:18:15.845990700] Player moved from (6,7) to (6,6)
-[2025-06-18T18:18:16.653224600] Player moved from (6,6) to (5,6)
-[2025-06-18T18:18:17.409061400] Player moved from (5,6) to (4,6)
-[2025-06-18T18:18:18.087187700] Player moved from (4,6) to (4,7)
-[2025-06-18T18:18:19.033568800] Player moved from (4,7) to (3,7)
-[2025-06-18T18:18:19.690817400] Player moved from (3,7) to (2,7)
-[2025-06-18T18:18:20.336724600] Added item: Health Potion
-[2025-06-18T18:18:20.339725700] Player moved from (2,7) to (2,6)
-[2025-06-18T19:08:27.997752500] Game started with player type: Mage and name: Player
-[2025-06-18T19:08:30.729587200] Goblin attacked for: 17 damage.
-[2025-06-18T19:08:31.335293800] Enemy moved to: (8,5)
-[2025-06-18T19:08:31.632001600] Enemy tried to move out of bounds: (10,8)
-[2025-06-18T19:08:34.157452300] Added item: Power Potion
-[2025-06-18T19:08:34.160455500] Player moved from (7,9) to (8,9)
-[2025-06-18T19:08:35.028230] The enemy evaded the attack!
-[2025-06-18T19:08:35.028230] Goblin attacked for: 10 damage.
-[2025-06-18T19:08:35.868006300] Player moved from (8,9) to (7,9)
-[2025-06-18T19:08:36.474466300] Player moved from (7,9) to (6,9)
-[2025-06-18T19:08:37.008070500] Player moved from (6,9) to (5,9)
-[2025-06-18T19:08:44.061334800] Player moved from (5,9) to (6,9)
-[2025-06-18T19:08:44.309118100] Player moved from (6,9) to (7,9)
-[2025-06-18T19:08:54.814134600] Cannot move through wall at (5,8)
-[2025-06-18T19:08:55.422846500] Cannot move through wall at (5,8)
-[2025-06-18T19:08:55.794555100] Player moved from (5,9) to (6,9)
-[2025-06-18T19:09:00.673361300] Cannot move through wall at (6,8)
-[2025-06-18T19:09:01.191308800] Player moved from (6,9) to (5,9)
-[2025-06-18T19:09:02.349457800] Player moved from (5,9) to (6,9)
-[2025-06-18T19:09:03.155293800] Player moved from (6,9) to (5,9)
-[2025-06-18T19:09:03.588216] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:03.588216] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:03.588216] Player evaded the enemy's attack!
-[2025-06-18T19:09:04.188078200] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:04.188078200] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:04.188078200] Player evaded the enemy's attack!
-[2025-06-18T19:09:04.457051100] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:04.457051100] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:04.457051100] Player evaded the enemy's attack!
-[2025-06-18T19:09:04.660324600] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:04.660324600] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:04.661310300] Dragon attacked for 16 damage.
-[2025-06-18T19:09:04.846727600] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:04.846727600] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:04.846727600] Dragon attacked with a Critical hit! for 32 damage.
-[2025-06-18T19:09:05.033752800] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:05.033752800] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:05.033752800] Dragon attacked for 16 damage.
-[2025-06-18T19:09:05.223324500] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:09:05.223324500] Player attacked the enemy for: 7 damage.
-[2025-06-18T19:09:05.223324500] Enemy is dead! You won the fight!
-[2025-06-18T19:09:05.768511800] Collected 131 treasure points!
-[2025-06-18T19:09:05.769518100] Player moved from (5,9) to (4,9)
-[2025-06-18T19:09:06.234368500] Added item: Health Potion
-[2025-06-18T19:09:06.236368700] Player moved from (4,9) to (4,8)
-[2025-06-18T19:09:06.568479400] Added item: Health Potion
-[2025-06-18T19:09:06.570492] Player moved from (4,8) to (4,7)
-[2025-06-18T19:09:07.169556800] Player moved from (4,7) to (5,7)
-[2025-06-18T19:09:07.563584100] The enemy evaded the attack!
-[2025-06-18T19:09:07.563584100] Goblin attacked for: 7 damage.
-[2025-06-18T19:09:08.783504800] The enemy evaded the attack!
-[2025-06-18T19:09:08.783504800] Player evaded the enemy's attack!
-[2025-06-18T19:09:09.149338900] Player moved from (5,7) to (4,7)
-[2025-06-18T19:09:09.602509500] Player moved from (4,7) to (4,8)
-[2025-06-18T19:09:09.919257500] Player moved from (4,8) to (4,9)
-[2025-06-18T19:09:10.207008300] Player moved from (4,9) to (5,9)
-[2025-06-18T19:09:10.516273600] Player moved from (5,9) to (6,9)
-[2025-06-18T19:09:53.526506800] Game started with player type: Mage and name: Player
-[2025-06-18T19:09:56.377537500] Enemy moved to: (9,1)
-[2025-06-18T19:09:56.678556700] Goblin attacked for: 18 damage.
-[2025-06-18T19:09:58.018191] Player moved from (8,9) to (8,8)
-[2025-06-18T19:09:59.319504700] Player moved from (8,8) to (7,8)
-[2025-06-18T19:09:59.985183300] Player moved from (7,8) to (7,7)
-[2025-06-18T19:10:00.538099600] Added item: Power Potion
-[2025-06-18T19:10:00.541111100] Player moved from (7,7) to (6,7)
-[2025-06-18T19:10:05.356943] Potion used!
-[2025-06-18T19:10:05.356943] Removed item: Power Potion
-[2025-06-18T19:10:05.356943] Power was 10 now is 13
-[2025-06-18T19:10:05.356943] Player used a power potion and gained 3 attack power!
-[2025-06-18T19:10:21.397118] Player moved from (6,7) to (5,7)
-[2025-06-18T19:10:21.996827700] Player moved from (5,7) to (4,7)
-[2025-06-18T19:10:22.625603900] Player moved from (4,7) to (3,7)
-[2025-06-18T19:10:23.106963200] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:23.107966800] Orc received 14 damage from magic attack.
-[2025-06-18T19:10:23.107966800] Player evaded the enemy's attack!
-[2025-06-18T19:10:23.533628200] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:23.533628200] Orc received 14 damage from magic attack.
-[2025-06-18T19:10:23.533628200] The orc attacked for: 21 damage.
-[2025-06-18T19:10:23.974595500] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:23.974595500] Orc received 14 damage from magic attack.
-[2025-06-18T19:10:23.974595500] Enemy is dead! You won the fight!
-[2025-06-18T19:10:24.847296500] Collected 226 treasure points!
-[2025-06-18T19:10:24.850854400] Player moved from (3,7) to (2,7)
-[2025-06-18T19:10:25.291538200] Player moved from (2,7) to (2,8)
-[2025-06-18T19:10:25.830918500] Added item: Health Potion
-[2025-06-18T19:10:25.832348400] Player moved from (2,8) to (3,8)
-[2025-06-18T19:10:29.266475200] Potion used!
-[2025-06-18T19:10:29.266475200] Removed item: Health Potion
-[2025-06-18T19:10:29.267695300] Health was 61 now is 75
-[2025-06-18T19:10:29.267695300] Player used a potion and healed 14 HP!
-[2025-06-18T19:10:30.222212500] Player moved from (3,8) to (3,9)
-[2025-06-18T19:10:30.778095100] Player moved from (3,9) to (4,9)
-[2025-06-18T19:10:31.202514] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:31.202514] Dragon attacked for 20 damage.
-[2025-06-18T19:10:31.560236600] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:31.560236600] Player evaded the enemy's attack!
-[2025-06-18T19:10:32.266553200] Player attacked the enemy for: 19 damage.
-[2025-06-18T19:10:32.266553200] Enemy is dead! You won the fight!
-[2025-06-18T19:10:32.737679600] Added item: Health Potion
-[2025-06-18T19:10:32.739662700] Player moved from (4,9) to (4,8)
-[2025-06-18T19:24:28.749288700] Game started with player type: Mage and name: Player
-[2025-06-18T19:24:29.049517600] Enemy moved to: (0,3)
-[2025-06-18T19:24:29.349052500] Enemy moved to: (1,3)
-[2025-06-18T19:24:29.965934200] Enemy moved to: (3,8)
-[2025-06-18T19:24:30.281537700] Enemy moved to: (4,8)
-[2025-06-18T19:24:31.849542300] Goblin attacked for: 24 damage.
-[2025-06-18T19:24:33.141152300] Player moved from (9,2) to (8,2)
-[2025-06-18T19:24:33.594995900] Player moved from (8,2) to (8,1)
-[2025-06-18T19:24:34.860177800] Player moved from (8,1) to (7,1)
-[2025-06-18T19:24:35.401106800] Added item: Health Potion
-[2025-06-18T19:24:35.404122400] Player moved from (7,1) to (6,1)
-[2025-06-18T19:24:36.151494800] Added item: Health Potion
-[2025-06-18T19:24:36.154499900] Player moved from (6,1) to (6,2)
-[2025-06-18T19:24:36.745260600] Player moved from (6,2) to (5,2)
-[2025-06-18T19:24:37.711540600] Player attacked the enemy for: 24 damage.
-[2025-06-18T19:24:37.711540600] Orc received 21 damage from magic attack.
-[2025-06-18T19:24:37.711540600] The orc attacked for: 20 damage.
-[2025-06-18T19:24:37.969264300] Player attacked the enemy for: 24 damage.
-[2025-06-18T19:24:37.969264300] Orc received 21 damage from magic attack.
-[2025-06-18T19:24:37.969264300] Enemy is dead! You won the fight!
-[2025-06-18T19:24:38.277724900] Collected 185 treasure points!
-[2025-06-18T19:24:38.280242] Player moved from (5,2) to (4,2)
-[2025-06-18T19:24:38.740446] Player moved from (4,2) to (4,3)
-[2025-06-18T19:24:39.497490900] Player moved from (4,3) to (3,3)
-[2025-06-18T19:24:49.444481] Player attacked the enemy for: 24 damage.
-[2025-06-18T19:24:49.444481] Orc received 14 damage from magic attack.
-[2025-06-18T19:24:49.444481] The orc attacked for: 22 damage.
-[2025-06-18T19:24:50.108085600] Player attacked the enemy for: 24 damage.
-[2025-06-18T19:24:50.108085600] Orc received 14 damage from magic attack.
-[2025-06-18T19:24:50.108085600] Player evaded the enemy's attack!
-[2025-06-18T19:24:51.806471500] Player moved from (3,3) to (4,3)
-[2025-06-18T19:24:52.321519900] Player moved from (4,3) to (4,2)
-[2025-06-18T19:24:54.410451900] Potion used!
-[2025-06-18T19:24:54.410451900] Removed item: Health Potion
-[2025-06-18T19:24:54.410451900] Health was 34 now is 79
-[2025-06-18T19:24:54.411454700] Player used a potion and healed 45 HP!
-[2025-06-18T19:24:55.925377] Potion used!
-[2025-06-18T19:24:55.925377] Removed item: Health Potion
-[2025-06-18T19:24:55.926377300] Health was 79 now is 100
-[2025-06-18T19:24:55.926377300] Player used a potion and healed 43 HP!
-[2025-06-18T19:24:56.736621800] The enemy evaded the attack!
-[2025-06-18T19:24:56.737615100] Dragon attacked for 7 damage.
-[2025-06-18T19:24:57.510318300] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:24:57.510318300] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:24:57.510318300] Dragon attacked for 7 damage.
-[2025-06-18T19:24:57.991896400] The enemy evaded the attack!
-[2025-06-18T19:24:57.991896400] Dragon attacked for 7 damage.
-[2025-06-18T19:24:58.505024300] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:24:58.505024300] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:24:58.505024300] Enemy is dead! You won the fight!
-[2025-06-18T19:24:59.109848300] Added item: Power Potion
-[2025-06-18T19:24:59.111847500] Player moved from (4,2) to (3,2)
-[2025-06-18T19:25:00.422679900] Player moved from (3,2) to (3,3)
-[2025-06-18T19:25:01.626340900] Potion used!
-[2025-06-18T19:25:01.626340900] Removed item: Power Potion
-[2025-06-18T19:25:01.626340900] Power was 16 now is 19
-[2025-06-18T19:25:01.626340900] Player used a power potion and gained 3 attack power!
-[2025-06-18T19:25:02.920699500] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:02.920699500] Player evaded the enemy's attack!
-[2025-06-18T19:25:03.370395800] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:03.370395800] Enemy is dead! You won the fight!
-[2025-06-18T19:25:04.148613500] Added item: Health Potion
-[2025-06-18T19:25:04.149652800] Player moved from (3,3) to (2,3)
-[2025-06-18T19:25:05.861616900] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:05.861616900] Player evaded the enemy's attack!
-[2025-06-18T19:25:06.261136700] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:06.261136700] Enemy is dead! You won the fight!
-[2025-06-18T19:25:06.743054400] Added item: Health Potion
-[2025-06-18T19:25:06.745058400] Player moved from (2,3) to (1,3)
-[2025-06-18T19:25:07.188904400] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:25:07.188904400] Player attacked the enemy for: 34 damage.
-[2025-06-18T19:25:07.188904400] Dragon attacked for 16 damage.
-[2025-06-18T19:25:07.633541500] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:25:07.633541500] Player attacked the enemy for: 34 damage.
-[2025-06-18T19:25:07.633541500] Enemy is dead! You won the fight!
-[2025-06-18T19:25:08.233417600] Collected 246 treasure points!
-[2025-06-18T19:25:08.235425] Player moved from (1,3) to (0,3)
-[2025-06-18T19:25:08.900845800] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:08.900845800] Goblin attacked for: 25 damage.
-[2025-06-18T19:25:09.266031400] Player attacked the enemy for: 28 damage.
-[2025-06-18T19:25:09.267026300] Enemy is dead! You won the fight!
-[2025-06-18T19:26:00.686431300] Player moved from (3,3) to (4,3)
-[2025-06-18T19:26:01.605683100] Player moved from (4,3) to (4,2)
-[2025-06-18T19:26:02.328839700] Player moved from (4,2) to (5,2)
-[2025-06-18T19:26:02.797379800] Player moved from (5,2) to (6,2)
-[2025-06-18T19:26:03.368952700] Player moved from (6,2) to (6,1)
-[2025-06-18T19:26:04.141858300] Player moved from (6,1) to (6,2)
-[2025-06-18T19:26:04.775608300] Player moved from (6,2) to (5,2)
-[2025-06-18T19:26:05.150108700] Player moved from (5,2) to (5,3)
-[2025-06-18T19:26:05.498734100] Player moved from (5,3) to (5,4)
-[2025-06-18T19:26:05.840372200] Added item: Health Potion
-[2025-06-18T19:26:05.841408900] Player moved from (5,4) to (5,5)
-[2025-06-18T19:26:06.226949100] The enemy evaded the attack!
-[2025-06-18T19:26:06.226949100] Dragon attacked for 8 damage.
-[2025-06-18T19:26:06.799894600] Player moved from (5,5) to (4,5)
-[2025-06-18T19:26:07.173353] Player moved from (4,5) to (4,6)
-[2025-06-18T19:28:30.213329] Game started with player type: Mage and name: Player
-[2025-06-18T19:28:32.034426900] Enemy moved to: (4,9)
-[2025-06-18T19:28:32.034426900] Enemy moved to: (4,6)
-[2025-06-18T19:28:32.035409500] Dragon attacked for 20 damage.
-[2025-06-18T19:28:32.443287900] Dragon attacked for 21 damage.
-[2025-06-18T19:28:32.756363600] Enemy moved to: (6,5)
-[2025-06-18T19:28:33.264364800] Enemy moved to: (7,5)
-[2025-06-18T19:28:33.359131400] Enemy moved to: (8,0)
-[2025-06-18T19:28:40.331607100] Added item: Health Potion
-[2025-06-18T19:28:40.335651300] Player moved from (4,8) to (5,8)
-[2025-06-18T19:28:40.986266200] Added item: Health Potion
-[2025-06-18T19:28:40.992800800] Player moved from (5,8) to (5,7)
-[2025-06-18T19:28:46.839586500] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:28:46.839586500] Player attacked the enemy for: 21 damage.
-[2025-06-18T19:28:46.839586500] Dragon attacked for 21 damage.
-[2025-06-18T19:28:47.340925500] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-18T19:28:47.340925500] Player attacked the enemy for: 21 damage.
-[2025-06-18T19:28:47.340925500] Enemy is dead! You won the fight!
-[2025-06-18T19:28:47.925955100] Collected 269 treasure points!
-[2025-06-18T19:28:47.927957100] Player moved from (5,7) to (4,7)
-[2025-06-18T19:28:48.507892] The enemy evaded the attack!
-[2025-06-18T19:28:48.507892] Goblin attack with Critical hit! for: 24 damage.
-[2025-06-18T19:28:49.002934100] The enemy evaded the attack!
-[2025-06-18T19:28:49.002934100] Player evaded the enemy's attack!
-[2025-06-18T19:36:39.462611100] Game started with player type: Mage and name: avigail
-[2025-06-18T19:36:41.120692600] Goblin attacked for: 17 damage.
-[2025-06-18T19:36:53.981800] Added item: Power Potion
-[2025-06-18T19:36:53.987026500] Player moved from (7,4) to (7,3)
-[2025-06-18T19:36:54.904841300] Added item: Health Potion
-[2025-06-18T19:36:54.907841500] Player moved from (7,3) to (8,3)
-[2025-06-18T19:36:55.368616600] Added item: Health Potion
-[2025-06-18T19:36:55.371619100] Player moved from (8,3) to (8,4)
-[2025-06-18T19:36:55.812025900] Added item: Health Potion
-[2025-06-18T19:36:55.814535100] Player moved from (8,4) to (8,5)
-[2025-06-18T19:36:56.378922700] Added item: Power Potion
-[2025-06-18T19:36:56.383921900] Player moved from (8,5) to (7,5)
-[2025-06-18T19:36:57.743903700] Player moved from (7,5) to (6,5)
-[2025-06-18T19:36:58.349448700] Added item: Health Potion
-[2025-06-18T19:36:58.352449800] Player moved from (6,5) to (5,5)
-[2025-06-18T19:36:59.299315900] Player moved from (5,5) to (5,4)
-[2025-06-18T19:36:59.823327100] The enemy evaded the attack!
-[2025-06-18T19:36:59.823327100] Goblin attacked for: 17 damage.
-[2025-06-18T19:37:00.312636400] The enemy evaded the attack!
-[2025-06-18T19:37:00.312636400] Player evaded the enemy's attack!
-[2025-06-18T19:37:00.812573400] The enemy evaded the attack!
-[2025-06-18T19:37:00.814084300] Goblin attacked for: 17 damage.
-[2025-06-18T19:37:01.240783400] The enemy evaded the attack!
-[2025-06-18T19:37:01.240783400] Player evaded the enemy's attack!
-[2025-06-18T19:37:01.682912300] The enemy evaded the attack!
-[2025-06-18T19:37:01.682912300] Player evaded the enemy's attack!
-[2025-06-18T19:37:04.247707400] Potion used!
-[2025-06-18T19:37:04.247707400] Removed item: Power Potion
-[2025-06-18T19:37:04.247707400] Power was 27 now is 28
-[2025-06-18T19:37:04.248708400] avigail used a power potion and gained 1 attack power!
-[2025-06-18T19:37:05.102598900] Potion used!
-[2025-06-18T19:37:05.103601500] Removed item: Health Potion
-[2025-06-18T19:37:05.103601500] Health was 48 now is 67
-[2025-06-18T19:37:05.103601500] avigail used a potion and healed 19 HP!
-[2025-06-18T19:37:06.522906400] Potion used!
-[2025-06-18T19:37:06.522906400] Removed item: Power Potion
-[2025-06-18T19:37:06.522906400] Power was 28 now is 30
-[2025-06-18T19:37:06.522906400] avigail used a power potion and gained 2 attack power!
-[2025-06-18T19:37:07.589618800] Added item: Health Potion
-[2025-06-18T19:37:07.593617300] Player moved from (5,4) to (5,3)
-[2025-06-18T19:37:08.236514100] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:08.236514100] Orc received 29 damage from magic attack.
-[2025-06-18T19:37:08.236514100] The orc attacked with Critical hit! for: 26 damage.
-[2025-06-18T19:37:09.882661500] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:09.882661500] Orc received 29 damage from magic attack.
-[2025-06-18T19:37:09.882661500] Enemy is dead! You won the fight!
-[2025-06-18T19:37:10.268036400] Added item: Power Potion
-[2025-06-18T19:37:10.271036800] Player moved from (5,3) to (4,3)
-[2025-06-18T19:37:10.967812300] Player moved from (4,3) to (3,3)
-[2025-06-18T19:37:11.327904800] Added item: Power Potion
-[2025-06-18T19:37:11.329906500] Player moved from (3,3) to (3,4)
-[2025-06-18T19:37:11.698041] Cannot move through wall at (4,4)
-[2025-06-18T19:37:12.003622900] Player moved from (3,4) to (3,5)
-[2025-06-18T19:37:12.452237800] Added item: Health Potion
-[2025-06-18T19:37:12.454743900] Player moved from (3,5) to (4,5)
-[2025-06-18T19:37:12.948861100] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:12.949866300] Dragon attacked for 14 damage.
-[2025-06-18T19:37:13.402539] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:13.402539] Enemy is dead! You won the fight!
-[2025-06-18T19:37:13.972657] Added item: Power Potion
-[2025-06-18T19:37:13.976137800] Player moved from (4,5) to (4,6)
-[2025-06-18T19:37:19.050322700] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:19.050322700] Goblin attacked for: 19 damage.
-[2025-06-18T19:37:19.858573600] avigail attacked the enemy for: 45 damage.
-[2025-06-18T19:37:19.858573600] Enemy is dead! You won the fight!
-[2025-06-18T19:37:21.831430] Potion used!
-[2025-06-18T19:37:21.831430] Removed item: Health Potion
-[2025-06-18T19:37:21.831430] Health was 8 now is 19
-[2025-06-18T19:37:21.831430] avigail used a potion and healed 11 HP!
-[2025-06-18T19:37:22.940014] Potion used!
-[2025-06-18T19:37:22.940014] Removed item: Health Potion
-[2025-06-18T19:37:22.940014] Health was 19 now is 55
-[2025-06-18T19:37:22.940014] avigail used a potion and healed 36 HP!
-[2025-06-18T19:37:23.798577800] Potion used!
-[2025-06-18T19:37:23.798577800] Removed item: Health Potion
-[2025-06-18T19:37:23.798577800] Health was 55 now is 92
-[2025-06-18T19:37:23.798577800] avigail used a potion and healed 37 HP!
-[2025-06-19T10:37:05.243709] Game started with player type: Mage and name: avigail
-[2025-06-19T10:37:05.868876200] Enemy tried to move out of bounds: (1,-1)
-[2025-06-19T10:37:06.811470200] Enemy moved to: (5,2)
-[2025-06-19T10:37:07.439815300] Enemy moved to: (7,3)
-[2025-06-19T10:37:07.439815300] The orc attacked for: 14 damage.
-[2025-06-19T10:37:09.690393900] Player moved from (7,2) to (6,2)
-[2025-06-19T10:37:10.315566900] Added item: Health Potion
-[2025-06-19T10:37:10.327188900] Player moved from (6,2) to (6,3)
-[2025-06-19T10:37:12.345624300] Player moved from (6,3) to (6,4)
-[2025-06-19T10:37:13.162783200] Added item: Health Potion
-[2025-06-19T10:37:13.170863200] Player moved from (6,4) to (7,4)
-[2025-06-19T10:37:15.339971500] avigail attacked the enemy for: 30 damage.
-[2025-06-19T10:37:15.340894800] Orc received 15 damage from magic attack.
-[2025-06-19T10:37:15.341647100] Player evaded the enemy's attack!
-[2025-06-19T10:37:15.816078600] avigail attacked the enemy for: 30 damage.
-[2025-06-19T10:37:15.816078600] Orc received 15 damage from magic attack.
-[2025-06-19T10:37:15.816078600] The orc attacked for: 14 damage.
-[2025-06-19T10:37:16.183883] avigail attacked the enemy for: 30 damage.
-[2025-06-19T10:37:16.183883] Orc received 15 damage from magic attack.
-[2025-06-19T10:37:16.185131900] Enemy is dead! You won the fight!
-[2025-06-19T10:37:16.860478700] Added item: Health Potion
-[2025-06-19T10:37:16.863042100] Player moved from (7,4) to (7,3)
-[2025-06-19T10:37:17.334528] Player moved from (7,3) to (7,4)
-[2025-06-19T10:37:18.184660600] Added item: Power Potion
-[2025-06-19T10:37:18.186654200] Player moved from (7,4) to (7,5)
-[2025-06-19T10:37:25.732146100] Player moved from (7,5) to (8,5)
-[2025-06-19T10:37:26.202236] Added item: Power Potion
-[2025-06-19T10:37:26.210324900] Player moved from (8,5) to (8,6)
-[2025-06-19T10:37:27.162394700] Player moved from (8,6) to (9,6)
-[2025-06-19T10:37:27.563391400] avigail attacked the enemy for: 30 damage.
-[2025-06-19T10:37:27.563391400] Orc received 29 damage from magic attack.
-[2025-06-19T10:37:27.563391400] The orc attacked for: 13 damage.
-[2025-06-19T10:37:28.138998200] avigail attacked the enemy for: 30 damage.
-[2025-06-19T10:37:28.138998200] Orc received 29 damage from magic attack.
-[2025-06-19T10:37:28.138998200] Enemy is dead! You won the fight!
-[2025-06-19T10:37:28.603363800] Collected 151 treasure points!
-[2025-06-19T10:37:28.605391100] Player moved from (9,6) to (9,7)
-[2025-06-19T10:37:29.205954900] Added item: Health Potion
-[2025-06-19T10:37:29.215013700] Player moved from (9,7) to (9,8)
-[2025-06-19T10:37:35.440734500] Mage attack by magic, his element is stronger than the enemy's
-[2025-06-19T10:37:35.440734500] avigail attacked the enemy for: 7 damage.
-[2025-06-19T10:37:35.440734500] Dragon attacked for 25 damage.
-[2025-06-19T10:37:36.288464800] Player moved from (7,5) to (7,4)
-[2025-06-19T10:37:37.328236900] Player moved from (7,4) to (7,5)
-[2025-06-19T10:37:37.793525200] Player moved from (7,5) to (8,5)
-[2025-06-19T10:37:38.199341500] Player moved from (8,5) to (8,6)
-[2025-06-19T10:37:38.667632300] Player moved from (8,6) to (7,6)
-[2025-06-19T10:49:21.808742700] Game started with player type: Mage and name: avigail
-[2025-06-19T10:49:23.968654600] Enemy moved to: (5,0)
-[2025-06-19T10:49:25.212731700] The orc attacked for: 26 damage.
-[2025-06-19T10:49:25.522866500] Dragon attacked for 14 damage.
-[2025-06-19T10:49:38.910619200] Added item: Health Potion
-[2025-06-19T10:49:38.917174800] Player moved from (9,6) to (9,7)
-[2025-06-19T10:49:39.824024900] Added item: Health Potion
-[2025-06-19T10:49:39.826022400] Player moved from (9,7) to (8,7)
-[2025-06-19T10:49:41.649571700] The enemy evaded the attack!
-[2025-06-19T10:49:41.649571700] Goblin attacked for: 15 damage.
-[2025-06-19T10:49:42.370600] The enemy evaded the attack!
-[2025-06-19T10:49:42.370600] Goblin attacked for: 15 damage.
-[2025-06-19T10:49:45.772918800] Potion used!
-[2025-06-19T10:49:45.773918] Removed item: Health Potion
-[2025-06-19T10:49:45.773918] Health was 30 now is 71
-[2025-06-19T10:49:45.773918] avigail used a potion and healed 41 HP!
-[2025-06-19T10:49:47.368767300] The enemy evaded the attack!
-[2025-06-19T10:49:47.368767300] Goblin attacked for: 15 damage.
-[2025-06-19T10:49:47.895910500] The enemy evaded the attack!
-[2025-06-19T10:49:47.895910500] Goblin attacked for: 15 damage.
-[2025-06-19T10:49:48.700328400] The enemy evaded the attack!
-[2025-06-19T10:49:48.700328400] Player evaded the enemy's attack!
-[2025-06-19T10:49:50.236059800] Potion used!
-[2025-06-19T10:49:50.236059800] Removed item: Health Potion
-[2025-06-19T10:49:50.236059800] Health was 41 now is 51
-[2025-06-19T10:49:50.236059800] avigail used a potion and healed 10 HP!
-[2025-06-19T10:49:51.040483300] avigail attacked the enemy for: 39 damage.
-[2025-06-19T10:49:51.040483300] Orc received 34 damage from magic attack.
-[2025-06-19T10:49:51.040483300] Player evaded the enemy's attack!
-[2025-06-19T10:49:51.584826800] avigail attacked the enemy for: 39 damage.
-[2025-06-19T10:49:51.584826800] Orc received 34 damage from magic attack.
-[2025-06-19T10:49:51.584826800] Enemy is dead! You won the fight!
-[2025-06-19T10:49:51.998315800] Collected 160 treasure points!
-[2025-06-19T10:49:52.000691200] Player moved from (8,7) to (8,6)
-[2025-06-19T10:50:04.273780600] avigail attacked the enemy for: 39 damage.
-[2025-06-19T10:50:04.273780600] Orc received 30 damage from magic attack.
-[2025-06-19T10:50:04.273780600] The orc attacked for: 23 damage.
-[2025-06-19T10:50:04.880583500] The enemy evaded the attack!
-[2025-06-19T10:50:04.881589] The orc attacked for: 23 damage.
-[2025-06-19T10:50:07.886127900] Player moved from (8,6) to (9,6)
-[2025-06-19T10:50:08.577517700] Player moved from (9,6) to (9,7)
-[2025-06-19T10:50:09.184369800] Player moved from (9,7) to (9,8)
-[2025-06-19T10:50:09.578684700] Player moved from (9,8) to (9,9)
-[2025-06-19T10:50:10.107581100] Player moved from (9,9) to (8,9)
-[2025-06-19T10:50:10.418837100] Added item: Health Potion
-[2025-06-19T10:50:10.420855800] Player moved from (8,9) to (7,9)
-[2025-06-19T10:50:12.397395500] Potion used!
-[2025-06-19T10:50:12.397395500] Removed item: Health Potion
-[2025-06-19T10:50:12.397395500] Health was 5 now is 34
-[2025-06-19T10:50:12.397395500] avigail used a potion and healed 29 HP!
-[2025-06-19T10:50:13.438482400] Player moved from (7,9) to (6,9)
-[2025-06-19T10:50:14.226049700] Added item: Health Potion
-[2025-06-19T10:50:14.228567600] Player moved from (6,9) to (6,8)
-[2025-06-19T10:50:15.184633] Player moved from (6,8) to (6,7)
-[2025-06-19T10:50:15.591566100] Added item: Health Potion
-[2025-06-19T10:50:15.594570800] Player moved from (6,7) to (5,7)
-[2025-06-19T10:50:15.924758700] Player moved from (5,7) to (4,7)
-[2025-06-19T10:50:16.484489800] Player moved from (4,7) to (4,6)
-[2025-06-19T10:50:17.401414100] Player moved from (4,6) to (3,6)
-[2025-06-19T10:50:17.668514600] avigail attacked the enemy for: 39 damage.
-[2025-06-19T10:50:17.668514600] Orc received 23 damage from magic attack.
-[2025-06-19T10:50:17.668514600] The orc attacked for: 13 damage.
-[2025-06-19T10:50:18.200194700] avigail attacked the enemy for: 39 damage.
-[2025-06-19T10:50:18.200194700] Orc received 23 damage from magic attack.
-[2025-06-19T10:50:18.200194700] Player evaded the enemy's attack!
-[2025-06-19T10:50:20.161374900] Added item: Health Potion
-[2025-06-19T10:50:20.161374900] Added item: Health Potion
-[2025-06-19T10:51:13.863300900] Game started with player type: Mage and name: vfu
-[2025-06-19T10:51:15.842583] Dragon attacked for 24 damage.
-[2025-06-19T10:51:16.310259300] Dragon attacked for 10 damage.
-[2025-06-19T10:51:16.449508900] Enemy moved to: (6,4)
-[2025-06-19T10:51:17.382912800] Enemy moved to: (8,8)
-[2025-06-19T10:51:18.926343300] The enemy evaded the attack!
-[2025-06-19T10:51:18.926343300] Dragon attacked for 10 damage.
-[2025-06-19T10:51:20.014617800] Added item: Health Potion
-[2025-06-19T10:51:20.019144600] Player moved from (5,0) to (6,0)
-[2025-06-19T10:51:20.492243300] Added item: Power Potion
-[2025-06-19T10:51:20.495245500] Player moved from (6,0) to (6,1)
-[2025-06-19T10:51:20.799579300] Added item: Power Potion
-[2025-06-19T10:51:20.803594200] Player moved from (6,1) to (6,2)
-[2025-06-19T10:51:21.451443600] Added item: Health Potion
-[2025-06-19T10:51:21.454440500] Player moved from (6,2) to (5,2)
-[2025-06-19T10:51:23.425151800] Potion used!
-[2025-06-19T10:51:23.426177500] Removed item: Health Potion
-[2025-06-19T10:51:23.426177500] Health was 56 now is 70
-[2025-06-19T10:51:23.427165700] vfu used a potion and healed 14 HP!
-[2025-06-19T10:51:25.136132300] Potion used!
-[2025-06-19T10:51:25.136132300] Removed item: Health Potion
-[2025-06-19T10:51:25.136132300] Health was 70 now is 100
-[2025-06-19T10:51:25.136132300] vfu used a potion and healed 40 HP!
-[2025-06-19T10:51:30.034865900] Added item: Power Potion
-[2025-06-19T10:51:30.034865900] Added item: Power Potion
-[2025-06-19T10:51:30.034865900] Added item: Power Potion
-[2025-06-19T10:51:30.034865900] Added item: Power Potion
-[2025-06-19T10:51:39.012661900] The enemy evaded the attack!
-[2025-06-19T10:51:39.012661900] The orc attacked for: 24 damage.
-[2025-06-19T10:51:39.536360100] vfu attacked the enemy for: 27 damage.
-[2025-06-19T10:51:39.536360100] Orc received 26 damage from magic attack.
-[2025-06-19T10:51:39.537360400] The orc attacked with Critical hit! for: 48 damage.
-[2025-06-19T10:51:41.160432200] vfu attacked the enemy for: 27 damage.
-[2025-06-19T10:51:41.160432200] Orc received 26 damage from magic attack.
-[2025-06-19T10:51:41.161433800] Enemy is dead! You won the fight!
-[2025-06-19T10:51:41.693589800] Collected 159 treasure points!
-[2025-06-19T10:51:41.696104900] Player moved from (5,2) to (5,3)
-[2025-06-19T10:51:43.052400300] Player moved from (5,3) to (5,4)
-[2025-06-19T10:51:44.027345100] vfu attacked the enemy for: 27 damage.
-[2025-06-19T10:51:44.027345100] Orc received 26 damage from magic attack.
-[2025-06-19T10:51:44.027345100] Player evaded the enemy's attack!
-[2025-06-19T10:51:45.877489400] Potion used!
-[2025-06-19T10:51:45.877489400] Removed item: Power Potion
-[2025-06-19T10:51:45.878498400] Power was 18 now is 19
-[2025-06-19T10:51:45.878498400] vfu used a power potion and gained 1 attack power!
-[2025-06-19T10:51:46.544540100] Potion used!
-[2025-06-19T10:51:46.544540100] Removed item: Power Potion
-[2025-06-19T10:51:46.544540100] Power was 19 now is 20
-[2025-06-19T10:51:46.544540100] vfu used a power potion and gained 1 attack power!
-[2025-06-19T10:51:47.841152500] vfu attacked the enemy for: 30 damage.
-[2025-06-19T10:51:47.841152500] Orc received 29 damage from magic attack.
-[2025-06-19T10:51:47.841152500] Enemy is dead! You won the fight!
-[2025-06-19T10:51:48.338455500] Added item: Power Potion
-[2025-06-19T10:51:48.340454600] Player moved from (5,4) to (6,4)
-[2025-06-19T10:51:49.780355300] Player moved from (6,4) to (6,5)
-[2025-06-19T10:51:50.187634400] Added item: Health Potion
-[2025-06-19T10:51:50.190650100] Player moved from (6,5) to (6,6)
-[2025-06-19T10:51:53.169579] vfu attacked the enemy for: 30 damage.
-[2025-06-19T10:51:53.169579] Orc received 29 damage from magic attack.
-[2025-06-19T10:51:53.169579] The orc attacked for: 18 damage.
-[2025-06-19T10:51:54.832691400] Player moved from (6,6) to (6,7)
-[2025-06-19T10:51:55.133442] Added item: Health Potion
-[2025-06-19T10:51:55.135961500] Player moved from (6,7) to (6,8)
-[2025-06-19T10:51:55.842090400] Player moved from (6,8) to (7,8)
-[2025-06-19T10:51:56.256067100] Added item: Health Potion
-[2025-06-19T10:51:56.259599900] Player moved from (7,8) to (7,7)
-[2025-06-19T10:51:58.858624900] Added item: Power Potion
-[2025-06-19T10:51:58.858624900] Added item: Health Potion
-[2025-06-19T10:51:58.858624900] Added item: Health Potion
-[2025-06-19T10:51:58.858624900] Added item: Health Potion
-[2025-06-19T11:01:24.265326300] Game started with player type: Mage and name: avigail
-[2025-06-19T11:01:24.758372100] Enemy moved to: (0,4)
-[2025-06-19T11:01:25.374138100] Enemy moved to: (3,3)
-[2025-06-19T11:01:25.375686100] The orc attacked for: 11 damage.
-[2025-06-19T11:01:25.676120900] Enemy moved to: (4,2)
-[2025-06-19T11:01:25.677117400] Goblin attacked for: 5 damage.
-[2025-06-19T11:01:27.210512600] Enemy moved to: (9,4)
-[2025-06-19T11:01:30.931323100] Added item: Health Potion
-[2025-06-19T11:01:30.935998600] Player moved from (4,3) to (5,3)
-[2025-06-19T11:01:32.037076100] Player moved from (5,3) to (5,4)
-[2025-06-19T11:01:32.359487200] Added item: Power Potion
-[2025-06-19T11:01:32.364479600] Player moved from (5,4) to (5,5)
-[2025-06-19T11:01:32.834660200] Added item: Health Potion
-[2025-06-19T11:01:32.838203100] Player moved from (5,5) to (6,5)
-[2025-06-19T11:01:33.247322500] Player moved from (6,5) to (6,4)
-[2025-06-19T11:01:35.792480600] Potion used!
-[2025-06-19T11:01:35.792480600] Removed item: Power Potion
-[2025-06-19T11:01:35.793469600] Power was 0 now is 4
-[2025-06-19T11:01:35.793469600] avigail used a power potion and gained 4 attack power!
-[2025-06-19T11:01:45.850213200] Added item: Power Potion
-[2025-06-19T11:01:45.852721100] Player moved from (6,4) to (7,4)
-[2025-06-19T11:01:46.427349] Added item: Health Potion
-[2025-06-19T11:01:46.429399300] Player moved from (7,4) to (7,3)
-[2025-06-19T11:01:46.921402700] The enemy evaded the attack!
-[2025-06-19T11:01:46.921402700] Player evaded the enemy's attack!
-[2025-06-19T11:01:47.620356300] The enemy evaded the attack!
-[2025-06-19T11:01:47.620356300] Player evaded the enemy's attack!
-[2025-06-19T11:01:48.384217100] The enemy evaded the attack!
-[2025-06-19T11:01:48.384217100] Goblin attacked for: 12 damage.
-[2025-06-19T11:01:48.582301700] The enemy evaded the attack!
-[2025-06-19T11:01:48.582301700] Goblin attacked for: 12 damage.
-[2025-06-19T11:01:48.787542200] The enemy evaded the attack!
-[2025-06-19T11:01:48.788558600] Player evaded the enemy's attack!
-[2025-06-19T11:01:49.003869700] The enemy evaded the attack!
-[2025-06-19T11:01:49.003869700] Goblin attacked for: 12 damage.
-[2025-06-19T11:01:49.228511800] The enemy evaded the attack!
-[2025-06-19T11:01:49.228511800] Goblin attacked for: 12 damage.
-[2025-06-19T11:01:54.507135700] Potion used!
-[2025-06-19T11:01:54.507135700] Removed item: Power Potion
-[2025-06-19T11:01:54.507135700] Power was 4 now is 7
-[2025-06-19T11:01:54.507135700] avigail used a power potion and gained 3 attack power!
-[2025-06-19T11:01:57.776271300] Potion used!
-[2025-06-19T11:01:57.776271300] Removed item: Health Potion
-[2025-06-19T11:01:57.776271300] Health was 36 now is 65
-[2025-06-19T11:01:57.776271300] avigail used a potion and healed 29 HP!
-[2025-06-19T11:02:00.744822400] avigail attacked the enemy for: 10 damage.
-[2025-06-19T11:02:00.744822400] Dragon attacked with a Critical hit! for 20 damage.
-[2025-06-19T11:02:01.417232600] The enemy evaded the attack!
-[2025-06-19T11:02:01.417747700] Dragon attacked for 10 damage.
-[2025-06-19T11:02:01.941802500] The enemy evaded the attack!
-[2025-06-19T11:02:01.941802500] Dragon attacked for 10 damage.
-[2025-06-19T11:02:03.538196300] Potion used!
-[2025-06-19T11:02:03.539190600] Removed item: Health Potion
-[2025-06-19T11:02:03.539190600] Health was 25 now is 39
-[2025-06-19T11:02:03.539190600] avigail used a potion and healed 14 HP!
-[2025-06-19T11:02:04.330208900] Potion used!
-[2025-06-19T11:02:04.330208900] Removed item: Health Potion
-[2025-06-19T11:02:04.330208900] Health was 39 now is 83
-[2025-06-19T11:02:04.330208900] avigail used a potion and healed 44 HP!
-[2025-06-19T11:02:04.843123400] avigail attacked the enemy for: 10 damage.
-[2025-06-19T11:02:04.843123400] Dragon attacked for 10 damage.
-[2025-06-19T11:02:05.288474700] avigail attacked the enemy for: 10 damage.
-[2025-06-19T11:02:05.288474700] Dragon attacked for 10 damage.
-[2025-06-19T11:02:05.739677100] avigail attacked the enemy for: 10 damage.
-[2025-06-19T11:02:05.739677100] Dragon attacked for 10 damage.
-[2025-06-19T11:02:06.188538] avigail attacked the enemy for: 10 damage.
-[2025-06-19T11:02:06.188538] Enemy is dead! You won the fight!
-[2025-06-19T11:02:06.678934400] Added item: Power Potion
-[2025-06-19T11:02:06.681929200] Player moved from (7,3) to (7,2)
-[2025-06-19T11:02:08.238582300] Player moved from (7,2) to (8,2)
-[2025-06-19T11:02:08.703740300] Added item: Health Potion
-[2025-06-19T11:02:08.706251900] Player moved from (8,2) to (8,1)
-[2025-06-19T11:02:09.080817200] Player moved from (8,1) to (9,1)
-[2025-06-19T11:02:09.504269700] Added item: Power Potion
-[2025-06-19T11:02:09.506268500] Player moved from (9,1) to (9,2)
-[2025-06-19T11:02:15.682945] Added item: Power Potion
-[2025-06-19T11:02:15.682945] Added item: Health Potion
-[2025-06-19T11:02:15.682945] Added item: Power Potion
-[2025-06-19T11:02:15.682945] Added item: Power Potion
-[2025-06-19T11:02:15.682945] Added item: Health Potion
-[2025-06-19T11:02:15.682945] Added item: Power Potion
-[2025-06-19T11:02:25.136357300] Player moved from (9,2) to (8,2)
-[2025-06-19T11:02:25.698700700] The enemy evaded the attack!
-[2025-06-19T11:02:25.699727500] Player evaded the enemy's attack!
-[2025-06-19T11:02:26.237342500] The enemy evaded the attack!
-[2025-06-19T11:02:26.237342500] Goblin attacked for: 12 damage.
-[2025-06-19T11:02:26.545190600] The enemy evaded the attack!
-[2025-06-19T11:02:26.545190600] Player evaded the enemy's attack!
-[2025-06-19T11:02:27.613632400] Player moved from (8,2) to (7,2)
-[2025-06-19T11:02:28.038531200] Player moved from (7,2) to (6,2)
-[2025-06-19T11:02:28.435875900] Player moved from (6,2) to (5,2)
-[2025-06-19T11:02:28.872208400] Player moved from (5,2) to (5,3)
-[2025-06-19T11:02:29.284460800] Player moved from (5,3) to (4,3)
-[2025-06-19T11:02:29.618397600] Player moved from (4,3) to (4,4)
-[2025-06-19T11:02:29.935927600] Player moved from (4,4) to (3,4)
-[2025-06-19T11:02:30.634651400] Player moved from (3,4) to (2,4)
-[2025-06-19T11:02:30.898280400] Added item: Power Potion
-[2025-06-19T11:02:30.900281400] Player moved from (2,4) to (2,5)
-[2025-06-19T11:02:31.432477800] The enemy evaded the attack!
-[2025-06-19T11:02:31.432477800] The orc attacked for: 4 damage.
-[2025-06-19T11:02:31.727439100] The enemy evaded the attack!
-[2025-06-19T11:02:31.727439100] The orc attacked for: 4 damage.
-[2025-06-19T11:02:32.082698900] The enemy evaded the attack!
-[2025-06-19T11:02:32.082698900] The orc attacked for: 4 damage.
-[2025-06-19T11:02:33.987245400] Added item: Power Potion
-[2025-06-19T11:02:33.987245400] Added item: Health Potion
-[2025-06-19T11:02:33.987245400] Added item: Power Potion
-[2025-06-19T11:02:33.987245400] Added item: Power Potion
-[2025-06-19T11:15:31.023219400] Game started with player type: Warrior and name: avigail
-[2025-06-19T11:15:33.318311100] Enemy moved to: (3,2)
-[2025-06-19T11:15:33.318311100] Enemy moved to: (4,0)
-[2025-06-19T11:15:33.626014500] Enemy moved to: (5,3)
-[2025-06-19T11:15:34.262846500] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:15:34.263842100] Dragon attacked for 12 damage.
-[2025-06-19T11:15:34.559145400] Enemy moved to: (7,7)
-[2025-06-19T11:15:36.235080300] Player moved from (6,2) to (7,2)
-[2025-06-19T11:15:36.999408600] Player moved from (7,2) to (7,3)
-[2025-06-19T11:15:40.890597400] Added item: Power Potion
-[2025-06-19T11:15:40.894632600] Player moved from (7,3) to (7,4)
-[2025-06-19T11:15:41.317117300] Added item: Health Potion
-[2025-06-19T11:15:41.321141800] Player moved from (7,4) to (6,4)
-[2025-06-19T11:15:42.034805600] Player moved from (6,4) to (5,4)
-[2025-06-19T11:15:42.628660] Added item: Health Potion
-[2025-06-19T11:15:42.630657200] Player moved from (5,4) to (4,4)
-[2025-06-19T11:15:43.057208200] Added item: Health Potion
-[2025-06-19T11:15:43.059299200] Player moved from (4,4) to (4,5)
-[2025-06-19T11:15:43.508395500] Added item: Health Potion
-[2025-06-19T11:15:43.510434100] Player moved from (4,5) to (5,5)
-[2025-06-19T11:16:01.696302900] Potion used!
-[2025-06-19T11:16:01.696302900] Removed item: Power Potion
-[2025-06-19T11:16:01.697313900] Power was 6 now is 9
-[2025-06-19T11:16:01.697313900] avigail used a power potion and gained 3 attack power!
-[2025-06-19T11:16:02.442827] Potion used!
-[2025-06-19T11:16:02.442827] Removed item: Health Potion
-[2025-06-19T11:16:02.442827] Health was 93 now is 100
-[2025-06-19T11:16:02.442827] avigail used a potion and healed 18 HP!
-[2025-06-19T11:16:04.407457300] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:04.407457300] Enemy attacked avigail for: 5 damage, you received only 2
-[2025-06-19T11:16:04.407457300] Dragon attacked for 5 damage.
-[2025-06-19T11:16:04.734472200] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:04.734472200] Enemy attacked avigail for: 5 damage, you received only 2
-[2025-06-19T11:16:04.734472200] Dragon attacked for 5 damage.
-[2025-06-19T11:16:05.068225800] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:05.068225800] Enemy attacked avigail for: 5 damage, you received only 2
-[2025-06-19T11:16:05.068225800] Dragon attacked for 5 damage.
-[2025-06-19T11:16:05.400813800] The enemy evaded the attack!
-[2025-06-19T11:16:05.400813800] Enemy attacked avigail for: 5 damage, you received only 2
-[2025-06-19T11:16:05.400813800] Dragon attacked for 5 damage.
-[2025-06-19T11:16:05.792434800] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:05.792434800] Enemy attacked avigail for: 5 damage, you received only 2
-[2025-06-19T11:16:05.792434800] Dragon attacked for 5 damage.
-[2025-06-19T11:16:06.250328100] avigail attacked with Critical hit! for 18 damage.
-[2025-06-19T11:16:06.250328100] Enemy is dead! You won the fight!
-[2025-06-19T11:16:06.737242500] Added item: Power Potion
-[2025-06-19T11:16:06.739252500] Player moved from (5,5) to (5,6)
-[2025-06-19T11:16:07.264394900] Added item: Health Potion
-[2025-06-19T11:16:07.266402600] Player moved from (5,6) to (6,6)
-[2025-06-19T11:16:08.375896] Player moved from (6,6) to (6,7)
-[2025-06-19T11:16:08.689411900] Added item: Health Potion
-[2025-06-19T11:16:08.693940700] Player moved from (6,7) to (6,8)
-[2025-06-19T11:16:10.524534200] Player moved from (6,8) to (7,8)
-[2025-06-19T11:16:10.917342800] The enemy evaded the attack!
-[2025-06-19T11:16:10.917342800] Player evaded the enemy's attack!
-[2025-06-19T11:16:11.280703700] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:11.280703700] Enemy attacked avigail for: 15 damage, you received only 8
-[2025-06-19T11:16:11.280703700] Dragon attacked for 15 damage.
-[2025-06-19T11:16:11.762278700] Player moved from (7,8) to (8,8)
-[2025-06-19T11:16:12.567134800] avigail attacked the enemy for: 9 damage.
-[2025-06-19T11:16:12.567134800] Player evaded the enemy's attack!
-[2025-06-19T11:16:13.112453] The enemy evaded the attack!
-[2025-06-19T11:16:13.112453] Player evaded the enemy's attack!
-[2025-06-19T11:16:13.451558400] The enemy evaded the attack!
-[2025-06-19T11:16:13.451558400] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:13.451558400] Dragon attacked for 12 damage.
-[2025-06-19T11:16:13.928497200] Added item: Health Potion
-[2025-06-19T11:16:13.930539800] Player moved from (8,8) to (8,9)
-[2025-06-19T11:16:17.630564500] Potion used!
-[2025-06-19T11:16:17.630564500] Removed item: Power Potion
-[2025-06-19T11:16:17.631560100] Power was 9 now is 11
-[2025-06-19T11:16:17.631560100] avigail used a power potion and gained 2 attack power!
-[2025-06-19T11:16:19.323248] Player moved from (8,9) to (8,8)
-[2025-06-19T11:16:19.798559] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:19.799554100] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:19.799554100] Dragon attacked for 12 damage.
-[2025-06-19T11:16:20.165384700] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:20.166380400] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:20.166380400] Dragon attacked for 12 damage.
-[2025-06-19T11:16:20.556102900] The enemy evaded the attack!
-[2025-06-19T11:16:20.556102900] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:20.556102900] Dragon attacked for 12 damage.
-[2025-06-19T11:16:21.005878700] The enemy evaded the attack!
-[2025-06-19T11:16:21.005878700] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:21.005878700] Dragon attacked for 12 damage.
-[2025-06-19T11:16:21.645239500] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:21.645239500] Enemy attacked avigail for: 24 damage, you received only 14
-[2025-06-19T11:16:21.646236500] Dragon attacked with a Critical hit! for 24 damage.
-[2025-06-19T11:16:22.280500400] The enemy evaded the attack!
-[2025-06-19T11:16:22.280500400] Enemy attacked avigail for: 12 damage, you received only 7
-[2025-06-19T11:16:22.280500400] Dragon attacked for 12 damage.
-[2025-06-19T11:16:24.043279200] Potion used!
-[2025-06-19T11:16:24.043279200] Removed item: Health Potion
-[2025-06-19T11:16:24.043279200] Health was 26 now is 43
-[2025-06-19T11:16:24.043279200] avigail used a potion and healed 17 HP!
-[2025-06-19T11:16:24.669157900] Potion used!
-[2025-06-19T11:16:24.669157900] Removed item: Health Potion
-[2025-06-19T11:16:24.669157900] Health was 43 now is 58
-[2025-06-19T11:16:24.669157900] avigail used a potion and healed 15 HP!
-[2025-06-19T11:16:25.320792100] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:25.320792100] Enemy is dead! You won the fight!
-[2025-06-19T11:16:25.922297200] Added item: Power Potion
-[2025-06-19T11:16:25.925305700] Player moved from (8,8) to (9,8)
-[2025-06-19T11:16:26.556034300] Player moved from (9,8) to (9,7)
-[2025-06-19T11:16:27.166263300] Player moved from (9,7) to (8,7)
-[2025-06-19T11:16:28.021673600] Orc received 11 damage from physical attack.
-[2025-06-19T11:16:28.021673600] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:28.021673600] Enemy attacked avigail for: 13 damage, you received only 7
-[2025-06-19T11:16:28.021673600] The orc attacked for: 13 damage.
-[2025-06-19T11:16:28.332872900] Orc received 11 damage from physical attack.
-[2025-06-19T11:16:28.332872900] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:28.332872900] Enemy attacked avigail for: 26 damage, you received only 15
-[2025-06-19T11:16:28.332872900] The orc attacked with Critical hit! for: 26 damage.
-[2025-06-19T11:16:28.549302400] Orc received 11 damage from physical attack.
-[2025-06-19T11:16:28.549302400] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:28.549302400] Player evaded the enemy's attack!
-[2025-06-19T11:16:28.778902800] Orc received 11 damage from physical attack.
-[2025-06-19T11:16:28.778902800] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:28.778902800] Enemy attacked avigail for: 13 damage, you received only 7
-[2025-06-19T11:16:28.778902800] The orc attacked for: 13 damage.
-[2025-06-19T11:16:29.202881] Orc received 11 damage from physical attack.
-[2025-06-19T11:16:29.202881] avigail attacked the enemy for: 11 damage.
-[2025-06-19T11:16:29.202881] Enemy is dead! You won the fight!
-[2025-06-19T11:16:30.624712200] Potion used!
-[2025-06-19T11:16:30.624712200] Removed item: Health Potion
-[2025-06-19T11:16:30.624712200] Health was 29 now is 59
-[2025-06-19T11:16:30.624712200] avigail used a potion and healed 30 HP!
-[2025-06-19T11:16:31.348231700] Potion used!
-[2025-06-19T11:16:31.348231700] Removed item: Health Potion
-[2025-06-19T11:16:31.348231700] Health was 59 now is 73
-[2025-06-19T11:16:31.348231700] avigail used a potion and healed 14 HP!
-[2025-06-19T11:16:32.312749500] Collected 216 treasure points!
-[2025-06-19T11:16:32.314833600] Player moved from (8,7) to (8,6)
-[2025-06-19T11:16:40.283407] Player moved from (5,5) to (5,5)
-[2025-06-19T11:19:42.698824900] Game started with player type: Archer and name: שהןעשןך
-[2025-06-19T11:19:44.631206500] Enemy moved to: (3,5)
-[2025-06-19T11:19:45.876167] Enemy moved to: (7,2)
-[2025-06-19T11:19:45.877187600] Goblin attacked for: 12 damage.
-[2025-06-19T11:19:46.812424600] Goblin attack with Critical hit! for: 22 damage.
-[2025-06-19T11:19:46.998614100] Enemy moved to: (9,5)
-[2025-06-19T11:19:52.071603300] Added item: Health Potion
-[2025-06-19T11:19:52.077698200] Player moved from (8,2) to (8,1)
-[2025-06-19T11:19:54.459648700] Added item: Health Potion
-[2025-06-19T11:19:54.461644800] Player moved from (8,1) to (7,1)
-[2025-06-19T11:20:06.283328] Potion used!
-[2025-06-19T11:20:06.283328] Removed item: Health Potion
-[2025-06-19T11:20:06.283328] Health was 66 now is 100
-[2025-06-19T11:20:06.288701100] שהןעשןך used a potion and healed 39 HP!
-[2025-06-19T11:20:08.568329400] Player moved from (7,1) to (6,1)
-[2025-06-19T11:20:09.057410800] Player moved from (6,1) to (6,2)
-[2025-06-19T11:20:12.888397100] Player moved from (7,1) to (7,1)
-[2025-06-19T11:20:30.461283400] Player moved from (7,1) to (6,1)
-[2025-06-19T11:20:31.826080700] Player moved from (6,1) to (6,0)
-[2025-06-19T11:20:32.501612500] Player moved from (6,0) to (6,1)
-[2025-06-19T11:20:33.305239500] Player moved from (6,1) to (6,0)
-[2025-06-19T11:20:33.806029300] Player moved from (6,0) to (5,0)
-[2025-06-19T11:20:34.753588500] Player moved from (5,0) to (6,0)
-[2025-06-19T11:20:35.097459] Player moved from (6,0) to (6,1)
-[2025-06-19T11:21:53.489922700] Game started with player type: Mage and name: avigail
-[2025-06-19T11:21:54.239433800] Enemy tried to move out of bounds: (-1,6)
-[2025-06-19T11:21:54.242473200] Dragon attacked for 16 damage.
-[2025-06-19T11:21:54.540546900] Enemy moved to: (1,8)
-[2025-06-19T11:21:54.843003100] Enemy moved to: (1,1)
-[2025-06-19T11:21:55.443476700] Enemy moved to: (3,2)
-[2025-06-19T11:21:56.683702] Enemy moved to: (8,5)
-[2025-06-19T11:21:56.932912700] Player moved from (0,3) to (1,3)
-[2025-06-19T11:21:56.996110500] Enemy moved to: (7,1)
-[2025-06-19T11:21:57.429322300] Enemy tried to move out of bounds: (10,6)
-[2025-06-19T11:21:57.614083] Player moved from (1,3) to (1,4)
-[2025-06-19T11:21:58.068195] Player moved from (1,4) to (2,4)
-[2025-06-19T11:21:58.384579900] Added item: Health Potion
-[2025-06-19T11:21:58.389114800] Player moved from (2,4) to (2,3)
-[2025-06-19T11:21:59.039479300] Player moved from (2,3) to (2,2)
-[2025-06-19T11:21:59.574534200] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:21:59.576051500] Orc received 11 damage from magic attack.
-[2025-06-19T11:21:59.576051500] The orc attacked for: 5 damage.
-[2025-06-19T11:22:00.829479500] The enemy evaded the attack!
-[2025-06-19T11:22:00.829479500] The orc attacked for: 5 damage.
-[2025-06-19T11:22:01.359775700] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:01.359775700] Orc received 11 damage from magic attack.
-[2025-06-19T11:22:01.359775700] The orc attacked with Critical hit! for: 10 damage.
-[2025-06-19T11:22:05.611906900] Potion used!
-[2025-06-19T11:22:05.611906900] Removed item: Health Potion
-[2025-06-19T11:22:05.611906900] Health was 64 now is 98
-[2025-06-19T11:22:05.611906900] avigail used a potion and healed 34 HP!
-[2025-06-19T11:22:07.705988] Player moved from (2,2) to (2,3)
-[2025-06-19T11:22:07.997573800] Player moved from (2,3) to (2,4)
-[2025-06-19T11:22:08.422112600] Player moved from (2,4) to (3,4)
-[2025-06-19T11:22:08.902070900] Player moved from (3,4) to (3,5)
-[2025-06-19T11:22:09.257373600] Added item: Power Potion
-[2025-06-19T11:22:09.259383500] Player moved from (3,5) to (4,5)
-[2025-06-19T11:22:09.624414] Added item: Power Potion
-[2025-06-19T11:22:09.626427700] Player moved from (4,5) to (4,6)
-[2025-06-19T11:22:10.024996700] Added item: Health Potion
-[2025-06-19T11:22:10.027534900] Player moved from (4,6) to (3,6)
-[2025-06-19T11:22:13.084433900] Added item: Power Potion
-[2025-06-19T11:22:13.084433900] Added item: Power Potion
-[2025-06-19T11:22:13.084433900] Added item: Health Potion
-[2025-06-19T11:22:13.085942100] Added item: Power Potion
-[2025-06-19T11:22:13.085942100] Added item: Power Potion
-[2025-06-19T11:22:13.085942100] Added item: Health Potion
-[2025-06-19T11:22:20.119516400] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:20.119516400] Goblin attacked for: 4 damage.
-[2025-06-19T11:22:20.555298900] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:20.555298900] Goblin attacked for: 4 damage.
-[2025-06-19T11:22:20.887154100] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:20.887154100] Goblin attacked for: 4 damage.
-[2025-06-19T11:22:21.549608] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:21.549608] Goblin attacked for: 4 damage.
-[2025-06-19T11:22:22.150214900] avigail attacked the enemy for: 12 damage.
-[2025-06-19T11:22:22.150214900] Enemy is dead! You won the fight!
-[2025-06-19T11:22:23.827453400] Added item: Health Potion
-[2025-06-19T11:22:23.831469200] Player moved from (3,6) to (3,7)
-[2025-06-19T11:22:24.527396200] Player moved from (3,7) to (3,6)
-[2025-06-19T11:22:26.121057700] Player moved from (3,6) to (2,6)
-[2025-06-19T11:22:28.031728200] Player moved from (3,6) to (3,6)
-[2025-06-19T11:22:28.031728200] Added item: Power Potion
-[2025-06-19T11:22:28.031728200] Added item: Power Potion
-[2025-06-19T11:22:28.031728200] Added item: Health Potion
-[2025-06-19T11:22:28.031728200] Added item: Health Potion
-[2025-06-19T11:22:28.031728200] Added item: Power Potion
-[2025-06-19T11:22:28.031728200] Added item: Power Potion
-[2025-06-19T11:22:28.031728200] Added item: Health Potion
-[2025-06-19T11:25:25.299218600] Game started with player type: Mage and name: avigail
-[2025-06-19T11:25:25.959905500] Enemy moved to: (0,6)
-[2025-06-19T11:25:26.560623500] Enemy moved to: (1,3)
-[2025-06-19T11:25:28.364836100] Enemy moved to: (9,6)
-[2025-06-19T11:25:28.367377100] Goblin attacked for: 12 damage.
-[2025-06-19T11:25:30.741603100] Added item: Power Potion
-[2025-06-19T11:25:30.744605] Player moved from (9,5) to (9,4)
-[2025-06-19T11:25:32.856072700] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:32.856072700] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:32.856072700] Player evaded the enemy's attack!
-[2025-06-19T11:25:33.247535800] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:33.247535800] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:33.247535800] The orc attacked for: 6 damage.
-[2025-06-19T11:25:33.490182800] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:33.490182800] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:33.490182800] The orc attacked for: 6 damage.
-[2025-06-19T11:25:33.724603100] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:33.724603100] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:33.724603100] The orc attacked for: 6 damage.
-[2025-06-19T11:25:33.981256700] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:33.981256700] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:33.981256700] The orc attacked for: 6 damage.
-[2025-06-19T11:25:34.422471600] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:25:34.422471600] Orc received 9 damage from magic attack.
-[2025-06-19T11:25:34.422471600] Enemy is dead! You won the fight!
-[2025-06-19T11:25:34.886102900] Collected 114 treasure points!
-[2025-06-19T11:25:34.888590900] Player moved from (9,4) to (8,4)
-[2025-06-19T11:25:35.297612200] Player moved from (8,4) to (7,4)
-[2025-06-19T11:25:35.705834700] Added item: Health Potion
-[2025-06-19T11:25:35.708360500] Player moved from (7,4) to (7,5)
-[2025-06-19T11:25:36.063075900] Player moved from (7,5) to (6,5)
-[2025-06-19T11:25:36.438781500] Added item: Health Potion
-[2025-06-19T11:25:36.441782800] Player moved from (6,5) to (5,5)
-[2025-06-19T11:25:39.509585500] Added item: Power Potion
-[2025-06-19T11:25:39.509585500] Added item: Health Potion
-[2025-06-19T11:25:39.509585500] Added item: Health Potion
-[2025-06-19T11:25:39.509585500] Added item: Power Potion
-[2025-06-19T11:25:39.509585500] Added item: Health Potion
-[2025-06-19T11:25:39.509585500] Added item: Health Potion
-[2025-06-19T11:25:43.994695100] Potion used!
-[2025-06-19T11:25:43.996206600] Removed item: Health Potion
-[2025-06-19T11:25:43.996206600] Health was 64 now is 100
-[2025-06-19T11:25:43.996206600] avigail used a potion and healed 44 HP!
-[2025-06-19T11:25:45.805303100] Potion used!
-[2025-06-19T11:25:45.805303100] Removed item: Power Potion
-[2025-06-19T11:25:45.805303100] Power was 9 now is 10
-[2025-06-19T11:25:45.805303100] avigail used a power potion and gained 1 attack power!
-[2025-06-19T11:25:47.114420300] Player moved from (5,5) to (4,5)
-[2025-06-19T11:25:48.156192700] Player moved from (4,5) to (3,5)
-[2025-06-19T11:25:49.369322600] Player moved from (3,5) to (4,5)
-[2025-06-19T11:25:51.502513800] Player moved from (4,5) to (5,5)
-[2025-06-19T11:25:51.502513800] Added item: Health Potion
-[2025-06-19T11:26:11.893656100] Added item: Health Potion
-[2025-06-19T11:26:11.893656100] Added item: Power Potion
-[2025-06-19T11:26:11.893656100] Added item: Health Potion
-[2025-06-19T11:26:11.893656100] Added item: Health Potion
-[2025-06-19T11:26:16.612319200] Potion used!
-[2025-06-19T11:26:16.612319200] Removed item: Power Potion
-[2025-06-19T11:26:16.612319200] Power was 9 now is 10
-[2025-06-19T11:26:16.612319200] avigail used a power potion and gained 1 attack power!
-[2025-06-19T11:26:17.327240] Potion used!
-[2025-06-19T11:26:17.327240] Removed item: Health Potion
-[2025-06-19T11:26:17.327240] Health was 64 now is 100
-[2025-06-19T11:26:17.327240] avigail used a potion and healed 44 HP!
-[2025-06-19T11:26:18.616065800] Player moved from (5,5) to (4,5)
-[2025-06-19T11:26:27.192803] Player moved from (4,5) to (5,5)
-[2025-06-19T11:26:27.193801500] Added item: Health Potion
-[2025-06-19T11:26:35.612011900] Player moved from (5,5) to (6,5)
-[2025-06-19T11:26:36.491273200] Player moved from (6,5) to (6,4)
-[2025-06-19T11:26:37.176292300] Player moved from (6,4) to (7,4)
-[2025-06-19T11:26:37.684735] Player moved from (7,4) to (7,5)
-[2025-06-19T11:26:38.369838400] Player moved from (7,5) to (6,5)
-[2025-06-19T11:26:42.516126200] Player moved from (6,5) to (7,5)
-[2025-06-19T11:26:42.577233400] Player moved from (7,5) to (6,5)
-[2025-06-19T11:26:43.143656900] Player moved from (6,5) to (7,5)
-[2025-06-19T11:26:43.738643400] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:26:43.738643400] Orc received 9 damage from magic attack.
-[2025-06-19T11:26:43.738643400] The orc attacked for: 13 damage.
-[2025-06-19T11:26:44.141482100] avigail attacked the enemy for: 13 damage.
-[2025-06-19T11:26:44.141482100] Orc received 9 damage from magic attack.
-[2025-06-19T11:26:44.141482100] The orc attacked for: 13 damage.
-[2025-06-19T11:26:44.774399200] Player moved from (7,5) to (6,5)
-[2025-06-19T11:33:08.897826500] Game started with player type: Mage and name: Player
-[2025-06-19T11:33:10.020256400] Enemy moved to: (3,2)
-[2025-06-19T11:33:10.619193100] Enemy moved to: (3,8)
-[2025-06-19T11:33:10.620209800] Goblin attacked for: 14 damage.
-[2025-06-19T11:33:10.623207900] Goblin attacked for: 4 damage.
-[2025-06-19T11:33:14.931505200] Added item: Health Potion
-[2025-06-19T11:33:14.936013400] Player moved from (3,7) to (2,7)
-[2025-06-19T11:33:15.418623900] Player moved from (2,7) to (3,7)
-[2025-06-19T11:33:16.072640200] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:16.072640200] Player evaded the enemy's attack!
-[2025-06-19T11:33:16.550984600] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:16.550984600] Goblin attacked for: 4 damage.
-[2025-06-19T11:33:16.851830500] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:16.852828300] Goblin attacked for: 4 damage.
-[2025-06-19T11:33:17.249903100] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:17.249903100] Goblin attacked for: 4 damage.
-[2025-06-19T11:33:17.790442500] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:17.790442500] Goblin attacked for: 4 damage.
-[2025-06-19T11:33:18.359175200] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:18.359175200] Enemy is dead! You won the fight!
-[2025-06-19T11:33:18.980307600] Cannot move through wall at (4,7)
-[2025-06-19T11:33:19.367344200] Added item: Health Potion
-[2025-06-19T11:33:19.370440900] Player moved from (3,7) to (3,6)
-[2025-06-19T11:33:19.833320400] Added item: Health Potion
-[2025-06-19T11:33:19.842412200] Player moved from (3,6) to (4,6)
-[2025-06-19T11:33:20.404512800] Added item: Health Potion
-[2025-06-19T11:33:20.407531800] Player moved from (4,6) to (4,5)
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:29.404517500] Added item: Health Potion
-[2025-06-19T11:33:32.428643500] Potion used!
-[2025-06-19T11:33:32.428643500] Removed item: Health Potion
-[2025-06-19T11:33:32.428643500] Health was 66 now is 99
-[2025-06-19T11:33:32.428643500] Player used a potion and healed 33 HP!
-[2025-06-19T11:33:33.856321500] The enemy evaded the attack!
-[2025-06-19T11:33:33.856321500] Goblin attacked for: 12 damage.
-[2025-06-19T11:33:34.502278900] The enemy evaded the attack!
-[2025-06-19T11:33:34.502278900] Player evaded the enemy's attack!
-[2025-06-19T11:33:34.984011600] The enemy evaded the attack!
-[2025-06-19T11:33:34.984011600] Goblin attacked for: 12 damage.
-[2025-06-19T11:33:35.379657700] The enemy evaded the attack!
-[2025-06-19T11:33:35.379657700] Goblin attacked for: 12 damage.
-[2025-06-19T11:33:36.542824500] Potion used!
-[2025-06-19T11:33:36.542824500] Removed item: Health Potion
-[2025-06-19T11:33:36.542824500] Health was 63 now is 100
-[2025-06-19T11:33:36.542824500] Player used a potion and healed 48 HP!
-[2025-06-19T11:33:37.541069100] Player moved from (4,5) to (4,4)
-[2025-06-19T11:33:38.144826] Player moved from (4,4) to (4,5)
-[2025-06-19T11:33:39.100594800] Player moved from (4,5) to (4,4)
-[2025-06-19T11:33:39.962533700] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:39.962533700] Player evaded the enemy's attack!
-[2025-06-19T11:33:40.385929200] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:40.385929200] Dragon attacked for 10 damage.
-[2025-06-19T11:33:40.673414300] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:40.674415800] Dragon attacked for 10 damage.
-[2025-06-19T11:33:40.936230900] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:40.936230900] Dragon attacked for 10 damage.
-[2025-06-19T11:33:41.352339100] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:41.352339100] Player evaded the enemy's attack!
-[2025-06-19T11:33:41.894218700] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:33:41.894218700] Enemy is dead! You won the fight!
-[2025-06-19T11:33:42.497610400] Added item: Health Potion
-[2025-06-19T11:33:42.499660100] Player moved from (4,4) to (5,4)
-[2025-06-19T11:33:42.883969100] Added item: Power Potion
-[2025-06-19T11:33:42.885964600] Player moved from (5,4) to (5,3)
-[2025-06-19T11:33:43.319905900] Player moved from (5,3) to (6,3)
-[2025-06-19T11:33:43.671931300] Added item: Health Potion
-[2025-06-19T11:33:43.673935100] Player moved from (6,3) to (6,4)
-[2025-06-19T11:33:44.185061200] Added item: Health Potion
-[2025-06-19T11:33:44.186059500] Player moved from (6,4) to (7,4)
-[2025-06-19T11:34:02.176138900] Player moved from (7,4) to (7,5)
-[2025-06-19T11:34:04.701104200] Player moved from (7,5) to (6,5)
-[2025-06-19T11:34:07.087536800] The enemy evaded the attack!
-[2025-06-19T11:34:07.088549] Goblin attacked for: 12 damage.
-[2025-06-19T11:34:07.838602300] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:34:07.838602300] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:08.280247100] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:34:08.281247400] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:08.584689800] Player attacked the enemy for: 9 damage.
-[2025-06-19T11:34:08.584689800] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:11.026042800] Potion used!
-[2025-06-19T11:34:11.026042800] Removed item: Health Potion
-[2025-06-19T11:34:11.026042800] Health was 16 now is 27
-[2025-06-19T11:34:11.026042800] Player used a potion and healed 11 HP!
-[2025-06-19T11:34:11.739552] Potion used!
-[2025-06-19T11:34:11.740556300] Removed item: Health Potion
-[2025-06-19T11:34:11.740556300] Health was 27 now is 45
-[2025-06-19T11:34:11.740556300] Player used a potion and healed 18 HP!
-[2025-06-19T11:34:12.532680600] Potion used!
-[2025-06-19T11:34:12.533684600] Removed item: Power Potion
-[2025-06-19T11:34:12.533684600] Power was 0 now is 4
-[2025-06-19T11:34:12.533684600] Player used a power potion and gained 4 attack power!
-[2025-06-19T11:34:13.155940900] Player attacked the enemy for: 6 damage.
-[2025-06-19T11:34:13.155940900] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:13.527544600] Player attacked the enemy for: 6 damage.
-[2025-06-19T11:34:13.527544600] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:14.686083200] Potion used!
-[2025-06-19T11:34:14.687600900] Removed item: Health Potion
-[2025-06-19T11:34:14.687600900] Health was 17 now is 59
-[2025-06-19T11:34:14.687600900] Player used a potion and healed 42 HP!
-[2025-06-19T11:34:15.336067700] Potion used!
-[2025-06-19T11:34:15.336067700] Removed item: Health Potion
-[2025-06-19T11:34:15.336067700] Health was 59 now is 73
-[2025-06-19T11:34:15.336067700] Player used a potion and healed 14 HP!
-[2025-06-19T11:34:15.908579700] Player attacked the enemy for: 6 damage.
-[2025-06-19T11:34:15.908579700] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:16.487534500] Player attacked the enemy for: 6 damage.
-[2025-06-19T11:34:16.487534500] Goblin attacked for: 14 damage.
-[2025-06-19T11:34:17.036233700] Player attacked the enemy for: 6 damage.
-[2025-06-19T11:34:17.036233700] Enemy is dead! You won the fight!
-[2025-06-19T11:34:17.524342800] Collected 279 treasure points!
-[2025-06-19T11:34:17.526348300] Player moved from (6,5) to (6,6)
-[2025-06-19T11:34:18.129551900] Player moved from (6,6) to (5,6)
-[2025-06-19T11:34:18.619673200] Player moved from (5,6) to (4,6)
-[2025-06-19T11:34:19.139578300] Player moved from (4,6) to (3,6)
-[2025-06-19T11:34:20.038190600] Player moved from (3,6) to (4,6)
-[2025-06-19T11:34:21.492577100] Player moved from (4,6) to (5,6)
-[2025-06-19T11:34:25.914193300] Player moved from (5,6) to (4,5)
-[2025-06-19T11:34:25.915155800] Added item: Health Potion
-[2025-06-19T11:34:29.271496700] Player moved from (4,5) to (4,6)
-[2025-06-19T11:34:32.171370700] Player moved from (4,6) to (5,6)
-[2025-06-19T11:34:32.906031400] Player moved from (5,6) to (4,6)
-[2025-06-19T11:34:33.402233700] Player moved from (4,6) to (3,6)
-[2025-06-19T11:34:33.987367800] Player moved from (3,6) to (3,7)
-[2025-06-19T11:34:34.763337800] Player moved from (3,7) to (3,6)
-[2025-06-19T11:34:35.800961800] Player moved from (3,6) to (3,5)
-[2025-06-19T11:34:36.353625500] Player moved from (3,5) to (3,4)
-[2025-06-19T11:34:37.070543200] Player moved from (3,4) to (4,4)
-[2025-06-19T11:34:37.620474600] Player moved from (4,4) to (5,4)
-[2025-06-19T11:34:38.699314300] Player moved from (5,4) to (6,4)
-[2025-06-19T11:34:39.360399200] Player moved from (6,4) to (6,5)
-[2025-06-19T11:34:39.871376400] Player moved from (6,5) to (6,6)
-[2025-06-19T11:34:40.294276] Player moved from (6,6) to (5,6)
-[2025-06-19T11:51:08.051117200] Game started with player type: Mage and name: aviagil
-[2025-06-19T11:51:09.427775400] Enemy tried to move out of bounds: (-1,8)
-[2025-06-19T11:51:09.727446400] Enemy moved to: (2,5)
-[2025-06-19T11:51:10.029103700] Dragon attacked for 10 damage.
-[2025-06-19T11:51:10.332705800] Goblin attacked for: 8 damage.
-[2025-06-19T11:51:10.503075500] Enemy moved to: (2,4)
-[2025-06-19T11:51:10.503075500] Dragon attacked for 4 damage.
-[2025-06-19T11:51:10.630793600] Enemy moved to: (3,7)
-[2025-06-19T11:51:11.111113600] Enemy moved to: (5,3)
-[2025-06-19T11:51:15.439763200] Player moved from (2,3) to (1,3)
-[2025-06-19T11:51:16.042169] Added item: Power Potion
-[2025-06-19T11:51:16.047152700] Player moved from (1,3) to (1,4)
-[2025-06-19T11:51:16.567437600] Player moved from (1,4) to (1,3)
-[2025-06-19T11:51:17.256418] Added item: Health Potion
-[2025-06-19T11:51:17.258946700] Player moved from (1,3) to (1,2)
-[2025-06-19T11:51:27.939883300] Added item: Power Potion
-[2025-06-19T11:51:27.940872100] Added item: Health Potion
-[2025-06-19T11:51:27.940872100] Added item: Power Potion
-[2025-06-19T11:51:27.940872100] Added item: Health Potion
-[2025-06-19T11:51:31.416110200] Potion used!
-[2025-06-19T11:51:31.417620400] Removed item: Power Potion
-[2025-06-19T11:51:31.417620400] Power was 0 now is 4
-[2025-06-19T11:51:31.417620400] aviagil used a power potion and gained 4 attack power!
-[2025-06-19T11:51:32.091562700] Potion used!
-[2025-06-19T11:51:32.091562700] Removed item: Health Potion
-[2025-06-19T11:51:32.091562700] Health was 78 now is 100
-[2025-06-19T11:51:32.091562700] aviagil used a potion and healed 40 HP!
-[2025-06-19T11:51:34.142255200] Player moved from (1,2) to (1,1)
-[2025-06-19T11:51:36.938619100] Player moved from (1,1) to (1,2)
-[2025-06-19T11:51:43.031328300] Player moved from (1,2) to (1,3)
-[2025-06-19T12:02:07.290064800] Game started with player type: Mage and name: Player
-[2025-06-19T12:02:08.414899300] Enemy tried to move out of bounds: (-1,5)
-[2025-06-19T12:02:09.024758] Enemy moved to: (1,9)
-[2025-06-19T12:02:10.281353500] Enemy tried to move out of bounds: (6,10)
-[2025-06-19T12:02:14.272141100] Added item: Power Potion
-[2025-06-19T12:02:14.361292500] Player moved from (2,1) to (1,1)
-[2025-06-19T12:02:14.925601] Player moved from (1,1) to (1,2)
-[2025-06-19T12:02:15.557624500] Added item: Health Potion
-[2025-06-19T12:02:15.560132200] Player moved from (1,2) to (2,2)
-[2025-06-19T12:02:16.446726200] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:02:16.446726200] Orc received 10 damage from magic attack.
-[2025-06-19T12:02:16.446726200] The orc attacked for: 5 damage.
-[2025-06-19T12:02:16.731654900] The enemy evaded the attack!
-[2025-06-19T12:02:16.731654900] The orc attacked for: 5 damage.
-[2025-06-19T12:02:17.276486900] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:02:17.276486900] Orc received 10 damage from magic attack.
-[2025-06-19T12:02:17.276486900] The orc attacked for: 5 damage.
-[2025-06-19T12:02:17.490841800] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:02:17.490841800] Orc received 10 damage from magic attack.
-[2025-06-19T12:02:17.490841800] The orc attacked for: 5 damage.
-[2025-06-19T12:02:17.682252200] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:02:17.682252200] Orc received 10 damage from magic attack.
-[2025-06-19T12:02:17.682252200] The orc attacked for: 5 damage.
-[2025-06-19T12:02:17.858104100] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:02:17.858104100] Orc received 10 damage from magic attack.
-[2025-06-19T12:02:17.858104100] Enemy is dead! You won the fight!
-[2025-06-19T12:02:18.465507600] Collected 248 treasure points!
-[2025-06-19T12:02:18.467548900] Player moved from (2,2) to (3,2)
-[2025-06-19T12:02:19.588582600] Player moved from (3,2) to (3,3)
-[2025-06-19T12:02:28.982517100] Added item: Power Potion
-[2025-06-19T12:02:28.983481500] Added item: Health Potion
-[2025-06-19T12:02:28.983481500] Added item: Power Potion
-[2025-06-19T12:02:28.983481500] Added item: Health Potion
-[2025-06-19T12:02:32.300010300] Potion used!
-[2025-06-19T12:02:32.300010300] Removed item: Health Potion
-[2025-06-19T12:02:32.300010300] Health was 75 now is 100
-[2025-06-19T12:02:32.300010300] Player used a potion and healed 36 HP!
-[2025-06-19T12:02:33.650014400] Potion used!
-[2025-06-19T12:02:33.650014400] Removed item: Power Potion
-[2025-06-19T12:02:33.650014400] Power was 10 now is 11
-[2025-06-19T12:02:33.651049600] Player used a power potion and gained 1 attack power!
-[2025-06-19T12:02:34.661240600] Player moved from (3,3) to (3,4)
-[2025-06-19T12:02:38.660052400] Player moved from (3,4) to (3,3)
-[2025-06-19T12:02:58.066603900] Player moved from (3,3) to (3,4)
-[2025-06-19T12:03:36.750266500] Player moved from (3,4) to (4,4)
-[2025-06-19T12:03:37.442391800] Player moved from (4,4) to (3,4)
-[2025-06-19T12:03:38.428722] Added item: Power Potion
-[2025-06-19T12:03:38.432281] Player moved from (3,4) to (2,4)
-[2025-06-19T12:03:39.093080900] Player moved from (2,4) to (1,4)
-[2025-06-19T12:03:39.657046400] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:03:39.657046400] Orc received 9 damage from magic attack.
-[2025-06-19T12:03:39.657046400] The orc attacked with Critical hit! for: 24 damage.
-[2025-06-19T12:03:40.066794200] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:03:40.066794200] Orc received 9 damage from magic attack.
-[2025-06-19T12:03:40.066794200] The orc attacked with Critical hit! for: 24 damage.
-[2025-06-19T12:03:40.478620900] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:03:40.478620900] Orc received 9 damage from magic attack.
-[2025-06-19T12:03:40.478620900] The orc attacked for: 12 damage.
-[2025-06-19T12:03:40.798844100] Player attacked the enemy for: 15 damage.
-[2025-06-19T12:03:40.798844100] Orc received 9 damage from magic attack.
-[2025-06-19T12:03:40.798844100] The orc attacked for: 12 damage.
-[2025-06-19T12:03:41.156772500] The enemy evaded the attack!
-[2025-06-19T12:03:41.156772500] The orc attacked for: 12 damage.
-[2025-06-19T12:22:43.343427900] Game started with player type: Warrior and name: Player
-[2025-06-19T12:22:43.889620600] Enemy moved to: (0,6)
-[2025-06-19T12:22:44.821511500] Enemy attacked Player for: 5 damage, you received only 4
-[2025-06-19T12:22:44.821511500] Dragon attacked for 5 damage.
-[2025-06-19T12:22:45.312573700] Player moved from (3,4) to (3,5)
-[2025-06-19T12:22:45.446585500] Enemy moved to: (6,3)
-[2025-06-19T12:22:45.508023800] Enemy moved to: (8,7)
-[2025-06-19T12:22:45.747624] Enemy moved to: (9,7)
-[2025-06-19T12:22:45.874555700] Player moved from (3,5) to (3,6)
-[2025-06-19T12:22:46.322641800] Player moved from (3,6) to (4,6)
-[2025-06-19T12:22:51.384115500] Cannot move through wall at (5,6)
-[2025-06-19T12:22:51.867789400] Player moved from (4,6) to (4,7)
-[2025-06-19T12:22:52.245569400] Player moved from (4,7) to (5,7)
-[2025-06-19T12:22:52.953583300] Added item: Health Potion
-[2025-06-19T12:22:52.968917300] Player moved from (5,7) to (6,7)
-[2025-06-19T12:22:54.737257100] Player moved from (6,7) to (5,7)
-[2025-06-19T12:22:55.234780] Player moved from (5,7) to (4,7)
-[2025-06-19T12:22:55.484827600] Player moved from (4,7) to (4,6)
-[2025-06-19T12:23:02.414171500] Player moved from (4,6) to (4,7)
-[2025-06-19T12:23:02.682962800] Player moved from (4,7) to (5,7)
-[2025-06-19T12:23:02.917885700] Player moved from (5,7) to (6,7)
-[2025-06-19T12:23:03.074167500] Player moved from (6,7) to (7,7)
-[2025-06-19T12:23:03.276818] Player attacked the enemy for: 13 damage.
-[2025-06-19T12:23:03.276818] Player evaded the enemy's attack!
-[2025-06-19T12:32:22.700301700] Game started with player type: Warrior and name: Player
-[2025-06-19T12:32:23.629412300] Enemy moved to: (2,8)
-[2025-06-19T12:32:24.808797400] Player moved from (1,7) to (1,6)
-[2025-06-19T12:32:25.178269900] Player moved from (1,6) to (1,5)
-[2025-06-19T12:32:25.802135500] Player moved from (1,5) to (2,5)
-[2025-06-19T12:32:26.773921300] Player moved from (2,5) to (3,5)
-[2025-06-19T12:32:40.799516500] Added item: Health Potion
-[2025-06-19T12:32:40.803392500] Player moved from (3,5) to (3,6)
-[2025-06-19T12:32:42.342503700] Added item: Health Potion
-[2025-06-19T12:32:42.345506] Player moved from (3,6) to (2,6)
-[2025-06-19T12:32:42.810792] Player moved from (2,6) to (2,5)
-[2025-06-19T12:32:43.005940400] Player moved from (2,5) to (2,4)
-[2025-06-19T12:32:43.214386700] Added item: Health Potion
-[2025-06-19T12:32:43.217391800] Player moved from (2,4) to (2,3)
-[2025-06-19T12:32:43.842194] Player moved from (2,3) to (2,2)
-[2025-06-19T12:32:44.231875400] Player moved from (2,2) to (3,2)
-[2025-06-19T12:32:52.084356800] Player moved from (3,2) to (4,2)
-[2025-06-19T12:32:52.332386700] Player moved from (4,2) to (4,3)
-[2025-06-19T12:32:52.960354600] Player moved from (4,3) to (4,4)
-[2025-06-19T12:32:53.665379600] Orc received 9 damage from physical attack.
-[2025-06-19T12:32:53.665379600] Player attacked the enemy for: 9 damage.
-[2025-06-19T12:32:53.670383] Enemy attacked Player for: 4 damage, you received only 3
-[2025-06-19T12:32:53.670383] The orc attacked for: 4 damage.
-[2025-06-19T12:32:53.902436200] Orc received 9 damage from physical attack.
-[2025-06-19T12:32:53.903445] Player attacked the enemy for: 9 damage.
-[2025-06-19T12:32:53.903445] Enemy attacked Player for: 8 damage, you received only 7
-[2025-06-19T12:32:53.903445] The orc attacked with Critical hit! for: 8 damage.
-[2025-06-19T12:32:54.120482700] The enemy evaded the attack!
-[2025-06-19T12:32:54.120482700] Enemy attacked Player for: 4 damage, you received only 3
-[2025-06-19T12:32:54.120482700] The orc attacked for: 4 damage.
-[2025-06-19T12:32:54.306518600] The enemy evaded the attack!
-[2025-06-19T12:32:54.306518600] Player evaded the enemy's attack!
-[2025-06-19T12:33:05.740898900] Player moved from (4,4) to (5,4)
-[2025-06-19T12:33:06.599080600] Player moved from (5,4) to (5,3)
-[2025-06-19T12:33:07.236489400] Player moved from (5,3) to (6,3)
-[2025-06-19T12:33:32.811407800] Player moved from (4,4) to (4,3)
-[2025-06-19T12:33:33.617897800] Player moved from (4,3) to (5,3)
-[2025-06-19T12:33:34.470309] Player moved from (5,3) to (5,4)
-[2025-06-19T12:33:35.121965] Player moved from (5,4) to (4,4)
-[2025-06-19T12:33:35.531331500] Player moved from (4,4) to (4,3)
-[2025-06-19T12:33:35.849775500] Added item: Power Potion
-[2025-06-19T12:33:35.852784200] Player moved from (4,3) to (3,3)
-[2025-06-19T12:33:37.409219200] Player moved from (3,3) to (3,2)
-[2025-06-19T12:33:37.828305700] Player moved from (3,2) to (4,2)
-[2025-06-19T12:33:38.251463600] Player moved from (4,2) to (4,3)
-[2025-06-19T12:33:38.420534] Player moved from (4,3) to (4,4)
-[2025-06-19T12:33:38.604864700] Player attacked with Critical hit! for 18 damage.
-[2025-06-19T12:33:38.604864700] Enemy attacked Player for: 22 damage, you received only 21
-[2025-06-19T12:33:38.605867900] Dragon attacked with a Critical hit! for 22 damage.
-[2025-06-19T12:33:38.934378600] Player moved from (4,4) to (5,4)
-[2025-06-19T15:34:26.972459800] Game started with player type: Warrior and name: SHIRA
-[2025-06-19T15:34:29.620177800] Enemy moved to: (9,0)
-[2025-06-19T15:34:29.623164400] Enemy attacked SHIRA for: 11 damage, you received only 7
-[2025-06-19T15:34:29.623164400] Goblin attacked for: 11 damage.
-[2025-06-19T15:34:29.919553300] Enemy attacked SHIRA for: 12 damage, you received only 8
-[2025-06-19T15:34:29.920269200] The orc attacked for: 12 damage.
-[2025-06-19T15:34:30.298798800] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:34:30.298798800] Goblin attacked for: 7 damage.
-[2025-06-19T15:34:30.849496400] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:30.849496400] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:30.849496400] Enemy attacked SHIRA for: 12 damage, you received only 8
-[2025-06-19T15:34:30.849496400] The orc attacked for: 12 damage.
-[2025-06-19T15:34:31.420201900] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:31.421226200] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:31.421226200] Player evaded the enemy's attack!
-[2025-06-19T15:34:31.955366500] The enemy evaded the attack!
-[2025-06-19T15:34:31.956391] Enemy attacked SHIRA for: 24 damage, you received only 17
-[2025-06-19T15:34:31.956391] The orc attacked with Critical hit! for: 24 damage.
-[2025-06-19T15:34:32.442752100] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:32.442752100] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:32.442752100] Enemy attacked SHIRA for: 12 damage, you received only 8
-[2025-06-19T15:34:32.442752100] The orc attacked for: 12 damage.
-[2025-06-19T15:34:32.945944800] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:32.945944800] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:32.945944800] Enemy attacked SHIRA for: 12 damage, you received only 8
-[2025-06-19T15:34:32.945944800] The orc attacked for: 12 damage.
-[2025-06-19T15:34:33.354136300] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:33.354136300] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:33.354136300] Enemy attacked SHIRA for: 12 damage, you received only 8
-[2025-06-19T15:34:33.354136300] The orc attacked for: 12 damage.
-[2025-06-19T15:34:33.827222500] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:33.827222500] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:33.827222500] Player evaded the enemy's attack!
-[2025-06-19T15:34:34.395197300] The enemy evaded the attack!
-[2025-06-19T15:34:34.395197300] Player evaded the enemy's attack!
-[2025-06-19T15:34:34.878868700] Orc received 7 damage from physical attack.
-[2025-06-19T15:34:34.878868700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:34.878868700] Enemy is dead! You won the fight!
-[2025-06-19T15:34:35.402372] Added item: Health Potion
-[2025-06-19T15:34:35.405376300] Player moved from (9,1) to (8,1)
-[2025-06-19T15:34:35.976086] Player moved from (8,1) to (7,1)
-[2025-06-19T15:34:36.354525400] Added item: Health Potion
-[2025-06-19T15:34:36.356529400] Player moved from (7,1) to (6,1)
-[2025-06-19T15:34:36.807803100] Player moved from (6,1) to (6,2)
-[2025-06-19T15:34:37.116576500] Added item: Health Potion
-[2025-06-19T15:34:37.118566200] Player moved from (6,2) to (6,3)
-[2025-06-19T15:34:38.993833500] Potion used!
-[2025-06-19T15:34:38.993833500] Removed item: Health Potion
-[2025-06-19T15:34:38.993833500] Health was 33 now is 66
-[2025-06-19T15:34:38.993833500] SHIRA used a potion and healed 33 HP!
-[2025-06-19T15:34:39.481513100] Potion used!
-[2025-06-19T15:34:39.481513100] Removed item: Health Potion
-[2025-06-19T15:34:39.481513100] Health was 66 now is 94
-[2025-06-19T15:34:39.481513100] SHIRA used a potion and healed 28 HP!
-[2025-06-19T15:34:40.559296900] Player moved from (6,3) to (5,3)
-[2025-06-19T15:34:41.053227500] Player moved from (5,3) to (5,4)
-[2025-06-19T15:34:41.307546200] Added item: Health Potion
-[2025-06-19T15:34:41.309531500] Player moved from (5,4) to (5,5)
-[2025-06-19T15:34:44.630521] Added item: Health Potion
-[2025-06-19T15:34:44.632511200] Player moved from (5,5) to (5,6)
-[2025-06-19T15:34:45.835723200] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:45.836749400] Player evaded the enemy's attack!
-[2025-06-19T15:34:46.304451700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:34:46.304451700] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:34:46.305455400] Dragon attacked for 7 damage.
-[2025-06-19T15:34:46.857897700] The enemy evaded the attack!
-[2025-06-19T15:34:46.857897700] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:34:46.857897700] Dragon attacked for 7 damage.
-[2025-06-19T15:34:50.276877] Added item: Health Potion
-[2025-06-19T15:34:50.278869300] Player moved from (5,6) to (5,7)
-[2025-06-19T15:34:55.751551900] Player moved from (5,7) to (6,7)
-[2025-06-19T15:34:56.210746400] Player moved from (6,7) to (7,7)
-[2025-06-19T15:34:58.442647400] Player moved from (7,7) to (7,6)
-[2025-06-19T15:34:58.782141500] Added item: Health Potion
-[2025-06-19T15:34:58.784131600] Player moved from (7,6) to (8,6)
-[2025-06-19T15:35:05.528187700] Added item: Health Potion
-[2025-06-19T15:35:05.530194900] Player moved from (5,7) to (4,7)
-[2025-06-19T15:35:08.104932400] Player moved from (4,7) to (5,7)
-[2025-06-19T15:35:08.811668800] Player moved from (5,7) to (6,7)
-[2025-06-19T15:35:09.295596100] Added item: Health Potion
-[2025-06-19T15:35:09.296585] Player moved from (6,7) to (6,8)
-[2025-06-19T15:35:10.053336500] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:10.053336500] Enemy attacked SHIRA for: 8 damage, you received only 5
-[2025-06-19T15:35:10.053336500] Goblin attacked for: 8 damage.
-[2025-06-19T15:35:10.351597500] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:10.352597400] Enemy attacked SHIRA for: 16 damage, you received only 11
-[2025-06-19T15:35:10.352597400] Goblin attack with Critical hit! for: 16 damage.
-[2025-06-19T15:35:10.540613400] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:10.540613400] Enemy attacked SHIRA for: 8 damage, you received only 5
-[2025-06-19T15:35:10.540613400] Goblin attacked for: 8 damage.
-[2025-06-19T15:35:10.721159200] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:10.721159200] Enemy attacked SHIRA for: 8 damage, you received only 5
-[2025-06-19T15:35:10.721159200] Goblin attacked for: 8 damage.
-[2025-06-19T15:35:10.880551800] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:10.880551800] Enemy attacked SHIRA for: 8 damage, you received only 5
-[2025-06-19T15:35:10.880551800] Goblin attacked for: 8 damage.
-[2025-06-19T15:35:11.054309400] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:11.054309400] Enemy attacked SHIRA for: 8 damage, you received only 5
-[2025-06-19T15:35:11.054309400] Goblin attacked for: 8 damage.
-[2025-06-19T15:35:11.183465700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:11.183465700] Enemy is dead! You won the fight!
-[2025-06-19T15:35:11.383279300] Collected 183 treasure points!
-[2025-06-19T15:35:11.385288500] Player moved from (6,8) to (7,8)
-[2025-06-19T15:35:12.414339700] Player moved from (7,8) to (7,7)
-[2025-06-19T15:35:13.471769500] Player moved from (7,7) to (7,8)
-[2025-06-19T15:35:13.794785700] Added item: Health Potion
-[2025-06-19T15:35:13.796799900] Player moved from (7,8) to (8,8)
-[2025-06-19T15:35:15.480552100] Potion used!
-[2025-06-19T15:35:15.481556400] Removed item: Health Potion
-[2025-06-19T15:35:15.481556400] Health was 48 now is 76
-[2025-06-19T15:35:15.481556400] SHIRA used a potion and healed 28 HP!
-[2025-06-19T15:35:15.885375300] Potion used!
-[2025-06-19T15:35:15.885375300] Removed item: Health Potion
-[2025-06-19T15:35:15.885375300] Health was 76 now is 99
-[2025-06-19T15:35:15.885375300] SHIRA used a potion and healed 23 HP!
-[2025-06-19T15:35:16.139729900] Potion used!
-[2025-06-19T15:35:16.139729900] Removed item: Health Potion
-[2025-06-19T15:35:16.139729900] Health was 99 now is 100
-[2025-06-19T15:35:16.140728200] SHIRA used a potion and healed 13 HP!
-[2025-06-19T15:35:16.517620500] Potion used!
-[2025-06-19T15:35:16.517620500] Removed item: Health Potion
-[2025-06-19T15:35:16.517620500] Health was 100 now is 100
-[2025-06-19T15:35:16.517620500] SHIRA used a potion and healed 32 HP!
-[2025-06-19T15:35:17.805577700] Potion used!
-[2025-06-19T15:35:17.805577700] Removed item: Health Potion
-[2025-06-19T15:35:17.805577700] Health was 100 now is 100
-[2025-06-19T15:35:17.805577700] SHIRA used a potion and healed 17 HP!
-[2025-06-19T15:35:18.893266100] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:18.893266100] Player evaded the enemy's attack!
-[2025-06-19T15:35:19.066946100] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.066946100] Player evaded the enemy's attack!
-[2025-06-19T15:35:19.221893900] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.221893900] Enemy attacked SHIRA for: 5 damage, you received only 3
-[2025-06-19T15:35:19.221893900] Goblin attacked for: 5 damage.
-[2025-06-19T15:35:19.385615300] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.386627700] Enemy attacked SHIRA for: 5 damage, you received only 3
-[2025-06-19T15:35:19.386627700] Goblin attacked for: 5 damage.
-[2025-06-19T15:35:19.549951600] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.549951600] Player evaded the enemy's attack!
-[2025-06-19T15:35:19.699441300] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.700467800] Enemy attacked SHIRA for: 5 damage, you received only 3
-[2025-06-19T15:35:19.700467800] Goblin attacked for: 5 damage.
-[2025-06-19T15:35:19.929261800] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:19.929261800] Enemy attacked SHIRA for: 10 damage, you received only 7
-[2025-06-19T15:35:19.929261800] Goblin attack with Critical hit! for: 10 damage.
-[2025-06-19T15:35:20.312521700] SHIRA attacked with Critical hit! for 14 damage.
-[2025-06-19T15:35:20.312521700] Enemy is dead! You won the fight!
-[2025-06-19T15:35:20.720660500] Collected 166 treasure points!
-[2025-06-19T15:35:20.722673700] Player moved from (8,8) to (8,7)
-[2025-06-19T15:35:21.847594500] Player moved from (8,7) to (8,6)
-[2025-06-19T15:35:22.360104800] Added item: Health Potion
-[2025-06-19T15:35:22.362124800] Player moved from (8,6) to (9,6)
-[2025-06-19T15:35:22.983319] Player moved from (9,6) to (8,6)
-[2025-06-19T15:35:23.312135200] Player moved from (8,6) to (7,6)
-[2025-06-19T15:35:23.671879300] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:23.671879300] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:35:23.671879300] Dragon attacked for 7 damage.
-[2025-06-19T15:35:23.920063700] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:23.920063700] Player evaded the enemy's attack!
-[2025-06-19T15:35:24.125216500] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:24.125216500] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:35:24.125216500] Dragon attacked for 7 damage.
-[2025-06-19T15:35:24.509015800] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:24.509015800] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:35:24.509015800] Dragon attacked for 7 damage.
-[2025-06-19T15:35:24.728155300] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:24.728155300] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:35:24.728155300] Dragon attacked for 7 damage.
-[2025-06-19T15:35:24.973259900] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:24.973259900] Enemy attacked SHIRA for: 7 damage, you received only 5
-[2025-06-19T15:35:24.973259900] Dragon attacked for 7 damage.
-[2025-06-19T15:35:25.440487] SHIRA attacked the enemy for: 7 damage.
-[2025-06-19T15:35:25.440487] Enemy is dead! You won the fight!
-[2025-06-19T15:35:25.855427400] Collected 166 treasure points!
-[2025-06-19T15:35:25.856414900] Game ended
+[2025-06-21T19:30:25.064437] Game started with player type: Warrior and name: Player
+[2025-06-21T19:30:25.930839] Enemy moved to: (3,2)
+[2025-06-21T19:30:26.071135] Enemy got a random decorator!
+[2025-06-21T19:30:26.072032] Enemy got a random decorator!
+[2025-06-21T19:30:26.072053] Enemy got a random decorator!
+[2025-06-21T19:30:26.072070] Enemy got a random decorator!
+[2025-06-21T19:30:26.538607] Enemy moved to: (5,5)
+[2025-06-21T19:30:26.664460] The enemy evaded the attack!
+[2025-06-21T19:30:26.665880] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:26.665949] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:26.912554] The enemy evaded the attack!
+[2025-06-21T19:30:26.912607] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:26.912624] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:27.070362] Enemy got a random decorator!
+[2025-06-21T19:30:27.071494] Enemy got a random decorator!
+[2025-06-21T19:30:27.072087] Enemy got a random decorator!
+[2025-06-21T19:30:27.249401] The enemy evaded the attack!
+[2025-06-21T19:30:27.249615] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:27.249683] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:27.446586] Enemy attacked Player for: 19 damage, you received only 17
+[2025-06-21T19:30:27.446626] Goblin attacked for: 19 damage.
+[2025-06-21T19:30:27.574765] The enemy evaded the attack!
+[2025-06-21T19:30:27.574854] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:27.574883] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:27.756625] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:27.756657] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:28.056966] Enemy moved to: (8,0)
+[2025-06-21T19:30:28.067817] [HealthRegenDecorator] Regenerated 5 HP → 8/100
+[2025-06-21T19:30:28.069132] Enemy got a random decorator!
+[2025-06-21T19:30:28.070236] Enemy got a random decorator!
+[2025-06-21T19:30:28.070253] Enemy got a random decorator!
+[2025-06-21T19:30:28.072077] Enemy got a random decorator!
+[2025-06-21T19:30:28.072084] Enemy got a random decorator!
+[2025-06-21T19:30:28.072128] Enemy got a random decorator!
+[2025-06-21T19:30:28.072234] Enemy got a random decorator!
+[2025-06-21T19:30:29.066628] Enemy got a random decorator!
+[2025-06-21T19:30:29.071136] Enemy got a random decorator!
+[2025-06-21T19:30:29.072173] Enemy got a random decorator!
+[2025-06-21T19:30:29.428437] The enemy evaded the attack!
+[2025-06-21T19:30:29.428696] Enemy attacked Player for: 18 damage, you received only 16
+[2025-06-21T19:30:29.428762] Goblin attacked for: 18 damage.
+[2025-06-21T19:30:29.428828] Game ended, player died!
+[2025-06-21T19:33:28.971273] Game started with player type: Archer and name: Player
+[2025-06-21T19:33:29.890450] Enemy moved to: (3,8)
+[2025-06-21T19:33:29.980039] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:30.419377] Player moved from (6,7) to (7,7)
+[2025-06-21T19:33:30.502479] Enemy moved to: (4,6)
+[2025-06-21T19:33:30.979035] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:30.979179] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.082149] Added item: Health Potion
+[2025-06-21T19:33:31.090619] Player moved from (7,7) to (7,6)
+[2025-06-21T19:33:31.493777] Player moved from (7,6) to (7,7)
+[2025-06-21T19:33:31.715735] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:31.715912] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:31.716020] Dragon attacked with a Critical hit! for 46 damage.
+[2025-06-21T19:33:31.973589] [HealthRegenDecorator] Regenerated 5 HP → 59/100
+[2025-06-21T19:33:31.974778] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.974794] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:31.974797] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.974847] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.976806] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.978841] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:31.979822] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:31.979831] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:31.979831] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:32.014235] Enemy moved to: (7,6)
+[2025-06-21T19:33:32.014500] Goblin attacked for: 17 damage.
+[2025-06-21T19:33:32.107409] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:32.107441] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:32.107534] Dragon attacked for 23 damage.
+[2025-06-21T19:33:32.330845] Dragon attacked with a Critical hit! for 46 damage.
+[2025-06-21T19:33:32.444043] Added item: Health Potion
+[2025-06-21T19:33:32.448474] Player moved from (7,7) to (8,7)
+[2025-06-21T19:33:32.627797] The orc attacked for: 22 damage.
+[2025-06-21T19:33:32.925090] Enemy tried to move out of bounds: (10,5)
+[2025-06-21T19:33:32.935991] The orc attacked for: 16 damage.
+[2025-06-21T19:33:32.971867] Player moved from (8,7) to (8,6)
+[2025-06-21T19:33:32.975940] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:32.976060] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:32.976118] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:32.979932] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:32.979932] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:33.219352] Added item: Health Potion
+[2025-06-21T19:33:33.222732] Player moved from (8,6) to (9,6)
+[2025-06-21T19:33:33.979222] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:34.938259] Potion used!
+[2025-06-21T19:33:34.938529] Removed item: Health Potion
+[2025-06-21T19:33:34.938709] Health was 0 now is 14
+[2025-06-21T19:33:34.938984] Player used a potion and healed 14 HP!
+[2025-06-21T19:33:34.975714] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:34.975714] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:34.980077] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:35.474699] Potion used!
+[2025-06-21T19:33:35.474935] Removed item: Health Potion
+[2025-06-21T19:33:35.475032] Health was 14 now is 41
+[2025-06-21T19:33:35.475074] Player used a potion and healed 27 HP!
+[2025-06-21T19:33:35.741615] Potion used!
+[2025-06-21T19:33:35.741944] Removed item: Health Potion
+[2025-06-21T19:33:35.742013] Health was 41 now is 74
+[2025-06-21T19:33:35.742060] Player used a potion and healed 33 HP!
+[2025-06-21T19:33:35.970766] [HealthRegenDecorator] Regenerated 5 HP → 79/100
+[2025-06-21T19:33:35.975477] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:35.978935] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:35.978935] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:35.978935] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:35.978935] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:35.979676] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:36.461694] Player moved from (9,6) to (8,6)
+[2025-06-21T19:33:36.975275] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:36.975747] Player moved from (8,6) to (8,5)
+[2025-06-21T19:33:36.978875] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:36.978875] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:36.978875] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:36.979936] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:37.384971] Player moved from (8,5) to (7,5)
+[2025-06-21T19:33:37.616913] Player moved from (7,5) to (7,4)
+[2025-06-21T19:33:37.954611] Player moved from (7,4) to (7,3)
+[2025-06-21T19:33:37.978931] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:37.978949] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:37.978930] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:37.979931] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-21T19:33:38.469996] Player moved from (7,3) to (8,3)
+[2025-06-21T19:33:38.719003] Player moved from (8,3) to (9,3)
+[2025-06-21T19:33:38.970126] [HealthRegenDecorator] Regenerated 5 HP → 84/100
+[2025-06-21T19:33:38.977139] Added item: Health Potion
+[2025-06-21T19:33:38.979935] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:38.979972] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-21T19:33:38.980814] Player moved from (9,3) to (9,4)
+[2025-06-21T19:33:39.250911] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:39.250985] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:39.251010] Dragon attacked with a Critical hit! for 44 damage.
+[2025-06-21T19:33:39.484138] The enemy evaded the attack!
+[2025-06-21T19:33:39.484204] Dragon attacked for 22 damage.
+[2025-06-21T19:33:40.383448] Potion used!
+[2025-06-21T19:33:40.383662] Removed item: Health Potion
+[2025-06-21T19:33:40.383741] Health was 18 now is 65
+[2025-06-21T19:33:40.383785] Player used a potion and healed 47 HP!
+[2025-06-21T19:33:40.808704] Player moved from (9,4) to (9,3)
+[2025-06-21T19:33:41.165972] Player moved from (9,3) to (9,2)
+[2025-06-21T19:33:41.631769] Player moved from (9,2) to (9,1)
+[2025-06-21T19:33:41.941026] Player moved from (9,1) to (9,2)
+[2025-06-21T19:33:42.148202] [HealthRegenDecorator] Regenerated 5 HP → 70/100
+[2025-06-21T19:33:42.148558] Player moved from (9,2) to (8,2)
+[2025-06-21T19:33:42.333552] Player moved from (8,2) to (7,2)
+[2025-06-21T19:33:42.559972] Player moved from (7,2) to (6,2)
+[2025-06-21T19:33:42.916772] Added item: Health Potion
+[2025-06-21T19:33:42.920510] Player moved from (6,2) to (5,2)
+[2025-06-21T19:33:43.476178] Player moved from (5,2) to (5,3)
+[2025-06-21T19:33:44.129182] Player moved from (5,3) to (4,3)
+[2025-06-21T19:33:44.347046] Added item: Health Potion
+[2025-06-21T19:33:44.353847] Player moved from (4,3) to (4,4)
+[2025-06-21T19:33:44.847642] Orc received 10 damage from physical attack.
+[2025-06-21T19:33:44.847769] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:44.847812] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:44.847833] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:44.847860] The orc attacked for: 15 damage.
+[2025-06-21T19:33:45.065940] Orc received 10 damage from physical attack.
+[2025-06-21T19:33:45.065998] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:45.066006] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:45.066011] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:45.066018] The orc attacked for: 15 damage.
+[2025-06-21T19:33:45.746977] Potion used!
+[2025-06-21T19:33:45.747126] Removed item: Health Potion
+[2025-06-21T19:33:45.747184] Health was 40 now is 83
+[2025-06-21T19:33:45.747225] Player used a potion and healed 43 HP!
+[2025-06-21T19:33:45.900885] Potion used!
+[2025-06-21T19:33:45.900992] Removed item: Health Potion
+[2025-06-21T19:33:45.901027] Health was 83 now is 100
+[2025-06-21T19:33:45.901049] Player used a potion and healed 48 HP!
+[2025-06-21T19:33:46.481521] Orc received 10 damage from physical attack.
+[2025-06-21T19:33:46.481649] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:46.481694] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:46.481717] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:46.481750] Player evaded the enemy's attack!
+[2025-06-21T19:33:46.808986] Orc received 10 damage from physical attack.
+[2025-06-21T19:33:46.809082] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:46.809135] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:46.809154] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:46.809164] Player evaded the enemy's attack!
+[2025-06-21T19:33:47.247713] Orc received 20 damage from physical attack.
+[2025-06-21T19:33:47.248042] Archer attacked with Critical hit! for 20 damage.
+[2025-06-21T19:33:47.248092] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:47.248148] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:47.248170] Player evaded the enemy's attack!
+[2025-06-21T19:33:47.616883] Orc received 10 damage from physical attack.
+[2025-06-21T19:33:47.616976] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:47.616999] Orc received 5 damage from physical attack.
+[2025-06-21T19:33:47.617012] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:47.617028] The orc attacked for: 15 damage.
+[2025-06-21T19:33:47.970705] Player moved from (4,4) to (4,5)
+[2025-06-21T19:33:48.165431] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:48.165462] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:48.165476] Dragon attacked for 18 damage.
+[2025-06-21T19:33:48.165705] [VampireEnemy] Drained 1 HP from player → Enemy health: 41/50
+[2025-06-21T19:33:48.599781] The enemy evaded the attack!
+[2025-06-21T19:33:48.599846] Dragon attacked for 18 damage.
+[2025-06-21T19:33:48.599866] [VampireEnemy] Drained 1 HP from player → Enemy health: 42/50
+[2025-06-21T19:33:49.077259] [HealthRegenDecorator] Regenerated 5 HP → 54/100
+[2025-06-21T19:33:49.077469] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:49.077534] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:49.077557] Player evaded the enemy's attack!
+[2025-06-21T19:33:49.662283] The enemy evaded the attack!
+[2025-06-21T19:33:49.662416] Dragon attacked for 18 damage.
+[2025-06-21T19:33:49.662461] [VampireEnemy] Drained 1 HP from player → Enemy health: 43/50
+[2025-06-21T19:33:50.289211] The enemy evaded the attack!
+[2025-06-21T19:33:50.289414] Dragon attacked for 18 damage.
+[2025-06-21T19:33:50.289494] [VampireEnemy] Drained 1 HP from player → Enemy health: 44/50
+[2025-06-21T19:33:50.994030] Player attacked the enemy for 10 damage.
+[2025-06-21T19:33:50.994227] Boosted attack: +5 damage dealt!
+[2025-06-21T19:33:50.994264] Player evaded the enemy's attack!
+[2025-06-21T19:33:52.970445] [HealthRegenDecorator] Regenerated 5 HP → 23/100
+[2025-06-21T19:33:53.630766] Player moved from (4,5) to (4,4)
+[2025-06-21T19:33:55.206222] Player moved from (4,4) to (3,4)
+[2025-06-21T19:33:55.458604] Player moved from (3,4) to (2,4)
+[2025-06-21T19:33:55.970708] [HealthRegenDecorator] Regenerated 5 HP → 28/100
+[2025-06-21T19:33:56.100074] Player moved from (2,4) to (3,4)
+[2025-06-21T19:33:56.334950] Player moved from (3,4) to (4,4)
+[2025-06-21T19:33:56.744778] Player moved from (4,4) to (4,5)
+[2025-06-21T19:33:57.128245] Player moved from (4,5) to (4,4)
+[2025-06-21T19:33:57.308789] Player moved from (4,4) to (4,3)
+[2025-06-21T19:33:57.628979] Player moved from (4,3) to (5,3)
+[2025-06-21T19:33:58.076875] Player moved from (5,3) to (6,3)
+[2025-06-21T19:33:58.528384] Player moved from (6,3) to (7,3)
+[2025-06-21T19:33:58.845726] Player moved from (7,3) to (7,4)
+[2025-06-21T19:33:59.126311] [HealthRegenDecorator] Regenerated 5 HP → 33/100
+[2025-06-21T19:33:59.126401] Player moved from (7,4) to (7,5)
+[2025-06-21T19:33:59.469908] Player moved from (7,5) to (8,5)
+[2025-06-21T19:33:59.717460] Player moved from (8,5) to (8,6)
+[2025-06-21T19:34:00.113161] Player moved from (8,6) to (8,7)
+[2025-06-21T19:34:00.353726] Player moved from (8,7) to (7,7)
+[2025-06-21T19:34:00.651854] Player moved from (7,7) to (6,7)
+[2025-06-21T19:34:00.975792] Player moved from (6,7) to (6,6)
+[2025-06-21T19:34:01.497993] Player moved from (6,6) to (6,7)
+[2025-06-21T19:34:01.710493] Player moved from (6,7) to (7,7)
+[2025-06-21T19:34:02.012432] Player attacked the enemy for 10 damage.
+[2025-06-21T19:34:02.012503] Boosted attack: +5 damage dealt!
+[2025-06-21T19:34:02.012517] Player evaded the enemy's attack!
+[2025-06-21T19:34:02.627234] [HealthRegenDecorator] Regenerated 5 HP → 38/100
+[2025-06-21T19:34:02.627447] Player moved from (7,7) to (8,7)
+[2025-06-21T19:34:02.942918] Player moved from (8,7) to (8,6)
+[2025-06-21T19:34:03.630558] Player moved from (8,6) to (8,5)
+[2025-06-21T19:34:04.107985] Player moved from (8,5) to (7,5)
+[2025-06-21T19:34:04.682933] Player moved from (7,5) to (7,4)
+[2025-06-21T19:34:05.019008] Player moved from (7,4) to (7,3)
+[2025-06-21T19:34:05.755586] [HealthRegenDecorator] Regenerated 5 HP → 43/100
+[2025-06-21T19:34:05.755742] Player moved from (7,3) to (6,3)
+[2025-06-21T19:34:06.410979] Player moved from (6,3) to (6,2)
+[2025-06-21T19:34:06.750359] Player moved from (6,2) to (5,2)
+[2025-06-21T19:34:07.475316] Player moved from (5,2) to (5,3)
+[2025-06-21T19:34:08.022714] Player moved from (5,3) to (4,3)
+[2025-06-21T19:34:08.417973] Player moved from (4,3) to (4,2)
+[2025-06-21T19:34:08.700132] Player moved from (4,2) to (5,2)
+[2025-06-21T19:34:08.966554] [HealthRegenDecorator] Regenerated 5 HP → 48/100
+[2025-06-21T19:34:09.037530] Player moved from (5,2) to (6,2)
+[2025-06-21T19:34:09.592977] Player moved from (6,2) to (7,2)
+[2025-06-21T19:34:10.096980] Player moved from (7,2) to (8,2)
+[2025-06-21T19:34:10.588988] Player moved from (8,2) to (9,2)
+[2025-06-21T19:34:11.156844] Player moved from (9,2) to (9,1)
+[2025-06-21T19:34:11.343289] Player attacked the enemy for 10 damage.
+[2025-06-21T19:34:11.343368] Boosted attack: +5 damage dealt!
+[2025-06-21T19:34:11.343395] Goblin attacked for: 20 damage.
+[2025-06-21T19:34:11.513132] Player attacked the enemy for 10 damage.
+[2025-06-21T19:34:11.513234] Boosted attack: +5 damage dealt!
+[2025-06-21T19:34:11.513282] Goblin attacked for: 20 damage.
+[2025-06-21T19:34:11.954322] Player moved from (9,1) to (9,2)
+[2025-06-21T19:34:11.970750] [HealthRegenDecorator] Regenerated 5 HP → 13/100
+[2025-06-21T19:34:12.405987] Player moved from (9,2) to (8,2)
+[2025-06-21T19:34:12.637282] Player moved from (8,2) to (7,2)
+[2025-06-21T19:34:12.947939] Player moved from (7,2) to (6,2)
+[2025-06-21T19:34:13.156879] Player moved from (6,2) to (5,2)
+[2025-06-21T19:34:13.513467] Player moved from (5,2) to (4,2)
+[2025-06-21T19:34:13.838944] Player moved from (4,2) to (4,3)
+[2025-06-21T19:34:14.030413] Player moved from (4,3) to (4,4)
+[2025-06-21T19:34:14.480775] Player moved from (4,4) to (3,4)
+[2025-06-21T19:34:14.690010] Player moved from (3,4) to (2,4)
+[2025-06-21T19:34:14.970691] [HealthRegenDecorator] Regenerated 5 HP → 18/100
+[2025-06-21T19:34:15.621209] Player moved from (2,4) to (3,4)
+[2025-06-21T19:34:15.981172] Player moved from (3,4) to (4,4)
+[2025-06-21T19:34:16.218865] Player moved from (4,4) to (4,5)
+[2025-06-21T19:34:16.779851] Player moved from (4,5) to (4,4)
+[2025-06-21T19:34:17.100614] Player moved from (4,4) to (4,3)
+[2025-06-21T19:34:17.697653] Player moved from (4,3) to (4,4)
+[2025-06-21T19:34:17.894523] Player moved from (4,4) to (3,4)
+[2025-06-21T19:34:17.970968] [HealthRegenDecorator] Regenerated 5 HP → 23/100
+[2025-06-21T19:34:18.135547] Player moved from (3,4) to (2,4)
+[2025-06-21T19:34:18.410011] Player moved from (2,4) to (2,3)
+[2025-06-21T19:34:19.044219] The enemy evaded the attack!
+[2025-06-21T19:34:19.044330] Goblin attacked for: 22 damage.
+[2025-06-21T19:34:19.044373] [VampireEnemy] Drained 1 HP from player → Enemy health: 49/50
+[2025-06-21T19:34:20.092552] Player attacked the enemy for 10 damage.
+[2025-06-21T19:34:20.092584] Boosted attack: +5 damage dealt!
+[2025-06-21T19:34:20.092589] Player evaded the enemy's attack!
+[2025-06-21T19:34:20.693590] Player attacked the enemy for 10 damage.
+[2025-06-21T19:34:20.693680] Boosted attack: +5 damage dealt!
+[2025-06-21T19:34:20.693712] Dragon attacked for 19 damage.
+[2025-06-21T19:34:20.693751] Game ended, player died!

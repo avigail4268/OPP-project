@@ -12,7 +12,6 @@ public interface PhysicalAttacker {
      * Performs a physical attack on the specified target.
      * The damage dealt may vary depending on whether the attack is a critical hit.
      * This method should contain the logic for calculating and applying damage.
-     *
      * @param target the Combatant receiving the attack
      */
     void attack(Combatant target);
@@ -20,10 +19,8 @@ public interface PhysicalAttacker {
     /**
      * Determines whether the next physical attack will be a critical hit.
      * Critical hits typically deal more damage than standard attacks.
-     *
      * @return true if the attack is a critical hit; false otherwise
      */
     boolean isCriticalHit();
-    /** @return if the hit is critical or not
-     */
+
 }

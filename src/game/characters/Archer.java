@@ -13,19 +13,31 @@ import java.util.Random;
  */
 public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAttacker {
 
-
+    /**
+     * Constructs a new Archer with the given name, position, and health.
+     * The Archer is assigned a random accuracy value between 0.8 and 1.0.
+     * @param name the name of the Archer
+     * @param pos the position of the Archer
+     * @param health the health of the Archer
+     */
     public Archer(String name, Position pos, int health) {
         super(name, pos, health);
         Random rand = new Random();
         accuracy = rand.nextDouble(0.8);
     }
 
-
+    /**
+     * Sets the accuracy of the Archer.
+     */
     public void setAccuracy (double accuracy) {
         this.accuracy = accuracy;
 
     }
 
+    /**
+     * Creates a deep copy of the Archer character.
+     * @return a new Archer instance with the same properties as this one
+     */
     @Override
     public PlayerCharacter deepCopy() {
         Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
@@ -36,13 +48,21 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         return archer;
     }
 
-
+    /**
+     * Returns the symbol representing the Archer.
+     * @return the string "Archer"
+     */
     @Override
     public String getDisplaySymbol() {
         return "Archer";
     }
 
-
+    /**
+     * Attacks the target Combatant with a ranged attack.
+     * If the attack is a critical hit, the damage is doubled.
+     * Logs the attack details using LogManager.
+     * @param target the Combatant to attack
+     */
     @Override
     public void attack(Combatant target) {
         int damage = this.getPower();
@@ -122,8 +142,5 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
 
     // --- Fields ---
-    /**
-     * The accuracy of the Archer, affecting the chance to evade attacks.
-     */
     private double accuracy;
 }

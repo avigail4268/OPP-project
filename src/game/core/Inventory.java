@@ -2,7 +2,6 @@ package game.core;
 
 import game.items.GameItem;
 import game.log.LogManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +54,17 @@ public class Inventory {
     }
 
     /**
+     * make a deep copy of the inventory.
+     */
+    public Inventory deepCopy() {
+        Inventory copy = new Inventory();
+        for (GameItem item : items) {
+            copy.addItem(item.deepCopy());
+        }
+        return copy;
+    }
+
+    /**
      * Compares this inventory to another object for equality.
      * Two inventories are considered equal if they contain the same items.
      * @param obj the object to compare with
@@ -79,16 +89,6 @@ public class Inventory {
 
 
     // --- Fields ---
-    /**
-     * The list of items in the inventory.
-     */
     private List<GameItem> items;
 
-    public Inventory deepCopy() {
-        Inventory copy = new Inventory();
-        for (GameItem item : items) {
-            copy.addItem(item.deepCopy());
-        }
-        return copy;
-    }
 }

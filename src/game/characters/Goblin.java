@@ -2,7 +2,6 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -24,6 +23,10 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
         agility = new Random().nextInt(80); // Random agility between 0 and 80
     }
 
+    /**
+     * Creates a deep copy of the Goblin.
+     * @return a new Goblin instance with the same position, health, and agility
+     */
     public Enemy deepCopy() {
         Goblin goblin = new Goblin(this.getPosition(), this.getHealth());
         goblin.setAgility(this.agility);
@@ -138,21 +141,21 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
 
     /**
      * Gets the agility of the Goblin.
-     * @return the agility value of the Goblin
+     * @return the agility of the Goblin
      */
     public int getAgility() {
         return agility;
     }
 
+    /**
+     * Sets the agility of the Goblin.
+     * @param agility the new agility value to set
+     */
     public void setAgility(int agility) {
         this.agility = agility;
     }
 
 
-
     // --- Fields ---
-    /**
-     * The agility of the Goblin that affects its evasion.
-     */
     private int agility; // Agility of the Goblin that affects evasion
 }

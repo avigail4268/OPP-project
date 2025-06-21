@@ -1,7 +1,6 @@
 package game.characters;
 import game.combat.MagicElement;
 import game.combat.*;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 
@@ -23,6 +22,12 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         this.element = MagicElement.getElement();
     }
 
+    /**
+     * Creates a deep copy of the Dragon instance.
+     * This method creates a new Dragon with the same position, health, and power,
+     * and sets its magic element to the same as the original.
+     * @return a new Dragon instance that is a copy of this one
+     */
     public Enemy deepCopy() {
         Dragon dragon = new Dragon(this.getPosition(), this.getHealth());
         dragon.setPower(this.getPower());
@@ -30,6 +35,11 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         return dragon;
     }
 
+    /**
+     * Sets the magic element of the Dragon.
+     * This method allows changing the Dragon's magic element to a new one.
+     * @param element the new MagicElement to set
+     */
     public void setElement(MagicElement element) {
         this.element = element;
     }
@@ -62,11 +72,11 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
         double magicPower = this.getPower() * 1.5;
         if (this.element.isElementStrongerThan(target.getMagicElement())) {
             target.receiveDamage((int)(magicPower * 1.2), this);
-            LogManager.addLog("Dragon's element is stronger than yours");
+            LogManager.addLog("Dragon's element is stronger than the player's");
             LogManager.addLog("Dragon attacked by magic for: " + (int)(magicPower * 1.2) + " damage.");
         } else {
             target.receiveDamage((int)(magicPower * 0.8), this);
-            LogManager.addLog("Dragon's element is weaker than yours");
+            LogManager.addLog("Dragon's element is stronger than the player's");
             LogManager.addLog("Dragon attacked by magic for: " + (int)(magicPower * 0.8) + " damage.");
         }
         return (int) magicPower;
@@ -90,7 +100,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
 
     /**
      * Determines if the Dragon's element is stronger than another MagicAttacker's element.
-     *
      * @param other the other MagicAttacker to compare
      * @return true if the Dragon's element is stronger, false otherwise
      */
@@ -102,7 +111,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Executes a close-range attack on a target Combatant.
      * This is a physical attack, which may be a critical hit.
-     *
      * @param target the target Combatant to attack
      */
     @Override
@@ -167,7 +175,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     /**
      * Checks if two Dragon objects are equal.
      * They are considered equal if their position and magic element are the same.
-     *
      * @param obj the object to compare
      * @return true if the objects are equal, false otherwise
      */
@@ -189,9 +196,5 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     }
 
     // --- Fields ---
-    /**
-     * The magic element of the Dragon.
-     * This element determines the type of magic damage the Dragon can deal.
-     */
     private MagicElement element;
 }

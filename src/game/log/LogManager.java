@@ -1,4 +1,3 @@
-
 package game.log;
 
 import java.io.BufferedWriter;
@@ -43,10 +42,8 @@ public class LogManager {
      */
     public static synchronized void stop() {
         if (!running) return;
-
         running = false;
         executor.shutdownNow();
-
         try {
             if (!executor.awaitTermination(2, TimeUnit.SECONDS)) {
                 System.err.println(" Logger thread did not shut down cleanly.");
@@ -54,7 +51,6 @@ public class LogManager {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Preserve interrupted status
         }
-
         try {
             if (writer != null) writer.close();
         } catch (IOException e) {
@@ -64,7 +60,6 @@ public class LogManager {
 
     /**
      * Adds a log message to the queue with a timestamp, if logging is running.
-     *
      * @param log The message to log.
      */
     public static void addLog(String log) {
@@ -93,16 +88,10 @@ public class LogManager {
             System.err.println(" Error while writing to log: " + e.getMessage());
         }
     }
+
     // --- Fields ---
-    /** Queue to store log messages before writing. */
     private static final BlockingQueue<String> queue = new LinkedBlockingQueue<>();
-
-    /** Single-threaded executor for writing logs. */
     private static ExecutorService executor;
-
-    /** Buffered writer for the log file. */
     private static BufferedWriter writer;
-
-    /** Indicates if the logging system is currently running. */
     private static volatile boolean running = false;
 }

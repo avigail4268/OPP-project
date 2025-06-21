@@ -2,6 +2,11 @@ package game.combat;
 import game.log.LogManager;
 import game.map.Position;
 
+/**
+ * The CombatSystem class handles the resolution of combat between two combatants.
+ * It manages the turn-based combat mechanics, including attack, evasion, and health management.
+ * Combat is resolved in a sequential manner where the attacker attacks first, followed by the defender's counter-attack if still alive.
+ */
 public class CombatSystem {
 
     /**

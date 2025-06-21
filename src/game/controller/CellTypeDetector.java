@@ -1,5 +1,4 @@
 package game.controller;
-
 import game.core.GameEntity;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;

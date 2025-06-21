@@ -26,7 +26,6 @@ public class GameFrame extends JFrame {
         setTitle("Dungeons & Dragons Game");
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
-
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -90,11 +89,8 @@ public class GameFrame extends JFrame {
     }
 
     // --- Fields ---
-    /** Panel responsible for displaying the game map. */
     private MapPanel mapPanel;
-    /** Panel responsible for showing player status and stats. */
     private StatusPanel statusPanel;
-    /** The controller that manages game logic and state. */
     private GameController controller;
 }
 

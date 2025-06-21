@@ -2,7 +2,6 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -24,10 +23,30 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         resistance = new Random().nextDouble() * 0.5; // Resistance value between 0 and 0.5
     }
 
+    /**
+     * Creates a deep copy of the Orc.
+     * @return a new Orc instance with the same position, health, and resistance
+     */
     public Enemy deepCopy() {
         Orc orc = new Orc(this.getPosition(), this.getHealth());
         orc.setResistance(this.resistance);
         return orc;
+    }
+
+    /**
+     * Returns the Orc's resistance to magic damage.
+     * @return the Orc's magic damage resistance
+     */
+    public double getResistance() {
+        return resistance;
+    }
+
+    /**
+     * Sets the Orc's resistance to magic damage.
+     * @param resistance the new resistance value
+     */
+    public void setResistance (double resistance) {
+        this.resistance = resistance;
     }
 
     /**
@@ -39,7 +58,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     @Override
     public void receiveDamage(int amount, Combatant source) {
         if (source.getMagicElement() != null) {
-            // Calculate reduced magic damage based on resistance
             double magicDamage = amount * (1 - resistance);
             super.receiveDamage((int) magicDamage, source);
             LogManager.addLog("Orc received " + (int) magicDamage + " damage from magic attack.");
@@ -142,22 +160,7 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
         return this.getDisplaySymbol();
     }
 
-    /**
-     * Returns the Orc's resistance to magic damage.
-     * @return the Orc's magic damage resistance
-     */
-    public double getResistance() {
-        return resistance;
-    }
-
-    public void setResistance (double resistance) {
-        this.resistance = resistance;
-    }
-
 
     // --- Fields ---
-    /**
-     * The Orc's resistance to magic damage.
-     */
     private double resistance;
 }

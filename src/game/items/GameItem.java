@@ -1,12 +1,9 @@
 package game.items;
-
-import game.characters.Goblin;
 import game.core.GameEntity;
 import game.map.Position;
 
 /**
  * Represents a generic item in the game world.
- *
  * Game items have a position, visibility status, description, and
  * can optionally block movement.
  */
@@ -14,7 +11,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Constructs a new game item.
-     *
      * @param position the initial position of the item
      * @param blocksMovement true if the item blocks movement, false otherwise
      */
@@ -25,12 +21,31 @@ public abstract class GameItem implements GameEntity {
         this.description = "This is a game item";
     }
 
+    /**
+     * Creates a deep copy of this game item.
+     * Subclasses must implement this method to ensure proper copying of item-specific fields.
+     * @return a new instance of the item with the same properties
+     */
     public abstract GameItem deepCopy();
 
+    /**
+     * Checks whether the item blocks movement.
+     * @return true if the item blocks movement, false otherwise
+     */
+    public boolean isBlocksMovement() {
+        return blocksMovement;
+    }
+
+    /**
+     * Returns the description of the item.
+     * @return the item's description
+     */
+    public String getDescription() {
+        return description;
+    }
 
     /**
      * Returns the current position of the item.
-     *
      * @return the position of the item
      */
     @Override
@@ -40,7 +55,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Sets whether the item is visible.
-     *
      * @param visible true to make the item visible, false to hide it
      */
     @Override
@@ -50,7 +64,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Checks if the item is visible.
-     *
      * @return true if the item is visible, false otherwise
      */
     @Override
@@ -60,7 +73,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Sets the position of the item.
-     *
      * @param newPos the new position to assign
      * @return true if the position was successfully updated, false if newPos is null
      */
@@ -75,7 +87,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Returns a string representation of the item.
-     *
      * @return a string describing the item
      */
     @Override
@@ -83,7 +94,6 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Compares this item to another object for equality.
-     *
      * @param obj the object to compare with
      * @return true if the objects are considered equal, false otherwise
      */
@@ -92,32 +102,13 @@ public abstract class GameItem implements GameEntity {
 
     /**
      * Returns the symbol used to display this item.
-     *
      * @return a string representing the display symbol
      */
     @Override
     public abstract String getDisplaySymbol();
-    /**
-     * Checks whether the item blocks movement.
-     *
-     * @return true if the item blocks movement, false otherwise
-     */
-    public boolean isBlocksMovement() {
-        return blocksMovement;
-    }
-
-    /**
-     * Returns the description of the item.
-     *
-     * @return the item's description
-     */
-    public String getDescription() {
-        return description;
-    }
 
     /**
      * Sets the description of the item.
-     *
      * @param description the new description to assign
      */
     protected void setDescription(String description) {
@@ -126,21 +117,9 @@ public abstract class GameItem implements GameEntity {
 
 
     // --- Fields ---
-    /**
-     * The position of the item in the game world.
-     */
     private Position position;
-    /**
-     * Indicates whether the item blocks movement.
-     */
     private final boolean blocksMovement;
-    /**
-     * The description of the item.
-     */
     private String description;
-    /**
-     * Indicates whether the item is visible.
-     */
     private boolean visible;
 }
 

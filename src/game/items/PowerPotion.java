@@ -1,8 +1,6 @@
 package game.items;
 
 import game.characters.PlayerCharacter;
-import game.core.GameEntity;
-import game.log.LogManager;
 import game.map.Position;
 
 /**
@@ -13,7 +11,6 @@ public class PowerPotion extends Potion {
 
     /**
      * Creates a new power potion at the specified position.
-     *
      * @param position the initial position of the potion
      * @param blocksMovement true if the potion blocks movement, false otherwise
      * @param max the maximum power increase amount
@@ -24,11 +21,21 @@ public class PowerPotion extends Potion {
         this.setDescription("This is a power potion, increases power by " + this.getIncreaseAmount());
     }
 
+    /**
+     * Creates a copy constructor for the power potion.
+     * @param position the initial position of the potion
+     * @param blocksMovement true if the potion blocks movement, false otherwise
+     * @param increaseAmount the fixed amount of power this potion increases
+     */
     public PowerPotion ( Position position, boolean blocksMovement , int increaseAmount) {
         super(position, blocksMovement, increaseAmount);
         this.setDescription("This is a power potion, increased by " + increaseAmount);
     }
 
+    /**
+     * Creates a deep copy of this power potion.
+     * @return a new instance of PowerPotion with the same properties
+     */
     @Override
     public GameItem deepCopy() {
         return new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount());
@@ -36,7 +43,6 @@ public class PowerPotion extends Potion {
 
     /**
      * Interacts with the player character by increasing their power and marking the potion as used.
-     *
      * @param c the player character interacting with the potion
      */
     @Override
@@ -46,7 +52,7 @@ public class PowerPotion extends Potion {
             c.setPower(amount);
             if (this.setIsUsed()) {
                 if (c.getInventory().removeItem(this)) {
-                    LogManager.addLog("Power was " + (c.getPower() - amount) + " now is " + c.getPower());
+                   return;
                 }
             }
         }
@@ -54,7 +60,6 @@ public class PowerPotion extends Potion {
 
     /**
      * Collects the power potion into the player character's inventory.
-     *
      * @param c the player character collecting the potion
      */
     @Override
@@ -64,7 +69,6 @@ public class PowerPotion extends Potion {
 
     /**
      * Returns the display symbol for the power potion.
-     *
      * @return "PP" as the symbol representing the power potion
      */
     @Override
@@ -75,7 +79,6 @@ public class PowerPotion extends Potion {
     /**
      * Compares this power potion to another object for equality.
      * Two power potions are equal if they have the same position and usage status.
-     *
      * @param obj the object to compare with
      * @return true if the power potions are equal, false otherwise
      */
@@ -89,21 +92,10 @@ public class PowerPotion extends Potion {
 
     /**
      * Returns a string representation of the power potion.
-     *
      * @return a string describing the power potion and its position
      */
     @Override
     public String toString() {
         return "Power Potion " + getPosition();
-    }
-
-    /**
-     * Checks whether the power potion can be used in a usable-in-use context.
-     *
-     * @return false, power potions are not usable in use-potion mechanics
-     */
-    @Override
-    public boolean isUsableInUsePotion() {
-        return false;
     }
 }

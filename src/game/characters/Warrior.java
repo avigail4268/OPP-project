@@ -3,7 +3,6 @@ package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;
 import game.combat.PhysicalAttacker;
-import game.core.GameEntity;
 import game.log.LogManager;
 import game.map.Position;
 import java.util.Random;
@@ -27,6 +26,27 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         this.defence = random.nextInt(120);
     }
 
+    /**
+     * Sets the Warrior's defense stat.
+     * @param defence the new defense value
+     */
+    public void setDefence(int defence) {
+        this.defence = defence;
+    }
+
+    /**
+     * Gets the Warrior's defense stat.
+     * @return the defense value
+     */
+    public int getDefence() {
+        return defence;
+    }
+
+    /**
+     * Creates a deep copy of this Warrior.
+     * The new Warrior has the same name, position, health, power, treasure points, and inventory.
+     * @return a new Warrior instance with the same attributes
+     */
     @Override
     public PlayerCharacter deepCopy () {
         Warrior warrior = new Warrior(this.getName(), this.getPosition(), this.getHealth());
@@ -122,10 +142,6 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         LogManager.addLog("Enemy attacked " + this.getName() + " for: " + amount + " damage, you received only " + damage);
     }
 
-    public void setDefence(int defence) {
-        this.defence = defence;
-    }
-
     /**
      * Checks if this Warrior is equal to another object.
      * Two Warriors are equal if they have the same name and position.
@@ -148,18 +164,7 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
     public String toString() {
         return "Warrior: " + this.getName();
     }
-    /**
-     * Gets the Warrior's defense stat.
-     * @return the defense value
-     */
-    public int getDefence() {
-        return defence;
-    }
 
     // --- Fields ---
-
-    /**
-     * The Warrior's defense stat, which reduces incoming damage.
-     */
     private int defence;
 }

@@ -1,8 +1,6 @@
-
 package game.controller;
 
 import javax.swing.*;
-
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
 import game.audio.SoundPlayer;
@@ -272,8 +270,19 @@ public class GameController {
         return new ImageIcon(imageWithBar);
     }
 
+    /**
+     * Gets the current game setup instance.
+     * @return the GameSetUp instance.
+     */
     public GameSetUp getSetUp() {
         return setUp;
+    }
+
+    /**
+     * Refreshes the game frame to update the GUI.
+     */
+    public void refresh(){
+        frame.refresh();
     }
 
     /**
@@ -282,9 +291,8 @@ public class GameController {
      */
     private void checkVictory() {
         if (engine.getPlayer().getTreasurePoints() >= 500) {
-            LogManager.addLog("Game ended");
+            LogManager.addLog("Game ended, player achieve 500 pt and won the game!");
             SoundPlayer.playSound("winner.wav");
-
             engine.shutdown();
             LogManager.stop();
             engine.getIsGameRunning().set(false);
@@ -299,37 +307,24 @@ public class GameController {
      * Displays a game over screen and ends the game if the player dies.
      */
     private void gameOver() {
+        LogManager.addLog("Game ended, player died!");
         SoundPlayer.playSound("losing.wav");
         engine.shutdown();
         LogManager.stop();
         engine.getIsGameRunning().set(false);
 
-        setUp.GameOverPanel(() -> {
+        setUp.gameOverPanel(() -> {
             System.exit(0);
         });
 
     }
 
-    public void refresh(){
-        frame.refresh();
-    }
 
 // --- Fields ---
-/**
- * Tile size in pixels.
- */
+
 private int tileSize = 64;
-
-/**
- * Reference to the game world engine.
- */
 private GameWorld engine;
-
-/**
- * Reference to the game frame GUI.
- */
 private GameFrame frame;
-
 private GameSetUp setUp = new GameSetUp();
 
 
