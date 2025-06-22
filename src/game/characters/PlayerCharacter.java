@@ -1,5 +1,4 @@
 package game.characters;
-
 import game.core.Inventory;
 import game.items.GameItem;
 import game.items.Potion;
@@ -8,9 +7,9 @@ import game.log.LogManager;
 import game.map.Position;
 
 /**
-// * PlayerCharacter represents a playable character in the game.
-// * It extends AbstractCharacter and includes inventory management, potion usage,
-// * and treasure collection features.
+ * PlayerCharacter represents a playable character in the game.
+ * It extends AbstractCharacter and includes inventory management, potion usage,
+ * and treasure collection features.
  */
 public abstract class PlayerCharacter extends AbstractCharacter {
 
@@ -81,30 +80,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     }
 
     /**
-     * Uses a Potion to heal the player character.
-     * The healing amount is determined by the potion's increase amount.
-     * Logs the action using LogManager.
-     * @param potion the Potion to use
-     */
-    public void usePotion(Potion potion) {
-        int healingAmount = potion.getIncreaseAmount();
-        potion.interact(this);
-        LogManager.addLog(getName() + " used a potion and healed " + healingAmount + " HP!");
-    }
-
-    /**
-     * Uses a PowerPotion to increase the player's attack power.
-     * The power boost amount is determined by the potion's increase amount.
-     * Logs the action using LogManager.
-     * @param potion the PowerPotion to use
-     */
-    public void usePowerPotion(PowerPotion potion) {
-        int powerBoost = potion.getIncreaseAmount();
-        potion.interact(this);
-        LogManager.addLog(getName() + " used a power potion and gained " + powerBoost + " attack power!");
-    }
-
-    /**
      * Retrieves the inventory of the player character.
      * @return the Inventory object containing the player's items
      */
@@ -132,8 +107,7 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     /**
      * updates the player character's state.
      */
-    public void update() {
-    }
+    public void update() {}
 
     /**
      * Returns the maximum health of the player character.
@@ -157,6 +131,30 @@ public abstract class PlayerCharacter extends AbstractCharacter {
      */
     protected void setInventory(Inventory inventory) {
         this.inventory = inventory;
+    }
+
+    /**
+     * Uses a Potion to heal the player character.
+     * The healing amount is determined by the potion's increase amount.
+     * Logs the action using LogManager.
+     * @param potion the Potion to use
+     */
+    private void usePotion(Potion potion) {
+        int healingAmount = potion.getIncreaseAmount();
+        potion.interact(this);
+        LogManager.addLog(getName() + " used a potion and healed " + healingAmount + " HP!");
+    }
+
+    /**
+     * Uses a PowerPotion to increase the player's attack power.
+     * The power boost amount is determined by the potion's increase amount.
+     * Logs the action using LogManager.
+     * @param potion the PowerPotion to use
+     */
+    private void usePowerPotion(PowerPotion potion) {
+        int powerBoost = potion.getIncreaseAmount();
+        potion.interact(this);
+        LogManager.addLog(getName() + " used a power potion and gained " + powerBoost + " attack power!");
     }
 
     // --- Fields ---

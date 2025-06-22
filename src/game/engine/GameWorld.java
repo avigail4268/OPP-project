@@ -1,5 +1,4 @@
 package game.engine;
-
 import game.combat.MagicElement;
 import game.controller.GameController;
 import game.characters.*;
@@ -15,7 +14,6 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.locks.ReentrantLock;
-
 import game.observer.GameObserver;
 
 
@@ -47,18 +45,6 @@ public class GameWorld {
         this.enemyExecutor = Executors.newFixedThreadPool(N);
         createPlayer(playerType, playerName, attributes, element,decorators);
         populateGameMap();
-    }
-
-    /**
-     * Creates a new enemy at the specified position and decorates it randomly.
-     * Adds the enemy to the game world and the map.
-     * @param pos The position where the enemy should be created.
-     */
-    public void createEnemy(Position pos) {
-        Enemy enemy = enemyFactory.createEnemy(pos);
-        enemies.add(enemy);
-        map.addToGrid(pos, enemy);
-        decorateEnemyRandomly(enemy);
     }
 
     /**
@@ -316,14 +302,13 @@ public class GameWorld {
      * @param memento The GameMemento containing the saved game state.
      */
     public void restoreFromMemento(GameMemento memento) {
-
         PlayerCharacter oldPlayer = getPlayer();
         map.removeFromGrid(oldPlayer.getPosition(), oldPlayer);
         this.players.clear();
         this.players.add(memento.getPlayer());
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
-        this.map.setGrid(memento.getGameMap().copyGrid());
+        this.map.setGrid(memento.getSavedGrid());
         map.addToGrid(memento.getPlayer().getPosition(), memento.getPlayer());
         this.controller.refresh();
     }
@@ -471,6 +456,18 @@ public class GameWorld {
             case 2 -> new ExplodingEnemyDecorator(enemy,getPlayer()); // Default case, no special decorator
             default -> enemy;
         };
+    }
+
+    /**
+     * Creates a new enemy at the specified position and decorates it randomly.
+     * Adds the enemy to the game world and the map.
+     * @param pos The position where the enemy should be created.
+     */
+    private void createEnemy(Position pos) {
+        Enemy enemy = enemyFactory.createEnemy(pos);
+        enemies.add(enemy);
+        map.addToGrid(pos, enemy);
+        decorateEnemyRandomly(enemy);
     }
 
     // --- Fields ---

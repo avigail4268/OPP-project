@@ -1,12 +1,9 @@
 package game.decorator;
-
 import game.characters.Enemy;
-import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.core.GameEntity;
 import game.map.Position;
 
-import java.util.List;
 
 /**
  * EnemyDecorator is an abstract class that serves as a base for decorators that enhance or modify the behavior of an Enemy.
@@ -22,14 +19,6 @@ public abstract class EnemyDecorator extends Enemy {
     public EnemyDecorator(Enemy enemy) {
         super(enemy);
         this.decoratorEnemy = enemy;
-    }
-
-    /**
-     * Gets the decorated Enemy instance.
-     * @return the Enemy being decorated
-     */
-    public Enemy getDecoratorEnemy() {
-        return decoratorEnemy;
     }
 
     /**
@@ -103,6 +92,14 @@ public abstract class EnemyDecorator extends Enemy {
     @Override
     public boolean isDead() {
         return decoratorEnemy.isDead();
+    }
+
+    /**
+     * Gets the decorated Enemy instance.
+     * @return the Enemy being decorated
+     */
+    protected Enemy getDecoratorEnemy() {
+        return decoratorEnemy;
     }
 
     // --- Fields ---

@@ -1,5 +1,4 @@
 package game.core;
-
 import game.items.GameItem;
 import game.log.LogManager;
 import java.util.ArrayList;

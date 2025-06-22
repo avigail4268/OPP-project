@@ -24,22 +24,21 @@ public class GameOriginator {
     /**
      * Sets the player character to a new instance.
      */
-    public void setPlayer(PlayerCharacter player) {
+     void setPlayer(PlayerCharacter player) {
         this.player = (PlayerCharacter) player.deepCopy();
     }
 
     /**
      * Sets the current game map to a new instance and saves the grid.
      */
-    public void setGameMap(GameMap map) {
-        this.gameMap = GameMap.getInstance(map.getSize());
+     void setGameMap(GameMap map) {
         this.savedGrid = map.copyGrid();
     }
 
     /**
      * Sets the enemies in the game.
      */
-    public void setEnemies(List<Enemy> enemies) {
+     void setEnemies(List<Enemy> enemies) {
         this.enemies = new ArrayList<>();
         for (Enemy enemy : enemies) {
             this.enemies.add((Enemy)enemy.deepCopy());
@@ -58,7 +57,7 @@ public class GameOriginator {
      * Sets the items in the game.
      * Each item is deep copied to ensure the original items are not modified.
      */
-    public void setItems(List<GameItem> items) {
+     void setItems(List<GameItem> items) {
         this.items = new ArrayList<>();
         for (GameItem item : items) {
             this.items.add(item.deepCopy());
@@ -68,13 +67,12 @@ public class GameOriginator {
     /**
      * Gets the memento of the current game state.
      */
-    public GameMemento createMemento() {
-        return new GameMemento(player, gameMap, enemies, items);
+     GameMemento createMemento() {
+        return new GameMemento(player, enemies, items, savedGrid);
     }
 
     // --- Fields ---
     private PlayerCharacter player;
-    private GameMap gameMap;
     private Map<Position, List<GameEntity>> savedGrid;
     private List<Enemy> enemies;
     private List<GameItem> items;

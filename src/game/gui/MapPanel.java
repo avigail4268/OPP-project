@@ -16,7 +16,6 @@ public class MapPanel extends JPanel implements GameObserver {
     /**
      * Constructs a MapPanel with the specified game controller.
      * Initializes the grid of buttons and sets up event listeners for user interactions.
-     *
      * @param controller The game controller that manages the game state and player actions
      */
     public MapPanel(GameController controller) {
@@ -53,6 +52,41 @@ public class MapPanel extends JPanel implements GameObserver {
     }
 
     /**
+     * Refreshes the map display by updating the icons of all buttons
+     * based on the current game state.
+     * This method is called whenever the game state changes to reflect updates.
+     */
+    public void refresh() {
+        for (int row = 0; row < cellButtons.length; row++) {
+            for (int col = 0; col < cellButtons[0].length; col++) {
+                cellButtons[row][col].setIcon(controller.getIconWithHealthBar(row, col));
+            }
+        }
+    }
+
+    /**
+     * Highlights a specific cell in the map with a temporary color change.
+     * This is used to visually indicate actions such as successful moves or attacks.
+     * @param row   The row index of the cell to highlight
+     * @param col   The column index of the cell to highlight
+     * @param color The color to use for highlighting
+     */
+    public void highlightCell(int row, int col, Color color) {
+        JButton cell = cellButtons[row][col];
+        Color original = cell.getBackground();
+        cell.setBackground(color);
+        new Timer(300, e -> cell.setBackground(original)).start();
+    }
+
+    /**
+     * refreshes the map display when the game state is updated.
+     */
+    @Override
+    public void onGameUpdated() {
+        refresh();
+    }
+
+    /**
      * Sets up key bindings for arrow keys to move the player character.
      * This allows the player to navigate the map using keyboard arrow keys.
      */
@@ -85,42 +119,6 @@ public class MapPanel extends JPanel implements GameObserver {
                 controller.handleArrowKey("RIGHT");
             }
         });
-    }
-
-    /**
-     * Refreshes the map display by updating the icons of all buttons
-     * based on the current game state.
-     * This method is called whenever the game state changes to reflect updates.
-     */
-    public void refresh() {
-        for (int row = 0; row < cellButtons.length; row++) {
-            for (int col = 0; col < cellButtons[0].length; col++) {
-                cellButtons[row][col].setIcon(controller.getIconWithHealthBar(row, col));
-            }
-        }
-    }
-
-    /**
-     * Highlights a specific cell in the map with a temporary color change.
-     * This is used to visually indicate actions such as successful moves or attacks.
-     *
-     * @param row   The row index of the cell to highlight
-     * @param col   The column index of the cell to highlight
-     * @param color The color to use for highlighting
-     */
-    public void highlightCell(int row, int col, Color color) {
-        JButton cell = cellButtons[row][col];
-        Color original = cell.getBackground();
-        cell.setBackground(color);
-        new Timer(300, e -> cell.setBackground(original)).start();
-    }
-
-    /**
-     * refreshes the map display when the game state is updated.
-     */
-    @Override
-    public void onGameUpdated() {
-        refresh();
     }
 
     // --- Fields ---

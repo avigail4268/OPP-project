@@ -1,4 +1,3 @@
-
 package game.characters;
 import game.combat.Combatant;
 import game.combat.MeleeFighter;

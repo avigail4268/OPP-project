@@ -1,5 +1,4 @@
 package game.controller;
-
 import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.awt.Graphics2D;
@@ -26,7 +25,6 @@ public class GameController {
 
     /**
      * Constructs a GameController for the given GameWorld engine.
-     *
      * @param engine the GameWorld instance used to manage the game logic.
      */
     public GameController(GameWorld engine) {
@@ -35,7 +33,6 @@ public class GameController {
 
     /**
      * Sets the GameFrame used by this controller.
-     *
      * @param frame the main game window frame.
      */
     public void setFrame(GameFrame frame) {
@@ -44,7 +41,6 @@ public class GameController {
 
     /**
      * Sets the size of tiles in pixels.
-     *
      * @param tileSize the tile size.
      */
     public void setTileSize(int tileSize) {
@@ -53,7 +49,6 @@ public class GameController {
 
     /**
      * Gets the number of rows in the map.
-     *
      * @return map size (rows).
      */
     public int getMapRows() {
@@ -62,7 +57,6 @@ public class GameController {
 
     /**
      * Gets the number of columns in the map.
-     *
      * @return map size (columns).
      */
     public int getMapCols() {
@@ -71,7 +65,6 @@ public class GameController {
 
     /**
      * Returns the player character.
-     *
      * @return the PlayerCharacter instance.
      */
     public PlayerCharacter getPlayer() {
@@ -80,7 +73,6 @@ public class GameController {
 
     /**
      * Alias for getEngine().
-     *
      * @return the GameWorld instance.
      */
     public GameWorld getGameWorld() {
@@ -90,7 +82,6 @@ public class GameController {
     /**
      * Handles a left-click at a specific tile.
      * Moves the player, triggers combat, or picks up items.
-     *
      * @param row the row clicked.
      * @param col the column clicked.
      */
@@ -99,10 +90,7 @@ public class GameController {
         Position clickedPos = new Position(row, col);
         List<GameEntity> entities = engine.getMap().getEntitiesAt(clickedPos);
         Position playerPos = engine.getPlayer().getPosition();
-
-
         engine.getPlayer().update(); // Update health regeneration if applicable
-
 
         if (engine.isValidMove(playerPos, clickedPos)) {
             ReentrantLock lock = GameWorld.getMapLock(clickedPos);
@@ -141,7 +129,6 @@ public class GameController {
     /**
      * Handles a right-click at a specific tile.
      * Displays information about the tile contents in a popup menu.
-     *
      * @param row          the row clicked.
      * @param col          the column clicked.
      * @param sourceButton the button that was clicked.
@@ -173,7 +160,6 @@ public class GameController {
 
     /**
      * Moves the player using arrow key direction input.
-     *
      * @param direction one of "UP", "DOWN", "LEFT", "RIGHT".
      */
     public void handleArrowKey(String direction) {
@@ -204,43 +190,7 @@ public class GameController {
     }
 
     /**
-     * Generates the image for a tile based on its contents.
-     *
-     * @param row tile row.
-     * @param col tile column.
-     * @return icon representing the tile.
-     */
-    public ImageIcon getIconForTile(int row, int col) {
-        Position pos = new Position(row, col);
-        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
-
-        if (entities == null || !engine.isVisibleToPlayer(row, col)) return null;
-
-        String path = "/images/";
-        if (CellTypeDetector.hasPlayer(entities)) {
-            path += CellTypeDetector.getFirstPlayer(entities).getDisplaySymbol() + ".png";
-        } else if (CellTypeDetector.hasEnemy(entities)) {
-            path += CellTypeDetector.getFirstEnemy(entities).getDisplaySymbol() + ".png";
-        } else if (CellTypeDetector.hasItem(entities)) {
-            path += CellTypeDetector.getFirstItem(entities).getDisplaySymbol() + ".png";
-        } else if (CellTypeDetector.hasWall(entities)) {
-            path += "Wall.png";
-        } else {
-            return null;
-        }
-
-        java.net.URL imgURL = getClass().getResource(path);
-        if (imgURL != null) {
-            ImageIcon originalIcon = new ImageIcon(imgURL);
-            Image scaledImage = originalIcon.getImage().getScaledInstance(tileSize, tileSize, Image.SCALE_SMOOTH);
-            return new ImageIcon(scaledImage);
-        }
-        return null;
-    }
-
-    /**
      * Generates a tile image with a health bar overlay.
-     *
      * @param row tile row.
      * @param col tile column.
      * @return icon with health bar overlay.
@@ -291,7 +241,6 @@ public class GameController {
 
     /**
      * Gets the current game setup instance.
-     *
      * @return the GameSetUp instance.
      */
     public GameSetUp getSetUp() {
@@ -337,6 +286,39 @@ public class GameController {
             System.exit(0);
         });
 
+    }
+    /**
+     * Generates the image for a tile based on its contents.
+     * @param row tile row.
+     * @param col tile column.
+     * @return icon representing the tile.
+     */
+    private ImageIcon getIconForTile(int row, int col) {
+        Position pos = new Position(row, col);
+        List<GameEntity> entities = engine.getMap().getEntitiesAt(pos);
+
+        if (entities == null || !engine.isVisibleToPlayer(row, col)) return null;
+
+        String path = "/images/";
+        if (CellTypeDetector.hasPlayer(entities)) {
+            path += CellTypeDetector.getFirstPlayer(entities).getDisplaySymbol() + ".png";
+        } else if (CellTypeDetector.hasEnemy(entities)) {
+            path += CellTypeDetector.getFirstEnemy(entities).getDisplaySymbol() + ".png";
+        } else if (CellTypeDetector.hasItem(entities)) {
+            path += CellTypeDetector.getFirstItem(entities).getDisplaySymbol() + ".png";
+        } else if (CellTypeDetector.hasWall(entities)) {
+            path += "Wall.png";
+        } else {
+            return null;
+        }
+
+        java.net.URL imgURL = getClass().getResource(path);
+        if (imgURL != null) {
+            ImageIcon originalIcon = new ImageIcon(imgURL);
+            Image scaledImage = originalIcon.getImage().getScaledInstance(tileSize, tileSize, Image.SCALE_SMOOTH);
+            return new ImageIcon(scaledImage);
+        }
+        return null;
     }
 
 

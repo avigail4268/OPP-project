@@ -34,22 +34,6 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     }
 
     /**
-     * Returns the Orc's resistance to magic damage.
-     * @return the Orc's magic damage resistance
-     */
-    public double getResistance() {
-        return resistance;
-    }
-
-    /**
-     * Sets the Orc's resistance to magic damage.
-     * @param resistance the new resistance value
-     */
-    public void setResistance (double resistance) {
-        this.resistance = resistance;
-    }
-
-    /**
      * Receives damage from an attack. If the attack is magical, the damage is reduced based on the Orc's resistance.
      * If the attack is physical, the damage is applied normally.
      * @param amount the amount of damage received
@@ -158,6 +142,22 @@ public class Orc extends Enemy implements MeleeFighter, PhysicalAttacker {
     @Override
     public String toString() {
         return this.getDisplaySymbol();
+    }
+
+    /**
+     * Returns the Orc's resistance to magic damage.
+     * @return the Orc's magic damage resistance
+     */
+    protected double getResistance() {
+        return resistance;
+    }
+
+    /**
+     * Sets the Orc's resistance to magic damage.
+     * @param resistance the new resistance value
+     */
+    protected void setResistance (double resistance) {
+        this.resistance = resistance;
     }
 
 

@@ -1,5 +1,4 @@
 package game.items;
-
 import game.characters.PlayerCharacter;
 import game.log.LogManager;
 import game.map.Position;

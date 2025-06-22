@@ -44,15 +44,6 @@ public abstract class Enemy extends AbstractCharacter {
     }
 
     /**
-     * Gets the amount of loot that the enemy holds.
-     * This is a random value between 100 and 300.
-     * @return the amount of loot
-     */
-    public int getLoot() {
-        return loot;
-    }
-
-    /**
      * Returns the maximum health points of the enemy.
      * This method can be overridden in subclasses to provide different health values.
      * @return the maximum health (default is 50)
@@ -83,6 +74,15 @@ public abstract class Enemy extends AbstractCharacter {
             return getPosition().equals(other.getPosition());
         }
         return false;
+    }
+
+    /**
+     * Gets the amount of loot that the enemy holds.
+     * This is a random value between 100 and 300.
+     * @return the amount of loot
+     */
+    private int getLoot() {
+        return loot;
     }
 
     // --- Fields ---

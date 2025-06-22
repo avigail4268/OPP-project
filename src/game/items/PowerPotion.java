@@ -1,5 +1,4 @@
 package game.items;
-
 import game.characters.PlayerCharacter;
 import game.map.Position;
 
@@ -100,6 +99,4 @@ public class PowerPotion extends Potion {
     public String toString() {
         return "Power Potion " + getPosition();
     }
-
-
 }

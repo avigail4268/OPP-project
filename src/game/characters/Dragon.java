@@ -36,15 +36,6 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     }
 
     /**
-     * Sets the magic element of the Dragon.
-     * This method allows changing the Dragon's magic element to a new one.
-     * @param element the new MagicElement to set
-     */
-    public void setElement(MagicElement element) {
-        this.element = element;
-    }
-
-    /**
      * Gets the display symbol representing the Dragon.
      * @return the string "DRAGON"
      */
@@ -193,6 +184,15 @@ public class Dragon extends Enemy implements PhysicalAttacker, MeleeFighter, Mag
     @Override
     public String toString() {
         return this.getDisplaySymbol();
+    }
+
+    /**
+     * Sets the magic element of the Dragon.
+     * This method allows changing the Dragon's magic element to a new one.
+     * @param element the new MagicElement to set
+     */
+    protected void setElement(MagicElement element) {
+        this.element = element;
     }
 
     // --- Fields ---

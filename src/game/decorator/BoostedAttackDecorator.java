@@ -1,6 +1,4 @@
-
 package game.decorator;
-
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.log.LogManager;
@@ -28,8 +26,8 @@ public class BoostedAttackDecorator extends PlayerDecorator {
      */
     @Override
     public void attack(Combatant target) {
-        super.attack(target); // מתקפה רגילה
-        target.receiveDamage(extraDamage, this); // תוספת נזק
+        super.attack(target);
+        target.receiveDamage(extraDamage, this);
         LogManager.addLog("Boosted attack: +" + extraDamage + " damage dealt!");
     }
 

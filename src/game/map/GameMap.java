@@ -182,9 +182,4 @@ public class GameMap {
     private static GameMap instance = null;
     private Map<Position, List<GameEntity>> grid = new HashMap<>();
     private final int size;
-
-
-    public Map<Position, List<GameEntity>> getGrid() {
-        return Collections.unmodifiableMap(grid);
-    }
 }

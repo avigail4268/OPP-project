@@ -11,16 +11,13 @@ import game.gui.GameSetUp;
  * Initializes user settings (map size, player type, name), game world, controller, and GUI.
  */
 public class Main {
-
     /**
      * Launches the game application. Prompts the user for game configuration
      * and initializes the game world and GUI.
-     *
      * @param args Command-line arguments (unused)
      */
     public static void main(String[] args) {
         GameSetUp gameSetUp = new GameSetUp();
         gameSetUp.start();
     }
-
 }

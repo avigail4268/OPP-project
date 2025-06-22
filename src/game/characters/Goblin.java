@@ -143,7 +143,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
      * Gets the agility of the Goblin.
      * @return the agility of the Goblin
      */
-    public int getAgility() {
+    protected int getAgility() {
         return agility;
     }
 
@@ -151,7 +151,7 @@ public class Goblin extends Enemy implements PhysicalAttacker, MeleeFighter {
      * Sets the agility of the Goblin.
      * @param agility the new agility value to set
      */
-    public void setAgility(int agility) {
+    protected void setAgility(int agility) {
         this.agility = agility;
     }
 

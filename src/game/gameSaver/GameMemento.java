@@ -1,9 +1,12 @@
 package game.gameSaver;
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
+import game.core.GameEntity;
 import game.items.GameItem;
-import game.map.GameMap;
+import game.map.Position;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * GameMemento is a class that represents a snapshot of the game state.
@@ -14,53 +17,60 @@ public class GameMemento {
 
     /**
      * Constructs a GameMemento with the current state of the game.
-     * @param player the player character
-     * @param gameMap the current game map
-     * @param enemies the list of enemies in the game
-     * @param items the list of items in the game
+     * The constructor expects deep-copied objects to be passed in.
      */
-    public GameMemento(PlayerCharacter player, GameMap gameMap, List<Enemy> enemies, List<GameItem> items) {
+    public GameMemento(PlayerCharacter player, List<Enemy> enemies, List<GameItem> items, Map<Position, List<GameEntity>> savedGrid) {
         this.player = player;
-        this.gameMap = gameMap;
         this.enemies = enemies;
         this.items = items;
+        this.savedGrid = savedGrid;
     }
 
     /**
-     * gets the player character from the memento.
-     * @return a new GameMemento instance with the same properties
+     * Gets a deep copy of the player character from the memento.
+     * @return a deep copy of the PlayerCharacter
      */
     public PlayerCharacter getPlayer() {
-        return player;
+        return (PlayerCharacter) player.deepCopy();
     }
 
     /**
-     * gets the game map from the memento.
-     * @return the GameMap instance
-     */
-    public GameMap getGameMap() {
-        return gameMap;
-    }
-
-    /**
-     * gets the list of enemies from the memento.
-     * @return the list of Enemy instances
+     * Gets a deep copy of the list of enemies from the memento.
+     * @return a list of deep-copied Enemy instances
      */
     public List<Enemy> getEnemies() {
-        return enemies;
+        List<Enemy> copy = new ArrayList<>();
+        for (Enemy enemy : enemies) {
+            copy.add((Enemy) enemy.deepCopy());
+        }
+        return copy;
     }
 
     /**
-     * gets the list of items from the memento.
-     * @return the list of GameItem instances
+     * Gets a deep copy of the list of items from the memento.
+     * @return a list of deep-copied GameItem instances
      */
     public List<GameItem> getItems() {
-        return items;
+        List<GameItem> copy = new ArrayList<>();
+        for (GameItem item : items) {
+            copy.add(item.deepCopy());
+        }
+        return copy;
     }
+
+    /**
+     * Gets the game grid from the memento.
+     * @return the saved grid as a map of positions to lists of game entities
+     */
+    public Map<Position, List<GameEntity>> getSavedGrid() {
+        return savedGrid;
+    }
+
 
     // --- Fields ---
     private final PlayerCharacter player;
-    private final GameMap gameMap;
     private final List<Enemy> enemies;
-    private final List <GameItem> items;
+    private final List<GameItem> items;
+    private final Map<Position, List<GameEntity>> savedGrid;
+
 }

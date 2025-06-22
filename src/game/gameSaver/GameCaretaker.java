@@ -1,5 +1,4 @@
 package game.gameSaver;
-
 import game.engine.GameWorld;
 import java.util.Stack;
 
@@ -20,14 +19,6 @@ public class GameCaretaker {
             instance = new GameCaretaker();
         }
         return instance;
-    }
-
-    /**
-     * Adds a memento to the stack of saved game states.
-     * @param m the GameMemento to be added
-     */
-    public void addMemento(GameMemento m) {
-        mementos.push(m);
     }
 
     /**
@@ -63,6 +54,14 @@ public class GameCaretaker {
      */
     private GameCaretaker() {
         mementos = new Stack<>();
+    }
+
+    /**
+     * Adds a memento to the stack of saved game states.
+     * @param m the GameMemento to be added
+     */
+    private void addMemento(GameMemento m) {
+        mementos.push(m);
     }
 
     // --- Fields ---

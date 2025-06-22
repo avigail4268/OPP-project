@@ -1,9 +1,7 @@
 package game.characters;
-
 import game.characterBuilders.*;
 import game.combat.MagicElement;
 import game.map.Position;
-
 import java.util.*;
 import java.util.function.Supplier;
 

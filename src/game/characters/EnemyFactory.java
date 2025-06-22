@@ -1,5 +1,4 @@
 package game.characters;
-
 import game.characterBuilders.*;
 import game.map.Position;
 import java.util.*;

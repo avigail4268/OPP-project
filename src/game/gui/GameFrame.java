@@ -1,10 +1,8 @@
 package game.gui;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import game.controller.GameController;
 
 /**

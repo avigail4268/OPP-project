@@ -27,14 +27,6 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     }
 
     /**
-     * Sets the accuracy of the Archer.
-     */
-    public void setAccuracy (double accuracy) {
-        this.accuracy = accuracy;
-
-    }
-
-    /**
      * Creates a deep copy of the Archer character.
      * @return a new Archer instance with the same properties as this one
      */
@@ -139,6 +131,14 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
     @Override
     public String toString() {
         return "Archer: " + this.getName();
+    }
+
+    /**
+     * Sets the accuracy of the Archer.
+     */
+    private void setAccuracy (double accuracy) {
+        this.accuracy = accuracy;
+
     }
 
     // --- Fields ---

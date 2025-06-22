@@ -1,5 +1,4 @@
 package game.gui;
-
 import game.audio.SoundPlayer;
 import game.characters.PlayerCharacter;
 import game.engine.GameWorld;
@@ -7,7 +6,6 @@ import game.gameSaver.GameCaretaker;
 import game.gameSaver.GameMemento;
 import game.items.GameItem;
 import game.observer.GameObserver;
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;

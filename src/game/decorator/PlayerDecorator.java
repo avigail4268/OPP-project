@@ -1,5 +1,4 @@
 package game.decorator;
-
 import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.combat.MagicElement;
@@ -21,27 +20,6 @@ public abstract class PlayerDecorator extends PlayerCharacter {
     public PlayerDecorator(PlayerCharacter player) {
         super(player);
         this.decoratorPlayer = player;
-    }
-
-    /**
-     * Gets the decorated PlayerCharacter instance.
-     * @return the PlayerCharacter being decorated
-     */
-    public PlayerCharacter getDecoratorPlayer() {
-        return decoratorPlayer;
-    }
-
-    /**
-     * Unwraps the decorator to get the original PlayerCharacter.
-     * This method traverses through the decorators until it finds the base PlayerCharacter.
-     * @return the original PlayerCharacter instance
-     */
-    public PlayerCharacter unwrap() {
-        PlayerCharacter current = this;
-        while (current instanceof PlayerDecorator decorator) {
-            current = decorator.getDecoratorPlayer();
-        }
-        return current;
     }
 
     /**
@@ -152,6 +130,27 @@ public abstract class PlayerDecorator extends PlayerCharacter {
     @Override
     public String getDisplaySymbol() {
         return decoratorPlayer.getDisplaySymbol();
+    }
+
+    /**
+     * Gets the decorated PlayerCharacter instance.
+     * @return the PlayerCharacter being decorated
+     */
+    protected PlayerCharacter getDecoratorPlayer() {
+        return decoratorPlayer;
+    }
+
+    /**
+     * Unwraps the decorator to get the original PlayerCharacter.
+     * This method traverses through the decorators until it finds the base PlayerCharacter.
+     * @return the original PlayerCharacter instance
+     */
+    protected PlayerCharacter unwrap() {
+        PlayerCharacter current = this;
+        while (current instanceof PlayerDecorator decorator) {
+            current = decorator.getDecoratorPlayer();
+        }
+        return current;
     }
 
     // --- Fields ---

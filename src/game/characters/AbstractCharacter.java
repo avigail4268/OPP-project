@@ -32,14 +32,6 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
     public abstract int getMaxHealth();
 
     /**
-     * Increases the power of the character by the given amount if positive.
-     * @param amount the amount to add to power
-     */
-    public void setPower(int amount) {
-        this.power += amount;
-    }
-
-    /**
      * Heals the character by a specified amount.
      * @param amount the amount to heal
      */
@@ -185,6 +177,14 @@ public abstract class AbstractCharacter implements Combatant, GameEntity {
      */
     @Override
     public abstract boolean isInRange (Position self, Position target);
+
+    /**
+     * Increases the power of the character by the given amount if positive.
+     * @param amount the amount to add to power
+     */
+    public void setPower(int amount) {
+        this.power += amount;
+    }
 
     // --- Fields ---
 
