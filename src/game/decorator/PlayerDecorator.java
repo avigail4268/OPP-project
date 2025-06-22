@@ -47,10 +47,7 @@ public abstract class PlayerDecorator extends PlayerCharacter {
      * @return a new GameEntity instance that is a deep copy of the decorated PlayerCharacter
      */
     @Override
-    public GameEntity deepCopy() {
-        return decoratorPlayer.deepCopy();
-    }
-
+    public abstract PlayerCharacter deepCopy();
     /**
      * Sets the health of the PlayerCharacter.
      * This method updates both the decorator and the underlying PlayerCharacter.
@@ -59,8 +56,8 @@ public abstract class PlayerDecorator extends PlayerCharacter {
      */
     @Override
     public boolean setHealth(int health) {
-        super.setHealth(health); // מעדכן את הדקורטור
-        return getDecoratorPlayer().setHealth(health); // מעדכן את השחקן האמיתי
+        super.setHealth(health);
+        return getDecoratorPlayer().setHealth(health);
     }
 
     /**

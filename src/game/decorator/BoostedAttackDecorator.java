@@ -31,6 +31,15 @@ public class BoostedAttackDecorator extends PlayerDecorator {
         LogManager.addLog("Boosted attack: +" + extraDamage + " damage dealt!");
     }
 
+    @Override
+    public PlayerCharacter deepCopy() {
+        PlayerCharacter copiedPlayer = (PlayerCharacter) getDecoratorPlayer().deepCopy();
+        BoostedAttackDecorator copy = new BoostedAttackDecorator(copiedPlayer, this.extraDamage);
+        copy.setPosition(this.getPosition());
+        return copy;
+    }
+
+
     // --- Fields ---
     private final int extraDamage;
 

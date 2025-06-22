@@ -45,6 +45,15 @@ public class RegenerationDecorator extends PlayerDecorator {
         }
     }
 
+    @Override
+    public PlayerCharacter deepCopy() {
+        PlayerCharacter copiedPlayer = (PlayerCharacter) getDecoratorPlayer().deepCopy();
+        RegenerationDecorator copy = new RegenerationDecorator(copiedPlayer, this.regenAmount, (int) (this.intervalMillis / 1000));
+        copy.setPosition(this.getPosition());
+        return copy;
+    }
+
+
     // --- Fields ---
     private final int regenAmount;
     private final long intervalMillis;

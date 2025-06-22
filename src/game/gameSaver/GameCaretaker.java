@@ -26,13 +26,12 @@ public class GameCaretaker {
      * This memento is then added to the stack of saved states.
      * @param game the current GameWorld to be saved
      */
-    public void save (GameWorld game) {
+    public void save(GameWorld game) {
         GameOriginator originator = new GameOriginator();
-        originator.setEnemies(game.getEnemies());
+        originator.setPlayer(game.getPlayer());
         originator.setGameMap(game.getMap());
+        originator.setEnemies(game.getEnemies());
         originator.setItems(game.getItems());
-        originator.setPlayer();
-
         GameMemento memento = originator.createMemento();
         addMemento(memento);
     }

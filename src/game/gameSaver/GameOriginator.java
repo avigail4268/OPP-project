@@ -23,24 +23,23 @@ public class GameOriginator {
     /**
      * Sets the player character to a new instance.
      */
-    public void setPlayer() {
-        for (List<GameEntity> entities : savedGrid.values()) {
-            for (GameEntity entity : entities) {
-                if (entity instanceof PlayerCharacter) {
-                    this.player = (PlayerCharacter) entity;
-                    return;
-                }
-            }
-        }
+    public void setPlayer(PlayerCharacter player) {
+        this.player = (PlayerCharacter) player.deepCopy();
     }
-
 
     /**
      * Sets the current game map to a new instance and saves the grid.
      */
+
     public void setGameMap(GameMap map) {
-        this.savedGrid = map.copyGrid();
+        Map<Position, List<GameEntity>> fullGrid = map.copyGrid();
+        for (List<GameEntity> entities : fullGrid.values()) {
+            entities.removeIf(e -> e instanceof PlayerCharacter);
+        }
+
+        this.savedGrid = fullGrid;
     }
+
 
     /**
      * Sets the enemies in the game.

@@ -59,10 +59,12 @@ public class MapPanel extends JPanel implements GameObserver {
     public void refresh() {
         for (int row = 0; row < cellButtons.length; row++) {
             for (int col = 0; col < cellButtons[0].length; col++) {
+                cellButtons[row][col].setIcon(null);
                 cellButtons[row][col].setIcon(controller.getIconWithHealthBar(row, col));
             }
         }
     }
+
 
     /**
      * Highlights a specific cell in the map with a temporary color change.

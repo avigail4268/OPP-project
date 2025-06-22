@@ -19,10 +19,10 @@ public class GameMemento {
      * The constructor expects deep-copied objects to be passed in.
      */
     public GameMemento(PlayerCharacter player, List<Enemy> enemies, List<GameItem> items, Map<Position, List<GameEntity>> savedGrid) {
-        this.player = player;
         this.enemies = enemies;
         this.items = items;
         this.savedGrid = savedGrid;
+        this.player = player;
     }
 
     /**

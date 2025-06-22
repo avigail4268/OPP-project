@@ -90,6 +90,7 @@ public class GameWorld {
         map.addToGrid(newPos, player);
     }
 
+
     /**
      * Fights an enemy at the specified position.
      * @param pos The position where the enemy is located.
@@ -301,10 +302,13 @@ public class GameWorld {
      * It replaces the current player, enemies, items, and map with those from the memento.
      * @param memento The GameMemento containing the saved game state.
      */
+
     public void restoreFromMemento(GameMemento memento) {
-        this.players.clear();
-        this.players.add(memento.getPlayer());
         this.map.setGrid(memento.getSavedGrid());
+        this.players = new ArrayList<>();
+        PlayerCharacter player = memento.getPlayer();
+        this.players.add(player);
+        this.map.addToGrid(player.getPosition(), player);
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
         this.controller.refresh();
@@ -482,4 +486,7 @@ public class GameWorld {
     private final EnemyFactory enemyFactory = new EnemyFactory();
 
 
+    public List<PlayerCharacter> getPlayers() {
+        return players;
+    }
 }

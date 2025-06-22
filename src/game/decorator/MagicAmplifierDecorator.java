@@ -92,4 +92,10 @@ public class MagicAmplifierDecorator extends PlayerDecorator implements MagicAtt
         getDecoratorPlayer().setHealth(health);
         return true;
     }
+
+    @Override
+    public PlayerCharacter deepCopy() {
+        PlayerCharacter copiedPlayer = (PlayerCharacter) getDecoratorPlayer().deepCopy();
+        return new MagicAmplifierDecorator(copiedPlayer);
+    }
 }
