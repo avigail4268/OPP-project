@@ -1,5 +1,4 @@
 package game.characters;
-
 import game.combat.Combatant;
 import game.combat.MagicElement;
 import game.core.GameEntity;

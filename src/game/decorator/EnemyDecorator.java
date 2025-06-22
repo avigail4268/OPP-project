@@ -1,9 +1,12 @@
 package game.decorator;
 
 import game.characters.Enemy;
+import game.characters.PlayerCharacter;
 import game.combat.Combatant;
 import game.core.GameEntity;
 import game.map.Position;
+
+import java.util.List;
 
 /**
  * EnemyDecorator is an abstract class that serves as a base for decorators that enhance or modify the behavior of an Enemy.
@@ -75,8 +78,35 @@ public abstract class EnemyDecorator extends Enemy {
         return decoratorEnemy.isInRange(self, target);
     }
 
+    /**
+     *returns the current health of the Enemy.
+     */
+    @Override
+    public int getHealth() {
+        return decoratorEnemy.getHealth();
+    }
+
+    /**
+     * Sets the health of the Enemy.
+     * @param health the new health value to set
+     * @return true if the health was successfully updated, false otherwise
+     */
+    @Override
+    public boolean setHealth(int health) {
+        return decoratorEnemy.setHealth(health);
+    }
+
+    /**
+     * Checks if the Enemy is dead.
+     * @return true if the Enemy's health is zero or less, false otherwise
+     */
+    @Override
+    public boolean isDead() {
+        return decoratorEnemy.isDead();
+    }
+
     // --- Fields ---
-    protected final Enemy decoratorEnemy;
+    private final Enemy decoratorEnemy;
 
 }
 

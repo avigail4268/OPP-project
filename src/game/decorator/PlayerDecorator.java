@@ -111,7 +111,7 @@ public abstract class PlayerDecorator extends PlayerCharacter {
      */
     @Override
     public void receiveDamage(int amount, Combatant source) {
-        decoratorPlayer.receiveDamage(amount, source);   // מעביר את הנזק פנימה לשחקן האמיתי
+        decoratorPlayer.receiveDamage(amount, source);
     }
 
     /**
@@ -121,7 +121,7 @@ public abstract class PlayerDecorator extends PlayerCharacter {
     @Override
     public void update() {
         decoratorPlayer.update();
-        this.setHealth(decoratorPlayer.getHealth()); // העתקת ערך כלפי חוץ — קריטי!
+        this.setHealth(decoratorPlayer.getHealth());
     }
 
     /**

@@ -53,7 +53,7 @@ public class Warrior extends PlayerCharacter implements MeleeFighter, PhysicalAt
         warrior.setDefence(this.defence);
         warrior.setPower(this.getPower());
         warrior.setTreasurePoints(this.getTreasurePoints());
-        warrior.setInventory(this.getInventory());
+        warrior.setInventory(this.getInventory().deepCopy());
         return warrior;
     }
 

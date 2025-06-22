@@ -57,7 +57,7 @@ public class GameWorld {
     public void createEnemy(Position pos) {
         Enemy enemy = enemyFactory.createEnemy(pos);
         enemies.add(enemy);
-        map.addToGrid(pos, enemy);  // <– נוסיף זמנית את האויב הפשוט
+        map.addToGrid(pos, enemy);
         decorateEnemyRandomly(enemy);
     }
 
@@ -464,14 +464,14 @@ public class GameWorld {
      * @return A decorated enemy instance.
      */
     private Enemy createRandomEnemyDecorator(Enemy enemy) {
-        int pick = new Random().nextInt(2);
+        int pick = new Random().nextInt(3);
         return switch (pick) {
             case 0 -> new VampireEnemyDecorator(enemy);
             case 1 -> new TeleportingEnemyDecorator(enemy);
+            case 2 -> new ExplodingEnemyDecorator(enemy,getPlayer()); // Default case, no special decorator
             default -> enemy;
         };
     }
-
 
     // --- Fields ---
     private static final ConcurrentHashMap<Position, ReentrantLock> lockMap = new java.util.concurrent.ConcurrentHashMap<>();

@@ -184,4 +184,7 @@ public class GameMap {
     private final int size;
 
 
+    public Map<Position, List<GameEntity>> getGrid() {
+        return Collections.unmodifiableMap(grid);
+    }
 }

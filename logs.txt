@@ -1,0 +1,129 @@
+[2025-06-22T11:12:42.328665800] Game started with player type: Archer and name: Player
+[2025-06-22T11:12:42.960839700] Enemy moved to: (1,0)
+[2025-06-22T11:12:42.960839700] Enemy moved to: (1,4)
+[2025-06-22T11:12:43.368607400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:43.368607400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:43.889354200] Enemy moved to: (4,1)
+[2025-06-22T11:12:44.340425700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T11:12:44.345462900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T11:12:44.356999800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:44.366611700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T11:12:45.344588800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T11:12:45.361687600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:46.345321300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:46.351784300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:46.361871200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:46.366893600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:46.505734300] Added item: Health Potion
+[2025-06-22T11:12:46.601852500] Player moved from (9,4) to (9,5)
+[2025-06-22T11:12:47.339026900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:47.618965900] Orc received 18 damage from physical attack.
+[2025-06-22T11:12:47.619966300] Player attacked the enemy for 18 damage.
+[2025-06-22T11:12:47.619966300] The orc attacked for: 17 damage.
+[2025-06-22T11:12:47.624507500] [VampireEnemy] Drained 1 HP from player → Enemy health: 33/50
+[2025-06-22T11:12:48.200030200] Orc received 18 damage from physical attack.
+[2025-06-22T11:12:48.200030200] Player attacked the enemy for 18 damage.
+[2025-06-22T11:12:48.200030200] Player evaded the enemy's attack!
+[2025-06-22T11:12:48.360710900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:48.366023100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:48.588862700] Orc received 18 damage from physical attack.
+[2025-06-22T11:12:48.588862700] Player attacked the enemy for 18 damage.
+[2025-06-22T11:12:48.588862700] Enemy is dead! You won the fight!
+[2025-06-22T11:12:48.983224900] Collected 234 treasure points!
+[2025-06-22T11:12:48.986230100] Player moved from (9,5) to (8,5)
+[2025-06-22T11:12:49.365172700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T11:12:49.394631500] Added item: Power Potion
+[2025-06-22T11:12:49.396631300] Player moved from (8,5) to (8,6)
+[2025-06-22T11:12:50.362713600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:50.365733200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:50.365733200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:51.363360] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:51.365535700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T11:12:51.466105200] Potion used!
+[2025-06-22T11:12:51.466105200] Removed item: Power Potion
+[2025-06-22T11:12:51.466105200] Player used a power potion and gained 3 attack power!
+[2025-06-22T11:12:52.053071100] Orc received 21 damage from physical attack.
+[2025-06-22T11:12:52.053071100] Player attacked the enemy for 21 damage.
+[2025-06-22T11:12:52.053071100] The orc attacked for: 12 damage.
+[2025-06-22T11:12:52.054071400] [VampireEnemy] Drained 1 HP from player → Enemy health: 30/50
+[2025-06-22T11:12:52.364595200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:52.367302400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T11:12:52.391890] Orc received 21 damage from physical attack.
+[2025-06-22T11:12:52.391890] Player attacked the enemy for 21 damage.
+[2025-06-22T11:12:52.391890] The orc attacked for: 12 damage.
+[2025-06-22T11:12:52.391890] [VampireEnemy] Drained 1 HP from player → Enemy health: 10/50
+[2025-06-22T11:12:52.723489900] Orc received 42 damage from physical attack.
+[2025-06-22T11:12:52.723489900] Archer attacked with Critical hit! for 42 damage.
+[2025-06-22T11:12:52.723489900] Enemy is dead! You won the fight!
+[2025-06-22T11:12:53.643137200] Added item: Power Potion
+[2025-06-22T11:12:53.648155700] Player moved from (8,6) to (8,7)
+[2025-06-22T11:12:55.485464900] Potion used!
+[2025-06-22T11:12:55.485464900] Removed item: Power Potion
+[2025-06-22T11:12:55.485464900] Player used a power potion and gained 2 attack power!
+[2025-06-22T11:12:56.708884200] Player attacked the enemy for 23 damage.
+[2025-06-22T11:12:56.709881200] Goblin attacked for: 16 damage.
+[2025-06-22T11:12:56.710389600] [VampireEnemy] Drained 1 HP from player → Enemy health: 28/50
+[2025-06-22T11:12:57.188589] Player attacked the enemy for 23 damage.
+[2025-06-22T11:12:57.188589] Goblin attacked for: 16 damage.
+[2025-06-22T11:12:57.188589] [VampireEnemy] Drained 1 HP from player → Enemy health: 6/50
+[2025-06-22T11:12:57.600651500] Player attacked the enemy for 23 damage.
+[2025-06-22T11:12:57.600651500] Enemy is dead! You won the fight!
+[2025-06-22T11:12:58.698066300] Added item: Power Potion
+[2025-06-22T11:12:58.709831100] Player moved from (8,7) to (7,7)
+[2025-06-22T11:13:00.641809600] Potion used!
+[2025-06-22T11:13:00.641809600] Removed item: Health Potion
+[2025-06-22T11:13:00.641809600] Health was 27 now is 73
+[2025-06-22T11:13:00.643406500] Player used a potion and healed 46 HP!
+[2025-06-22T11:13:01.263744800] Potion used!
+[2025-06-22T11:13:01.263744800] Removed item: Power Potion
+[2025-06-22T11:13:01.263744800] Player used a power potion and gained 3 attack power!
+[2025-06-22T11:13:02.094776600] The enemy evaded the attack!
+[2025-06-22T11:13:02.094776600] Goblin attack with Critical hit! for: 34 damage.
+[2025-06-22T11:13:02.656714900] Player attacked the enemy for 26 damage.
+[2025-06-22T11:13:02.656714900] Player evaded the enemy's attack!
+[2025-06-22T11:13:03.098638400] The enemy evaded the attack!
+[2025-06-22T11:13:03.098638400] Goblin attacked for: 17 damage.
+[2025-06-22T11:13:04.111716200] Player moved from (7,7) to (6,7)
+[2025-06-22T11:13:04.477704500] Added item: Health Potion
+[2025-06-22T11:13:04.481709] Player moved from (6,7) to (6,8)
+[2025-06-22T11:13:06.496687] Potion used!
+[2025-06-22T11:13:06.496687] Removed item: Health Potion
+[2025-06-22T11:13:06.496687] Health was 22 now is 69
+[2025-06-22T11:13:06.496687] Player used a potion and healed 47 HP!
+[2025-06-22T11:13:07.104336500] The enemy evaded the attack!
+[2025-06-22T11:13:07.104336500] Goblin attacked for: 17 damage.
+[2025-06-22T11:13:07.528241400] Archer attacked with Critical hit! for 52 damage.
+[2025-06-22T11:13:07.528241400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T11:13:07.528241400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T11:13:07.528241400] Enemy is dead! You won the fight!
+[2025-06-22T11:13:07.528241400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T11:13:07.528241400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T11:13:07.951572900] Collected 120 treasure points!
+[2025-06-22T11:13:07.954092900] Player moved from (6,8) to (7,8)
+[2025-06-22T11:13:08.685133200] Player moved from (7,8) to (7,9)
+[2025-06-22T11:13:09.192500400] Added item: Health Potion
+[2025-06-22T11:13:09.194602700] Player moved from (7,9) to (6,9)
+[2025-06-22T11:13:10.020751600] The enemy evaded the attack!
+[2025-06-22T11:13:10.020751600] Player evaded the enemy's attack!
+[2025-06-22T11:13:10.364860600] The enemy evaded the attack!
+[2025-06-22T11:13:10.365859600] Dragon attacked for 17 damage.
+[2025-06-22T11:13:10.365859600] [VampireEnemy] Drained 1 HP from player → Enemy health: 50/50
+[2025-06-22T11:13:11.847336] Potion used!
+[2025-06-22T11:13:11.848308800] Removed item: Health Potion
+[2025-06-22T11:13:11.848308800] Health was 31 now is 62
+[2025-06-22T11:13:11.848308800] Player used a potion and healed 31 HP!
+[2025-06-22T11:13:12.686946300] Player attacked the enemy for 26 damage.
+[2025-06-22T11:13:12.686946300] Dragon attacked for 17 damage.
+[2025-06-22T11:13:12.686946300] [VampireEnemy] Drained 1 HP from player → Enemy health: 25/50
+[2025-06-22T11:13:13.378236400] Player attacked the enemy for 26 damage.
+[2025-06-22T11:13:13.378236400] Enemy is dead! You won the fight!
+[2025-06-22T11:13:13.811816500] Added item: Power Potion
+[2025-06-22T11:13:13.816851300] Player moved from (6,9) to (5,9)
+[2025-06-22T11:13:14.221774200] Player moved from (5,9) to (4,9)
+[2025-06-22T11:13:17.954801300] Player moved from (4,9) to (3,9)
+[2025-06-22T11:13:21.150290900] Added item: Power Potion
+[2025-06-22T11:13:21.150290900] Added item: Power Potion
+[2025-06-22T11:13:24.183855100] Player moved from (3,9) to (3,8)
+[2025-06-22T11:13:24.688531400] Added item: Health Potion
+[2025-06-22T11:13:24.691521200] Player moved from (3,8) to (3,7)
+[2025-06-22T11:13:25.517170700] Player moved from (3,7) to (3,8)

@@ -52,7 +52,9 @@ public class Potion extends GameItem implements Interactable {
      */
     @Override
     public GameItem deepCopy() {
-        return new Potion(getPosition(), this.isBlocksMovement(), increaseAmount);
+        Potion potion = new Potion(getPosition(), this.isBlocksMovement(), increaseAmount);
+        potion.isUsed = this.isUsed;
+        return potion;
     }
 
     /**
@@ -131,6 +133,10 @@ public class Potion extends GameItem implements Interactable {
             return true;
         }
         return false;
+    }
+
+    protected void setIsUsed(boolean isUsed) {
+        this.isUsed = isUsed;
     }
 
     // --- Fields ---

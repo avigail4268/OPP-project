@@ -28,7 +28,6 @@ public class GameCaretaker {
      */
     public void addMemento(GameMemento m) {
         mementos.push(m);
-        System.out.println("Added memento");
     }
 
     /**

@@ -43,7 +43,7 @@ public class Archer extends PlayerCharacter implements RangeFighter, PhysicalAtt
         Archer archer = new Archer(this.getName(), this.getPosition(),this.getHealth());
         archer.setAccuracy(this.accuracy);
         archer.setPower(this.getPower());
-        archer.setInventory(this.getInventory());
+        archer.setInventory(this.getInventory().deepCopy());
         archer.setTreasurePoints(this.getTreasurePoints());
         return archer;
     }

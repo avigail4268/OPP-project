@@ -1,6 +1,4 @@
-
 package game.decorator;
-
 import game.characters.Enemy;
 import game.combat.Combatant;
 import game.log.LogManager;
@@ -31,8 +29,8 @@ public class TeleportingEnemyDecorator extends EnemyDecorator {
         super.receiveDamage(amount, source);
 
         if (!hasTeleported && getHealth() < getMaxHealth() * TELEPORT_THRESHOLD) {
-            GameMap map = GameMap.getInstance();                        // Singleton
-            Position newPos = map.getRandomEmptyPosition();             // משבצת פנויה
+            GameMap map = GameMap.getInstance();
+            Position newPos = map.getRandomEmptyPosition();
             if (newPos != null) {
                 getDecoratorEnemy().setPosition(newPos);
                 hasTeleported = true;

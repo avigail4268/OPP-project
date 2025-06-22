@@ -136,17 +136,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     }
 
     /**
-     * Sets the floating text to be displayed above the player character.
-     * The text will be displayed for a limited time based on the system's current time.
-     * @param text the text to display
-     */
-    public void setFloatingText(String text) {
-        this.floatingText = text;
-        this.floatingTextStartTime = System.currentTimeMillis();
-    }
-
-
-    /**
      * Returns the maximum health of the player character.
      */
     @Override
@@ -176,9 +165,6 @@ public abstract class PlayerCharacter extends AbstractCharacter {
     private Inventory inventory;
     private int treasurePoints;
     private final int maxHealth = 100; // Default max health, can be overridden by subclasses
-    private String floatingText;
-    private long floatingTextStartTime;
-
 }
 
 

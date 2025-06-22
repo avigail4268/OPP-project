@@ -38,7 +38,9 @@ public class PowerPotion extends Potion {
      */
     @Override
     public GameItem deepCopy() {
-        return new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount());
+        PowerPotion copy = new PowerPotion(getPosition(), this.isBlocksMovement(), this.getIncreaseAmount());
+        copy.setIsUsed(this.getIsUsed());
+        return copy;
     }
 
     /**
@@ -98,4 +100,6 @@ public class PowerPotion extends Potion {
     public String toString() {
         return "Power Potion " + getPosition();
     }
+
+
 }

@@ -1,5 +1,4 @@
 package game.gameSaver;
-
 import game.characters.Enemy;
 import game.characters.PlayerCharacter;
 import game.core.GameEntity;
@@ -71,17 +70,6 @@ public class GameOriginator {
      */
     public GameMemento createMemento() {
         return new GameMemento(player, gameMap, enemies, items);
-    }
-
-    /**
-     * Restores the game state from a given memento.
-     * This method sets the player, game map, enemies, and items to the state stored in the memento.
-     */
-    public void setMemento(GameMemento memento) {
-        this.player = memento.getPlayer();
-        this.gameMap = memento.getGameMap();
-        this.enemies = memento.getEnemies();
-        this.items = memento.getItems();
     }
 
     // --- Fields ---
