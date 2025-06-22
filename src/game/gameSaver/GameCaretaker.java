@@ -31,7 +31,7 @@ public class GameCaretaker {
         originator.setEnemies(game.getEnemies());
         originator.setGameMap(game.getMap());
         originator.setItems(game.getItems());
-        originator.setPlayer(game.getPlayer());
+        originator.setPlayer();
 
         GameMemento memento = originator.createMemento();
         addMemento(memento);

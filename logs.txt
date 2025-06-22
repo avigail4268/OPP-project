@@ -290,3 +290,1664 @@
 [2025-06-22T12:54:26.212960300] [HealthRegenDecorator] Regenerated 5 HP → 100/100
 [2025-06-22T12:54:28.012329900] Player moved from (6,9) to (6,8)
 [2025-06-22T12:54:28.809628900] Player moved from (6,8) to (6,7)
+[2025-06-22T13:11:10.481772400] Game started with player type: Archer and name: Player
+[2025-06-22T13:11:11.489085500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:11.491089600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:11.505732400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:11.810373300] Enemy moved to: (0,8)
+[2025-06-22T13:11:12.497875500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:12.508976900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:13.012137500] Enemy moved to: (5,1)
+[2025-06-22T13:11:13.312510300] Dragon attacked for 17 damage.
+[2025-06-22T13:11:13.497544900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:13.503084] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:13.505094100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:13.508627200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:13.616680300] Enemy moved to: (7,8)
+[2025-06-22T13:11:13.616680300] The orc attacked with Critical hit! for: 40 damage.
+[2025-06-22T13:11:14.221092400] Dragon attacked with a Critical hit! for 22 damage.
+[2025-06-22T13:11:14.500695700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:14.509405800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:14.509405800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:14.514420600] Enemy moved to: (9,3)
+[2025-06-22T13:11:15.501033500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:15.501033500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:15.502028200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:15.503027700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:15.503027700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:15.506068300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:15.509128600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:16.487926400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:16.507706200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:17.494962300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:17.496921100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:17.502144700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:17.505108900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:18.505110] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:18.507712300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:18.844101400] Orc received 10 damage from physical attack.
+[2025-06-22T13:11:18.845105200] Player attacked the enemy for 10 damage.
+[2025-06-22T13:11:18.845105200] Player evaded the enemy's attack!
+[2025-06-22T13:11:19.497756100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:19.497756100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:19.507780100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:19.507780100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:19.573067400] Orc received 10 damage from physical attack.
+[2025-06-22T13:11:19.573067400] Player attacked the enemy for 10 damage.
+[2025-06-22T13:11:19.574068900] The orc attacked for: 20 damage.
+[2025-06-22T13:11:19.577888] [VampireEnemy] Drained 1 HP from player → Enemy health: 31/50
+[2025-06-22T13:11:20.503983600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:20.507986800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:20.658999400] Orc received 10 damage from physical attack.
+[2025-06-22T13:11:20.658999400] Player attacked the enemy for 10 damage.
+[2025-06-22T13:11:20.658999400] The orc attacked for: 20 damage.
+[2025-06-22T13:11:20.658999400] [VampireEnemy] Drained 1 HP from player → Enemy health: 22/50
+[2025-06-22T13:11:20.658999400] Game ended, player died!
+[2025-06-22T13:11:39.247809] Game started with player type: Archer and name: Player
+[2025-06-22T13:11:40.271117500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:40.583135] Enemy moved to: (2,7)
+[2025-06-22T13:11:41.479751300] Enemy moved to: (5,3)
+[2025-06-22T13:11:41.782258500] Enemy moved to: (8,4)
+[2025-06-22T13:11:41.782258500] Dragon attacked for 9 damage.
+[2025-06-22T13:11:41.789264500] Goblin attacked for: 23 damage.
+[2025-06-22T13:11:42.080718100] Enemy moved to: (8,6)
+[2025-06-22T13:11:42.080718100] The orc attacked for: 24 damage.
+[2025-06-22T13:11:42.234757600] Enemy moved to: (8,8)
+[2025-06-22T13:11:42.251736600] [HealthRegenDecorator] Regenerated 5 HP → 49/100
+[2025-06-22T13:11:42.254258] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:42.258748700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:42.258748700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:42.259762300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:42.262787800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:42.270300400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:43.254313100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:43.261910500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:43.544596400] Player moved from (8,5) to (7,5)
+[2025-06-22T13:11:44.215528900] Player moved from (7,5) to (6,5)
+[2025-06-22T13:11:44.260896300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:44.270445700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:44.596509400] Added item: Health Potion
+[2025-06-22T13:11:44.600053100] Player moved from (6,5) to (6,4)
+[2025-06-22T13:11:45.204055800] Player moved from (6,4) to (7,4)
+[2025-06-22T13:11:45.232224] [HealthRegenDecorator] Regenerated 5 HP → 54/100
+[2025-06-22T13:11:45.272134100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:45.622613400] Player moved from (7,4) to (7,5)
+[2025-06-22T13:11:46.001202600] Player moved from (7,5) to (7,6)
+[2025-06-22T13:11:46.260195800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:46.269118600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:46.291677800] Added item: Health Potion
+[2025-06-22T13:11:46.293716700] Player moved from (7,6) to (7,7)
+[2025-06-22T13:11:47.254160600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:47.261764500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:47.267851600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:47.270932200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:48.232191200] [HealthRegenDecorator] Regenerated 5 HP → 59/100
+[2025-06-22T13:11:48.269019500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:48.270067300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:48.271347200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:11:48.272036400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:48.840133200] Potion used!
+[2025-06-22T13:11:48.841138800] Removed item: Health Potion
+[2025-06-22T13:11:48.841138800] Health was 59 now is 87
+[2025-06-22T13:11:48.841138800] Player used a potion and healed 28 HP!
+[2025-06-22T13:11:49.261760900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:11:49.270842900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:11:50.826552900] Potion used!
+[2025-06-22T13:11:50.826552900] Removed item: Health Potion
+[2025-06-22T13:11:50.826552900] Health was 87 now is 100
+[2025-06-22T13:11:50.826552900] Player used a potion and healed 21 HP!
+[2025-06-22T13:11:52.624970900] Player moved from (7,7) to (7,8)
+[2025-06-22T13:11:53.167530300] Added item: Power Potion
+[2025-06-22T13:11:53.169025600] Player moved from (7,8) to (7,9)
+[2025-06-22T13:11:53.730111800] Added item: Power Potion
+[2025-06-22T13:11:53.733111900] Player moved from (7,9) to (6,9)
+[2025-06-22T13:11:56.062118500] Added item: Power Potion
+[2025-06-22T13:11:56.062118500] Added item: Power Potion
+[2025-06-22T13:11:56.062118500] Added item: Power Potion
+[2025-06-22T13:11:56.062118500] Added item: Power Potion
+[2025-06-22T13:11:58.745725200] Potion used!
+[2025-06-22T13:11:58.745725200] Removed item: Power Potion
+[2025-06-22T13:11:58.746724200] Player used a power potion and gained 1 attack power!
+[2025-06-22T13:11:59.656101400] Potion used!
+[2025-06-22T13:11:59.656101400] Removed item: Power Potion
+[2025-06-22T13:11:59.656101400] Player used a power potion and gained 3 attack power!
+[2025-06-22T13:12:00.400120600] Player attacked the enemy for 20 damage.
+[2025-06-22T13:12:00.401118400] [TeleportingEnemyDecorator] Enemy teleported to (7,8)
+[2025-06-22T13:12:00.401118400] Boosted attack: +5 damage dealt!
+[2025-06-22T13:12:00.401118400] Player evaded the enemy's attack!
+[2025-06-22T13:12:00.801049500] The enemy evaded the attack!
+[2025-06-22T13:12:00.801049500] Dragon attacked physically for: 36 damage.
+[2025-06-22T13:12:01.327540400] The enemy evaded the attack!
+[2025-06-22T13:12:01.327540400] Player evaded the enemy's attack!
+[2025-06-22T13:12:02.232397100] [HealthRegenDecorator] Regenerated 5 HP → 69/100
+[2025-06-22T13:12:02.313025500] Player attacked the enemy for 20 damage.
+[2025-06-22T13:12:02.313025500] Boosted attack: +5 damage dealt!
+[2025-06-22T13:12:02.313025500] Enemy is dead! You won the fight!
+[2025-06-22T13:12:02.862991500] Collected 289 treasure points!
+[2025-06-22T13:12:02.864987100] Player moved from (6,9) to (5,9)
+[2025-06-22T13:12:05.242946400] [HealthRegenDecorator] Regenerated 5 HP → 74/100
+[2025-06-22T13:12:05.385190800] Added item: Power Potion
+[2025-06-22T13:12:05.385190800] Added item: Power Potion
+[2025-06-22T13:12:09.242572700] [HealthRegenDecorator] Regenerated 5 HP → 79/100
+[2025-06-22T13:20:11.818947600] Game started with player type: Archer and name: Player
+[2025-06-22T13:20:12.382661400] Enemy moved to: (0,8)
+[2025-06-22T13:20:12.382661400] Enemy moved to: (0,1)
+[2025-06-22T13:20:12.832629] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:12.835625400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:12.836633900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:12.840701600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:13.830089900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:13.833072900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:13.833072900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:13.836075] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:13.836075] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:13.836075] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:13.837594700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:13.838608500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:13.839621500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:14.186588600] Enemy moved to: (4,7)
+[2025-06-22T13:20:14.787710800] Enemy moved to: (7,3)
+[2025-06-22T13:20:14.787710800] Goblin attacked for: 23 damage.
+[2025-06-22T13:20:14.833903800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:14.836173500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:14.837618200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:15.136042600] Added item: Power Potion
+[2025-06-22T13:20:15.141082300] Player moved from (7,4) to (6,4)
+[2025-06-22T13:20:15.578764700] Added item: Health Potion
+[2025-06-22T13:20:15.580772] Player moved from (6,4) to (5,4)
+[2025-06-22T13:20:15.831099300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:15.835063400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:15.835063400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:15.836099300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:15.839676600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:16.455083300] Added item: Health Potion
+[2025-06-22T13:20:16.457607] Player moved from (5,4) to (4,4)
+[2025-06-22T13:20:16.834031100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:17.834786400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:17.835787700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:17.839161300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:20:18.503491] Added item: Power Potion
+[2025-06-22T13:20:18.503491] Added item: Health Potion
+[2025-06-22T13:20:18.503491] Added item: Health Potion
+[2025-06-22T13:20:18.504434900] Added item: Power Potion
+[2025-06-22T13:20:18.504434900] Added item: Health Potion
+[2025-06-22T13:20:18.504434900] Added item: Health Potion
+[2025-06-22T13:20:18.834066200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:18.834066200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:18.839117100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:19.833607200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:19.833607200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:20.831084600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:20.834647100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:20.837651600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:21.400101200] Potion used!
+[2025-06-22T13:20:21.400101200] Removed item: Health Potion
+[2025-06-22T13:20:21.400101200] Health was 77 now is 95
+[2025-06-22T13:20:21.400101200] Player used a potion and healed 18 HP!
+[2025-06-22T13:20:21.825395400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:21.830909400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:20:21.838916600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:21.839419500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:20:22.316344100] Potion used!
+[2025-06-22T13:20:22.317851400] Removed item: Health Potion
+[2025-06-22T13:20:22.317851400] Health was 95 now is 100
+[2025-06-22T13:20:22.317851400] Player used a potion and healed 42 HP!
+[2025-06-22T13:20:23.255255600] Potion used!
+[2025-06-22T13:20:23.255255600] Removed item: Power Potion
+[2025-06-22T13:20:23.255255600] Player used a power potion and gained 3 attack power!
+[2025-06-22T13:20:24.727782500] Added item: Power Potion
+[2025-06-22T13:20:24.730013400] Player moved from (4,4) to (3,4)
+[2025-06-22T13:20:25.209022500] The enemy evaded the attack!
+[2025-06-22T13:20:25.209022500] Goblin attacked for: 16 damage.
+[2025-06-22T13:20:25.662884500] Player attacked the enemy for 11 damage.
+[2025-06-22T13:20:25.662884500] Goblin attacked for: 16 damage.
+[2025-06-22T13:20:26.170499500] Player attacked the enemy for 11 damage.
+[2025-06-22T13:20:26.170499500] Goblin attacked for: 16 damage.
+[2025-06-22T13:20:26.650491600] Player attacked the enemy for 11 damage.
+[2025-06-22T13:20:26.650491600] Goblin attacked for: 16 damage.
+[2025-06-22T13:20:27.674658500] The enemy evaded the attack!
+[2025-06-22T13:20:27.675657900] Goblin attacked for: 16 damage.
+[2025-06-22T13:20:29.481193200] Potion used!
+[2025-06-22T13:20:29.481193200] Removed item: Power Potion
+[2025-06-22T13:20:29.481193200] Player used a power potion and gained 3 attack power!
+[2025-06-22T13:20:30.754979900] Player attacked the enemy for 14 damage.
+[2025-06-22T13:20:30.755976900] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:20:30.755976900] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:20:30.755976900] Enemy is dead! You won the fight!
+[2025-06-22T13:20:30.755976900] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:20:30.755976900] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:20:32.341128400] Added item: Power Potion
+[2025-06-22T13:20:32.343108400] Player moved from (3,4) to (2,4)
+[2025-06-22T13:20:33.082344800] Player moved from (2,4) to (3,4)
+[2025-06-22T13:20:35.139835700] Added item: Power Potion
+[2025-06-22T13:20:35.140838400] Added item: Health Potion
+[2025-06-22T13:20:35.140838400] Added item: Health Potion
+[2025-06-22T13:21:17.769948700] Added item: Power Potion
+[2025-06-22T13:21:17.773183400] Player moved from (4,4) to (3,4)
+[2025-06-22T13:21:24.941678900] Added item: Health Potion
+[2025-06-22T13:21:24.943683200] Player moved from (3,4) to (3,5)
+[2025-06-22T13:21:25.483224100] Player moved from (3,5) to (4,5)
+[2025-06-22T13:21:26.007780800] Added item: Health Potion
+[2025-06-22T13:21:26.009795600] Player moved from (4,5) to (5,5)
+[2025-06-22T13:21:26.553102700] Player moved from (5,5) to (5,4)
+[2025-06-22T13:21:26.995714] Player moved from (5,4) to (6,4)
+[2025-06-22T13:21:28.185988500] Player moved from (6,4) to (5,4)
+[2025-06-22T13:21:28.520126400] Player moved from (5,4) to (5,5)
+[2025-06-22T13:21:28.843907700] Player moved from (5,5) to (4,5)
+[2025-06-22T13:21:29.183745700] Player moved from (4,5) to (3,5)
+[2025-06-22T13:21:29.567746] Player moved from (3,5) to (3,4)
+[2025-06-22T13:21:30.223238700] Player moved from (3,4) to (3,5)
+[2025-06-22T13:21:30.675287900] Added item: Health Potion
+[2025-06-22T13:21:30.677792600] Player moved from (3,5) to (2,5)
+[2025-06-22T13:21:32.408654400] Player moved from (2,5) to (3,5)
+[2025-06-22T13:21:52.475966] Game started with player type: Archer and name: Player
+[2025-06-22T13:21:53.324052500] Enemy tried to move out of bounds: (-1,3)
+[2025-06-22T13:21:53.326047700] Enemy moved to: (1,1)
+[2025-06-22T13:21:53.507588900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:54.226230100] Enemy moved to: (4,7)
+[2025-06-22T13:21:55.503291700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:55.506325400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:21:55.512934800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:21:56.367363200] Player moved from (5,3) to (4,3)
+[2025-06-22T13:21:56.501172200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:21:56.509718600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:56.937729300] Added item: Power Potion
+[2025-06-22T13:21:56.941230600] Player moved from (4,3) to (3,3)
+[2025-06-22T13:21:57.395953200] Player moved from (3,3) to (4,3)
+[2025-06-22T13:21:57.495841] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:57.511478600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:21:57.512469300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:57.778760100] Added item: Health Potion
+[2025-06-22T13:21:57.780770100] Player moved from (4,3) to (4,2)
+[2025-06-22T13:21:58.501280200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:58.508871700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:21:58.512429] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:59.511875800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:21:59.513874900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:00.494071700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:22:00.499641600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:00.508732800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:00.510783500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:00.512800300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:00.768821900] Added item: Power Potion
+[2025-06-22T13:22:00.768821900] Added item: Health Potion
+[2025-06-22T13:22:00.769856] Added item: Power Potion
+[2025-06-22T13:22:00.769856] Added item: Health Potion
+[2025-06-22T13:22:01.498770500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:22:01.510852500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:22:01.511851] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:22:01.512852400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:22:02.508825700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:22:02.510341900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:22:02.510341900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:22:05.589114100] Added item: Health Potion
+[2025-06-22T13:22:05.592131800] Player moved from (4,2) to (3,2)
+[2025-06-22T13:22:05.939668300] The enemy evaded the attack!
+[2025-06-22T13:22:05.940671900] Goblin attacked for: 15 damage.
+[2025-06-22T13:22:07.104284200] Player attacked the enemy for 26 damage.
+[2025-06-22T13:22:07.104284200] Player evaded the enemy's attack!
+[2025-06-22T13:22:07.548565] [TeleportingEnemyDecorator] Enemy teleported to (2,0)
+[2025-06-22T13:22:07.548565] Archer attacked with Critical hit! for 52 damage.
+[2025-06-22T13:22:07.548565] Enemy is dead! You won the fight!
+[2025-06-22T13:22:07.997593] Collected 185 treasure points!
+[2025-06-22T13:22:08.000618800] Player moved from (3,2) to (2,2)
+[2025-06-22T13:22:10.818844600] Added item: Power Potion
+[2025-06-22T13:22:10.818844600] Added item: Health Potion
+[2025-06-22T13:22:15.575068500] Added item: Health Potion
+[2025-06-22T13:22:15.577585400] Player moved from (4,2) to (3,2)
+[2025-06-22T13:22:17.357667800] Player attacked the enemy for 45 damage.
+[2025-06-22T13:22:17.357667800] Player evaded the enemy's attack!
+[2025-06-22T13:22:18.006890400] Archer attacked with Critical hit! for 90 damage.
+[2025-06-22T13:22:18.006890400] Enemy is dead! You won the fight!
+[2025-06-22T13:22:18.405524600] Collected 293 treasure points!
+[2025-06-22T13:22:18.409039] Player moved from (3,2) to (2,2)
+[2025-06-22T13:23:11.534485400] Game started with player type: Archer and name: Player
+[2025-06-22T13:23:12.555623700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:12.560655700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:12.968559500] Enemy tried to move out of bounds: (-1,2)
+[2025-06-22T13:23:13.554513400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:13.556516] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:13.557505200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:13.560531500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:13.562530500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:13.565527400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:13.571020100] The orc attacked for: 23 damage.
+[2025-06-22T13:23:13.872886200] Enemy moved to: (2,5)
+[2025-06-22T13:23:13.875882200] Dragon attacked for 15 damage.
+[2025-06-22T13:23:14.391243200] Enemy moved to: (3,6)
+[2025-06-22T13:23:14.511506200] [HealthRegenDecorator] Regenerated 5 HP → 67/100
+[2025-06-22T13:23:14.555093800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:14.559636100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:14.563647] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:15.553194500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:15.558684300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:15.563700500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:16.523091100] Added item: Health Potion
+[2025-06-22T13:23:16.527608800] Player moved from (2,4) to (3,4)
+[2025-06-22T13:23:16.558639400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:17.499741600] [HealthRegenDecorator] Regenerated 5 HP → 72/100
+[2025-06-22T13:23:17.542507900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:17.562758800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:17.594970100] Player moved from (3,4) to (3,5)
+[2025-06-22T13:23:18.140707300] Added item: Health Potion
+[2025-06-22T13:23:18.144698600] Player moved from (3,5) to (4,5)
+[2025-06-22T13:23:18.544866700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:18.557733200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:18.563825] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:18.563825] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:19.557756200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:19.557756200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:19.560784900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:20.550615700] [HealthRegenDecorator] Regenerated 5 HP → 77/100
+[2025-06-22T13:23:20.554626200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:20.572197700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:20.574198600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:20.576226100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:20.885198700] Added item: Health Potion
+[2025-06-22T13:23:20.885198700] Added item: Health Potion
+[2025-06-22T13:23:20.885198700] Added item: Health Potion
+[2025-06-22T13:23:20.885198700] Added item: Health Potion
+[2025-06-22T13:23:21.557594400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:21.558652] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:21.558652] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:23:21.559658900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:23:21.561724400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:21.562662300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:23:24.499140300] [HealthRegenDecorator] Regenerated 5 HP → 82/100
+[2025-06-22T13:23:25.180986900] Added item: Health Potion
+[2025-06-22T13:23:25.183990100] Player moved from (4,5) to (5,5)
+[2025-06-22T13:23:25.896210800] Player attacked the enemy for 12 damage.
+[2025-06-22T13:23:25.897733900] Boosted attack: +5 damage dealt!
+[2025-06-22T13:23:25.898757900] Goblin attacked for: 13 damage.
+[2025-06-22T13:23:26.469636800] Player attacked the enemy for 12 damage.
+[2025-06-22T13:23:26.469636800] Boosted attack: +5 damage dealt!
+[2025-06-22T13:23:26.469636800] Player evaded the enemy's attack!
+[2025-06-22T13:23:27.003896800] Player attacked the enemy for 12 damage.
+[2025-06-22T13:23:27.003896800] Boosted attack: +5 damage dealt!
+[2025-06-22T13:23:27.003896800] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:23:27.003896800] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:23:27.003896800] Enemy is dead! You won the fight!
+[2025-06-22T13:23:27.003896800] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:23:27.003896800] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:23:27.499090100] [HealthRegenDecorator] Regenerated 5 HP → 70/100
+[2025-06-22T13:23:27.595273] Added item: Power Potion
+[2025-06-22T13:23:27.597768300] Player moved from (5,5) to (5,4)
+[2025-06-22T13:23:29.703750] Added item: Health Potion
+[2025-06-22T13:23:29.703750] Added item: Health Potion
+[2025-06-22T13:23:30.500082800] [HealthRegenDecorator] Regenerated 5 HP → 75/100
+[2025-06-22T13:23:34.499036300] [HealthRegenDecorator] Regenerated 5 HP → 80/100
+[2025-06-22T13:24:06.616591800] Game started with player type: Archer and name: Player
+[2025-06-22T13:24:07.635737100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:07.651586800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:07.664646500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:07.667636800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:07.667636800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:08.156657300] Enemy moved to: (0,1)
+[2025-06-22T13:24:08.447751500] Enemy moved to: (0,3)
+[2025-06-22T13:24:08.636668200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:08.637672800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:08.647839700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:08.655389600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:09.631116800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:09.636668] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:09.657405800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:09.983260800] Enemy moved to: (6,6)
+[2025-06-22T13:24:09.984263200] Dragon attacked with a Critical hit! for 36 damage.
+[2025-06-22T13:24:09.985263500] The orc attacked for: 18 damage.
+[2025-06-22T13:24:10.574243200] Enemy moved to: (6,8)
+[2025-06-22T13:24:10.576248200] Goblin attacked for: 26 damage.
+[2025-06-22T13:24:10.639783300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:10.645831500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:10.652027100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:10.656026600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:11.087668300] Enemy moved to: (8,9)
+[2025-06-22T13:24:11.389364800] Enemy moved to: (8,4)
+[2025-06-22T13:24:11.645736300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:11.647768300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:11.647768300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:12.627884700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:12.651472400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:12.653470600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:13.636050800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:13.645797800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:13.651320] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:13.655320900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:14.644725900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:14.650924900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:14.652923400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:14.657433200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:15.366831100] Player attacked the enemy for 24 damage.
+[2025-06-22T13:24:15.366831100] Goblin attacked for: 26 damage.
+[2025-06-22T13:24:15.366831100] Game ended, player died!
+[2025-06-22T13:24:36.827566100] Game started with player type: Archer and name: Player
+[2025-06-22T13:24:37.850336300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:37.855370300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:38.037843700] Enemy moved to: (3,3)
+[2025-06-22T13:24:38.341755900] Dragon attacked for 18 damage.
+[2025-06-22T13:24:38.635199100] Enemy moved to: (3,8)
+[2025-06-22T13:24:38.636199700] Goblin attacked for: 15 damage.
+[2025-06-22T13:24:38.853459300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:38.854468400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:39.347814900] Enemy moved to: (8,0)
+[2025-06-22T13:24:39.490895] Enemy moved to: (7,0)
+[2025-06-22T13:24:39.805717300] [HealthRegenDecorator] Regenerated 5 HP → 72/100
+[2025-06-22T13:24:39.848257400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:39.852847200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:39.854851300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:40.841944400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:41.843817600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:41.851266700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:42.902201400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:42.904199400] [HealthRegenDecorator] Regenerated 5 HP → 77/100
+[2025-06-22T13:24:42.906216300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:42.906216300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:43.843700200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:43.852229600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:43.853744600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:43.853744600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:44.654874600] Added item: Health Potion
+[2025-06-22T13:24:44.660800400] Player moved from (3,7) to (2,7)
+[2025-06-22T13:24:44.845262900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:45.847761300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:24:45.852776100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:46.795337200] [HealthRegenDecorator] Regenerated 5 HP → 82/100
+[2025-06-22T13:24:46.848964600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:24:46.848964600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:46.852052600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:46.853006300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:24:48.793230500] Added item: Health Potion
+[2025-06-22T13:24:48.793230500] Added item: Health Potion
+[2025-06-22T13:24:50.808064400] [HealthRegenDecorator] Regenerated 5 HP → 87/100
+[2025-06-22T13:24:51.407642900] Player moved from (2,7) to (3,7)
+[2025-06-22T13:24:53.077603500] Player attacked the enemy for 22 damage.
+[2025-06-22T13:24:53.077603500] Boosted attack: +5 damage dealt!
+[2025-06-22T13:24:53.079110500] Dragon attacked for 18 damage.
+[2025-06-22T13:24:53.528705100] Player attacked the enemy for 22 damage.
+[2025-06-22T13:24:53.528705100] Boosted attack: +5 damage dealt!
+[2025-06-22T13:24:53.528705100] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:24:53.528705100] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:24:53.529714400] Enemy is dead! You won the fight!
+[2025-06-22T13:24:53.529714400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:24:53.529714400] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:24:53.994093200] [HealthRegenDecorator] Regenerated 5 HP → 70/100
+[2025-06-22T13:24:53.994093200] Added item: Health Potion
+[2025-06-22T13:24:53.996086400] Player moved from (3,7) to (4,7)
+[2025-06-22T13:24:55.635661700] Potion used!
+[2025-06-22T13:24:55.635661700] Removed item: Health Potion
+[2025-06-22T13:24:55.635661700] Health was 70 now is 93
+[2025-06-22T13:24:55.636661600] Player used a potion and healed 23 HP!
+[2025-06-22T13:24:57.331750800] Added item: Health Potion
+[2025-06-22T13:24:57.331750800] Added item: Health Potion
+[2025-06-22T13:24:57.331750800] Added item: Health Potion
+[2025-06-22T13:24:57.795090] [HealthRegenDecorator] Regenerated 5 HP → 98/100
+[2025-06-22T13:25:01.795236300] [HealthRegenDecorator] Regenerated 5 HP → 100/100
+[2025-06-22T13:27:29.714184600] Game started with player type: Archer and name: Player
+[2025-06-22T13:27:30.737559] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:30.745590500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:30.748617500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:30.757671700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:31.747799900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:31.747799900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:31.755947700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:32.753030400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:32.756033800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:32.756033800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:33.213641300] Enemy moved to: (7,4)
+[2025-06-22T13:27:33.216172600] The orc attacked for: 23 damage.
+[2025-06-22T13:27:33.736304600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:33.752746] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:33.755741400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:33.757739] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:34.733014300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:34.751634500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:34.757677700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:34.810360600] Added item: Power Potion
+[2025-06-22T13:27:34.818940500] Player moved from (7,3) to (7,2)
+[2025-06-22T13:27:35.728629300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:35.749986800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:35.749986800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:35.751985900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:35.758529500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:35.987442100] [HealthRegenDecorator] Regenerated 5 HP → 82/100
+[2025-06-22T13:27:35.987442100] Added item: Health Potion
+[2025-06-22T13:27:35.992987] Player moved from (7,2) to (8,2)
+[2025-06-22T13:27:36.733892200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:36.759646600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:36.759646600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:36.761638600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:36.761638600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:37.755051200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:38.748251300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:38.754880200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:38.762086] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:27:38.762086] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:38.831580500] Added item: Power Potion
+[2025-06-22T13:27:38.831580500] Added item: Health Potion
+[2025-06-22T13:27:38.832090600] Added item: Power Potion
+[2025-06-22T13:27:38.832090600] Added item: Health Potion
+[2025-06-22T13:27:39.693755100] [HealthRegenDecorator] Regenerated 5 HP → 87/100
+[2025-06-22T13:27:39.728952500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:27:39.748639900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:27:42.693691800] [HealthRegenDecorator] Regenerated 5 HP → 92/100
+[2025-06-22T13:27:45.783022600] [HealthRegenDecorator] Regenerated 5 HP → 97/100
+[2025-06-22T13:27:49.694732600] [HealthRegenDecorator] Regenerated 5 HP → 100/100
+[2025-06-22T13:27:55.277691600] Player moved from (8,2) to (7,2)
+[2025-06-22T13:27:57.762009400] Potion used!
+[2025-06-22T13:27:57.762009400] Removed item: Health Potion
+[2025-06-22T13:27:57.763004900] Health was 100 now is 100
+[2025-06-22T13:27:57.763004900] Player used a potion and healed 13 HP!
+[2025-06-22T13:27:58.752558300] Potion used!
+[2025-06-22T13:27:58.752558300] Removed item: Power Potion
+[2025-06-22T13:27:58.753552600] Player used a power potion and gained 1 attack power!
+[2025-06-22T13:28:01.159647900] Added item: Power Potion
+[2025-06-22T13:28:01.159647900] Added item: Health Potion
+[2025-06-22T13:28:01.160648700] Added item: Power Potion
+[2025-06-22T13:28:01.160648700] Added item: Health Potion
+[2025-06-22T13:28:01.160648700] Added item: Power Potion
+[2025-06-22T13:28:01.160648700] Added item: Health Potion
+[2025-06-22T13:28:07.576893700] Player moved from (7,3) to (8,3)
+[2025-06-22T13:28:09.086043200] Player attacked the enemy for 45 damage.
+[2025-06-22T13:28:09.086043200] Enemy is dead! You won the fight!
+[2025-06-22T13:28:09.605762800] Added item: Health Potion
+[2025-06-22T13:28:09.610287700] Player moved from (8,3) to (8,4)
+[2025-06-22T13:28:09.975521700] Added item: Health Potion
+[2025-06-22T13:28:09.979029600] Player moved from (8,4) to (8,5)
+[2025-06-22T13:28:10.877540600] Player moved from (8,5) to (8,4)
+[2025-06-22T13:28:11.204879300] Player moved from (8,4) to (8,3)
+[2025-06-22T13:29:48.611925700] Game started with player type: Archer and name: Player
+[2025-06-22T13:29:49.139790] Enemy moved to: (1,1)
+[2025-06-22T13:29:49.631990700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:49.633990700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:49.634990300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:49.637499400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:50.339827200] The orc attacked for: 15 damage.
+[2025-06-22T13:29:50.344898800] Enemy moved to: (6,7)
+[2025-06-22T13:29:50.344898800] The orc attacked for: 21 damage.
+[2025-06-22T13:29:50.628973700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:50.634996100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:51.466130400] Enemy moved to: (8,9)
+[2025-06-22T13:29:51.541878100] Enemy tried to move out of bounds: (10,4)
+[2025-06-22T13:29:51.595805800] [HealthRegenDecorator] Regenerated 5 HP → 69/100
+[2025-06-22T13:29:51.635234700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:51.636234800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:52.635105200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:52.637611400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:52.637611400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:53.085412800] Player moved from (6,6) to (7,6)
+[2025-06-22T13:29:53.631286700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:53.633829900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:53.635820500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:53.636818700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:53.871825300] Player moved from (7,6) to (7,7)
+[2025-06-22T13:29:54.445100400] Player moved from (7,7) to (7,6)
+[2025-06-22T13:29:54.591342700] [HealthRegenDecorator] Regenerated 5 HP → 74/100
+[2025-06-22T13:29:54.632871800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:54.634871800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:54.635871500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:54.938629100] Player moved from (7,6) to (8,6)
+[2025-06-22T13:29:55.337607] Added item: Health Potion
+[2025-06-22T13:29:55.341129100] Player moved from (8,6) to (9,6)
+[2025-06-22T13:29:56.635476400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:56.637699900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:57.637397800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:29:57.662885600] Added item: Health Potion
+[2025-06-22T13:29:57.662885600] Added item: Health Potion
+[2025-06-22T13:29:58.590928400] [HealthRegenDecorator] Regenerated 5 HP → 79/100
+[2025-06-22T13:29:58.622891600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:58.628940200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:58.630952300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:29:58.631968700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:29:59.891824100] Player moved from (9,6) to (8,6)
+[2025-06-22T13:30:00.363707800] Player moved from (8,6) to (7,6)
+[2025-06-22T13:30:01.591609800] [HealthRegenDecorator] Regenerated 5 HP → 84/100
+[2025-06-22T13:30:03.776066800] Player moved from (7,6) to (8,6)
+[2025-06-22T13:30:04.289119800] Archer attacked with Critical hit! for 32 damage.
+[2025-06-22T13:30:04.289119800] Boosted attack: +5 damage dealt!
+[2025-06-22T13:30:04.289119800] Dragon attacked for 28 damage.
+[2025-06-22T13:30:04.289119800] [VampireEnemy] Drained 1 HP from player → Enemy health: 12/50
+[2025-06-22T13:30:04.591161500] [HealthRegenDecorator] Regenerated 5 HP → 61/100
+[2025-06-22T13:30:04.667744300] Player attacked the enemy for 16 damage.
+[2025-06-22T13:30:04.667744300] Boosted attack: +5 damage dealt!
+[2025-06-22T13:30:04.667744300] Enemy is dead! You won the fight!
+[2025-06-22T13:30:05.126116400] Added item: Health Potion
+[2025-06-22T13:30:05.128688300] Player moved from (8,6) to (8,7)
+[2025-06-22T13:30:07.551103800] Added item: Health Potion
+[2025-06-22T13:30:08.593417300] [HealthRegenDecorator] Regenerated 5 HP → 66/100
+[2025-06-22T13:30:10.371964800] Player moved from (6,6) to (7,6)
+[2025-06-22T13:30:11.341960500] Player moved from (7,6) to (8,6)
+[2025-06-22T13:30:11.605548800] [HealthRegenDecorator] Regenerated 5 HP → 71/100
+[2025-06-22T13:38:44.773855200] Game started with player type: Archer and name: Player
+[2025-06-22T13:38:46.745532300] Enemy moved to: (5,0)
+[2025-06-22T13:38:46.786284700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:38:47.795294100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:48.791949700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:48.793944800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:49.759318600] Added item: Health Potion
+[2025-06-22T13:38:49.790026100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:49.792037700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:38:49.795037100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:49.853039800] Player moved from (1,1) to (2,1)
+[2025-06-22T13:38:50.306968600] Player moved from (2,1) to (1,1)
+[2025-06-22T13:38:50.761075] Added item: Health Potion
+[2025-06-22T13:38:50.765075100] Player moved from (1,1) to (1,0)
+[2025-06-22T13:38:50.790791200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:51.344731400] The enemy evaded the attack!
+[2025-06-22T13:38:51.344731400] Player evaded the enemy's attack!
+[2025-06-22T13:38:51.777431100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:51.792654100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:51.792654100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:51.792654100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:51.982716100] Player attacked the enemy for 14 damage.
+[2025-06-22T13:38:51.982716100] Boosted attack: +5 damage dealt!
+[2025-06-22T13:38:51.982716100] Player evaded the enemy's attack!
+[2025-06-22T13:38:52.598729300] Player attacked the enemy for 14 damage.
+[2025-06-22T13:38:52.598729300] Boosted attack: +5 damage dealt!
+[2025-06-22T13:38:52.598729300] Dragon attacked for 19 damage.
+[2025-06-22T13:38:52.787792300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:38:52.794097200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:38:52.794097200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:53.063999200] Archer attacked with Critical hit! for 28 damage.
+[2025-06-22T13:38:53.063999200] Boosted attack: +5 damage dealt!
+[2025-06-22T13:38:53.063999200] Enemy is dead! You won the fight!
+[2025-06-22T13:38:53.753838900] [HealthRegenDecorator] Regenerated 5 HP → 86/100
+[2025-06-22T13:38:53.784020700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:53.784020700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:53.785038500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:53.792464100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:53.792464100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:38:53.795462500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:53.994003500] Collected 197 treasure points!
+[2025-06-22T13:38:53.996005100] Player moved from (1,0) to (2,0)
+[2025-06-22T13:38:54.790915900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:38:54.791821900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:38:56.760013200] [HealthRegenDecorator] Regenerated 5 HP → 91/100
+[2025-06-22T13:38:57.197792500] Added item: Health Potion
+[2025-06-22T13:38:57.198795700] Added item: Health Potion
+[2025-06-22T13:38:57.198795700] Added item: Health Potion
+[2025-06-22T13:38:57.198795700] Added item: Health Potion
+[2025-06-22T13:39:00.748800700] [HealthRegenDecorator] Regenerated 5 HP → 96/100
+[2025-06-22T13:39:01.702138500] Potion used!
+[2025-06-22T13:39:01.702138500] Removed item: Health Potion
+[2025-06-22T13:39:01.702138500] Health was 96 now is 100
+[2025-06-22T13:39:01.703131400] Player used a potion and healed 22 HP!
+[2025-06-22T13:39:02.526229700] Player moved from (2,0) to (2,1)
+[2025-06-22T13:39:03.254956900] [TeleportingEnemyDecorator] Enemy teleported to (8,6)
+[2025-06-22T13:39:03.254956900] Archer attacked with Critical hit! for 28 damage.
+[2025-06-22T13:39:03.254956900] Boosted attack: +5 damage dealt!
+[2025-06-22T13:39:03.254956900] Dragon attacked physically for: 36 damage.
+[2025-06-22T13:39:03.624677100] The enemy evaded the attack!
+[2025-06-22T13:39:03.624677100] Player evaded the enemy's attack!
+[2025-06-22T13:39:03.748900400] [HealthRegenDecorator] Regenerated 5 HP → 69/100
+[2025-06-22T13:39:04.093750900] Player attacked the enemy for 14 damage.
+[2025-06-22T13:39:04.093750900] Boosted attack: +5 damage dealt!
+[2025-06-22T13:39:04.093750900] Enemy is dead! You won the fight!
+[2025-06-22T13:39:04.661390300] Collected 264 treasure points!
+[2025-06-22T13:39:04.663430700] Player moved from (2,1) to (3,1)
+[2025-06-22T13:39:06.245197200] Potion used!
+[2025-06-22T13:39:06.246110500] Removed item: Health Potion
+[2025-06-22T13:39:06.246110500] Health was 69 now is 84
+[2025-06-22T13:39:06.246110500] Player used a potion and healed 15 HP!
+[2025-06-22T13:39:06.748127300] [HealthRegenDecorator] Regenerated 5 HP → 89/100
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.108716100] Added item: Health Potion
+[2025-06-22T13:39:09.762172800] [HealthRegenDecorator] Regenerated 5 HP → 94/100
+[2025-06-22T13:39:12.868922100] Player moved from (1,1) to (1,2)
+[2025-06-22T13:39:13.747735500] [HealthRegenDecorator] Regenerated 5 HP → 99/100
+[2025-06-22T13:39:15.087786] Player moved from (1,2) to (2,2)
+[2025-06-22T13:39:15.498680900] Player moved from (2,2) to (2,1)
+[2025-06-22T13:39:16.224378700] Player moved from (2,1) to (2,2)
+[2025-06-22T13:39:16.751696200] [HealthRegenDecorator] Regenerated 5 HP → 100/100
+[2025-06-22T13:39:16.772986200] Player moved from (2,2) to (1,2)
+[2025-06-22T13:39:17.439969] Player moved from (1,2) to (2,2)
+[2025-06-22T13:39:56.505056100] Game started with player type: Warrior and name: Player
+[2025-06-22T13:39:57.510343400] Enemy moved to: (0,2)
+[2025-06-22T13:39:57.514889100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:57.515889700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:57.529573900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:39:57.530573800] Enemy attacked Player for: 13 damage, you received only 7
+[2025-06-22T13:39:57.531599700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:57.531599700] Dragon attacked for 13 damage.
+[2025-06-22T13:39:58.526093300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:58.528615600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:39:58.732595400] Enemy moved to: (2,7)
+[2025-06-22T13:39:59.484249400] [HealthRegenDecorator] Regenerated 5 HP → 98/100
+[2025-06-22T13:39:59.509020900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:59.513040600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:39:59.527652600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:39:59.572983400] Added item: Health Potion
+[2025-06-22T13:39:59.577501400] Player moved from (0,3) to (1,3)
+[2025-06-22T13:39:59.965262900] Added item: Health Potion
+[2025-06-22T13:39:59.968849400] Player moved from (1,3) to (1,2)
+[2025-06-22T13:40:00.523662500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:00.524664400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:00.526661500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:00.527668700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:00.530694300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:00.818760100] Enemy moved to: (9,9)
+[2025-06-22T13:40:01.523018] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:01.524021] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:01.526104600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:40:02.479000900] [HealthRegenDecorator] Regenerated 5 HP → 100/100
+[2025-06-22T13:40:02.522661500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:02.525659] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:02.525659] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:03.515107600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:03.527433300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:03.528942800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:40:04.250030600] Added item: Health Potion
+[2025-06-22T13:40:04.250030600] Added item: Health Potion
+[2025-06-22T13:40:04.251033500] Added item: Health Potion
+[2025-06-22T13:40:04.251033500] Added item: Health Potion
+[2025-06-22T13:40:04.523828600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:04.527826600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:40:04.529903600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:04.530908] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:05.524776800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:05.527470300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:05.528978500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:06.528940900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:06.530955100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:40:06.530955100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:40:06.937116900] Player attacked the enemy for: 12 damage.
+[2025-06-22T13:40:06.938112700] Boosted attack: +5 damage dealt!
+[2025-06-22T13:40:06.938112700] Enemy attacked Player for: 13 damage, you received only 7
+[2025-06-22T13:40:06.938112700] Dragon attacked for 13 damage.
+[2025-06-22T13:40:07.332255900] Player attacked the enemy for: 12 damage.
+[2025-06-22T13:40:07.333261100] [TeleportingEnemyDecorator] Enemy teleported to (5,3)
+[2025-06-22T13:40:07.333261100] Boosted attack: +5 damage dealt!
+[2025-06-22T13:40:07.333261100] Enemy attacked Player for: 19 damage, you received only 11
+[2025-06-22T13:40:07.333261100] Dragon attacked physically for: 19 damage.
+[2025-06-22T13:40:07.686743900] Player attacked the enemy for: 12 damage.
+[2025-06-22T13:40:07.686743900] Boosted attack: +5 damage dealt!
+[2025-06-22T13:40:07.686743900] Enemy is dead! You won the fight!
+[2025-06-22T13:40:08.451817200] Added item: Health Potion
+[2025-06-22T13:40:08.453815] Player moved from (1,2) to (0,2)
+[2025-06-22T13:40:09.479142200] [HealthRegenDecorator] Regenerated 5 HP → 87/100
+[2025-06-22T13:40:11.067293400] Potion used!
+[2025-06-22T13:40:11.067293400] Removed item: Health Potion
+[2025-06-22T13:40:11.067293400] Health was 87 now is 100
+[2025-06-22T13:40:11.067293400] Player used a potion and healed 27 HP!
+[2025-06-22T13:40:11.849018200] Potion used!
+[2025-06-22T13:40:11.850030500] Removed item: Health Potion
+[2025-06-22T13:40:11.850030500] Health was 100 now is 100
+[2025-06-22T13:40:11.850030500] Player used a potion and healed 49 HP!
+[2025-06-22T13:40:12.393675600] Potion used!
+[2025-06-22T13:40:12.393675600] Removed item: Health Potion
+[2025-06-22T13:40:12.393675600] Health was 100 now is 100
+[2025-06-22T13:40:12.393675600] Player used a potion and healed 15 HP!
+[2025-06-22T13:40:14.248305300] Added item: Health Potion
+[2025-06-22T13:40:14.248305300] Added item: Health Potion
+[2025-06-22T13:40:14.248812700] Added item: Health Potion
+[2025-06-22T13:40:14.248812700] Added item: Health Potion
+[2025-06-22T13:40:14.248812700] Added item: Health Potion
+[2025-06-22T13:40:14.248812700] Added item: Health Potion
+[2025-06-22T13:40:18.735878600] Player moved from (0,3) to (0,4)
+[2025-06-22T13:40:21.457792] Added item: Power Potion
+[2025-06-22T13:40:21.459808100] Player moved from (0,4) to (1,4)
+[2025-06-22T13:40:21.865017700] Player moved from (1,4) to (1,3)
+[2025-06-22T13:40:57.563591100] Game started with player type: Warrior and name: Player
+[2025-06-22T13:40:58.593820300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:58.594823400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:58.606322100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:58.611861200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:59.230484200] Enemy moved to: (3,0)
+[2025-06-22T13:40:59.593740100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:59.594743900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:40:59.607871400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:40:59.611930] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:00.440896] Enemy moved to: (6,3)
+[2025-06-22T13:41:00.441909400] Enemy moved to: (6,9)
+[2025-06-22T13:41:00.468770300] Enemy attacked Player for: 17 damage, you received only 9
+[2025-06-22T13:41:00.473066100] Dragon attacked for 17 damage.
+[2025-06-22T13:41:00.610543800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:01.412454800] Enemy moved to: (7,8)
+[2025-06-22T13:41:01.412454800] Enemy attacked Player for: 19 damage, you received only 10
+[2025-06-22T13:41:01.412454800] Dragon attacked for 19 damage.
+[2025-06-22T13:41:01.606330900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:01.607848800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:01.944370300] Enemy tried to move out of bounds: (10,7)
+[2025-06-22T13:41:02.017802] Enemy moved to: (8,9)
+[2025-06-22T13:41:02.018821600] Enemy attacked Player for: 19 damage, you received only 10
+[2025-06-22T13:41:02.018821600] Dragon attacked for 19 damage.
+[2025-06-22T13:41:02.577397200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:02.601596] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:02.601596] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:02.608645400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:02.609666200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:02.610601100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:02.611621400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:03.587500500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:03.601832500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:03.608841500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:03.608841500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:03.610311200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:04.063565] Player attacked with Critical hit! for 48 damage.
+[2025-06-22T13:41:04.063565] Enemy attacked Player for: 17 damage, you received only 9
+[2025-06-22T13:41:04.063565] Dragon attacked for 17 damage.
+[2025-06-22T13:41:04.071139700] [VampireEnemy] Drained 1 HP from player → Enemy health: 3/50
+[2025-06-22T13:41:04.547717700] Player attacked the enemy for: 24 damage.
+[2025-06-22T13:41:04.547717700] Enemy is dead! You won the fight!
+[2025-06-22T13:41:04.607672800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:04.607672800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:04.610732700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:05.133449800] Added item: Health Potion
+[2025-06-22T13:41:05.137431900] Player moved from (7,9) to (6,9)
+[2025-06-22T13:41:05.604310200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:05.607872] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:05.610192300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:05.800897400] Added item: Health Potion
+[2025-06-22T13:41:05.802898100] Player moved from (6,9) to (6,8)
+[2025-06-22T13:41:07.574979500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:41:07.602378300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:41:07.606508800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:41:07.974712600] Added item: Health Potion
+[2025-06-22T13:41:07.974712600] Added item: Health Potion
+[2025-06-22T13:41:07.975712] Added item: Health Potion
+[2025-06-22T13:41:07.975712] Added item: Health Potion
+[2025-06-22T13:41:22.941468200] Player moved from (6,8) to (5,8)
+[2025-06-22T13:41:30.668685500] Added item: Health Potion
+[2025-06-22T13:41:30.668685500] Added item: Health Potion
+[2025-06-22T13:41:30.668685500] Added item: Health Potion
+[2025-06-22T13:41:30.668685500] Added item: Health Potion
+[2025-06-22T13:41:30.668685500] Added item: Health Potion
+[2025-06-22T13:41:30.670174800] Added item: Health Potion
+[2025-06-22T13:41:34.305072400] Player moved from (6,8) to (5,8)
+[2025-06-22T13:41:35.783773700] Player moved from (5,8) to (5,7)
+[2025-06-22T13:41:36.585850700] Player moved from (5,7) to (5,8)
+[2025-06-22T13:41:36.905824100] Player moved from (5,8) to (5,9)
+[2025-06-22T13:41:37.368802300] Player moved from (5,9) to (6,9)
+[2025-06-22T13:41:37.705594800] Player moved from (6,9) to (7,9)
+[2025-06-22T13:41:39.214925300] Player moved from (7,9) to (6,9)
+[2025-06-22T13:41:39.590979] Player moved from (6,9) to (5,9)
+[2025-06-22T13:41:40.061117900] Player moved from (5,9) to (5,8)
+[2025-06-22T13:41:40.461454600] Player moved from (5,8) to (4,8)
+[2025-06-22T13:41:41.170025200] Player moved from (4,8) to (5,8)
+[2025-06-22T13:41:41.620991400] Player moved from (5,8) to (5,7)
+[2025-06-22T13:41:42.308856200] Added item: Health Potion
+[2025-06-22T13:41:42.312415600] Player moved from (5,7) to (4,7)
+[2025-06-22T13:41:42.828819] Player moved from (4,7) to (5,7)
+[2025-06-22T13:41:43.754034400] Player moved from (5,7) to (5,8)
+[2025-06-22T13:41:49.746681900] Potion used!
+[2025-06-22T13:41:49.747675800] Removed item: Health Potion
+[2025-06-22T13:41:49.747675800] Health was 62 now is 82
+[2025-06-22T13:41:49.747675800] Player used a potion and healed 20 HP!
+[2025-06-22T13:41:50.376139800] Player moved from (5,8) to (4,8)
+[2025-06-22T13:41:50.807624500] Player moved from (4,8) to (4,9)
+[2025-06-22T13:41:51.230095800] Player moved from (4,9) to (5,9)
+[2025-06-22T13:41:51.591714700] Player moved from (5,9) to (5,8)
+[2025-06-22T13:51:43.774736700] Game started with player type: Warrior and name: Player
+[2025-06-22T13:51:44.796034400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:44.798600500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:44.798600500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:44.806656] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:45.773042800] Enemy moved to: (3,4)
+[2025-06-22T13:51:45.796246500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:45.797763700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:45.797763700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:45.804803800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:46.091784500] Enemy attacked Player for: 25 damage, you received only 13
+[2025-06-22T13:51:46.092783500] Dragon attacked for 25 damage.
+[2025-06-22T13:51:46.669650] Enemy moved to: (3,6)
+[2025-06-22T13:51:46.793870] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:46.798881300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:46.802425600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:47.271036500] Enemy moved to: (5,1)
+[2025-06-22T13:51:47.271036500] Enemy attacked Player for: 14 damage, you received only 7
+[2025-06-22T13:51:47.271969700] The orc attacked for: 14 damage.
+[2025-06-22T13:51:47.577468800] Enemy moved to: (6,6)
+[2025-06-22T13:51:47.792766700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:47.794788700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:47.806775500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:47.807768200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:48.479895] Enemy moved to: (8,5)
+[2025-06-22T13:51:48.790963800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:48.792924100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:48.807842100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:48.807842100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:49.795973300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:49.795973300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:49.802065500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:49.803095900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:49.804615300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:50.593774400] Added item: Health Potion
+[2025-06-22T13:51:50.596750800] Player moved from (5,0) to (6,0)
+[2025-06-22T13:51:50.794243200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:50.796474500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T13:51:50.796474500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:50.803812500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:51.802853900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:51.805850600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:51.811367700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:52.800235900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:52.804228800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:52.806227800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:53.153388300] Added item: Health Potion
+[2025-06-22T13:51:53.153388300] Added item: Health Potion
+[2025-06-22T13:51:53.791424300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T13:51:53.804799500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T13:51:55.713623400] Player moved from (6,0) to (5,0)
+[2025-06-22T13:51:56.293012900] Player attacked the enemy for: 16 damage.
+[2025-06-22T13:51:56.293949100] Enemy attacked Player for: 25 damage, you received only 13
+[2025-06-22T13:51:56.293949100] Dragon attacked for 25 damage.
+[2025-06-22T13:51:56.710711700] Player attacked the enemy for: 16 damage.
+[2025-06-22T13:51:56.710711700] Enemy attacked Player for: 25 damage, you received only 13
+[2025-06-22T13:51:56.710711700] Dragon attacked for 25 damage.
+[2025-06-22T13:51:57.085816400] Player attacked with Critical hit! for 32 damage.
+[2025-06-22T13:51:57.086778200] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:51:57.086778200] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:51:57.086778200] Enemy is dead! You won the fight!
+[2025-06-22T13:51:57.086778200] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:51:57.086778200] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T13:51:57.513861100] Collected 266 treasure points!
+[2025-06-22T13:51:57.516860100] Player moved from (5,0) to (4,0)
+[2025-06-22T13:51:58.151883500] Player moved from (4,0) to (5,0)
+[2025-06-22T13:52:00.030213] Added item: Health Potion
+[2025-06-22T13:52:00.031215800] Added item: Health Potion
+[2025-06-22T13:52:00.031215800] Added item: Health Potion
+[2025-06-22T13:52:02.371121500] Player moved from (6,0) to (5,0)
+[2025-06-22T14:01:55.263339100] Game started with player type: Archer and name: Player
+[2025-06-22T14:01:56.288839200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:01:56.290852900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:56.297370400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:56.298884700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:01:56.298884700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:01:56.301909900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:01:57.287777900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:01:57.293817] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:01:57.301354200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:57.302354600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:01:57.704577700] Enemy tried to move out of bounds: (3,10)
+[2025-06-22T14:01:58.004678700] Enemy moved to: (5,3)
+[2025-06-22T14:01:58.300562800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:58.306573500] Enemy moved to: (7,1)
+[2025-06-22T14:01:58.306573500] The orc attacked for: 19 damage.
+[2025-06-22T14:01:59.275467900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:59.286092400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:59.286092400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:01:59.287609400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:01:59.292645400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:01:59.508951500] Enemy moved to: (9,9)
+[2025-06-22T14:02:00.216005900] Added item: Power Potion
+[2025-06-22T14:02:00.221067600] Player moved from (7,2) to (7,3)
+[2025-06-22T14:02:00.267966300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:00.289689700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:00.691888900] Added item: Power Potion
+[2025-06-22T14:02:00.700926] Player moved from (7,3) to (7,4)
+[2025-06-22T14:02:01.243215900] [HealthRegenDecorator] Regenerated 5 HP → 86/100
+[2025-06-22T14:02:01.292710300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:02.273015600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:03.287882400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:02:03.292069400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:02:03.292069400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:02:03.293068700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:02:03.296070100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:02:03.297582900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:04.295097200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:02:04.415956800] Added item: Power Potion
+[2025-06-22T14:02:04.415956800] Added item: Power Potion
+[2025-06-22T14:02:04.415956800] Added item: Power Potion
+[2025-06-22T14:02:04.415956800] Added item: Power Potion
+[2025-06-22T14:02:04.416960900] Added item: Power Potion
+[2025-06-22T14:02:04.416960900] Added item: Power Potion
+[2025-06-22T14:02:05.238155300] [HealthRegenDecorator] Regenerated 5 HP → 91/100
+[2025-06-22T14:02:05.291243700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:02:05.295238500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:02:05.299840100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:02:05.299840100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:02:07.112202200] Player moved from (7,4) to (7,3)
+[2025-06-22T14:02:08.239038100] [HealthRegenDecorator] Regenerated 5 HP → 96/100
+[2025-06-22T14:02:08.381574] Archer attacked with Critical hit! for 28 damage.
+[2025-06-22T14:02:08.381574] Boosted attack: +5 damage dealt!
+[2025-06-22T14:02:08.381574] Dragon attacked for 21 damage.
+[2025-06-22T14:02:08.381574] [VampireEnemy] Drained 1 HP from player → Enemy health: 3/50
+[2025-06-22T14:02:08.844378] The enemy evaded the attack!
+[2025-06-22T14:02:08.845420600] Dragon attacked for 21 damage.
+[2025-06-22T14:02:08.845420600] [VampireEnemy] Drained 1 HP from player → Enemy health: 4/50
+[2025-06-22T14:02:09.228679400] Player attacked the enemy for 14 damage.
+[2025-06-22T14:02:09.228679400] Boosted attack: +5 damage dealt!
+[2025-06-22T14:02:09.228679400] Enemy is dead! You won the fight!
+[2025-06-22T14:02:09.937813300] Added item: Health Potion
+[2025-06-22T14:02:09.940838100] Player moved from (7,3) to (6,3)
+[2025-06-22T14:02:10.390468300] Player moved from (6,3) to (7,3)
+[2025-06-22T14:02:10.791901600] Player moved from (7,3) to (7,4)
+[2025-06-22T14:02:11.417512800] [HealthRegenDecorator] Regenerated 5 HP → 59/100
+[2025-06-22T14:02:11.417512800] Player moved from (7,4) to (6,4)
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:13.340854100] Added item: Power Potion
+[2025-06-22T14:02:15.237802200] [HealthRegenDecorator] Regenerated 5 HP → 64/100
+[2025-06-22T14:02:17.204844500] Orc received 88 damage from physical attack.
+[2025-06-22T14:02:17.204844500] Archer attacked with Critical hit! for 88 damage.
+[2025-06-22T14:02:17.204844500] Enemy is dead! You won the fight!
+[2025-06-22T14:02:17.854190100] Collected 145 treasure points!
+[2025-06-22T14:02:17.855707800] Player moved from (7,2) to (7,1)
+[2025-06-22T14:02:18.237911800] [HealthRegenDecorator] Regenerated 5 HP → 69/100
+[2025-06-22T14:02:20.272510200] Player moved from (7,1) to (7,0)
+[2025-06-22T14:02:20.819009800] Player moved from (7,0) to (6,0)
+[2025-06-22T14:02:21.240927900] [HealthRegenDecorator] Regenerated 5 HP → 74/100
+[2025-06-22T14:02:21.240927900] Added item: Power Potion
+[2025-06-22T14:02:21.243924400] Player moved from (6,0) to (6,1)
+[2025-06-22T14:02:21.553292700] Added item: Health Potion
+[2025-06-22T14:02:21.555817100] Player moved from (6,1) to (6,2)
+[2025-06-22T14:02:22.005100500] Player attacked the enemy for 44 damage.
+[2025-06-22T14:02:22.005100500] Enemy is dead! You won the fight!
+[2025-06-22T14:02:22.561106100] Added item: Power Potion
+[2025-06-22T14:02:22.563099800] Player moved from (6,2) to (6,3)
+[2025-06-22T14:02:22.891087700] Player moved from (6,3) to (6,4)
+[2025-06-22T14:02:23.863891200] Player moved from (6,4) to (6,3)
+[2025-06-22T14:02:24.248935800] [HealthRegenDecorator] Regenerated 5 HP → 79/100
+[2025-06-22T14:02:28.246035] [HealthRegenDecorator] Regenerated 5 HP → 84/100
+[2025-06-22T14:02:32.238791500] [HealthRegenDecorator] Regenerated 5 HP → 89/100
+[2025-06-22T14:02:35.243008600] [HealthRegenDecorator] Regenerated 5 HP → 94/100
+[2025-06-22T14:02:39.238660300] [HealthRegenDecorator] Regenerated 5 HP → 99/100
+[2025-06-22T14:02:43.241154500] [HealthRegenDecorator] Regenerated 5 HP → 100/100
+[2025-06-22T14:19:35.218654100] Game started with player type: Archer and name: Player
+[2025-06-22T14:19:36.250717200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:36.252714800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:36.253716200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:36.256713100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:37.245694] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:37.249856] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:37.256503900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:37.526556100] Enemy moved to: (2,3)
+[2025-06-22T14:19:37.828658] Enemy moved to: (4,9)
+[2025-06-22T14:19:38.130264500] Enemy moved to: (5,8)
+[2025-06-22T14:19:38.130264500] Enemy moved to: (7,0)
+[2025-06-22T14:19:38.131282] Goblin attacked for: 19 damage.
+[2025-06-22T14:19:38.254959900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:38.259041600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:38.431574300] Enemy moved to: (7,3)
+[2025-06-22T14:19:38.778920900] Dragon attacked for 15 damage.
+[2025-06-22T14:19:39.252314100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:39.252314100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:39.258849700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:39.335169300] Dragon attacked for 12 damage.
+[2025-06-22T14:19:40.253048500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:40.253048500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:40.253048500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:40.255045800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:40.261428700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:40.430047500] Player attacked the enemy for 26 damage.
+[2025-06-22T14:19:40.430047500] Player evaded the enemy's attack!
+[2025-06-22T14:19:40.887026600] Player attacked the enemy for 26 damage.
+[2025-06-22T14:19:40.888028600] Enemy is dead! You won the fight!
+[2025-06-22T14:19:41.231338300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:41.245031900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:41.251069800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:41.256067700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:41.259085] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:41.260093900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:41.261382300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:41.517470500] Collected 293 treasure points!
+[2025-06-22T14:19:41.520984300] Player moved from (7,1) to (7,0)
+[2025-06-22T14:19:42.256735500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:42.696838300] Added item: Power Potion
+[2025-06-22T14:19:42.699394500] Player moved from (7,0) to (8,0)
+[2025-06-22T14:19:42.985835400] Added item: Health Potion
+[2025-06-22T14:19:42.987852900] Player moved from (8,0) to (9,0)
+[2025-06-22T14:19:43.246977900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:43.251497] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:43.255529] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:43.257492900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:44.228665900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:44.252251900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:44.256248700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:44.258762900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:45.248636] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:19:45.254149900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:19:45.256148500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:45.257659400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:45.257659400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:19:48.541396500] Added item: Power Potion
+[2025-06-22T14:19:48.541396500] Added item: Health Potion
+[2025-06-22T14:19:48.541396500] Added item: Power Potion
+[2025-06-22T14:19:48.541396500] Added item: Health Potion
+[2025-06-22T14:19:50.736343300] Player moved from (9,0) to (8,0)
+[2025-06-22T14:19:54.026818200] Added item: Power Potion
+[2025-06-22T14:19:54.026818200] Added item: Health Potion
+[2025-06-22T14:19:56.265167600] Player moved from (9,0) to (8,0)
+[2025-06-22T14:19:56.748777500] Player moved from (8,0) to (7,0)
+[2025-06-22T14:19:57.195025800] Player moved from (7,0) to (6,0)
+[2025-06-22T14:19:57.628646200] Player moved from (6,0) to (5,0)
+[2025-06-22T14:19:57.948715] Player moved from (5,0) to (4,0)
+[2025-06-22T14:19:58.513054200] Player moved from (4,0) to (5,0)
+[2025-06-22T14:19:58.753669900] Player moved from (5,0) to (6,0)
+[2025-06-22T14:19:58.924056800] Player moved from (6,0) to (7,0)
+[2025-06-22T14:19:59.103717700] Player moved from (7,0) to (8,0)
+[2025-06-22T14:19:59.915780500] Player attacked the enemy for 49 damage.
+[2025-06-22T14:19:59.915780500] Enemy is dead! You won the fight!
+[2025-06-22T14:20:00.215167] Added item: Health Potion
+[2025-06-22T14:20:00.217707] Player moved from (8,0) to (8,1)
+[2025-06-22T14:20:00.590228] Player moved from (8,1) to (8,2)
+[2025-06-22T14:20:00.990925] Player moved from (8,2) to (9,2)
+[2025-06-22T14:20:01.693384] Player moved from (9,2) to (9,1)
+[2025-06-22T14:20:02.437898600] Player moved from (9,1) to (8,1)
+[2025-06-22T14:20:02.924154300] Player moved from (8,1) to (8,2)
+[2025-06-22T14:20:07.803631100] Player moved from (8,2) to (9,2)
+[2025-06-22T14:20:08.209038100] Player moved from (9,2) to (9,1)
+[2025-06-22T14:20:53.593443100] Game started with player type: Archer and name: Player
+[2025-06-22T14:20:54.644737300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:54.645713300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:20:54.646724300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:20:54.649772900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:20:54.650774600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:20:54.804030400] Enemy moved to: (0,1)
+[2025-06-22T14:20:55.106] Enemy moved to: (1,8)
+[2025-06-22T14:20:55.108529600] Goblin attacked for: 24 damage.
+[2025-06-22T14:20:55.616681500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:55.617679800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:20:55.648822700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:55.650834900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:20:56.307041] Enemy moved to: (6,7)
+[2025-06-22T14:20:56.644391400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:20:56.648883800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:57.642346600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:58.650907] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:59.642580400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:20:59.648984600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:20:59.650648300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:00.617655500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:21:00.632706200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:21:01.632371100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:01.645890600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:21:01.651428600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:01.865717100] Player moved from (0,8) to (0,7)
+[2025-06-22T14:21:02.632369300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:03.616907700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:03.634451300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:21:03.648592700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:21:03.648592700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:21:06.849045900] Player moved from (0,8) to (0,7)
+[2025-06-22T14:21:07.536166500] Player moved from (0,7) to (0,6)
+[2025-06-22T14:21:08.042135600] Added item: Health Potion
+[2025-06-22T14:21:08.045121300] Player moved from (0,6) to (1,6)
+[2025-06-22T14:21:08.434296600] Added item: Health Potion
+[2025-06-22T14:21:08.437819200] Player moved from (1,6) to (1,7)
+[2025-06-22T14:22:31.412659300] Game started with player type: Archer and name: Player
+[2025-06-22T14:22:32.435219300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:32.438750100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:32.438750100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:32.439768] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:32.840028800] Enemy moved to: (2,5)
+[2025-06-22T14:22:32.842033300] Goblin attacked for: 24 damage.
+[2025-06-22T14:22:33.438764100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:34.279901400] Enemy tried to move out of bounds: (6,10)
+[2025-06-22T14:22:34.425661500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:34.433193100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:34.441746] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:35.428900600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:35.429409700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:35.430419500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:36.428554600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:36.442627100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:38.426219800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:38.441909200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:38.441909200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:39.008687] Player attacked the enemy for 22 damage.
+[2025-06-22T14:22:39.008687] Player evaded the enemy's attack!
+[2025-06-22T14:22:39.336542200] Player attacked the enemy for 22 damage.
+[2025-06-22T14:22:39.336542200] Goblin attacked for: 24 damage.
+[2025-06-22T14:22:39.431210600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:39.437716200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:39.441798500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:39.608588900] Player attacked the enemy for 22 damage.
+[2025-06-22T14:22:39.608588900] Enemy is dead! You won the fight!
+[2025-06-22T14:22:40.061186500] Collected 202 treasure points!
+[2025-06-22T14:22:40.066761800] Player moved from (2,4) to (2,5)
+[2025-06-22T14:22:40.441347200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:40.441347200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:40.443366400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:22:41.436797700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:41.441722100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:22:41.443386700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:22:45.315109] Player moved from (2,4) to (1,4)
+[2025-06-22T14:24:47.790246800] Game started with player type: Archer and name: Player
+[2025-06-22T14:24:48.832292400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:48.844372100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:48.845368600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:49.781004100] Enemy moved to: (1,3)
+[2025-06-22T14:24:49.782520800] Enemy moved to: (2,6)
+[2025-06-22T14:24:49.844133700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:49.846136400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:50.835714300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:50.846250800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:50.847759900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:51.288865600] Enemy moved to: (7,8)
+[2025-06-22T14:24:51.464949800] Added item: Power Potion
+[2025-06-22T14:24:51.613581300] Player moved from (8,0) to (7,0)
+[2025-06-22T14:24:51.841165200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:51.847716100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:51.854350700] Enemy moved to: (8,6)
+[2025-06-22T14:24:52.155176600] Enemy moved to: (9,6)
+[2025-06-22T14:24:52.214582500] Added item: Power Potion
+[2025-06-22T14:24:52.219779800] Player moved from (7,0) to (6,0)
+[2025-06-22T14:24:52.831774300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:52.844459] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:53.833315500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:53.833315500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:53.834086300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:53.834086300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:53.835380700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:53.835380700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:53.841341700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:54.835233700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:54.841082700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:55.825076100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:55.837684300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:55.841145100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:24:55.842101800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:55.846149400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:55.847697400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:56.363718500] Added item: Power Potion
+[2025-06-22T14:24:56.364721700] Added item: Power Potion
+[2025-06-22T14:24:56.364721700] Added item: Power Potion
+[2025-06-22T14:24:56.364721700] Added item: Power Potion
+[2025-06-22T14:24:56.822023600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:56.838765900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:56.844348400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:57.840019100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:24:57.846022800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:24:59.954282800] Player moved from (6,0) to (7,0)
+[2025-06-22T14:25:06.236988700] Player moved from (6,0) to (7,0)
+[2025-06-22T14:31:25.884987400] Game started with player type: Archer and name: Player
+[2025-06-22T14:31:26.926280200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:26.926280200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:26.926280200] Enemy moved to: (1,1)
+[2025-06-22T14:31:27.529875100] The orc attacked for: 16 damage.
+[2025-06-22T14:31:27.824841400] Enemy moved to: (4,3)
+[2025-06-22T14:31:27.904157500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:27.910750800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:27.919522100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:27.921482400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:28.119933800] The orc attacked for: 14 damage.
+[2025-06-22T14:31:28.125488900] Enemy moved to: (6,4)
+[2025-06-22T14:31:28.428474600] Enemy moved to: (8,5)
+[2025-06-22T14:31:28.920736600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:29.308858900] Added item: Health Potion
+[2025-06-22T14:31:29.312747500] Player moved from (6,0) to (6,1)
+[2025-06-22T14:31:29.920783700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:30.234622800] Player moved from (6,1) to (6,2)
+[2025-06-22T14:31:30.910160700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:30.914711700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:30.920721600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:31.906703500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:31.909714100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:31.921045] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:32.662903600] Added item: Health Potion
+[2025-06-22T14:31:32.662903600] Added item: Health Potion
+[2025-06-22T14:31:33.945435900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:34.677738600] Player moved from (6,2) to (6,3)
+[2025-06-22T14:31:34.920878900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:34.921883500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:34.921883500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:34.923986500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:35.917901500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:35.918922] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:31:35.921900800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:31:35.921900800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:31:38.562585600] Player moved from (6,2) to (6,1)
+[2025-06-22T14:34:56.630073400] Game started with player type: Archer and name: Player
+[2025-06-22T14:34:57.502625500] The orc attacked for: 22 damage.
+[2025-06-22T14:34:57.649612400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:34:57.649612400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:34:57.651607300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:34:57.805318300] Dragon attacked for 19 damage.
+[2025-06-22T14:34:58.636955300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:34:58.647019500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:34:58.649019400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:34:58.650019800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:34:58.651026200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:34:59.387219100] Enemy moved to: (6,9)
+[2025-06-22T14:34:59.644798400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:34:59.645877300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:34:59.646907600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:34:59.989225] Enemy moved to: (8,5)
+[2025-06-22T14:35:00.140937] Enemy moved to: (6,8)
+[2025-06-22T14:35:00.209042900] Enemy moved to: (7,8)
+[2025-06-22T14:35:00.638390400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:00.648124] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:00.650259] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:00.650259] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:00.652463600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:01.648475800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:01.649070900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:01.649070900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:01.652057600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:02.647989200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:02.650832700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:02.651523600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:02.651523600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:03.645484700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:03.649244500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:04.646413500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:04.652998200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:05.648370500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:05.649907500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:05.651991400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:06.189685] Orc received 12 damage from physical attack.
+[2025-06-22T14:35:06.190690800] Player attacked the enemy for 12 damage.
+[2025-06-22T14:35:06.190690800] The orc attacked for: 22 damage.
+[2025-06-22T14:35:06.587085400] Orc received 24 damage from physical attack.
+[2025-06-22T14:35:06.588622400] Archer attacked with Critical hit! for 24 damage.
+[2025-06-22T14:35:06.588622400] The orc attacked for: 22 damage.
+[2025-06-22T14:35:06.637020] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:06.642632700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:06.645633100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:35:06.648632200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:06.648632200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:35:06.652092100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:35:06.938641900] Orc received 12 damage from physical attack.
+[2025-06-22T14:35:06.938641900] [TeleportingEnemyDecorator] Enemy teleported to (8,1)
+[2025-06-22T14:35:06.938641900] Player attacked the enemy for 12 damage.
+[2025-06-22T14:35:06.938641900] Archer: Player is out of melee range.
+[2025-06-22T14:35:07.761029400] Orc received 12 damage from physical attack.
+[2025-06-22T14:35:07.761029400] Player attacked the enemy for 12 damage.
+[2025-06-22T14:35:07.761029400] Enemy is dead! You won the fight!
+[2025-06-22T14:35:08.298860400] Collected 251 treasure points!
+[2025-06-22T14:35:08.313786100] Player moved from (1,0) to (1,1)
+[2025-06-22T14:35:08.798976200] Added item: Health Potion
+[2025-06-22T14:35:08.805051500] Player moved from (1,1) to (1,2)
+[2025-06-22T14:35:11.699031100] Potion used!
+[2025-06-22T14:35:11.699031100] Removed item: Health Potion
+[2025-06-22T14:35:11.699031100] Health was 15 now is 64
+[2025-06-22T14:35:11.699031100] Player used a potion and healed 49 HP!
+[2025-06-22T14:35:17.628790200] Added item: Power Potion
+[2025-06-22T14:35:17.634674800] Player moved from (1,2) to (1,3)
+[2025-06-22T14:36:17.534973600] Game started with player type: Archer and name: Player
+[2025-06-22T14:36:17.855755900] Enemy moved to: (0,8)
+[2025-06-22T14:36:18.155933900] Enemy moved to: (3,1)
+[2025-06-22T14:36:18.457399600] Enemy moved to: (2,5)
+[2025-06-22T14:36:18.548500900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:18.553501700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:18.553501700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:19.057586] Enemy moved to: (5,2)
+[2025-06-22T14:36:19.544169] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:19.546796600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:19.548850400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:19.553043700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:19.554257900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:19.555096100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:20.264322300] The orc attacked for: 13 damage.
+[2025-06-22T14:36:20.560466900] Goblin attacked for: 24 damage.
+[2025-06-22T14:36:21.549236] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:21.554632300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:21.556783200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:22.548785200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:22.548785200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:22.552994900] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:22.554940600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:23.547830600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:23.549898500] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:23.555231300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:24.555899200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:25.550456700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:25.556350700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:25.557159300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:26.540147300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:26.554276700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:36:26.649570800] Orc received 12 damage from physical attack.
+[2025-06-22T14:36:26.649570800] Player attacked the enemy for 12 damage.
+[2025-06-22T14:36:26.649570800] The orc attacked for: 13 damage.
+[2025-06-22T14:36:26.656424800] [VampireEnemy] Drained 1 HP from player → Enemy health: 30/50
+[2025-06-22T14:36:27.091833700] The enemy evaded the attack!
+[2025-06-22T14:36:27.092825800] Player evaded the enemy's attack!
+[2025-06-22T14:36:27.479915500] Orc received 12 damage from physical attack.
+[2025-06-22T14:36:27.479915500] Player attacked the enemy for 12 damage.
+[2025-06-22T14:36:27.479915500] The orc attacked for: 13 damage.
+[2025-06-22T14:36:27.480908] [VampireEnemy] Drained 1 HP from player → Enemy health: 19/50
+[2025-06-22T14:36:27.553338] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:27.555905300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:27.557723] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:27.930148300] Orc received 12 damage from physical attack.
+[2025-06-22T14:36:27.930148300] Player attacked the enemy for 12 damage.
+[2025-06-22T14:36:27.930148300] The orc attacked for: 13 damage.
+[2025-06-22T14:36:27.930148300] [VampireEnemy] Drained 1 HP from player → Enemy health: 8/50
+[2025-06-22T14:36:28.587857900] Orc received 24 damage from physical attack.
+[2025-06-22T14:36:28.587857900] Archer attacked with Critical hit! for 24 damage.
+[2025-06-22T14:36:28.587857900] Enemy is dead! You won the fight!
+[2025-06-22T14:36:29.181840100] Collected 210 treasure points!
+[2025-06-22T14:36:29.191638700] Player moved from (9,8) to (9,7)
+[2025-06-22T14:36:33.938796100] The enemy evaded the attack!
+[2025-06-22T14:36:33.938796100] Goblin attacked for: 7 damage.
+[2025-06-22T14:36:35.917340100] Cannot move through wall at (8,7)
+[2025-06-22T14:36:36.627411300] Cannot move through wall at (8,7)
+[2025-06-22T14:36:37.317555100] Cannot move through wall at (8,7)
+[2025-06-22T14:36:37.700511700] Cannot move through wall at (8,7)
+[2025-06-22T14:36:38.257603500] The enemy evaded the attack!
+[2025-06-22T14:36:38.257603500] Goblin attack with Critical hit! for: 14 damage.
+[2025-06-22T14:36:39.057513700] Cannot move through wall at (8,7)
+[2025-06-22T14:36:40.887544800] The enemy evaded the attack!
+[2025-06-22T14:36:40.887544800] Goblin attacked for: 7 damage.
+[2025-06-22T14:36:40.887544800] Game ended, player died!
+[2025-06-22T14:36:56.222239500] Game started with player type: Archer and name: Player
+[2025-06-22T14:36:56.848207500] Enemy tried to move out of bounds: (-1,3)
+[2025-06-22T14:36:57.149628300] Enemy moved to: (1,8)
+[2025-06-22T14:36:57.150631500] The orc attacked for: 22 damage.
+[2025-06-22T14:36:57.225669100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:57.227669400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:57.240670700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:57.242667700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:58.051556900] Goblin attack with Critical hit! for: 32 damage.
+[2025-06-22T14:36:58.145064600] Enemy moved to: (5,6)
+[2025-06-22T14:36:58.228254] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:58.239768700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:58.239768700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:59.238837100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:59.244521100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:36:59.244521100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:36:59.244521100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:37:00.029958300] Added item: Health Potion
+[2025-06-22T14:37:00.035501700] Player moved from (2,8) to (2,7)
+[2025-06-22T14:37:00.226768900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:00.228772800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:00.239798] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:00.241809200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:00.242840800] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:00.636815900] Added item: Health Potion
+[2025-06-22T14:37:00.641408100] Player moved from (2,7) to (1,7)
+[2025-06-22T14:37:01.244951700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:37:02.228364800] Potion used!
+[2025-06-22T14:37:02.229383] Removed item: Health Potion
+[2025-06-22T14:37:02.229383] Health was 46 now is 92
+[2025-06-22T14:37:02.230757] Player used a potion and healed 46 HP!
+[2025-06-22T14:37:02.242454300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:02.242454300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:37:02.243412200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:02.244404300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:02.244404300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:02.997788700] Potion used!
+[2025-06-22T14:37:02.997788700] Removed item: Health Potion
+[2025-06-22T14:37:02.997788700] Health was 92 now is 100
+[2025-06-22T14:37:02.997788700] Player used a potion and healed 12 HP!
+[2025-06-22T14:37:03.227561500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:37:03.242069300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:37:03.243059900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:37:04.229539900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:37:04.243608700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:37:04.243608700] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:05.241866100] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:06.242040200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:06.242796400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:37:08.262157300] Added item: Health Potion
+[2025-06-22T14:37:08.271763900] Player moved from (1,7) to (1,6)
+[2025-06-22T14:37:09.679944700] The enemy evaded the attack!
+[2025-06-22T14:37:09.679944700] The orc attacked for: 25 damage.
+[2025-06-22T14:37:10.489445200] Orc received 12 damage from physical attack.
+[2025-06-22T14:37:10.493499300] Player attacked the enemy for 12 damage.
+[2025-06-22T14:37:10.493499300] The orc attacked for: 25 damage.
+[2025-06-22T14:37:12.190196100] Orc received 12 damage from physical attack.
+[2025-06-22T14:37:12.190196100] [TeleportingEnemyDecorator] Enemy teleported to (6,4)
+[2025-06-22T14:37:12.190196100] Player attacked the enemy for 12 damage.
+[2025-06-22T14:37:12.190196100] Archer: Player is out of melee range.
+[2025-06-22T14:37:13.989730400] Orc received 12 damage from physical attack.
+[2025-06-22T14:37:13.989730400] Player attacked the enemy for 12 damage.
+[2025-06-22T14:37:13.989730400] Archer: Player is out of melee range.
+[2025-06-22T14:37:18.549983400] Player moved from (1,6) to (1,5)
+[2025-06-22T14:37:20.089837700] Added item: Health Potion
+[2025-06-22T14:37:20.092900500] Player moved from (1,5) to (1,6)
+[2025-06-22T14:37:21.346180200] Player moved from (1,6) to (0,6)
+[2025-06-22T14:37:21.749742200] Player moved from (0,6) to (0,7)
+[2025-06-22T14:37:22.342527900] Player moved from (0,7) to (0,8)
+[2025-06-22T14:37:22.759740900] Player moved from (0,8) to (0,9)
+[2025-06-22T14:37:23.112190700] Added item: Power Potion
+[2025-06-22T14:37:23.112190700] Player moved from (0,9) to (1,9)
+[2025-06-22T14:37:23.459429] Added item: Health Potion
+[2025-06-22T14:37:23.469452400] Player moved from (1,9) to (2,9)
+[2025-06-22T14:37:23.779615100] Player moved from (2,9) to (2,8)
+[2025-06-22T14:39:44.345457300] Game started with player type: Archer and name: Player
+[2025-06-22T14:39:44.653183200] Enemy moved to: (1,5)
+[2025-06-22T14:39:44.953998800] Goblin attacked for: 20 damage.
+[2025-06-22T14:39:45.363834300] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:45.855676200] Enemy moved to: (6,1)
+[2025-06-22T14:39:47.352157800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:47.353900200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:47.364005400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:47.364005400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:48.349367200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:48.353413700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:48.354405400] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:49.359874] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:49.359874] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:50.348204] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:50.349241] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:50.354439300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:50.360157400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:50.361166500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:50.362192100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:50.634405500] The enemy evaded the attack!
+[2025-06-22T14:39:50.634405500] Goblin attacked for: 20 damage.
+[2025-06-22T14:39:51.130429200] Player attacked the enemy for 14 damage.
+[2025-06-22T14:39:51.130429200] Goblin attacked for: 20 damage.
+[2025-06-22T14:39:51.361926200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:51.362753500] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T14:39:51.576122700] [TeleportingEnemyDecorator] Enemy teleported to (5,7)
+[2025-06-22T14:39:51.576122700] Player attacked the enemy for 14 damage.
+[2025-06-22T14:39:51.576122700] Goblin attacked for: 20 damage.
+[2025-06-22T14:39:51.972432100] Archer attacked with Critical hit! for 28 damage.
+[2025-06-22T14:39:51.972432100] Enemy is dead! You won the fight!
+[2025-06-22T14:39:52.351179100] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:52.362588400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:52.591343500] Added item: Power Potion
+[2025-06-22T14:39:52.600953600] Player moved from (2,7) to (1,7)
+[2025-06-22T14:39:52.976107900] Added item: Health Potion
+[2025-06-22T14:39:52.986776200] Player moved from (1,7) to (0,7)
+[2025-06-22T14:39:53.355331600] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:53.363094400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:54.353207200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T14:39:54.354866900] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T14:39:54.918360] Potion used!
+[2025-06-22T14:39:54.918360] Removed item: Power Potion
+[2025-06-22T14:39:54.918360] Player used a power potion and gained 3 attack power!
+[2025-06-22T14:39:55.615493600] Potion used!
+[2025-06-22T14:39:55.615493600] Removed item: Health Potion
+[2025-06-22T14:39:55.615493600] Health was 20 now is 64
+[2025-06-22T14:39:55.615493600] Player used a potion and healed 44 HP!
+[2025-06-22T14:40:00.880350600] Player attacked the enemy for 17 damage.
+[2025-06-22T14:40:00.880350600] Goblin attacked for: 15 damage.
+[2025-06-22T14:40:03.017883600] The enemy evaded the attack!
+[2025-06-22T14:40:03.017883600] Player evaded the enemy's attack!
+[2025-06-22T14:40:03.718791700] Player attacked the enemy for 17 damage.
+[2025-06-22T14:40:03.719792300] Goblin attacked for: 15 damage.
+[2025-06-22T14:40:04.300344] The enemy evaded the attack!
+[2025-06-22T14:40:04.300344] Goblin attacked for: 15 damage.
+[2025-06-22T14:40:04.762184] Player attacked the enemy for 17 damage.
+[2025-06-22T14:40:04.762184] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T14:40:04.762184] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T14:40:04.762184] Enemy is dead! You won the fight!
+[2025-06-22T14:40:04.762184] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T14:40:04.762184] [ExplodingEnemyDecorator] Player Player took explosion damage! -2% of max health.
+[2025-06-22T14:40:05.317639800] Added item: Power Potion
+[2025-06-22T14:40:05.317639800] Player moved from (0,7) to (0,8)
+[2025-06-22T14:40:10.362830800] Player moved from (0,7) to (1,7)
+[2025-06-22T14:40:11.223164300] Player moved from (1,7) to (0,7)
+[2025-06-22T14:40:11.557664800] Player moved from (0,7) to (0,6)
+[2025-06-22T14:40:11.928363100] Player moved from (0,6) to (0,7)
+[2025-06-22T14:40:12.189782100] The enemy evaded the attack!
+[2025-06-22T14:40:12.189782100] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:12.488327700] The enemy evaded the attack!
+[2025-06-22T14:40:12.488327700] Goblin attack with Critical hit! for: 12 damage.
+[2025-06-22T14:40:12.839749] The enemy evaded the attack!
+[2025-06-22T14:40:12.839749] Player evaded the enemy's attack!
+[2025-06-22T14:40:13.098073600] The enemy evaded the attack!
+[2025-06-22T14:40:13.098073600] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:13.290499100] The enemy evaded the attack!
+[2025-06-22T14:40:13.290499100] Player evaded the enemy's attack!
+[2025-06-22T14:40:13.462850200] The enemy evaded the attack!
+[2025-06-22T14:40:13.462850200] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:13.627899200] The enemy evaded the attack!
+[2025-06-22T14:40:13.627899200] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:13.795721700] The enemy evaded the attack!
+[2025-06-22T14:40:13.795721700] Goblin attack with Critical hit! for: 12 damage.
+[2025-06-22T14:40:14.084886400] The enemy evaded the attack!
+[2025-06-22T14:40:14.084886400] Player evaded the enemy's attack!
+[2025-06-22T14:40:14.348041400] The enemy evaded the attack!
+[2025-06-22T14:40:14.348041400] Player evaded the enemy's attack!
+[2025-06-22T14:40:14.702270700] The enemy evaded the attack!
+[2025-06-22T14:40:14.702270700] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:15.121658700] The enemy evaded the attack!
+[2025-06-22T14:40:15.121658700] Goblin attacked for: 6 damage.
+[2025-06-22T14:40:15.477956900] The enemy evaded the attack!
+[2025-06-22T14:40:15.477956900] Goblin attack with Critical hit! for: 12 damage.
+[2025-06-22T14:40:15.477956900] Game ended, player died!
+[2025-06-22T15:15:30.233238600] Game started with player type: Archer and name: Player
+[2025-06-22T15:15:31.242962600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:31.246938700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:31.247938700] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:31.251150800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:31.496675] Enemy moved to: (5,1)
+[2025-06-22T15:15:32.098283700] Enemy moved to: (7,4)
+[2025-06-22T15:15:32.099044500] Goblin attacked for: 24 damage.
+[2025-06-22T15:15:32.100067600] The orc attacked for: 11 damage.
+[2025-06-22T15:15:32.248253200] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T15:15:32.250242] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:32.805656900] Goblin attacked for: 18 damage.
+[2025-06-22T15:15:33.241014300] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:33.252749200] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:33.297682300] Enemy moved to: (9,5)
+[2025-06-22T15:15:34.250117] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:34.252563800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:34.252563800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:34.253577400] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:34.253577400] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T15:15:35.025248500] Added item: Health Potion
+[2025-06-22T15:15:35.034816100] Player moved from (7,3) to (7,2)
+[2025-06-22T15:15:35.248328900] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:35.250778100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:36.002595700] Added item: Health Potion
+[2025-06-22T15:15:36.007840200] Player moved from (7,2) to (6,2)
+[2025-06-22T15:15:36.251666300] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T15:15:36.252664700] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:36.253667800] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:36.569177600] Player moved from (6,2) to (7,2)
+[2025-06-22T15:15:37.245112200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:38.248765800] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:38.250795200] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:38.251941600] Enemy got a random decorator: TeleportingEnemyDecorator
+[2025-06-22T15:15:38.251941600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:38.252794600] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:39.102009600] Potion used!
+[2025-06-22T15:15:39.102009600] Removed item: Health Potion
+[2025-06-22T15:15:39.102009600] Health was 47 now is 73
+[2025-06-22T15:15:39.103002500] Player used a potion and healed 26 HP!
+[2025-06-22T15:15:40.240609100] Enemy got a random decorator: VampireEnemyDecorator
+[2025-06-22T15:15:40.252243500] Enemy got a random decorator: ExplodingEnemyDecorator
+[2025-06-22T15:15:40.927450100] Added item: Health Potion
+[2025-06-22T15:15:43.627672100] Player moved from (7,2) to (6,2)
+[2025-06-22T15:15:44.207713100] Player attacked the enemy for 14 damage.
+[2025-06-22T15:15:44.207713100] Goblin attacked for: 24 damage.
+[2025-06-22T15:15:44.488783] [TeleportingEnemyDecorator] Enemy teleported to (9,6)
+[2025-06-22T15:15:44.488783] Player attacked the enemy for 14 damage.
+[2025-06-22T15:15:44.488783] Goblin attacked for: 24 damage.
+[2025-06-22T15:15:44.667718800] Player attacked the enemy for 14 damage.
+[2025-06-22T15:15:44.667718800] Enemy is dead! You won the fight!
+[2025-06-22T15:15:45.193691] Added item: Health Potion
+[2025-06-22T15:15:45.197664500] Player moved from (6,2) to (6,3)
+[2025-06-22T15:15:45.708474800] Player moved from (6,3) to (6,2)
+[2025-06-22T15:15:50.637874800] Player moved from (7,2) to (6,2)

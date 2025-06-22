@@ -302,14 +302,11 @@ public class GameWorld {
      * @param memento The GameMemento containing the saved game state.
      */
     public void restoreFromMemento(GameMemento memento) {
-        PlayerCharacter oldPlayer = getPlayer();
-        map.removeFromGrid(oldPlayer.getPosition(), oldPlayer);
         this.players.clear();
         this.players.add(memento.getPlayer());
+        this.map.setGrid(memento.getSavedGrid());
         this.enemies = memento.getEnemies();
         this.items = memento.getItems();
-        this.map.setGrid(memento.getSavedGrid());
-        map.addToGrid(memento.getPlayer().getPosition(), memento.getPlayer());
         this.controller.refresh();
     }
 

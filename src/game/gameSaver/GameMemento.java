@@ -7,7 +7,6 @@ import game.map.Position;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 /**
  * GameMemento is a class that represents a snapshot of the game state.
  * It contains the player character, game map, enemies, and items at a specific point in time.
@@ -31,7 +30,7 @@ public class GameMemento {
      * @return a deep copy of the PlayerCharacter
      */
     public PlayerCharacter getPlayer() {
-        return (PlayerCharacter) player.deepCopy();
+        return player;
     }
 
     /**
@@ -66,11 +65,9 @@ public class GameMemento {
         return savedGrid;
     }
 
-
     // --- Fields ---
     private final PlayerCharacter player;
     private final List<Enemy> enemies;
     private final List<GameItem> items;
     private final Map<Position, List<GameEntity>> savedGrid;
-
 }
