@@ -1,0 +1,1 @@
+layers. Implemented combat mechanics, map navigation, and event-driven interactions using advanced OOP and design patterns. Designed the project with a full-stack mindset to allow future integration with modern front-end and backend services.
